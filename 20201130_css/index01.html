@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>css</title>
+	<style >
+		/*h3{color:brown;}
+		li{color:brown;}*/
+
+		h3,li{color:brown;}		
+		body.main{}
+		.warning{}
+
+		body>div>ul>li{}
+		body li{}
+
+		a[href="http://www.naver.com"]{color:brown;}
+
+/*		p>a:{text-decoration:none;}
+		p>a:link{color:black;}
+		p>a:visited{color:black;}
+		p>a:active{color:red;}
+		p>a:hover{font-weight:bold;}
+		p>a:focus{color:blue;}*/
+
+		a:link, a:visited{
+			color:black;
+			text-decoration:none;}
+
+/*		ul.nav>li{}
+		.nav>li{}
+		body>div>ul.nav>li{} /*자식*/
+*/
+
+/*		.nav li{}
+		div .nav li 자손 */ 
+
+		ul.nav>li{background-color: skyblue;} /* li 모두 */
+		ul.nav>li:first-child{background-color: blue;} /*첫 번째 한개의 요소만 */
+		ul.nav>li:last-child{background-color: orange;} /*마지막 자식 요소만 */
+		ul.nav>li:nth-child(2){background-color: white} /*마지막 자식 요소만 */
+
+	</style>
+</head>
+<body class="main">
+	<h3>Lorem, ipsum, dolor.</h3>
+	<hr>
+	<div>
+		<div>Lorem, ipsum, dolor.</div>
+		<ul class="nav">
+			<li>html</li>
+			<li>css</li>
+			<li>javascript</li>
+		</ul>
+		<div class="warning">Lorem ipsum dolor sit amet.</div>
+	</div>
+	<P>
+		<!-- a[속성="속성값"] -->
+		<a href="http://www.naver.com" class="link">naver</a>
+		<a href="http://www.daum.net">daum</a>
+		<a href="http://wwwgabia.com">gabia</a>
+	</P>
+</body>
+</html>
