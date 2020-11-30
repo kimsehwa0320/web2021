@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>css</title>
+	<style>
+		body{
+			background-color: linen;
+			color: blueviolet;
+			margin-left: 30px;
+			margin-right: 30px;
+			/*왼쪽오른쪽여백*/
+		}
+		h3{
+			text-align: center;
+			color:darkred;
+		}
+		p{color: black;} /*1*/
+		.han{color: red;} /*10*/
+		p.han{color: yellow;} /*11*/
+		p .han{color: yellow;}
+
+	</style>
+</head>
+<body>
+	<h3>Lorem.</h3>
+	<hr>
+	<p class="han">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Perspiciatis, perferendis!</p>
+	<p style="text-align: center; color: magenta; font-size:30px;">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Perspiciatis, perferendis!</p>
+	<div class="class">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas recusandae a doloremque, unde velit ab, magni asperiores quisquam modi aliquam hic dolorum nobis ipsum, sapiente provident est, quo aspernatur nihil.</div>
+
+	<!-- div.han 이라 입력하면 동일하게 출력됨 
+	<div class="han">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Dolor eaque placeat hic quasi sed mollitia nulla sint qui esse aperiam deserunt, ratione inventore odit natus distinctio repudiandae minus error corporis.</div> -->
+
+	div#han>lorem
+	<div id="han">Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Odit fugit commodi voluptatum distinctio deserunt minus repellat, reiciendis laboriosam aperiam blanditiis. Impedit, numquam ratione aut sed repellat neque voluptatem quod libero.</div>
+
+</body>
+</html>
