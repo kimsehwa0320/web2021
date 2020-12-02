@@ -15,11 +15,16 @@
 			text-align:justify; /*글자간격정열*/
 		}
 		div.box{
-			background-color: blue;
-			width: 1200px;height: 100px;
+			background-color: skyblue;
+			width: 500px; _height: 100px;
 			margin: 0 auto; /*margin-left: auto; margin-right: auto;*/
 
 		}
+		div.box>div.box1{float: left; width: 200px; background-color: orange;}
+		div.box>div.box2{float: right; width: 200px; background-color: green;}
+		/*div.box>div.box3{clear:both;} display: none 하면 box배경색 없어짐 float때문*/
+		/*div.box:after{content: ""; display: block; clear: both;} box3이없어도됨*/
+		.clearfix:after{content: ""; display: block; clear: both;} 
 	</style>
 </head>
 <body>
@@ -27,9 +32,20 @@
 	Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Reiciendis deserunt quos ipsa tempora animi ipsam atque officiis ad saepe, incidunt exercitationem perferendis magnam quaerat dolore voluptas sequi corrupti ex eligendi.
 	<img src="../images/testimg.jpg" alt="">
 	<hr>
-	<div class="box">
-		text
+	<div class="box clearfix">
+		<div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus vel perspiciatis debitis reprehenderit quaerat aperiam, et nulla cupiditate officia delectus deleniti minus recusandae inventore itaque, assumenda, quae cum rerum illum.</div>
+		<div class="box2">Exercitationem sed, provident ullam deleniti minima alias, eius dolorum. Exercitationem animi assumenda, possimus facere saepe cumque modi natus eius soluta, maiores quod eveniet earum praesentium quasi molestias nam! Voluptatum, ipsum!</div>
+		<!--<div class="box3"> Recusandae delectus quidem nesciunt nemo, enim harum dolorem quo ipsum, tempore beatae architecto assumenda numquam pariatur, qui rem molestiae at illo praesentium dolores corporis. Alias excepturi, voluptatum maxime optio. Praesentium. --></div>
 	</div>
+
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, consequuntur corporis iure temporibus pariatur debitis, labore quam sapiente nisi. Iure eum officia odio asperiores dolores cumque dolorem voluptatibus mollitia eligendi!
+<style>
+	/*div.box10:before{content:"";}*/
+	div.box10:before{content:"안녕하세요";}
+	/*div.box10:after{content:"";}*/
+	div.box10:after{content: "반갑습니다"; display: block; clear: both;}
+</style>
+	<div class="box10">10Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolor hic quisquam, non odio, saepe molestiae vero ea sed ratione dolore tempore corporis eaque assumenda. Quae voluptatem sequi qui. Praesentium!</div>
 
 </body>
 </html>
