@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>display</title>
+
+	<style>
+		*{margin: 0px; padding: 0px;}
+		a:link,a:visited{color: #000; text-decoration: none;}
+		li{list-style:none;} /*박스앞에 점 사라짐*/
+		ul.gnb>li{display :inline;}
+		ul.gnb>li>a{ 
+			display:inline-block; 
+			background-color: brown; 
+			color: white; 
+			width: 100px; height: 35px; 
+			text-align:center; /*텍스트 가운데로 배치*/
+			line-height: 35px; /*글자 행 간격으로 하이값이랑 동일하게 주어서 가운데로 옮김*/
+		}
+		ul.gnb>li>a:hover{background-color: skyblue; color:#f00;} /*호버했을때 효과*/
+	</style>
+</head>
+<body>
+	<!-- ul.gnb>li*4>a[href="#"]>{menu$} -->
+	<ul class="gnb">
+		<li><a href="#">menu1</a></li>
+		<li><a href="#">menu2</a></li>
+		<li><a href="#">menu3</a></li>
+		<li><a href="#">menu4</a></li>
+	</ul>
+
+	<a href="#">menu4</a></li>
+</body>
+</html>
