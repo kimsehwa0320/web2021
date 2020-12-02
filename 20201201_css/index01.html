@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin:0px;padding:0px;} /*리셋 값 중요*/
+		a:link,a:visited{
+			text-decoration:none; color:black;
+		}
+		div.box{
+			background-color: skyblue;
+			width:300px; /*해당픽셀만큼만 배경색크기 할당 - 블럭단위이므로 블럭영역은 일정 단축키:w300*/
+			height:300px; /*높이는 해당 영역 할당 가능 - 블럭단위의 높이도 늘어남 단축키:h300*/
+			padding:30px 20px 10px 0; /*콘텐츠의 배경에 패딩 값 줌 - 사방으로 20px씩 부여*/
+			/*padding-left: 10px; 왼쪽만 값을 주고 싶을 때, 단축키:pl,pr,pt,pb*/
+			margin:20px 10px; /*mr,ml,mt,mb*/
+			border:3px dotted #00f; /*보더크기, 보더스타일, 보더색*/
+			 /*border-right: 1px solid #000 단축키:bd,bdr,bdl*/
+
+		}
+		div.box>a{
+			background-color: red;
+ 			}
+		/*	div.box01{ 이미지를 박스에 넣는 법
+			width: 300px;	
+			height: 300px;	
+			background-color:skyblue;
+			padding: 10px;
+			border: 10px solid #000;
+			margin: 10px;
+			box-sizing: border-box;	마진값 빼고 볼더 패딩값을 안쪽으로 밀어 넣음 
+		} */
+		div.box01>img{
+			width: 100%;	
+		}	
+		div.box01>img{
+			background-color: pink;	
+			width: 300px;	height: 300px;	
+			padding: 	10px;
+			border:10px solid #f00;
+			margin: 10px;
+			box-sizing: border-box;	
+		}		
+	</style>
+</head>
+<body>
+	<!-- div.box>{text}  골격 만들기 -->
+	<div class="box">
+		<a href="#">text</a>
+	</div>
+	<div class="box01">	
+		<img src="../images/testimg.jpg" alt="">
+
+	</div>	
+</body>
+</html>

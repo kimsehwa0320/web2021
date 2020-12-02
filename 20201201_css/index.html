@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hover</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<style>
+		a:link{color:black; text-decoration:none;}
+		a:visited{color:black;}
+		/*a:link, a:visited{color:black; text-decoration:none;} 위에 두 문장 단축 동일한 값*/
+		body{font-family: 'Nanum Gothic', sans-serif;}
+		ul.menu>li{font-family: 'Roboto', sans-serif;}
+
+		a:hover{color:red;} /*1+1*/
+
+		/*li:hover{background-color:skyblue;text-decoration:underline;}*/
+		h3:hover{background-color:blue;text-decoration:line-through;}
+		ul.nav>li:hover{background-color:skyblue}
+		ul.menu>li:hover{background-color:blue}
+		ul.menu>li>a:hover{color:white;} /*1+10+1+1+1*/
+
+/*		ul.nav li:hover{background-color:skyblue}
+		ul.menu li:hover{background-color:blue} 모두 위와 동일함 
+		ul.menu a:hover{color:white;} /*1+10+1+1+1*/ 
+
+		/*h3{text-align:center;}*/
+		h1{text-indent:-999px;} 
+
+	</style>
+</head>
+<body>
+	<!-- ul>li*5>a[href="#"]>{menu$} -->
+	<h1>로고</h1>
+	<h3>title</h3>
+	<ul class="nav">
+		<li><a href="#">menu1</a></li>
+		<li><a href="#">menu2</a></li>
+		<li><a href="#">menu3</a></li>
+		<li><a href="#">menu4</a></li>
+		<li><a href="#">menu5</a></li>
+	</ul>
+
+	<!-- ul.menu>li*5>a[href="#"]>{menu$}-->
+	<ul class="menu">
+		<li><a href="#">menu1</a></li>
+		<li><a href="#">menu2</a></li>
+		<li><a href="#">menu3</a></li>
+		<li><a href="#">menu4</a></li>
+		<li><a href="#">menu5</a></li>
+	</ul> 
+</body>
+</html>
