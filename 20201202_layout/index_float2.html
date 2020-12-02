@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>float2</title>
+	<style>
+
+		/*reset*/
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{color: #000; text-decoration: none;}
+		li{list-style: none;}
+		.clearfix:after{content: ""; display: block;clear: both;}
+
+		/*navigation*/
+		div.nav{width: 500px; background-color: skyblue; margin: 0 auto;}
+		div.nav>ul{}
+		div.nav li{float: left; width: 100px; height: 40px; text-align: center; line-height: 40px; } /*블록단위이기 때문에 알아서 가득 참*/
+		div.nav li:hover{background-color: #ccc; cursor: pointer;}
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<ul class="clearfix">
+			<li>menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+	</div>
+</body>
+</html>

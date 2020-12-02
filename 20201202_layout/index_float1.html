@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>float1</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		a:link,a:vieited{
+			color: #000; text-decoration: none;
+		}
+		li{list-style:none;} /*동그란 점 없애기*/
+		.clearfix:after{content: ""; display: block;clear: both;}
+
+		div.box{
+			width: 500px;
+			background-color: skyblue;
+			margin: 0 auto; /*센터로 만들기*/
+		}
+		div.box>div.box1{float: left; background-color: orange; width: 100px; height: 50px; text-align: left; line-height: 50px;}
+		div.box>div.box2{float: right; background-color: green; width: 100px; height: 50px; text-align: right; line-height: 50px;}
+		/*div.box>div.clear{clear: both;}*/
+		/*div.box:after{content: ""; display: block; clear: both;}*/
+
+	</style>
+</head>
+<body>
+	<div class="box clearfix">
+		<div class="box1">left</div>
+		<div class="box2">right</div>
+		<!-- <div class="clear"></div> -->
+	</div>
+	Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis similique id consequuntur voluptatibus rem explicabo, nisi, ipsam beatae blanditiis odio accusantium optio recusandae eaque excepturi obcaecati, minima. Vero, error ratione?
+</body>
+</html>
