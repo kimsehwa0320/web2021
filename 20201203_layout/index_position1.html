@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position1</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{text-decoration : none; color: #000;}
+		li{list-style:none;}
+		.clearfix:after{content:""; clear: both; display: block;}
+
+		div{width: 100px; height: 100px; text-align: center; line-height: 100px} /*가운데 정렬*/
+		div.box1{
+			background-color: pink;
+			position: absolute;
+			left: 50%; /*부모자의 왼쪽을 기준으로 가운데 배치*/
+			margin-left: -50px;/*100px의 반*/
+			/* top: 50%; 브라우저에서 정 가운데 배치*/
+		}
+		div.box2{
+			background-color: skyblue;
+			position: absolute;
+			right:0; 
+			top:50%; margin-top: -50px;
+		}
+		div.box3{
+			background-color: green;
+			position: absolute;
+			left: 50%; margin-left: -50px;
+			bottom:0;
+			
+		}
+		div.box4{
+			background-color: yellow;
+			position: absolute;
+			left:0; 
+			top:50%; margin-top: -50px;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- div.box$*4>{$} -->
+	<div class="box1">top</div>
+	<div class="box2">right</div>
+	<div class="box3">bottom</div>
+	<div class="box4">left</div>
+</body>
+</html>

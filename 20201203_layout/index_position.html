@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position</title>
+	<style> 
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{text-decoration : none; color: #000;}
+		li{list-style:none;}
+		.clearfix:after{content:""; clear: both; display: block;}
+
+		body{ background-image: url(../images/bg_grid.gif); }
+
+		div{width: 200px; height: 200px;} /*div의 box태그 모두 적용 */
+		div.box1{ background-color: violet; 
+				  position: absolute;
+				  left: 0; top: 0;
+			 				  
+				  } 
+		div.box2{ background-color: skyblue; 
+				  position: absolute;
+				  right: 0; top: 0;
+
+				} 
+		div.box3{ 
+			background-color: orange;
+			position: absolute;
+			right: 0; bottom: 0;
+			 }
+		div.box4{ 
+			background-color: yellow; 
+			position: absolute;
+			left: 0; bottom: 0;
+		}
+	</style>
+</head>
+<body>
+	<!-- div.box$*4>lorem10 -->
+	<div class="box1">1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, molestiae?</div>
+	<div class="box2">2. Dignissimos maxime totam error ea fugit quidem iste quibusdam quis!</div>
+	<div class="box3">3. Officiis, vel! Fugiat excepturi soluta aliquam, temporibus, eius officia laboriosam?</div>
+	<div class="box4">4. Eaque unde obcaecati facilis omnis itaque quas, at a officiis.</div>
+</body>
+</html>
+
+<!-- 	<style> 
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{text-decoration : none; color: #000;}
+		li{list-style:none;}
+		.clearfix{content:""; clear: both; display: block;}
+
+		body{ background-image: url(../images/bg_grid.gif); }
+
+		div{width: 200px; height: 200px;} /*div의 box태그 모두 적용 */
+		div.box1{ background-color: violet; 
+				  /*position: relative; 
+				  left: 100px; top: 100px*/ 
+				  /*position: absolute;
+				  left: 100px; top: 100px;
+				  z-index:2; */				 				  
+				  } /*부모자 : body, absolute: 레이어 개념 형성(원래있던 영역사라짐)*/
+		div.box2{ background-color: skyblue; 
+				  /*position: relative; 
+				  left:200px; top: -200px;*/ 
+				  /*position: absolute; 
+				  left: 200px; top: 200px; 
+				  z-index:1;  우선순위변경 -> 값이 큰 요소일수록 겉으로 올라옴*/
+				  /*position: absolute;
+				  left: 100px; top: 0; top가 0이어야 맨 위로 감 */
+				} 
+		div.box3{ background-color: orange; }
+		div.box4{ background-color: yellow; }
+	</style> -->
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position2</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{text-decoration : none; color: #000;}
+		li{list-style:none;}
+		.clearfix:after{content:""; clear: both; display: block;}
+
+		div.box{
+			width: 500px;height: 500px; 
+			background-color: skyblue;
+			position: relative; /*만든 500사각형 안에서만 배치하게 하기*/
+			left:50%; margin-left: -250px; /*500사각형을 정 가운데로 정렬 배치방법 1  top값을 안먹어서 위아래 가운데 정렬은 힘듬*/
+			/*margin: 0 auto; 가운데 정렬하는 방법 2*/
+			/*position: absolute;
+			top:50%; margin-left: -250px; 정 가운데 정렬 방법 3*/
+		}
+
+		div.box>div{width: 100px; height: 100px; text-align: center; line-height: 100px;}
+		div.box>div.box1{
+			background-color: pink;
+			position: absolute;
+			left:50%; margin-left: -50px;
+
+		}
+		div.box>div.box2{
+			background-color: orange;
+			position: absolute;
+			right:0; 
+			top:50%; margin-top: -50px;
+		}
+		div.box>div.box3{
+			background-color: blue;
+			position: absolute;
+			left: 50%; margin-left: -50px;
+			bottom:0;
+			
+		}
+		div.box>div.box4{
+			background-color: green;
+			position: absolute;
+			left:0; 
+			top:50%; margin-top: -50px;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="box">
+		<!-- div.box$*4>{$} -->
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+	</div>
+</body>
+</html>
