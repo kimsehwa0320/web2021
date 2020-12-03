@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>floatmenu</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{color: #000; text-decoration: none;}
+		li{list-style: none;}
+		/* nav.nav>ul:after{content: ""; display: block; clear: both;} 에프터는 인라인 요소이므로 블록으로 사용해야함 */
+		.clearfix:after{content: ""; display: block; clear: both;} 
+		/*위와 같이 해도 되지만 계속 사용할거면 ul에 클래스 명 클리어픽스 지정 */
+
+
+		/*nav*/
+		nav.nav{ width: 1000px; /*background-color: skyblue;*/ margin: 0 auto;} /*외곽 마진 0 auto로 가운데 정렬*/
+		nav.nav>ul{}
+		nav.nav>ul>li{float: left; width: 200px; background-color: orange; /*height: 40px;*/ } 
+		/*1. 리스트이기 때문에 왼쪽에 붙여줌 그럼 배경색 사라짐 그러므로 ul에 에프터(자식요소 마지막)사용 위드로 메뉴 하나당 크기 줌
+		2. bgc와 li와 ul은 색 입히는데로 계속 덮어짐 나중에 할때마다 덧붙여짐 */
+		nav.nav>ul>li:hover{background-color: violet;}
+		nav.nav>ul>li:hover a{color: white;}  /*a태그에 호버 넣을땐 이렇게 해야함*/
+
+		/*nav.nav>ul>li>a:hover{background-color: violet; color: white;}  a태그만을 이용해서 배경색과 글자색 바꾸기도 됨*/
+
+		nav.nav>ul>li>a{display: block; height: 40px; text-align: center; line-height: 40px;} 
+		/*1. 글자 있는 곳 말고도 블록 자체에 커서가 잡히게 블록형성(위드는 되고 높이는 안되므로 a태그에도 h값을 할당 
+		2. 라인하이트값으로 40을 밀어줬기 때문에 높이가 생성됨 하이트가 필요 없게 됨 처음에만 높이값 제어하고 빼면됨 있어도 상관 x*/
+		
+
+
+
+	</style>
+</head>
+<body>
+
+		<nav class="nav">
+			<ul class ="clearfix"> <!-- 원래 <ul>이 었음 -->
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+
+		<div style="background-color: #ccc;">text</div>
+
+</body>
+</html>
