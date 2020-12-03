@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>menu</title>]
+	<style> /*연습*/
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{text-decoration : none; color: #000;}
+		li{list-style:none;}
+		.clearfix{content:""; clear: both; display: block;}
+
+		nav.nav{background-color: yellow; width: 500px; margin:0 auto;}
+		nav.nav>ul{}
+		nav.nav>ul>li{float: left; width: 100px; background-color: violet;}
+		nav.nav>ul>li>a{display: block; text-align: center; line-height: 30px}
+		nav.nav>ul>li>a:hover{background-color: black; color: white;}
+
+		div.b{background-color: #yellow; width: 1000px; margin: 0 auto;}
+		div.b>ul>li{float: left; width: 200px; background-color: pink; border : 2px solid black ; border-radius : 50px; margin-top : 50px;}
+		div.b>ul>li>a{display: block; text-align: center; line-height: 40px;}
+		div.b>ul>li>a:hover{background-color: gray; color: yellow; border-radius : 50px;}
+	</style>
+</head>
+
+<body>
+	<nav class="nav">
+		<ul class = "clearfix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</nav>
+
+	<div class="b">
+		<ul class="clearfix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+		</ul>
+	</div>
+</body>
+</html>
