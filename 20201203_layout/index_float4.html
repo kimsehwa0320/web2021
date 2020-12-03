@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/*reset*/
+		*{margin: 0; padding: 0;}
+		a:link,a:visited{text-decoration : none; color: #000;}
+		li{list-style:none;}
+		.clearfix:after{content:""; clear: both; display: block;}
+
+		/*header*/
+		header.header{ width: 1000px; /*background-color: pink; */margin:0 auto;}
+		header.header>h1{text-align: center; margin-bottom:10px;}
+		header.header>nav.nav{}
+		header.header>nav.nav>ul{}
+		header.header>nav.nav>ul>li{float: left; width: 200px; }
+		header.header>nav.nav>ul>li>a{display: block; line-height: 40px; text-align: center; background-color: skyblue; }
+
+		header.header>nav.nav>ul>li>a:hover{ background-color: yellow; color:white;}
+
+		/*visual*/
+		div.visual_slider{height: 300px; background-color: #ccc; text-align: center; padding-top: 120px; box-sizing: border-box; margin: 10px;} /*블록단위이므로 위드 필요 x*/
+
+		/*container*/
+		section.container{width: 1000px; background-color: #ccf; margin: 0 auto; padding: 10px; box-sizing: border-box; } /*box-sizing: border-box 안쪽으로 영역 축소*/
+		section.container>aside.aside{float: left; background: #fff; width: 34%; height: 500px; border: 1px solid; text-align: center; line-height: 500px;}
+		section.container>div.content{float: right; background: #fff; width: 65%; height: 500px; border: 1px solid; text-align: center; line-height: 500px;}
+
+		/*footer*/
+		footer.footer{background-color: darkred; width: 1000px; margin: 0 auto; height: 50px; line-height: 50px; text-align: center;}
+
+		/*etc*/
+		.mb10{margin-bottom: 10px !important;} /*마진값이 안나올 수 있므로 !임포턴트 넣음 이렇게하면 각 클래스명에 클리어픽스처럼 똑같이  margin: 10px; 넣으면 됨*/ 
+
+	</style>
+</head>
+<body>
+	<!-- header.header>h1>{logo}^nav.nav>ul>li*5>a[href="#"]>{menu$} -->
+	<!-- header.header>(h1>{logo})+(nav.nav>ul>li*5>a[href="#"]>{menu$}) -->
+	<header class="header margin: 10px;">
+		<h1>logo</h1>
+		<nav class="nav">
+			<ul class = "clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- 비주얼영역 -->
+	<div class = "visual_slider margin: 10px;">visual<br>slider</div>
+
+	<section class="container clearfix margin: 10px;">
+		<aside class="aside">aside</aside>
+		<div class="content">content</div>
+	</section>
+
+	<footer class="footer">footer</footer>
+</body>
+</html>
