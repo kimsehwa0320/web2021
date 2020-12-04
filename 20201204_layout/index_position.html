@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		body{background-image: url(../images/bg_grid.gif);}
+
+		/*div{width: 100px; height: 100px; } div 전체설정*/
+		.box1,.box2,.box3{width: 100px;height: 100px;} /*div.box로 묶었기 때문에 div.box1,2,3만 잡고 싶을 떄 */
+		.box1{
+			width: 250px;
+			background-color: pink;
+			/*position: absolute;	*/
+		} 
+		.box2{
+			background-color: green;
+			position: absolute;	
+			right: 0px;top: 300px;	/*부모 : body에서 100px, 50px잡아줌*/
+		}
+		.box3{
+			background-color: yellow;
+		}
+
+		div.box{ 
+			width: 500px;height: 200px; 
+			background-color: skyblue; 
+			margin: 0 auto; 
+			position: relative; /*box를 부모 배경으로 지정하게 해서 상자들이 다 안으로 들어감*/
+			} /*box의 부모자 사이즈 지정*/
+	</style>
+</head>
+
+
+<body>
+	<div class="box">
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+	</div>
+</body>
+</html>
