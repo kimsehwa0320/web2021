@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position3</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		/*header*/
+		header.header{width: 1000px; height: 100px;  
+			background-color: skyblue; 
+			margin: 0 auto;
+			position: relative;
+			text-align: center; /*상속개념 적용돼서 밑에 자식들까지 다 센터 적용*/
+			} /*골격 만드는 부분 : 원래부모는 body인데 por을 넣어서 부모를 header로 바꿈*/
+		.header h1{background-color: pink; width: 500px; }
+		.util_menu{
+			position: absolute;
+			background-color: green;
+			right: 0; top: 0;
+			width: 300px; height: 40px;
+			line-height: 40px;
+			text-align: right;
+		}
+		.gnb{
+			background-color: violet;
+			width: 1000px; height: 40px; /*바닥에 붙일거니까 위드는 header과 맞게 100%*/
+			position: absolute; bottom:0;
+			line-height: 40px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<header class="header"> <!-- 시멘틱 태그 -->
+		<h1>logo</h1>
+		<div class="util_menu">util menu</div> <!-- 메인메뉴 -->
+		<div class="sns">sns</div> <!-- 메인메뉴 -->
+		<nav class="gnb">main menu</nav>		
+	</header>
+</body>
+</html>

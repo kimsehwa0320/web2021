@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position4</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		/*header*/
+		#header{width: 1000px; height: 110px; 
+			background-color: red; 
+			margin: 0 auto; 
+			position: relative; 
+		}
+		#header h1{ width: 90px; height: 90px; 
+			background-color: yellow;
+			position: absolute; top: 10px; left: 10px; 
+		 }
+		#header h1 a{display: block; line-height: 90px;}
+		.util_menu{ 
+			width: 300px; 
+			background-color: white;
+			position: absolute;
+			right:10px; top:10px;
+
+		}
+		.util_menu li{float: left; width: 100px;}/*새로로 나열된 콘텐츠 가로로 나열하게 함*/
+		.util_menu a{display: block; text-align: center; line-height: 40px; } /*글자만 에서 블록으로*/
+		.gnb{width: 700px; 
+			background-color: green;
+			 position: absolute; 
+			 right: 10px; bottom:10px;}
+		.gnb li{float: left;
+				width: 20%;
+		 }
+		 .gnb a{display: block; text-align: center; line-height: 40px;}
+		 .gnb a:hover{background-color: blue; color:white;}
+
+
+
+
+	</style>
+</head>
+<body>
+	<header id="header"> <!-- 시멘틱 태그 mh(mainheader) ht(headertop) 등 가상의 이름  -->
+		<h1><a href="#">LOGO</a></h1>
+		<div class="util_menu">
+			<!-- ul>li*3>a[href="#"]>{menu$} 메인메뉴 부분-->
+			<ul class = "clearfix" > 
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">CONTACT US</a></li>
+				<li><a href="#">SITE MAP</a></li>
+			</ul>
+		</div>
+		<nav class="gnb clearfix">
+			<!-- ul>li*5>a[href="#"]>{MENU$} -->
+			<ul>
+				<li><a href="#">MENU1</a></li>
+				<li><a href="#">MENU2</a></li>
+				<li><a href="#">MENU3</a></li>
+				<li><a href="#">MENU4</a></li>
+				<li><a href="#">MENU5</a></li>
+			</ul>
+		</nav>		
+	</header>
+</body>
+</html>
