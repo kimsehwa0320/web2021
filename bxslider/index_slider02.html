@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>bxslider control</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			var mySlider = $("ul.slider").bxSlider({
+				auto:true,
+				mode:"fade", 
+				controls:false,
+				pager:false
+			}); /*mySlider이라는 슬라이드 이름으로 지정하여 변수 지정*/
+
+			/*$("ul.slider").bxSlider({
+				auto:true,
+				mode:"fade", 
+				controls:false,
+				pager:false
+			}); 묶어서 변수화 하여 메소드로 사용*/
+
+			// $(".nextBtn").click(function(){ 실행문 });
+
+			$(".nextBtn").click(function(){
+				mySlider.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+				mySlider.goToPrevSlide();
+			});
+		});
+	</script>
+	<style>
+		.slider img{width: 100%; display: block;}
+		.bx-wrapper {
+    		-moz-box-shadow: none;
+    		-webkit-box-shadow: none; 
+    		box-shadow: none;
+    		border:  0 none;
+    		background: #fff;
+    		margin-bottom: 0; 
+		} /*배너박스 테두리,그림자 전부 삭제*/
+		.bx-wrapper .bx-pager{ bottom: 30px; }
+		.sliderWrap{width: 1000px; margin: 0 auto; position: relative;} /*화면이 1000에 맞춰줘서 조정되며 가운데 정렬*/
+		.contents{width: 1000px; height: 400px; margin: 0 auto; background: skyblue;} /*만들면 두 콘텐츠가 떨어져 있음 bx-wrapper가 세로값을 다 ㅁㄱ음 마진-버텀값이 있기 때문에 0 으로 바꺼줌*/
+
+		.nextBtn{position: absolute; top: 50%; margin-top: -50px; right: 10px; cursor: pointer;}
+		.prevBtn{position: absolute; top: 50%; margin-top: -50px; left: 10px; cursor: pointer;}
+	</style>
+</head>
+<body>
+	<div class="sliderWrap">
+		<ul class="slider"> <!-- 100% -->
+			<li><img src="images/img01.jpg" alt=""></li>
+			<li><img src="images/img02.jpg" alt=""></li>
+		</ul>
+		<div class="nextBtn"><img src="images/next01.png" alt=""></div> <!-- 블럭이어서 밑으로 내려옴 -->
+		<div class="prevBtn"><img src="images/prev01.png" alt=""></div>
+	</div>
+
+	<div class="contents">
+		
+	</div>
+
+
+</body>
+</html>

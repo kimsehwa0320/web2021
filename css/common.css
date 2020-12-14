@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*common css*/
+.tac{text-align:center;}
+.pt20{padding-top: 20px !important;}
+.pb20{padding-bottom: 20px !important;}
+.mb5{margin-bottom: 5px !important;}
+.mb10{margin-bottom: 10px !important;}
+.mb15{margin-bottom: 15px !important;}
+.mb20{margin-bottom: 20px !important;}
+
+
+
+.h2line:after{
+content: ""; display: block; width: 200px; height: 1px; 
+background: #000; margin: 10px auto; /*라인 가운데 정렬 위아래 5px*/
+}

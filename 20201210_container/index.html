@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>container</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.container{ 
+			width: 1200px; margin: 0 auto;
+			}
+		.container h2,.container p{ text-align: center; }
+		.container h2:after{
+			content: ""; display: block; width: 200px; height: 1px; 
+			background: #000; margin: 5px auto; /*라인 가운데 정렬 위아래 5px*/
+		}
+		.contents li{ 
+			float: left; width: 288.75px; height: 288.75px;
+			 margin-right: 15px; 
+			 position: relative;
+			 } /*거터 15*/
+		.contents li:last-child{margin-right: 0;} /*마진값 삭제*/
+		.contents img{ width: 100%; } /*img->100% = li(부모)->100%*/
+		.contents .overlay{
+			position: absolute;top: 0;
+			width: 100%; height: 100%;
+			background: rgba(255,0,0,0.3); 
+			color:white; /* display: none; 안보이는 상태유지*/
+			text-align: center; line-height: 288.75px; opacity: 0; transition:0.3s; 
+			 } 
+		.contents li:hover .overlay{ /*display: block;*/ opacity: 1; } 
+
+
+
+		.dot:after{ /*dot를 클래스명에 입력한 애들만 뜨게함*/
+			content: ""; display: block; 
+			width: 10px; height: 10px; 
+			background-color: #000; 
+			border-radius:5px; margin: 0 auto;} 
+		.dot:before{ 
+			content: ""; display: block; 
+			width: 10px; height: 10px; 
+			background-color: #000; border-radius:5px; 
+			margin: 0 auto; margin-bottom: 10px; }
+		.container p{ margin-bottom: 10px; } 
+
+		/*수치값 따로 저장*/
+		.pa20{padding: 20px;}
+		.c_gray{background: #ccc;}
+		.ptb20{padding: 20px 0;} /*패딩 위아래만 씀 */
+		.ptb30{padding: 30px 0;} 
+		.mb20{margin-bottom: 20px !important;}
+
+	</style>
+</head>
+<body>
+	<div class="container pa20 c_gray dot"> 
+		<!-- before -->
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia odit quae commodi possimus facilis! Asperiores adipisci debitis porro laborum obcaecati dolor id a consectetur praesentium officia! Earum, beatae laboriosam.</p>
+		<!-- after -->
+	</div>
+
+	<div class="container ptb30">
+		<h2>GALLERY</h2>
+		<P class="mb20">Lorem, ipsum dolor sit amet.</P>
+		<div class="contents">
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="1">
+					<div class="overlay">image1</div>
+				</li>
+								<li>
+					<img src="../images/testimg.jpg" alt="1">
+					<div class="overlay">image2</div>
+				</li>
+								<li>
+					<img src="../images/testimg.jpg" alt="1">
+					<div class="overlay">image3</div>
+				</li>
+								<li>
+					<img src="../images/testimg.jpg" alt="1">
+					<div class="overlay">image4</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="c_gray">
+			<div class="container ptb30">
+		<h2>GALLERY</h2>
+		<P class="mb20">Lorem, ipsum dolor sit amet.</P>
+		<div class="contents">
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="1">
+					<div class="overlay">image1</div>
+				</li>
+								<li>
+					<img src="../images/testimg.jpg" alt="1">
+					<div class="overlay">image2</div>
+				</li>
+								<li>
+					<img src="../images/testimg.jpg" alt="1">
+					<div class="overlay">image3</div>
+				</li>
+								<li>
+					<img src="../images/testimg.jpg" alt="1">
+					<div class="overlay">image4</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
