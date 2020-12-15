@@ -13,7 +13,7 @@
 			$(".slider").bxSlider({
 				controls:false, //좌우 화살표 삭제
 				//pager:false, 단추 삭제
-				pagerCustom:".sliderTab" //선택자는 "" 필수 예약어가아님 클래스명이므로 . 필수  
+				pagerCustom:".sliderTab" 
 				// auto:true
 			});
 		})
@@ -24,19 +24,17 @@
 		    -webkit-box-shadow: none;
 		    box-shadow: none;
 		    border: 0 none;
-		    /*background: #fff; 하얀색이라 넣을 필요 x*/
 		    margin-bottom: 0;
 		}
-		.sliderWrap{width: 1260px; height: 740px; margin: 0 auto; position: relative;} /*이미지크기와똑같이잡아줄것 */
-		.slider .txtWrap{position: absolute; top: 150px; right: 100px; width: 400px;}  /*위드 사백으로 크기 조절로 길어서 넘치면 밑으로내림 글자 */
-		/*검사눌러보면 li는 bxslider에서 자동으로 렐러티브 넣어주기 때문에 이미 포지션 렐러티브가 부모에 포함 돼있는상태임 */
+		.sliderWrap{width: 1260px; height: 740px; margin: 0 auto; position: relative;} /*이미지크기와 동일 */
+		.slider .txtWrap{position: absolute; top: 150px; right: 100px; width: 400px;}  
 
 
 		.slider .txtWrap h2{font-size:30px;}
 		.slider .txtWrap h2:after{
 			content: ""; display: block; 
 			width: 200px; height: 2px;
-			background: #000; margin:10px 0; /*위아래 왼쪽오른쪽 순*/
+			background: #000; margin:10px 0; 
 		}
 		.slider .txtWrap p{margin-bottom: 20px;}
 		.slider .txtWrap a{
@@ -46,7 +44,7 @@
 			border: 1px solid #000;
 			border-radius:20px;
 			font-weight:bold;
-		}/*에이태그ㅡ는 디스플레이블럭필수*/
+		}
 		.slider .txtWrap a:hover{
 			background: #000; color: #fff;
 		}
@@ -62,14 +60,14 @@
 	</style>
 </head>
 <body>
-	<div class="sliderWrap"> <!-- 전체 사이즈 잡아주기 위해 전체 묶어줌 사용 -->
+	<div class="sliderWrap"> <!-- 전체 사이즈 잡아주기 -->
 		<ul class="slider"> <!-- 1260 -->
 			<li>
 				<img src="images/main_slider01.jpg" alt="">
 				<div class="txtWrap">
 					<h2>Lorem, ipsum dolor sit.1</h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ad.</p>
-					<a href="#" class="btn">바로가기</a> <!-- 버튼으로 만들거임 -->
+					<a href="#" class="btn">바로가기</a> <!-- 버튼 -->
 				</div>
 			</li>
 			<li>
