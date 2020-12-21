@@ -26,15 +26,74 @@
 						</div>
 						<div class="field">
 							<label for="user-pass" class="blind">패스워드</label>
-							<input type="text" id="user-pass" name="user-pass" placeholder="비밀번호입력" required class="inp-field">
+							<input type="password" id="user-pass" name="user-pass" placeholder="비밀번호입력" required class="inp-field">
 							<span class="icon pass">password</span>
 						</div>
 						<div class="field">
 							<label for="user-pass2" class="blind">패스워드 확인</label>
-							<input type="text" id="user-pass2" name="user-pass2" placeholder="패스워드 확인" required class="inp-field">
+							<input type="password" id="user-pass2" name="user-pass2" placeholder="패스워드 확인" required class="inp-field">
 							<span class="icon pass2">password</span>
 						</div>
 					</fieldset>
+
+					<fieldset>
+						<legend>개인정보</legend>
+						<div class="field">
+							<label for="username" class="blind">이름</label>
+							<input type="text" id="username" name="name" placeholder="이름" class="inp-field w458" required>
+						</div>
+						<div class="field btn-radio">
+							<label for="male" class="btn-label male">남자</label>
+							<input type="radio" id="male" name="users" value="남자">
+							<label for="female" class="btn-label female">여자</label>
+							<input type="radio" id="female" name="users" value="여자">
+						</div>
+					<div class="field birth clearfix">
+						<label for="user-birth">생일</label>
+						<input type="text" id="user-birth" name="userb" placeholder="년(4자)" class="inp-field w130" maxlength="4" >
+						<span class="field_wall">|</span>
+						<select name="month">
+							<option value="1">1월</option>
+							<option value="1">2월</option>
+							<option value="1">3월</option>
+							<option value="1">4월</option>
+							<option value="1">5월</option>
+							<option value="1">6월</option>
+							<option value="1">7월</option>
+							<option value="1">8월</option>
+							<option value="1">9월</option>
+							<option value="1">10월</option>
+							<option value="1">11월</option>
+							<option value="1">12월</option>
+						</select>
+						<span class="field_wall">|</span>
+						<label for="day" class="blind">일</label>
+						<input type="text" id="day" name="userd" placeholder="일" class="inp-field w145" >
+					</div>
+					<div class="field">
+						<label for="user-email" class="blind">본인확인메일</label>
+						<input type="text" id="user-email" name="usere" placeholder="본인확인 이메일(선택)" class="inp-field w458">
+					</div>
+					</fieldset>
+
+					<fieldset>
+						<legend>전화번호인증</legend>
+						<div class="field confirm clearfix"> <!-- 인증버튼 정렬 -->
+							<label for="user-num" class="blind">인증번호받기</label>
+							<select name="usern" id="user-num">
+								<option value="82">+082</option>
+							</select>
+							<span class="field_wall">|</span>
+							<input type="text" name="usernum" placeholder="휴대전화번호" class="inp-field w205">
+							<button type="button" class="btn_click">인증</button> 
+						</div>
+						<div class="field confirm clearfix">
+							<label for="user-confirm" class="blind">인증번호입력</label>
+							<input type="text" id="user-confirm" namme="usercon" placeholder="인증번호" class="inp-field w332">
+							<button type="button" class="btn_click">확인</button>
+						</div>
+					</fieldset>
+
 					<div class="btn-area">
 						<input type="submit" value="가입하기" class="btn-submit">
 					</div>
