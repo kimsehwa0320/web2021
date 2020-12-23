@@ -11,13 +11,16 @@
 			background-repeat: no-repeat;
 			background-position: center; 
 			background-size: cover;
+			overflow-x: hidden; /*스크롤 없애기*/
+			overflow-y: hidden; /*스크롤 없애기*/
 		}
 		.wrap{ 
 			position: absolute; 
-			background:pink;
+			/*background:pink;*/
 			left: 50%; transform: translateX(-50%) translateY(-50%);
 			/*transform: translate(-50%, -50%); 와 동일*/
-			top: 50%; 
+			top: 50%;
+			z-index: 2; 
 			 }
 			.img01{ 
 				position: absolute; top:-200px; right: -100px;/* 배경제거*/
@@ -36,16 +39,59 @@
 
 			.wrap form{position: relative;} 
 			/*position: absolute 가능*/
+			.searchTitle{
+				display: block;
+				position: absolute;
+				width: 60px; height: 20px;
+				background-image: url(images/searchtext.jpg);
+				text-indent:-999px; left: 20px; top: 18px; z-index: 2;
+			}
+
+			.searchInp{
+				position: relative;
+				width: 400px;height: 50px;
+				text-indent:90px; font-size:18px;
+				border: 3px solid #000;
+				border-radius:25px; /*h50*/
+			}
+			.searchBtn{
+				position: absolute;
+				width: 40px;height: 40px;
+				right: 10px; top: 50%; transform: translateY(-50%); /*버튼 위치*/
+				border: 2px solid #aaa; 
+				border-radius:20px; /*버튼테두리 동그라미*/
+				background: #fff; 
+				background-image: url(images/search.jpg);
+				background-repeat: no-repeat; 
+				background-position: center; /*가운데 정렬*/
+				text-indent:-99990px;
+			}
+
+			.img00{
+				position: absolute; 
+				left: 0; bottom: 0;
+				animation-name :air;
+				animation-duration :3s;
+				animation-fill-mode:forwards;
+				animation-iteration-count:infinite;
+				animation-timing-function:linear;
+				
+			}
+			@keyframes air {
+				from{ left: 0; bottom: 0; }
+				to{ left: 1800px; bottom: 1500px; }
+			}
 	</style>
 </head>
 <body>
 	<div class="wrap">
 		<img src="images/content2.png" alt="" class="img01">
 		<form action="#" method="post">
-			<label for="search">search</label>
-			<input type="text" id="search" placeholder="검색어를 입력하세요.">
-			<input type="submit" value="button"></input>
+			<label for="search" class="searchTitle">search</label>
+			<input type="text" id="search" placeholder="검색어를 입력하세요." class="searchInp">
+			<input type="submit" value="button" class="searchBtn"></input>
 		</form>
 	</div>
+	<img src="images/reallyAir.png" alt="" class="img00">
 </body>
 </html>
