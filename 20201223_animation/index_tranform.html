@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tranform</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.boxWrap{
+			width: 500px;height: 500px; 
+			background: skyblue;margin: 0 auto;
+			overflow: hidden; 
+			/*상자가 scale200퍼로 커질때 박스워랩에서 박스가 커져서 나가는걸 방지*/
+		}
+
+		.box{
+			width: 200px;height: 200px;background: red;
+			transform: translate(0px,0px) rotate(0deg) scale(1);
+			/*rotate(45deg); box를 가운데를 중심으로 45도 회전시킴 */
+			/*transform-origin:center; 센터를 중심으로 사용하겠다는 기본값*/
+			/*transform-origin:100% 100%; 오리진값없으면 그냥 중앙*/
+			/*오른쪽 위ㅣ를 중심으로 사용하겠다는 기본값 100 100은 오른쪽 밑 */
+			transition: 0.3s /*0.3초만큼 스무스하게 움직임*/
+		}
+		.boxWrap:hover .box{
+			transform: rotate(20deg) scale(2);
+		}	
+	</style>
+	
+</head>
+<body>
+	<div class="boxWrap">
+		<div class="box"></div>
+	</div>
+
+	<style>
+		.contents{
+			width: 1000px; margin: 0 auto; background: pink;
+		}
+		.contents>ul{}
+		.contents>ul>li{
+		float: left; width: 242.5px;/*gutter:(1000-30)/4*/
+		margin-right: 10px; overflow: hidden;
+		}
+		.contents>ul>li:last-child{margin-right: 0;}
+		.contents>ul>li>img{
+			width: 100%; display: block;
+			transition: 0.3s;
+			transform-origin:center;
+			}/*242.5안에 이미지가 100%로 포함해서 나옴 디블로 높이에 여백 제어해서 없앰*/
+		.contents>ul>li:hover img{transform: scale(1.1);}
+	</style>
+
+	<div class="container">
+		<div class="contents clearfix">
+			<ul>
+				<li><img src="../images/testimg.jpg" alt=""></li>
+				<li><img src="../images/testimg.jpg" alt=""></li>
+				<li><img src="../images/testimg.jpg" alt=""></li>
+				<li><img src="../images/testimg.jpg" alt=""></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
