@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>anipos</title>
+	<style>
+		html,body{ height: 100%; } /*이이미지 사이즈 맞춤*/
+		body{
+			background-image: url(images/bg02.jpg);
+			background-repeat: no-repeat;
+			background-position: center; 
+			background-size: cover;
+		}
+		.wrap{ 
+			position: absolute; 
+			background:pink;
+			left: 50%; transform: translateX(-50%) translateY(-50%);
+			/*transform: translate(-50%, -50%); 와 동일*/
+			top: 50%; 
+			 }
+			.img01{ 
+				position: absolute; top:-200px; right: -100px;/* 배경제거*/
+				animation-name:bal01;
+				animation-duration:3s;
+				animation-iteration-count:infinite;
+				animation-direction:alternate;
+		    } 
+
+			@keyframes bal01{
+				0%{top: -200px;}
+				/*50%{top: -250px;}
+				100%{top: -200px;} 원상복귀*/
+				100%{top: -250px;}  
+			}
+
+			.wrap form{position: relative;} 
+			/*position: absolute 가능*/
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<img src="images/content2.png" alt="" class="img01">
+		<form action="#" method="post">
+			<label for="search">search</label>
+			<input type="text" id="search" placeholder="검색어를 입력하세요.">
+			<input type="submit" value="button"></input>
+		</form>
+	</div>
+</body>
+</html>
