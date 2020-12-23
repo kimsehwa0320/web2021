@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>table</title>
+	<style>
+		table,td,th{
+			border: 1px solid #000; 
+			border-collapse:collapse; 
+		} 
+		table{width: 500px;}
+		td{height: 50px; padding: 10px;} 
+		th{height: 50px;} 
+		.tac{text-align: center;}
+	</style>
+</head>
+<body>
+	<table>
+		<colgroup>
+			<col width="15%">
+			<col width="30%">
+			<col width="*">
+			<col width="15%">
+		</colgroup>
+		<tr> <!-- 줄 -->
+			<th>Lorem.</th> <!-- 행 -->
+			<th>Vero?</th>
+			<th>Quisquam.</th>
+			<th>Veniam.</th>
+		</tr>
+		<tr> <!-- 줄 -->
+			<td rowspan="2">Lorem.</td> <!-- 행 -->
+			<td>Vero?</td>
+			<td class="tac">Quisquam.</td>
+			<td>Veniam.</td>
+		</tr>
+		<tr> <!-- 줄 -->
+			<td colspan="3">Vero?</td>
+		</tr>
+		<tr> <!-- 줄 -->
+			<td>Lorem.</td> <!-- 행 -->
+			<td>Vero?</td>
+			<td>Quisquam.</td>
+			<td>Veniam.</td>
+		</tr>
+	</table>
+</body>
+</html>
