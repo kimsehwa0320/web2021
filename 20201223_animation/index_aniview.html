@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>aniview</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.box{ 
+			width: 300px;height: 300px;
+			position: relative; margin: 0 auto;
+			background: skyblue;
+			overflow: hidden;
+			border:10px solid skyblue;
+			cursor: pointer;
+		}
+		.box .img{ 
+			position: absolute;
+			left: 50%; top: 50%; 
+			transform: translate(-50%,-50%)
+			scale(1.1);
+			transition: 0.3s;
+			  }
+		.box:hover .img{
+			transform: translate(-50%,-50%) scale(1.2); 
+		}
+
+		/*.box .plus{
+			position: absolute; width: 50px;height: 50px;
+			left: 50%; top: 50%; 가운데 정렬
+			transform: translate(-50%,-50%);
+			transition: 0.3s;
+		}
+		.box:hover .plus{
+			transform: translate(-50%,-50%) rotate(90deg);
+		}*/
+
+		.box .bg{
+			width: 100%;height: 100%;
+			position: relative; 
+			background: #000; opacity: 0;
+			transition: 0.3s;
+		}
+		.box:hover .bg{ opacity: 0.2; }
+
+		.box .wrap{
+			width: 50px;height: 50px;_background:pink;
+			position: absolute;left:50%;top: 50%;
+			transform:translate(-50%,-50%);
+			border-radius:25px;border: 4px solid #fff;
+			transition:0.3s; 
+		}
+		.wrap .bar1,.wrap .bar2{
+			width: 30px;height: 4px;background: #fff;
+			position: absolute;left: 50%;top:50%;
+			transform:translate(-50%,-50%);
+			border-radius:3px;
+		}
+		.wrap .bar2{transform:translate(-50%,-50%) rotate(90deg);}
+		.box:hover .wrap{
+			transform: translate(-50%,-50%) rotate(90deg);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="images/travel.jpg" class="img" alt="">
+		<div class="bg"></div>
+		<!--<img src="images/plus_btn.png" class="plus" alt=""> -->
+		<div class="wrap"> <!-- 플러스버튼 만들기 -->
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+		</div>
+	</div>
+
+<style>
+	.container{ padding: 30px 0; }
+	.contents{ width: 1200px; margin: 0 auto; }
+	.contents h2{ text-align: center; margin-bottom: 20px; }
+	.contents ul{}
+	.contents ul li{ 
+		float: left; width: 232px; margin-right: 10px;/*거터 10px*/
+		/*border-radius: 50%;*/ overflow: hidden; position: relative; cursor: pointer;
+	} 
+	.contents ul li:last-child{margin-right: 0;}
+	.contents ul li img{width: 100%; display: block; transition: 0.3s;}
+
+	.contents .bg{ 
+		width: 100%; height: 100%;
+		position: absolute; /*left: 0; top: 0; 밑에서 사용*/
+		background: rgba(0,0,0,0.3); opacity: 0; 
+
+		transition: 0.3s;
+	}
+	.contents .bg h3{
+		color: #fff;
+		position: absolute; left: 50%; top: 50%; 
+		transform: translate(-50%,-50%);
+	}
+	.contents li:nth-child(1):hover .bg{opacity: 1;}
+	.contents li:hover img{transform: scale(1.1);} /*첫번째만 호버*/
+
+	/*left*/
+	.contents li:nth-child(2) .bg{ left:-232px; top: 0px; opacity: 1; }
+	/*정확히 왼쪽으로 이동 left:-100% 도 가능*/
+	.contents li:nth-child(2):hover .bg{left: 0;}
+
+	/*top*/
+	.contents li:nth-child(3) .bg{ left:0; top:-232px; opacity: 1; }
+	.contents li:nth-child(3):hover .bg{top: 0;}
+
+	/*right*/
+	.contents li:nth-child(4) .bg{ right:-232px; top:0; opacity: 1; }
+	.contents li:nth-child(4):hover .bg{right: 0;}
+
+	/*bottom*/
+	.contents li:nth-child(5) .bg{ left: 0; bottom:-232px; opacity: 1; }
+	.contents li:nth-child(5):hover .bg{bottom: 0;}
+
+	.gray{background: #ccc;}
+	.round{border-radius: 50% !important;}
+</style>
+
+<div class="container gray">
+	<div class="contents">	
+		<h2>gallery</h2>
+		<ul class="clearfix"> <!-- li->fl사용=ul->clearfix = gray-->
+			<li class="round">
+				<img src="../images/testimg.jpg" alt="">
+				<div class="bg">
+					<h3>여행</h3>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="bg">
+				<h3>여행</h3>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="bg">
+				<h3>여행</h3>	
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="bg">
+				<h3>여행</h3>	
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="bg">
+				<h3>여행</h3>	
+				</div>
+			</li>
+
+		</ul>
+	</div>
+</div>
+
+<style>
+	.btnWrap{ width: 200px; height: 40px; position: relative; }
+	.btnWrap a{display: block; text-align: center; line-height: 40px;}
+	.btnWrap .bar1{ 
+		position: absolute; background: #f00;
+		width: 0; height: 5px;
+		bottom: 0; right: 0; transition: 0.3s;
+	}
+	.btnWrap:hover .bar1{ width: 100%; }
+</style>
+<div class="btnWrap">
+	<a href="#">BUTTON</a>
+	<div class="bar1"></div>
+</div>
+
+
+<style>
+	.btnWrapOne{ width: 200px; height: 40px; position: relative; }
+	.btnWrapOne a{display: block; text-align: center; line-height: 40px;}
+	.btnWrapOne .bar{ 
+		position: absolute; background: #f00;
+		width: 100%; height: 5px; 
+		bottom: 0; transform: scaleX(0);
+		transition: 0.3s;
+	}
+	.btnWrapOne:hover .bar{ transform: scaleX(1); }
+</style>
+<div class="btnWrapOne">
+	<a href="#">BUTTON</a>
+	<div class="bar"></div>
+</div>
+
+<style>
+	.btnWrapTwo{ width: 200px; height: 40px; position: relative; }
+	.btnWrapTwo a{display: block; text-align: center; line-height: 40px; position: relative;}
+	.btnWrapTwo .bar{ 
+		position: absolute; background: red;
+		width: 100%; height: 100%; 
+		transition: 0.3s; 
+		transform: scaleX(0);
+		transform-origin: left center; 
+	}
+	.btnWrapTwo:hover .bar{ transform: scaleX(1); transform-origin: right center;} 
+	.btnWrapTwo:hover a{ color:#fff; font-weight:bold;}
+</style>
+<div class="btnWrapTwo">
+	<div class="bar"></div>
+	<a href="#">BUTTON</a>
+</div>
+</body>
+</html>
