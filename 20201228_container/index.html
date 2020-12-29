@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>container</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<script src="../js/wow.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+
+	<style> 
+
+		.container{ width: 1200px; margin: 0 auto; min-width: 1200px; }
+		.container h2:after{
+			content: ""; display: block; 
+			width: 200px; height: 1px;
+			background-color: #000; margin: 0 auto;
+		}
+
+		.contents.gall li{
+			float: left; margin-right: 15px; 
+			width: 288.75px; 
+			height: 288.75px;
+			position: relative; /*오버레이의 부모자 li에 por*/
+			overflow: hidden; 
+			cursor: pointer;
+		}
+
+		.pink{
+			background-image: url(../images/pc01.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			background-attachment: fixed; 
+		}
+
+		.contents.gall li:last-child{margin-right: 0;}
+		.contents.gall img{width: 100%; display: block;} /*거터값을 먹게 하려면 w100%*/
+
+		.contents.gall .overlay{ 
+			width: 100%; height: 100%;
+			background: rgba(255,0,0,0.2);
+			position: absolute;
+			top:-180; left:0px; 
+			opacity: 0; transition: 0.5s; 
+		}
+		.contents.gall .txt{
+			width: 150px; height: 150px;
+			background: red; color:#fff;
+			position: absolute;
+			top:50%; left:50%;
+			transform: translate(-50%,-50%);
+			/*margin-left: -75px; margin-top: -75px; */
+			border-radius:15px; line-height:150px;  
+		}
+
+		.contents.gall li:hover .overlay{ opacity: 1; left: 0; top:0; }
+
+		.color1{background: lightgray;}
+		.tac{text-align:center;}
+		.pt20{padding-top: 20px !important;}
+		.pb40{padding-bottom: 40px !important;}
+		.mb20{margin-bottom: 20px !important;}
+		.mb40{margin-bottom: 40px !important;}
+			
+	</style>
+</head>
+<body>
+	<div style="height:1000px"></div>
+		<div class="container pt20 pb40 wow bounce"> 
+		<h2 class="tac wow fadeInLeft" data-wow-delay="0.5s">GALLERY</h2>
+		<p class="tac mb20 wow fadeInRight" data-wow-delay="0.6s">Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Exercitationem, ipsum.</p>
+		<!-- ul.contents.gall.clearfix -->
+		<ul class="contents gall clearfix">
+			<li class="wow bounce" data-wow-delay="0.5s">
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt tac">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li class="wow bounce" data-wow-delay="0.7s">
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt tac">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li class="wow bounce" data-wow-delay="0.9s">
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt tac">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li class="wow bounce" data-wow-delay="1.1s">
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt tac">Lorem ipsum.</div>
+				</div>
+			</li>
+		</ul>
+		</div>
+
+	<div class="pink wow fadeIn">
+		<div class="container pt20 pb40 wow bounce">
+		<h2 class="tac">GALLERY</h2>
+		<p class="tac mb20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, cum?</p>
+		<!-- ul.contents.gall.clearfix -->
+		<ul class="contents gall clearfix">
+			<li class="wow fadeInLeft" class=data-wow-delay="0.5s">
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt tac">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li class="wow fadeInLeft" class=data-wow-delay="0.7s">
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt tac">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li class="wow fadeInLeft" class=data-wow-delay="0.9s">
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt tac">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li class="wow fadeInLeft" class=data-wow-delay="1.1s">
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt tac">Lorem ipsum.</div>
+				</div>
+			</li>
+		</ul>
+		</div>
+	</div>
+
+	<div>
+		<div class="container pt20 pb40">
+		<h2 class="tac">GALLERY</h2>
+		<p class="tac mb20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, aliquam.</p>
+		<!-- ul.contents.gall.clearfix -->
+		<ul class="contents gall clearfix">
+			<li class="wow pulse" data-wow-iteration="infinite" data-wow-delay="1.0s">
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt tac">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li class="wow pulse" data-wow-iteration="infinite" data-wow-delay="1.2s">
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt tac">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li class="wow pulse" data-wow-iteration="infinite" data-wow-delay="1.4s">
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt tac">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li class="wow pulse" data-wow-iteration="infinite" data-wow-delay="1.6s">
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt tac">Lorem ipsum.</div>
+				</div>
+			</li>
+		</ul>
+		</div>
+	</div>
+
+<div class="pink">
+	<div class="container pt20 pb40">
+	<h2 class="tac">GALLERY</h2>
+	<p class="tac mb20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, ipsa.</p>
+	<!-- ul.contents.gall.clearfix -->
+	<ul class="contents gall clearfix">
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt tac">Lorem ipsum.</div>
+			</div>
+		</li>
+					<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt tac">Lorem ipsum.</div>
+			</div>
+		</li>
+					<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt tac">Lorem ipsum.</div>
+			</div>
+		</li>
+					<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt tac">Lorem ipsum.</div>
+			</div>
+		</li>
+	</ul>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
