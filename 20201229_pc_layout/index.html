@@ -11,7 +11,7 @@
 	<header id="main_header">
 		<h1 id="logo"><a href="#">logo</a></h1>
 		<nav class="util_menu">
-			<ul>
+			<ul class="clearfix">
 				<li><a href="#">menu1</a></li>
 				<li><a href="#">menu2</a></li>
 				<li><a href="#">menu3</a></li>
@@ -29,13 +29,41 @@
 		</nav>
 	</header>
 
-	<div id="content">
-		<section id="main_section"></section> <!-- 왼쪽 콘텐츠 -->
-		<aside id="main_aside"></aside> <!-- 오른쪽 콘텐츠 -->
+	<div id="content" class="clearfix">
+		<section id="main_section">
+			<!-- article.main_article*4>h2>lorem2^p>lorem20 h2와 p를 형제 관계로 사용 -->
+			<article class="main_article">
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod perspiciatis iusto nulla officiis eum blanditiis eaque molestias est amet, impedit.</p>
+			</article>
+			<article class="main_article">
+				<h2>Nisi, ullam!</h2>
+				<p>Iusto quis labore inventore dolore repudiandae doloribus nulla alias neque excepturi est incidunt itaque et reprehenderit ratione cumque, nesciunt! Illo.</p>
+			</article>
+			<article class="main_article">
+				<h2>Sit, dolor!</h2>
+				<p>Culpa eligendi itaque obcaecati laborum repellat, ipsam expedita, temporibus atque accusamus assumenda maxime minima cumque nihil illum totam facere dolore!</p>
+			</article>
+			<article class="main_article">
+				<h2>Repellat, ipsa.</h2>
+				<p>Cum, illum ipsam neque dicta nisi quod placeat officiis iusto sequi numquam similique, quidem corporis, veniam autem cupiditate dignissimos minus!</p>
+			</article>	
+		</section> <!-- 왼쪽 콘텐츠 -->
+
+		<aside id="main_aside">
+			<input type="radio" name="tab" id="first" checked class="inp"> <!-- 인접선택자 적용 -->
+			<input type="radio" name="tab" id="second" checked class="inp">
+
+			<div class="button clearfix">
+				<label for="first">first</label>
+				<label for="second">second</label>
+			</div>
+		</aside> <!-- 오른쪽 콘텐츠 -->
 	</div>
 
 	<footer id="main_footer">
-		
+		<h3>Lorem, ipsum.</h3>
+		<adress>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Magni, saepe?</adress>
 	</footer>
 
 </body>

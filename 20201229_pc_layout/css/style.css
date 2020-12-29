@@ -1,15 +1,55 @@
 @charset "utf-8";
 
-
+/*header*/
 header#main_header{
 	width: 960px; margin: 0 auto; height: 130px;
-	background-color: red; position: relative;
+	_background-color: red; position: relative; margin-bottom: 10px;
 }
+
 header #logo{position: absolute; left: 10px; top: 20px;}
 header #logo a{
-	display: block; width: 200px; background: white;}
+	display: block; width: 200px; _background: white;}
 
-.util_menu{position: absolute; right: 0; top: 0;}
+.util_menu{position: absolute; right:0; top:20px;}
 .util_menu>ul{}
-.util_menu>ul>li{float: left;}
+.util_menu>ul>li{float: left; border: 1px solid #000; border-right: 0 none;}
+.util_menu>ul>li:first-child{border-radius:15px 0 0 15px;}
+.util_menu>ul>li:last-child{border-right: 1px solid #000; border-radius:0 15px 15px 0;}
+.util_menu>ul>li:hover{background: green;}
+.util_menu>ul>li a:hover{ color:white;}
 .util_menu>ul>li>a{display: block; padding: 2px 10px;}
+
+.gnb_menu{position: absolute; bottom: 0; width: 100%;}
+.gnb_menu>ul{}
+.gnb_menu>ul>li{float: left; width: 20%; border: 1px solid #000; border-right: 0 none;} /*960중에 20%씩 할당*/
+.gnb_menu>ul>li:first-child{border-radius:20px 0 0 20px;}
+.gnb_menu>ul>li:last-child{border-right: 1px solid #000; border-radius:0 20px 20px 0;}
+.gnb_menu>ul>li a{display: block; text-align: center; line-height: 40px;}
+.gnb_menu>ul>li:hover{background: green;}
+.gnb_menu>ul>li a:hover{ color:white;}
+
+
+/*content*/
+#content{width: 960px; margin: 0 auto; _background-color: red;}
+
+#main_section{width: 750px; float: left; _background-color: white;}
+#main_section .main_article{padding: 20px; border: 1px solid #000; margin-bottom: 10px;}
+
+#main_aside{width: 200px; float: right; _background-color: white;}
+#main_aside .button label{
+	display: block; cursor: pointer;
+	width: 100px; float: left; line-height: 30px;
+	text-align: center; background: skyblue; border-radius:10px 10px 0 0;
+} 
+.inp:nth-child(1):checked~div.button>label:first-child{background: red !important;}
+.inp:nth-child(2):checked~div.button>label:last-child{background: red !important;}
+
+/*footer*/
+#main_footer{
+	width: 960px;margin: 0 auto; 
+	text-align: center; border: 1px solid #000; 
+	padding: 20px 0; margin-bottom: 10px;
+}
+#main_footer address{font-style: normal;}/* 이탈릭체에서 일반폰트로*/
+
+
