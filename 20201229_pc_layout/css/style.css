@@ -29,12 +29,13 @@ header #logo a{
 .gnb_menu>ul>li a:hover{ color:white;}
 
 
-/*content*/
+/*content-section*/
 #content{width: 960px; margin: 0 auto; _background-color: red;}
 
 #main_section{width: 750px; float: left; _background-color: white;}
 #main_section .main_article{padding: 20px; border: 1px solid #000; margin-bottom: 10px;}
 
+/*content-aside*/
 #main_aside{width: 200px; float: right; _background-color: white;}
 #main_aside .button label{
 	display: block; cursor: pointer;
@@ -43,6 +44,30 @@ header #logo a{
 } 
 .inp:nth-child(1):checked~div.button>label:first-child{background: red !important;}
 .inp:nth-child(2):checked~div.button>label:last-child{background: red !important;}
+
+/*인접사용자 사용*/
+.inp:nth-child(1):checked~div.tab_items1{display: block;}
+.inp:nth-child(1)~div.tab_items1{display: none;}
+
+.inp:nth-child(2):checked~div.tab_items2{display: block;}
+.inp:nth-child(2)~div.tab_items2{display: none;}
+
+
+/*.tab_items1{background: green;}
+.tab_items2{background: blue;}*/
+
+.inp{display: none;}
+
+.item{padding: 10px; border: 1px solid #000; border-top: 0 none;}
+.thumbnail{float: left;}
+.des{float: left; margin-left: 10px; width: 120px;}
+.des .title{ /*블록 잡혀있음*/
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+
+
 
 /*footer*/
 #main_footer{
