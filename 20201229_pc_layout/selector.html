@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Selector</title>
+	<style>
+		div{
+			background: skyblue; border: 1px solid #000;
+			margin-bottom: 5px;
+		}
+		/*자기를 제외한 선택자 다음의 box1 하나만 선택*/
+/*		div.box+div.box1{
+			background: red;
+		} */
+
+		/*자기를 제외한 다음번에 나오는 선택자 모두*/
+/*		div.box~div.box1{
+			background: blue;
+		}*/
+	</style>
+</head>
+<body>
+	<div class="box">Lorem.</div>
+	<div class="box1">Accusantium?</div>
+	<div class="box1">Fugit!</div>
+	<div class="box">Dolorum.</div>
+	<div class="box">Reprehenderit.</div>
+	<div class="box">Mollitia!</div>
+	<div class="box">Enim.</div>
+	<div class="box">Commodi!</div>
+	<div class="box">Labore.</div>
+	<div class="box">Maiores!</div>
+</body>
+</html>

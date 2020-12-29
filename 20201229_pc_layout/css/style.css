@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+
+header#main_header{
+	width: 960px; margin: 0 auto; height: 130px;
+	background-color: red; position: relative;
+}
+header #logo{position: absolute; left: 10px; top: 20px;}
+header #logo a{
+	display: block; width: 200px; background: white;}
+
+.util_menu{position: absolute; right: 0; top: 0;}
+.util_menu>ul{}
+.util_menu>ul>li{float: left;}
+.util_menu>ul>li>a{display: block; padding: 2px 10px;}
