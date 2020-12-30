@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>script</title>
+</head>
+<body>
+	<!-- 비교연산자 -->
+	<script>
+		var x = 5; //num
+		var y = "5"; //str
+		var result; //변수
+
+		//비교연산자(숫자 인식)
+		result = (x>y); //true, false
+		document.write(result+"<br>");
+
+		result = (x==y);
+		document.write(result+"<br>");
+
+		//데이터 타입 비교 
+		result = (x===y); 
+		document.write(result+"<br>");
+
+		// 조건연산자
+		var i = 5;
+		var z = 7;
+		var res;
+
+		// res = (비교문)? true : false; 삼항조건연산자 
+		res = (i>z)? i : z;
+		document.write("i와 z중의 큰 값은 "+res+"입니다.");
+	</script>
+	
+</body>
+</html>
