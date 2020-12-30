@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+#main_header{ 
+	position: relative; height: 45px; 
+	background-image: url(../img/header_background.png); 
+}
+#main_header a.left{
+	display: block; height: 32px;
+	background-image: url(../img/header_left_button.png);
+	width: 62px; text-indent: -99999px;
+	position: absolute; top: 7px; left: 7px;
+} 
+#main_header h1{text-align: center; color:#fff;}
+#main_header label.right{
+	display: block; height: 32px;
+	background-image: url(../img/header_right_button.png);
+	width: 32px; text-indent: -9999px;
+	cursor: pointer;
+	position: absolute; top: 7px; right: 7px;
+}
+
+
+#toggle_gnb_wrap{
+	background: #363636;
+	padding: 15px;
+}
+.toggle_gnb{padding: 5px;background: #fff;}
+
+.toggle_gnb>ul>li{float: left;}
+.toggle_gnb>ul>li>a{display: block; width: 80px; text-align: center;}
+
+
+#toggle{display: none;}
+#toggle ~ #toggle_gnb_wrap{display: none;}
+#toggle:checked ~ #toggle_gnb_wrap{display: block;}
+
+
+#top_gnb{background: #d42111; border-bottom: 1px solid #000;}
+#top_gnb div{float: left;width: 25%;}
+#top_gnb div a{display: block; text-align: center; line-height: 35px; color:#fff;}
+
+#bottom_gnb{
+	display: table; width: 100%;
+	border-bottom: 1px solid #000;
+}
+#bottom_gnb div{display: table-cell;}
+#bottom_gnb div a{
+	display: block; line-height: 35px; 
+	text-align: center; position: relative; /*a:after의 부모는 a*/
+}
+#bottom_gnb div a:after{
+	content: ""; display: block;
+	width: 1px; height: 20px; 
+	background: #000; position: absolute; 
+	top: 10px; /*left: -1px;*/ /*왼쪽 막대기 밀기*/
+}
+#bottom_gnb div:first-child a:after{content: "";display: none;} /*왼쪽막대기 제거*/
+
+
+.main_section{border-bottom: 1px solid #000;}
+#section_header{padding: 20px;}
+#section_article{padding: 20px;}
+#section_article p{margin-bottom: 10px;}
+
+#main_footer{padding: 10px; text-align:center;}
+#main_footer address{font-style: normal;}
+
+
+
