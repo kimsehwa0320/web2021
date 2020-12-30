@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>table</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		/*테이블사용*/
+		table{ 
+			border: 1px solid #000; border-collapse:collapse; 
+			width: 100%; /*전체 칸 비율*/ margin-bottom: 10px;
+		}
+		td{
+			border: 1px solid #000;
+			width: 25%; /*칸 간격*/
+			text-align: center;
+			height: 100px;
+			/*vertical-align: top;top, middle, bottom*/
+		}
+
+		/*ul태그사용*/
+		.box li{ 
+			float: left; width: 25%; 
+			border: 1px solid #000; 
+			height: 100px; border-right: 0 none;
+			text-align: center; line-height: 100px;
+			margin-bottom: 10px;
+			}
+		.box li:last-child{border-right: 1px solid #000;}
+
+		/*ul태그에 display: table,table-cell사용*/
+		.box1{
+			width: 100%; 
+			display: table; 
+			_border: 1px solid #000;
+		}
+		.box1 li{
+			display: table-cell; 
+			border: 1px solid #000;
+			border-right: 0 none;
+			width: 25%; text-align: center;
+			height: 100px; vertical-align: middle;
+		}
+		.box1 li:last-child{border-right: 1px solid #000;}
+	</style>
+</head>
+<body>
+	<table>
+		<tr><!-- row -->
+			<td>Lorem.<br>hello</td>
+			<td>Nisi.</td>
+			<td>Fuga.</td>
+			<td>Culpa.</td>
+		</tr>
+	</table>
+
+	<ul class="box clearfix">
+		<li>Lorem.<br>hello</li>
+		<li>Voluptate.</li>
+		<li>Iusto.</li>
+		<li>Reiciendis.</li>
+	</ul>
+
+	<ul class="box1">
+			<li>Lorem.<br>hello</li>
+			<li>Rerum.</li>
+			<li>Fugiat.</li>
+			<li>Iure.</li>
+	</ul>
+</body>
+</html>
