@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>for</title>
+	<style>
+		table{border-collapse:collapse; width: 100%;}
+		td{border: 1px solid #000;}
+		.number{background: skyblue;}
+
+	</style>
+</head>
+<body>
+	<script>
+
+
+
+		var dan2 = 2; //단 바꿀때 간편
+		// document.write(dan2+" X 1 = "+(dan2*1)+"<br>");
+		// document.write(dan2+" X 2 = "+(dan2*2)+"<br>");
+		// document.write(dan2+" X 3 = "+(dan2*3)+"<br>");
+		// document.write(dan2+" X 4 = "+(dan2*4)+"<br>");
+		// document.write(dan2+" X 5 = "+(dan2*5)+"<br>");
+		// document.write(dan2+" X 6 = "+(dan2*6)+"<br>");
+		// document.write(dan2+" X 7 = "+(dan2*7)+"<br>");
+		// document.write(dan2+" X 8 = "+(dan2*8)+"<br>");
+		// document.write(dan2+" X 9 = "+(dan2*9)+"<br>");
+
+		for(var i=1;i<9;i++){
+			//document.write(i);
+			document.write(dan2+" X "+i+" = "+(dan2*i)+"<br>");
+		}
+
+		for(var j=0;j<10;j++){
+			document.write("<p class='number'>")
+			document.write(dan2 + " x " + j + "=" + (dan2*j));
+			document.write("</p>");
+		}
+
+		//for문에서 table사용-가로
+		var table = "<table>";
+		table += "<tr>"; //table=table+"<tr>"
+		for(var i=1;i<10;i++){
+			table += "<td>" + dan2 + " x " + i + "=" + (dan2*i) + "</td>"; //table=table+"<td>"
+		}
+		table += "<tr>";
+		table += "</table>";
+
+		document.write(table);
+
+		//for문에서 table사용-세로
+		var table = "<table>";
+		for(var i=1;i<10;i++){
+			table += "<tr>"; //table=table+"<tr>"
+			table += "<td>" + dan2 + " x " + i + "=" + (dan2*i) + "</td>"; //table=table+"<td>"
+			table += "<tr>";
+		}
+		table += "</table>";
+
+		document.write(table);
+
+		var x,y;
+		for(x=2;x<=5;x++){
+			document.write("<b> ---[" + x + "]");
+		}
+
+
+
+		// document.write("2 X 1 = 2<br>");
+		// document.write("2 X 2 = 4<br>");
+		// document.write("2 X 3 = 6<br>");
+		// document.write("2 X 4 = 8<br>");
+		// document.write("2 X 5 = 10<br>");
+		// document.write("2 X 6 = 12<br>");
+		// document.write("2 X 7 = 14<br>");
+		// document.write("2 X 8 = 16<br>");
+		// document.write("2 X 9 = 18<br>");
+	</script>
+</body>
+</html>
