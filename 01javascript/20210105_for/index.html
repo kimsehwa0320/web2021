@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>for</title>
+	<style>
+		.dan{float: left; width: 100px;}
+	</style>
+	<script>
+		var dan = 3;
+		document.write(dan+" X 1 ="+(dan*1)+"<br>"); //3*3=1
+		document.write(dan+" X 2 ="+(dan*2)+"<br>"); 
+		document.write(dan+" X 3 ="+(dan*3)+"<br>"); 
+		document.write(dan+" X 4 ="+(dan*4)+"<br>"); 
+		document.write(dan+" X 5 ="+(dan*5)+"<br>"); 
+		document.write(dan+" X 6 ="+(dan*6)+"<br>"); 
+		document.write(dan+" X 7 ="+(dan*7)+"<br>"); 
+		document.write(dan+" X 8 ="+(dan*8)+"<br>"); 
+		document.write(dan+" X 9 ="+(dan*9)+"<br>"); 
+
+		for(var i=1;i<10;i++){
+			document.write(dan +" X "+ i +" = "+ (dan*i) +"<br>");
+		}
+
+		// 2~9단
+		for(var i=2;1<=9;i++){
+			document.write("<div class='dan'>");
+			document.write("<h2>");
+			document.write(i+"단");//단마다 간격 생성
+			document.write("</h2>");
+
+				for(var y=1;y<10;y++){
+					document.write(i + "x" + y + "=" + (i*y) + "<br>" );
+				}
+			document.write("</div>");
+		}
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
