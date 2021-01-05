@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.menuWrap{
+	width: 1200px;
+	position: fixed; /*상단바 고정*/
+	top: 10px;
+	left: 50%; transform: translateX(-50%);
+}
+.topNav{background: #333;}
+.topNav a{
+	display: block; color:white; 
+	float: left;padding: 14px 16px;
+}
+.topNav .toggle{float: right; display: none;}
+
+
+@media screen and (max-width: 575px){ /*mobile*/
+	.menuWrap{
+		position: fixed; width: 100%;
+	}
+	.topNav a{display: none;}
+	.topNav a:first-child{display: block;}
+	.topNav a.toggle{display: block;} /*모바일이 아닐 떄 햄버거 사라짐*/ 
+
+	.topNav.responsive a{float: none;display: block;}
+	.topNav.responsive a.toggle{position: absolute; right: 0;top: 0;}
+}
+
+@media screen and (min-width: 576px) and (max-width: 991px){ /*tablet*/
+	.menuWrap{width: 100%;}
+}
+
+@media screen and (min-width: 992px){ /*pc*/
+	.menuWrap{
+		width: 1200px;
+		position: fixed; 
+		top: 10px;
+		left: 50%; transform: translateX(-50%);
+	}
+
+}
