@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>toggle</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="css/all.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script src="../js/wow.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+
+	<script>
+		$(document).ready(function(){
+			$(".toggle").click(function(){
+				if($("#myTopMenu").attr("class") == "topNav clearfix" ){
+					$("#myTopMenu").addClass("responsive"); 
+				}else{
+					$("#myTopMenu").removeClass("responsive"); 
+				}
+			});
+		});
+	</script>	
+
+
+</head>
+<style>
+	*{margin: 0;padding: 0;}
+	a:link,a:visited{color: #000; text-decoration : none; }
+	li{list-style:none;}
+	.clearfix:after{content:""; display: block; clear: both; }
+
+/*	.menuWrap{
+		width: 1200px; position: fixed;
+		left: 50%; transform: translateX(-50%);
+	}*/
+	.topNav{display: block;background: #000; }
+	.topNav a{
+		display: block; color:white; 
+		float: left;padding: 30px 30px;
+	}
+	.topNav a:first-child{background-color: #fef200; color:#000; padding: 20px;}
+	.topNav a:nth-child(5){color:#fef200;}
+	.topNav .toggle{float: right; display: none;}
+
+
+
+	
+	
+
+	@media screen and (max-width: 575px){ 
+	.menuWrap{
+		position: fixed; width: 100%; 
+	}
+	.topNav a{display: none;}
+	.topNav a:first-child{display: block;}
+	.topNav a.toggle{display: block;} 
+
+	.topNav.responsive a{float: none;display: block;}
+	.topNav.responsive a.toggle{position: absolute; right: 0;top: 0;}
+	}
+	
+	
+
+	@media screen and (min-width: 576px) and (max-width: 991px){ 
+		.menuWrap{width: 100%;}
+	}
+
+	@media screen and (min-width: 992px){ 
+		.menuWrap{
+			width: 1200px;
+			position: fixed; 
+			left: 50%; transform: translateX(-50%);
+		}
+		.container{width: 1200px; margin: 0 auto;}
+
+	}
+
+
+</style>
+<body>
+	<div class="menuWrap">
+		<nav id="myTopMenu" class="topNav clearfix">
+			<a href="#"><strong>HIMEDIA<br>himadia</strong></a>
+			<a href="#"><i class="fas fa-gem"></i>BRAND</a>
+			<a href="#"><i class="fas fa-taxi"></i>SHOP</a>
+			<a href="#"><i class="fas fa-calendar-check"></i>EVENT</a>
+			<a href="#"><i class="fas fa-pen-nib"></i>SERVICE</a>
+			<a href="#" class="toggle"><i class="fas fa-shopping-bag"></i></a>
+		</nav>
+	</div>
+	<div class=container>
+		<div id="container1" class="wow fadeInLeft" data-wow-delay="0.3s">
+			Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Ducimus earum, illo sint et numquam illum quasi facilis nam dolor deserunt, minima quisquam velit iste debitis eaque necessitatibus ea deleniti, commodi beatae reprehenderit. Quos, in doloremque vel delectus eligendi asperiores, ullam maiores, libero possimus accusantium sed beatae reiciendis repellendus ex recusandae pariatur aperiam? Harum, voluptate totam magni excepturi sint aut temporibus minima id laborum sit sed nihil quae quia architecto neque suscipit mollitia aliquam modi error eveniet, dolore? Facere, iusto, nemo. Culpa in totam repellendus tempora nihil quos illo quas? Tenetur quidem sed voluptatibus impedit aut illum ea commodi. Laborum, sapiente. Accusantium distinctio saepe recusandae sapiente excepturi veniam rem, porro delectus eaque consequuntur vel laudantium optio molestiae quo voluptatum maiores quia a odio? Soluta, modi. Voluptatem praesentium, voluptas, hic culpa sequi eveniet expedita laboriosam pariatur nulla, harum enim quas provident asperiores, ab amet. Sequi quos, voluptate consectetur esse, placeat vitae neque tenetur enim doloribus voluptatum odit perspiciatis saepe. Numquam adipisci facere quia illo perferendis esse provident porro quas sed? Praesentium voluptatem blanditiis doloremque ipsum officiis corrupti, incidunt cupiditate tempora tenetur deserunt nisi placeat numquam error recusandae, quos temporibus veritatis culpa eaque, repellendus totam eos dolorem, dolore unde? Impedit, tenetur pariatur voluptates.
+			voluptates reiciendis. Impedit aliquid, soluta totam eum, aut voluptas. Aliquam recusandae corporis repellendus, ad deleniti consequuntur eos ipsa, porro. Quas quidem deleniti corrupti necessitatibus minus, vel maxime rem qui ad reiciendis quia similique eligendi itaque dolore incidunt maiores. Culpa recusandae temporibus commodi. Itaque sit explicabo placeat asperiores non saepe laboriosam, cum quis blanditiis quae quam in velit aperiam excepturi, repellat doloribus laborum atque commodi laudantium! Tenetur adipisci fuga, necessitatibus asperiores perferendis quod, exercitationem dolore minus facere magni omnis at dolor debitis amet sit, porro cumque, libero voluptatem praesentium inventore atque recusandae delectus?
+		</div>
+		<div id="container2" class="wow fadeInRight" data-wow-delay="0.3s">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorum aperiam ex suscipit, animi dicta at fugiat id, voluptatem eligendi vel ipsam ea, beatae dolorem ab ipsa quibusdam, assumenda! Error minima eum, facere consequatur illo doloribus voluptatum quisquam eaque nostrum, odio, repellat corrupti soluta tempore cupiditate sint tenetur inventore maiores alias officia. Voluptatibus voluptates corrupti optio saepe alias nulla libero autem at atque non delectus corporis cupiditate id sit, earum accusantium, eos eaque voluptatem vero? Quo, deleniti minima quia veniam. Debitis ab maxime nam minima vero reprehenderit ipsa natus repudiandae optio ea, autem earum sequi quam! Debitis quasi asperiores, autem. Deleniti dolore magni, autem culpa voluptas pariatur dolores neque earum veniam, maxime eum et perferendis officiis nesciunt voluptatibus iure labore laudantium beatae sint? Inventore debitis laboriosam ut, aliquam itaque enim animi suscipit commodi! Obcaecati repellendus pariatur ratione tenetur sapiente, officiis nam est, molestiae natus in illum quae repudiandae, dolor quod! Dignissimos, cumque amet quia, quasi fugit pariatur quibusdam ullam odit vitae quidem doloribus dolorem, ab voluptates reiciendis. Impedit aliquid, soluta totam eum, aut voluptas. Aliquam recusandae corporis repellendus, ad deleniti consequuntur eos ipsa, porro. Quas quidem deleniti corrupti necessitatibus minus, vel maxime rem qui ad reiciendis quia similique eligendi itaque dolore incidunt maiores. Culpa recusandae temporibus commodi. Itaque sit explicabo placeat asperiores non saepe laboriosam, cum quis blanditiis quae quam in velit aperiam excepturi, repellat doloribus laborum atque commodi laudantium! Tenetur adipisci fuga, necessitatibus asperiores perferendis quod, exercitationem dolore minus facere magni omnis at dolor debitis amet sit, porro cumque, libero voluptatem praesentium inventore atque recusandae delectus?
+		</div>
+		<div id="container3" class="wow fadeInLeft" data-wow-delay="0.3s">
+			consectetur debitis optio! Cum, asperiores! At rerum explicabo hic libero cumque voluptates ipsum? Consectetur id omnis mollitia, minima fuga, quis quam in quo veritatis corporis sunt vero vel culpa aliquid unde enim? Non voluptatem, esse placeat dolores dolor nobis, officiis explicabo dolorum doloremque, aut magni atque aperiam eius assumenda officia iure voluptate alias maiores consectetur autem vitae consequuntur error fugit exercitationem, eaque? Eius cupiditate porro ipsa voluptatum animi, voluptate voluptas nesciunt expedita ea pariatur repellat? Similique eum esse et natus quos autem voluptatibus unde quidem modi qui voluptatum, assumenda corporis, officiis maxime pariatur molestias tempora, adipisci vero. Nesciunt excepturi maxime obcaecati possimus reprehenderit, animi adipisci et alias totam veniam, exercitationem voluptate magni iusto id recusandae voluptas a, maiores, voluptatem tempore? Saepe, perspiciatis necessitatibus labore vitae, modi molestias laboriosam fugit! Veritatis excepturi doloribus eos animi necessitatibus ad, consequatur cum et iusto vitae culpa quos praesentium possimus nostrum rerum numquam modi delectus voluptate debitis consectetur expedita. Nulla, ducimus praesentium quia culpa cupiditate sed magni voluptatibus delectus unde, autem necessitatibus eveniet aperiam. Sit odit mollitia iusto perspiciatis! Minus, sint? Numquam impedit excepturi dignissimos! Numquam eaque ipsum deserunt alias incidunt perferendis suscipit hic. Earum aliquid quos sunt, debitis quidem sit quia quasi labore ex illum quibusdam incidunt quas architecto cupiditate voluptatem? 
+			assumenda corporis, officiis maxime pariatur molestias tempora, adipisci vero. Nesciunt excepturi maxime obcaecati possimus reprehenderit, animi adipisci et alias totam veniam, exercitationem voluptate magni iusto id recusandae voluptas a, maiores, voluptatem tempore? Saepe, perspiciatis necessitatibus labore vitae, modi molestias laboriosam fugit! Veritatis excepturi doloribus eos animi necessitatibus ad, consequatur cum et iusto vitae culpa quos praesentium possimus nostrum rerum numquam modi delectus voluptate debitis consectetur expedita. Nulla, ducimus praesentium quia culpa cupiditate sed magni voluptatibus delectus unde, autem necessitatibus eveniet aperiam. Sit odit mollitia iusto perspiciatis! Minus, sint? Numquam impedit excepturi dignissimos! Numquam eaque ipsum deserunt alias incidunt perferendis suscipit hic. Earum aliquid quos sunt, debitis quidem sit quia quasi labore ex illum quibusdam incidunt quas architecto cupiditate voluptatem? 
+	</div>
+</body>
+</html>

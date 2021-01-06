@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array</title>
+</head>
+<body>
+	<div id="han"></div>
+	<script>
+		//var num = 1; 객체 var num = new Number(1);
+		//var str = "han"; 객체 var str = new String("han");
+		var city = ["seoul","busan","incheon","suwon"]; //배열 var city = new Aeeay[];
+
+		function printArr(){
+			var txt = "";
+			for(var i=0;i<city.length;i++){ //city.length = 2
+				// document.write(i)
+				//document.write("배열데이터 [" + i + "]는 " + city[i]+"<br>");
+
+
+				txt += "배열데이터[" + i + "]는 " + city[i]+"<br>";
+				console.log(txt);
+				
+			}
+			document.getElementById("han").innerHTML = txt;
+		}
+		// printArr();
+	</script>
+	
+	<div onclick="printArr()">데이터출력</div> <!-- 버튼처럼 사용 -->
+</body>
+</html>
