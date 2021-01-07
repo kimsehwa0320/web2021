@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>toggle_buttonrtt</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<style>
+		html,body{height: 100%;overflow: hidden;/*스크롤 방지*/}
+		
+		.toggleMenu{
+			width: 50px; height: 50px; background: #fff;
+			border: 1px solid #000; position: absolute; right: 0; cursor: pointer;
+		}
+		.toggleMenu div{
+			width: 34px;height: 5px;background: #000;
+			border-radius: 3px; position: absolute;
+			left: 50%; transform: translateX(-50%);
+			transition: 0.3s;
+		}
+
+		.bar1{top: 11px;}
+		.bar2{top: 21px;} 
+		.bar3{top: 31px;}
+
+/*		toggle모양을 x로 변환
+		.toggleMenu:hover .bar1{
+			left: 50%;top: 50%;
+			transform: translate(-50%,-50%) rotate(45deg); 
+		}
+		.toggleMenu:hover .bar2{
+			opacity: 0;
+		}
+		.toggleMenu:hover .bar3{
+			left: 50%;top: 50%;
+			transform: translate(-50%,-50%) rotate(-45deg); 
+		}*/
+
+
+		/*class change jauery 사용*/
+		.toggleMenu.change .bar1{
+			left: 50%;top: 50%;
+			transform: translate(-50%,-50%) rotate(45deg); 
+		}
+		.toggleMenu.change .bar2{
+			opacity: 0;
+		}
+		.toggleMenu.change .bar3{
+			left: 50%;top: 50%;
+			transform: translate(-50%,-50%) rotate(-45deg); 
+		}
+
+
+		.topMenu{
+			width: 100%; background-color: pink;
+			height: 100%; /*html,body->h100p*/
+			position: absolute; top: 0; right: -100%; 
+		} 
+
+	.topNav{
+		width: 300px; height: 300px; 
+		position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+	}
+	.topNav a{
+		display: block; text-align: center; 
+		line-height: 75px; font-size: 2em; font-weight:bold;
+	}
+
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".toggleMenu").click(function(){
+				// console.log($(".toggleMenu").attr("class"));
+
+				var toggle = $(".toggleMenu").attr("class");
+				if( toggle == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$(".topMenu").animate({right:0},300);
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$(".topMenu").animate({right:"-100%"},300);
+				}
+					
+			});	
+				
+		});
+	</script>
+</head>
+<body>
+	<div class="topMenu">
+		<nav class="topNav">
+			<a href="#">HOME</a>
+			<a href="#">NEWS</a>
+			<a href="#">CONTACT</a>
+			<a href="#">PRODUCT</a>
+		</nav>
+	</div>
+
+	<div class="toggleMenu">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</div>
+</body>
+</html>
