@@ -9,40 +9,40 @@
 	<link rel="stylesheet" href="../css/jquery.bxslider.css">
 	<script src="../js/jquery-3.1.1.min.js"></script>
 	<script src="../js/jquery.bxslider.js"></script>
-	
+
 	<style>
 		*{margin: 0;padding: 0;}
 		a:link,a:visited{color: #000; text-decoration : none; }
 		li{list-style:none;}
-		.clearfix:after{content:""; display: block; clear: both; }
+		.clearfix:after{content:""; display-: block; clear: both; }
 
 		html,body{height: 100%;}
 		.visual{text-align: center; font-size:24px; font-weight:bold; }
 		.visual:after{
-			content: ""; display: block; 
+			content: ""; display: block;
 			width: 500px; height: 2px;
 			background-color: #000; margin: 0 auto;
 			margin-bottom: 40px;
 		}
 		.bx-wrapper {
     		-moz-box-shadow: none;
-    		-webkit-box-shadow: none; 
+    		-webkit-box-shadow: none;
     		box-shadow: none;
     		border:  0 none;
     		background: #fff;
-    		margin-bottom: 0; 
+    		margin-bottom: 0;
 			}
-		.sliderWrap{ margin: 0 auto; position: relative;} 
+		.sliderWrap{ margin: 0 auto; position: relative;}
 		.slider img{width: 100%; display: block;}
 
 		.nextBtn{
-			position: absolute; top: 50%; 
-			margin-top: -50px; right: 10px; 
+			position: absolute; top: 50%;
+			margin-top: -50px; right: 10px;
 			cursor: pointer;
 		}
 		.prevBtn{
-			position: absolute; top: 50%; 
-			margin-top: -50px; left: 10px; 
+			position: absolute; top: 50%;
+			margin-top: -50px; left: 10px;
 			cursor: pointer;
 		}
 
@@ -63,24 +63,24 @@
 		}
 
 		.bar1{top: 11px;}
-		.bar2{top: 21px;} 
+		.bar2{top: 21px;}
 		.bar3{top: 31px;}
 
 		.toggleMenu.change .bar1{
 			left: 50%;top: 50%;
-			transform: translate(-50%,-50%) rotate(45deg); 
+			transform: translate(-50%,-50%) rotate(45deg);
 		}
 		.toggleMenu.change .bar2{
 			opacity: 0;
 		}
 		.toggleMenu.change .bar3{
 			left: 50%;top: 50%;
-			transform: translate(-50%,-50%) rotate(-45deg); 
+			transform: translate(-50%,-50%) rotate(-45deg);
 		}
 
 
 
-	@media screen and (min-width: 992px){ 
+	@media screen and (min-width: 992px){
 		.menuWrap{
 			position: fixed; width: 1200PX;
 			left: 50%; transform: translateX(-50%);
@@ -89,16 +89,16 @@
 		.toggleMenu{display: none;}
 	}
 
-	@media screen and (min-width: 557px) and (max-width: 991px){ 
+	@media screen and (min-width: 557px) and (max-width: 991px){
 		.menuWrap{width: 100%;}
 		.toggleMenu{display: none;}
 	}
 
-	@media screen and (max-width: 556px){ 
-		.menuWrap{padding: fixed; width: 100%;top: 0;}
+	@media screen and (max-width: 556px){
+		.menuWrap{position: fixed; width: 100%;top: 0;}  /*수정 */
 		#myTopMenu{
 			position: fixed;
-			width: 100%; height: 100%; 
+			width: 100%; height: 100%;
 			background-color: #fef200;
 			left: -100%;top: 0;
 		}
@@ -116,8 +116,8 @@
 			$(window).resize(function(){
 
 				$(".toggleMenu").removeClass("change");
-				$(".toggleMenu").removeAttr("style");
-			});	
+				$("#myTopMenu").removeAttr("style"); //수정
+			});
 
 			$(".toggleMenu").click(function(){
 
@@ -129,16 +129,33 @@
 					$(".toggleMenu").removeClass("change");
 					$("#myTopMenu").stop().animate({left:"-100%"},300);
 				}
-					
-			});	
-				
+
+			});
+
+
+
+
+			//slider
+			$(".slider").bxSlider({
+						auto:true,
+						mode:"fade",
+						pager:false
+					});
+
 		});
 	</script>
 
 </head>
 
 <body>
-<!-- 	<div class="menuWrap">
+	<style>
+	 .menuWrap{z-index: 99999}   /*첨부 */
+	.slidervisual{z-index: 0} /*첨부 */
+	</style>
+
+
+	<div class="menuWrap">  <!-- 수정 -->
+
 		<h1><strong>logo</strong></h1>
 		<div id="myTopMenu">
 			<nav class="topNav clearfix noFloat">
@@ -154,56 +171,20 @@
 			<div class="bar2"></div>
 			<div class="bar3"></div>
 		</div>
-	</div> -->
+	</div>
 
-<script>
-	$(document).ready(function(){
-
-		var mySlider = $(".slider").bxSlider({
-			auto:true,
-			mode:"fade", 
-			pager:false
-		});
-
-		$(".nextBtn").click(function(){
-			mySlider.goToNextSlide();
-		});
-		$(".prevBtn").click(function(){
-			mySlider.goToPrevSlide();
-		});
-	});
-</script>
-	<div class="slidervisual">
+	<div class="slidervisual">  <!-- 수정 -->
 		<div class="visual">bxslider</div>
 		<div class="sliderWrap">
-			<ul class="slider"> 
-				<li><img src="../images/pc01.jpg" alt=""></li>
-				<li><img src="../images/pc02.jpg" alt=""></li>
-				<li><img src="../images/pc03.jpg" alt=""></li>
+			<ul class="slider">
+				<li><img src="images/pc01.jpg" alt=""></li>
+				<li><img src="images/pc02.jpg" alt=""></li>
+				<li><img src="images/pc03.jpg" alt=""></li>
 			</ul>
-			<div class="nextBtn"><img src="../images/next01.png" alt=""></div> 
-			<div class="prevBtn"><img src="../images/prev01.png" alt=""></div>
 		</div>
 	</div>
 
-	<div class="menuWrap">
 
-		<h1><strong>logo</strong></h1>
-		<div id="myTopMenu">
-			<nav class="topNav clearfix noFloat">
-				<a href="#">HOME</a>
-				<a href="#"><i class="fas fa-calendar-check"></i>NEWS</a>
-				<a href="#"><i class="fas fa-taxi"></i>CONTACCT</a>
-				<a href="#"><i class="fas fa-pen-nib"></i>PRODUCT</a>
-			</nav>
-		</div>
-
-		<div class="toggleMenu">
-			<div class="bar1"></div>
-			<div class="bar2"></div>
-			<div class="bar3"></div>
-		</div>
-	</div>
 
 
 	<div class=container>
@@ -215,8 +196,8 @@
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorum aperiam ex suscipit, animi dicta at fugiat id, voluptatem eligendi vel ipsam ea, beatae dolorem ab ipsa quibusdam, assumenda! Error minima eum, facere consequatur illo doloribus voluptatum quisquam eaque nostrum, odio, repellat corrupti soluta tempore cupiditate sint tenetur inventore maiores alias officia. Voluptatibus voluptates corrupti optio saepe alias nulla libero autem at atque non delectus corporis cupiditate id sit, earum accusantium, eos eaque voluptatem vero? Quo, deleniti minima quia veniam. Debitis ab maxime nam minima vero reprehenderit ipsa natus repudiandae optio ea, autem earum sequi quam! Debitis quasi asperiores, autem. Deleniti dolore magni, autem culpa voluptas pariatur dolores neque earum veniam, maxime eum et perferendis officiis nesciunt voluptatibus iure labore laudantium beatae sint? Inventore debitis laboriosam ut, aliquam itaque enim animi suscipit commodi! Obcaecati repellendus pariatur ratione tenetur sapiente, officiis nam est, molestiae natus in illum quae repudiandae, dolor quod! Dignissimos, cumque amet quia, quasi fugit pariatur quibusdam ullam odit vitae quidem doloribus dolorem, ab voluptates reiciendis. Impedit aliquid, soluta totam eum, aut voluptas. Aliquam recusandae corporis repellendus, ad deleniti consequuntur eos ipsa, porro. Quas quidem deleniti corrupti necessitatibus minus, vel maxime rem qui ad reiciendis quia similique eligendi itaque dolore incidunt maiores. Culpa recusandae temporibus commodi. Itaque sit explicabo placeat asperiores non saepe laboriosam, cum quis blanditiis quae quam in velit aperiam excepturi, repellat doloribus laborum atque commodi laudantium! Tenetur adipisci fuga, necessitatibus asperiores perferendis quod, exercitationem dolore minus facere magni omnis at dolor debitis amet sit, porro cumque, libero voluptatem praesentium inventore atque recusandae delectus?
 		</div>
 		<div id="container3">
-			consectetur debitis optio! Cum, asperiores! At rerum explicabo hic libero cumque voluptates ipsum? Consectetur id omnis mollitia, minima fuga, quis quam in quo veritatis corporis sunt vero vel culpa aliquid unde enim? Non voluptatem, esse placeat dolores dolor nobis, officiis explicabo dolorum doloremque, aut magni atque aperiam eius assumenda officia iure voluptate alias maiores consectetur autem vitae consequuntur error fugit exercitationem, eaque? Eius cupiditate porro ipsa voluptatum animi, voluptate voluptas nesciunt expedita ea pariatur repellat? Similique eum esse et natus quos autem voluptatibus unde quidem modi qui voluptatum, assumenda corporis, officiis maxime pariatur molestias tempora, adipisci vero. Nesciunt excepturi maxime obcaecati possimus reprehenderit, animi adipisci et alias totam veniam, exercitationem voluptate magni iusto id recusandae voluptas a, maiores, voluptatem tempore? Saepe, perspiciatis necessitatibus labore vitae, modi molestias laboriosam fugit! Veritatis excepturi doloribus eos animi necessitatibus ad, consequatur cum et iusto vitae culpa quos praesentium possimus nostrum rerum numquam modi delectus voluptate debitis consectetur expedita. Nulla, ducimus praesentium quia culpa cupiditate sed magni voluptatibus delectus unde, autem necessitatibus eveniet aperiam. Sit odit mollitia iusto perspiciatis! Minus, sint? Numquam impedit excepturi dignissimos! Numquam eaque ipsum deserunt alias incidunt perferendis suscipit hic. Earum aliquid quos sunt, debitis quidem sit quia quasi labore ex illum quibusdam incidunt quas architecto cupiditate voluptatem? 
-			assumenda corporis, officiis maxime pariatur molestias tempora, adipisci vero. Nesciunt excepturi maxime obcaecati possimus reprehenderit, animi adipisci et alias totam veniam, exercitationem voluptate magni iusto id recusandae voluptas a, maiores, voluptatem tempore? Saepe, perspiciatis necessitatibus labore vitae, modi molestias laboriosam fugit! Veritatis excepturi doloribus eos animi necessitatibus ad, consequatur cum et iusto vitae culpa quos praesentium possimus nostrum rerum numquam modi delectus voluptate debitis consectetur expedita. Nulla, ducimus praesentium quia culpa cupiditate sed magni voluptatibus delectus unde, autem necessitatibus eveniet aperiam. Sit odit mollitia iusto perspiciatis! Minus, sint? Numquam impedit excepturi dignissimos! Numquam eaque ipsum deserunt alias incidunt perferendis suscipit hic. Earum aliquid quos sunt, debitis quidem sit quia quasi labore ex illum quibusdam incidunt quas architecto cupiditate voluptatem? 
+			consectetur debitis optio! Cum, asperiores! At rerum explicabo hic libero cumque voluptates ipsum? Consectetur id omnis mollitia, minima fuga, quis quam in quo veritatis corporis sunt vero vel culpa aliquid unde enim? Non voluptatem, esse placeat dolores dolor nobis, officiis explicabo dolorum doloremque, aut magni atque aperiam eius assumenda officia iure voluptate alias maiores consectetur autem vitae consequuntur error fugit exercitationem, eaque? Eius cupiditate porro ipsa voluptatum animi, voluptate voluptas nesciunt expedita ea pariatur repellat? Similique eum esse et natus quos autem voluptatibus unde quidem modi qui voluptatum, assumenda corporis, officiis maxime pariatur molestias tempora, adipisci vero. Nesciunt excepturi maxime obcaecati possimus reprehenderit, animi adipisci et alias totam veniam, exercitationem voluptate magni iusto id recusandae voluptas a, maiores, voluptatem tempore? Saepe, perspiciatis necessitatibus labore vitae, modi molestias laboriosam fugit! Veritatis excepturi doloribus eos animi necessitatibus ad, consequatur cum et iusto vitae culpa quos praesentium possimus nostrum rerum numquam modi delectus voluptate debitis consectetur expedita. Nulla, ducimus praesentium quia culpa cupiditate sed magni voluptatibus delectus unde, autem necessitatibus eveniet aperiam. Sit odit mollitia iusto perspiciatis! Minus, sint? Numquam impedit excepturi dignissimos! Numquam eaque ipsum deserunt alias incidunt perferendis suscipit hic. Earum aliquid quos sunt, debitis quidem sit quia quasi labore ex illum quibusdam incidunt quas architecto cupiditate voluptatem?
+			assumenda corporis, officiis maxime pariatur molestias tempora, adipisci vero. Nesciunt excepturi maxime obcaecati possimus reprehenderit, animi adipisci et alias totam veniam, exercitationem voluptate magni iusto id recusandae voluptas a, maiores, voluptatem tempore? Saepe, perspiciatis necessitatibus labore vitae, modi molestias laboriosam fugit! Veritatis excepturi doloribus eos animi necessitatibus ad, consequatur cum et iusto vitae culpa quos praesentium possimus nostrum rerum numquam modi delectus voluptate debitis consectetur expedita. Nulla, ducimus praesentium quia culpa cupiditate sed magni voluptatibus delectus unde, autem necessitatibus eveniet aperiam. Sit odit mollitia iusto perspiciatis! Minus, sint? Numquam impedit excepturi dignissimos! Numquam eaque ipsum deserunt alias incidunt perferendis suscipit hic. Earum aliquid quos sunt, debitis quidem sit quia quasi labore ex illum quibusdam incidunt quas architecto cupiditate voluptatem?
 		</div>
 	</div>
 
