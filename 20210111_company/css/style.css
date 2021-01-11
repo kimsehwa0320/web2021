@@ -5,15 +5,16 @@ header#main_header{}
 
 /*header top*/
 #header_top{
-	width: 1260px; background: pink; position: fixed;
+	width: 1260px; position: fixed; color: white;
 	left: 50%; transform: translateX(-50%); top: 40px;
 	z-index: 99999;
 }
 
-#header_top>h1{float: left; background: red; height: 50px;}
+#header_top>h1{float: left; height: 50px;}
+#header_top h1 a{color: white;}
 #main_menu{float: right;}
 #main_menu li{float: left; height: 50px;}
-#main_menu li a{display: block; line-height: 50px; padding:0 30px; }
+#main_menu li a{display: block; line-height: 50px; padding:0 30px; color: white; }
 .toggleMenu{display: none;}
 
 
@@ -24,8 +25,47 @@ header#main_header{}
 	position: absolute;width: 500px;
 	left: 50%; margin-left: -250px; top: 30%;
 	text-align: center; color: white; _background: blue;
-
 }
+.sliderWrap .slider_1st .slider_txt1{
+	position: absolute; color: white;
+	top: 25%; left: 120px;letter-spacing: -2px;
+}
+.slider_txt1 h3{font-size:48px; padding: 16px 0;}
+/*.sliderWrap .slider_txt h3:after{
+	content:""; display: block; width: 300px;height: 2px;
+	background: #fff; margin: 0 auto;
+}*/
+
+.slider_txt1 .txt1Btn1{
+	width:150px; line-height:100px; color: white;
+	font-weight:bold; font-size: 14px;
+	text-decoration:underline;
+	padding-right: 15px;
+}
+.slider_txt1 .txt1Btn2{
+	width:150px;line-height:100px;
+	text-align: center; padding: 0 15px;
+	border: 10px solid #fff; background: #fff;
+	border-radius:20px; color: #25262a;
+	font-size: 14px;font-weight:bold;
+}
+/*.slider_txt1 a:hover{background: #000; color: #fff;}*/
+
+.sliderWrap .slider_2st .slider_txt2{
+	position: absolute; color: black;
+	top: 25%; left: 120px; letter-spacing: -2px;
+	letter-spacing: -2px;
+}
+.slider_txt2 h3{font-size:48px; padding: 16px 0; letter-spacing: -5px;}
+.slider_txt2 .txt1Btn3{
+	width:150px;line-height:100px; top: 15px;
+	text-align: center; padding: 0 15px;
+	border: 10px solid #000; background: #000;
+	border-radius:20px; color: #fff;
+	font-size: 14px;font-weight:bold;
+}
+
+
 .sliderWrap li{height: 1005px;background: skyblue;}
 .sliderWrap .slider_1st{
 	background-image: url(../images/mainimg01.jpg);
@@ -40,11 +80,7 @@ header#main_header{}
 	background-size: cover;
 }
 
-.sliderWrap .slider_txt h3{font-size:2em;}
-.sliderWrap .slider_txt h3:after{
-	content:""; display: block; width: 300px;height: 2px;
-	background: #fff; margin: 0 auto;
-}
+
 
 
 .sliderWrap .bx-wrapper {
