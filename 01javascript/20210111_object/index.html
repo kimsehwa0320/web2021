@@ -9,6 +9,11 @@
 	<p id="name"></p>
 	<p id="speedup"></p>
 	<p id="speeddown"></p>
+	<p id="speedPlus"></p>
+	<p id="speedName"></p>
+
+	<p>name[0] 자동차이름 : <span class="name"></span></p>
+	<p>name[1] 자동차이름 : <span class="name"></span></p>
 	<script>
 		var car = ["소나타",100,"white"];
 		// var car1 = new Array("소나타",100,"white");
@@ -25,11 +30,28 @@
 			},
 			speeddown:function(){
 				return this.speed-10;
+			},
+			speedPlus:function(s){
+				return this.speed+s;
+			},
+			speedName:function(s,name){
+				return this.speed+s+name;
 			}
 		}
-		document.getElementById("name").innerHTML = car1.name; 
-		document.getElementById("speedup").innerHTML = car1.speedup();
+		document.getElementById("name").innerHTML = car1.name; //$("#name").html(car.name)
+		document.getElementById("speedup").innerHTML = "속도 업 : "+car1.speedup();
 		document.getElementById("speeddown").innerHTML = car1.speeddown();
+		document.getElementById("speedPlus").innerHTML = car1.speedPlus(20);
+		document.getElementById("speedName").innerHTML = car1.speedName(100,"소나타");
+
+		document.getElementsByClassName("name")[0].innerHTML = car1.name; //$(".name")eq().html(car.name)
+		document.getElementsByClassName("name")[1].innerHTML = car1.name; 
+
+		document.getElementsByTagName("p")[0].innerHTML = car1.name; ////$("p")
+
+
+
+
 	</script>
 	
 </body>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>object</title>
+</head>
+<body>
+	<script>
+		var size = 10; 
+		while(size>0){ 
+			document.write("*");
+			size--; //size = size- 1;
+		}
+
+		document.write("<br>");
+		var sizeup = 0;
+		while(sizeup<10){
+			document.write("*");
+			sizeup++; 
+		}
+
+		document.write("<br>");
+		for(var i=10;1>0;i--){
+			document.write("+");
+		}
+
+		document.write("<br>");
+		for(var z=0;z<10;z++){
+			document.write("+");
+		}
+
+		var plots=[20,5,8,20,15];
+		var plotsLength = plots.length; //5개
+		for(var i=0;i<plotsLength;i++){
+			console.log(i+"값은 "+plots[i]);
+			var size = plots[i];
+			while(size>0){
+				document.write("+");
+				size--;
+			}
+			document.write(plots[i]+"<br>");
+		}		
+
+	</script>
+</body>
+</html>
