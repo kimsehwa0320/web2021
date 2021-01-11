@@ -81,22 +81,15 @@
 	</style>
 	<script>
 		$(document).ready(function(){
-
-			$(window).resize(function(){
-
-				$(".toggleMenu").removeClass("change");
-				$(".toggleMenu").removeAttr("style");
-			});	
-
 			$(".toggleMenu").click(function(){
 
 				var toggle = $(".toggleMenu").attr("class");
 				if( toggle == "toggleMenu"){
 					$(".toggleMenu").addClass("change");
-					$("#myTopMenu").stop().animate({left:0},300);
+					$("#myTopMenu").animate({left:0},300);
 				}else{
 					$(".toggleMenu").removeClass("change");
-					$("#myTopMenu").stop().animate({left:"-100%"},300);
+					$("#myTopMenu").animate({left:"-100%"},300);
 				}
 					
 			});	

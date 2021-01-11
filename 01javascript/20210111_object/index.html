@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>object</title>
+</head>
+<body>
+	<p id="name"></p>
+	<p id="speedup"></p>
+	<p id="speeddown"></p>
+	<script>
+		var car = ["소나타",100,"white"];
+		// var car1 = new Array("소나타",100,"white");
+		var car1 = {
+			name:"volt",
+			speed:200, //car1.speed
+			color:"red", //car1.color
+			start:function(){
+				return this.speed+200;
+				//return car1.speed+200; //car1.start()
+			},
+			speedup:function(){
+				return this.speed+10;
+			},
+			speeddown:function(){
+				return this.speed-10;
+			}
+		}
+		document.getElementById("name").innerHTML = car1.name; 
+		document.getElementById("speedup").innerHTML = car1.speedup();
+		document.getElementById("speeddown").innerHTML = car1.speeddown();
+	</script>
+	
+</body>
+</html>
