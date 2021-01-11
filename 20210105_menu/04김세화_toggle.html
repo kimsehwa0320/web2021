@@ -78,6 +78,40 @@
 			transform: translate(-50%,-50%) rotate(-45deg); 
 		}
 
+	
+	<style>
+		html,body{height: 100%;}
+		.menuWrap{background: #333; position: absolute; height: 50px;}
+		.menuWrap h1{color:white;_background: skyblue;width: 100px; text-align: center;}
+		#myTopMenu{position: absolute; left: 100px; top:0; _padding: 10px; _background: #fff;}
+		#myTopMenu a{display: block; color:white; float: left; padding: 10px;}
+
+		.toggleMenu{
+			width: 50px; height: 50px;top: 0;
+			position: absolute; right: 5px; cursor: pointer;
+		}
+		.toggleMenu div{
+			width: 34px;height: 5px;background: #fff;
+			position: absolute; border-radius: 3px;
+			left: 50%; transform: translateX(-50%);
+			transition: 0.3s;
+		}
+
+		.bar1{top: 11px;}
+		.bar2{top: 21px;} 
+		.bar3{top: 31px;}
+
+		.toggleMenu.change .bar1{
+			left: 50%;top: 50%;
+			transform: translate(-50%,-50%) rotate(45deg); 
+		}
+		.toggleMenu.change .bar2{
+			opacity: 0;
+		}
+		.toggleMenu.change .bar3{
+			left: 50%;top: 50%;
+			transform: translate(-50%,-50%) rotate(-45deg); 
+		}
 
 
 	@media screen and (min-width: 992px){ 
@@ -95,11 +129,19 @@
 	}
 
 	@media screen and (max-width: 556px){ 
+
 		.menuWrap{padding: fixed; width: 100%;top: 0;}
 		#myTopMenu{
 			position: fixed;
 			width: 100%; height: 100%; 
 			background-color: #fef200;
+		}
+
+		.menuWrap{padding: fixed; width: 100%;}
+		#myTopMenu{
+			position: fixed;
+			width: 100%; height: 100%; 
+			background-color: skyblue;
 			left: -100%;top: 0;
 		}
 		.topNav{position: absolute; left: 50%;top: 50%;transform: translate(-50%,-50%);}
@@ -112,7 +154,6 @@
 	</style>
 	<script>
 		$(document).ready(function(){
-
 			$(window).resize(function(){
 
 				$(".toggleMenu").removeClass("change");
@@ -128,6 +169,21 @@
 				}else{
 					$(".toggleMenu").removeClass("change");
 					$("#myTopMenu").stop().animate({left:"-100%"},300);
+			var bWidth = 556;
+			var vWidth = $("body").width();
+			console.log(vwidth);
+
+			
+			$(".toggleMenu").click(function(){
+
+
+				var toggle = $(".toggleMenu").attr("class");
+				if( toggle == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$("#myTopMenu").animate({left:0},300);
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$("#myTopMenu").animate({left:"-100%"},300);
 				}
 					
 			});	
@@ -189,6 +245,7 @@
 	<div class="menuWrap">
 
 		<h1><strong>logo</strong></h1>
+		<h1>logo</h1>
 		<div id="myTopMenu">
 			<nav class="topNav clearfix noFloat">
 				<a href="#">HOME</a>
@@ -204,7 +261,6 @@
 			<div class="bar3"></div>
 		</div>
 	</div>
-
 
 	<div class=container>
 		<div id="container1">
