@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dom</title>
+</head>
+<body>
+	<style>
+		.box{
+			width: 200px; position: relative; _left: 100px;
+
+		}
+		img{width: 100%;}
+	</style>
+	<style>
+		.box1{
+			width: 200px;height: 50px;border: 1px solid #000;
+			border-radius: 25px;text-align: center;line-height:50px;
+			background-color: #fff;
+		}
+		.box1:hover{background-color:skyblue;}
+	</style>
+	<div class="box1" onclick="changeImage('1')">첫번째 배경</div>
+	<div class="box1" onclick="changeImage('2')">두번째 배경</div>
+	<div class="box1" onclick="changeImage('3')">세번째 배경</div>
+	<div class="box1" onclick="bodyColor('#fff')">배경 복구</div>
+	<style>
+		
+	</style>
+	<script>
+		function changeImage(url){
+			var cI = document.getElementsByTagName("body")[0];
+			cI.style.backgroundImage = url;
+		}
+	
+		function bodyColor(color){
+			var bc = document.getElementsByTagName("body")[0];
+			bc.style.backgroundColor = color;
+		}
+
+	</script>
+
+</body>
+</html>
