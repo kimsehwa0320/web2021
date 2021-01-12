@@ -19,7 +19,7 @@ header#main_header{}
 
 
 /*slider*/
-.sliderWrap{height: 105px;}
+.sliderWrap{height: 1005px;}
 /*.sliderWrap li img{width: 100%;}*/
 .sliderWrap .slider_txt{
 	position: absolute;width: 500px;
