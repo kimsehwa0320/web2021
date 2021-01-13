@@ -77,6 +77,30 @@
 			box2[0].addEventListener("mouseover", function(){}); 
 			box2[0].addEventListener("mouseout", function(){}); 
 		</script>
+
+		<!-- 마우스오버7 -->
+		<div class="box3">버튼클릭하면 이벤트객체를 출력</div>
+
+		<p onclick="fun(event)">클릭</p>
+		<div onclick="fun(event)">클릭</div>
+		<button onclick="fun(event)">클릭</button><br>
+		<a href="#" onclick="fun(event)">클릭</a> <!-- 이동 안되는 링크 -->
+		<a href="#" onclick="return false">링크안됨</a> <!-- 이동 안되는 링크 -->
+
+		<script>
+			function fun(event){
+				console.log(event.type); //콘솔창에 이벤트 이름 출력(click)
+				var txt = "type : " + event.type + "<br>";
+				txt += "target : " + event.target + "<br>";
+
+
+				var box3 = document.getElementsByClassName("box3")[0]; //box3문장에 type : click 출력
+				box3.innerHTML = txt;
+
+				event.preventDefault();
+
+			}
+		</script>
 </body>
 
 </html>
