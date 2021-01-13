@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dom</title>
+	<style>
+		.box{width: 200px;position: relative;left: 0; transition: 0.3s}
+		.box img{width: 100%;}
+	</style>
+</head>
+<body>
+	<p id="firstP" style="background-color: yellow;color: blue;" onclick="this.style.color='black'">
+		이것은 <span style="color: red;">문장입니다.</span>
+	</p>
+	<button onclick="change()">스타일수정</button>
+	<button onclick="change1()">스타일다시</button>
+	<div class="box">
+		<img src="../images/testimg.jpg" alt="">
+	</div>
+	<button onclick="move(100)">+100</button>
+	<button onclick="move(0)">0</button>
+	<button onclick="bc('#f00')">bgColor</button>
+	<button onclick="bodyColor('pink')">bodyColor</button>
+	<script>
+		var p = document.getElementById("firstP");
+		var txt ="p.id는 " + p.id + "\n";
+		txt +="p.tagName은 " + p.tagName + "\n";
+		console.log(txt)
+
+		function change(){
+			var tP = document.getElementById("firstP");
+			tP.style.color = "green";
+			tP.style.fontSize = "30px";
+		}
+
+		function change1(){
+			var tagP = document.getElementById("firstP");
+			tagP.style.color = "pink";
+			tagP.style.fontSize = "30px";
+		}	
+
+		function move100(){
+			var box = document.getElementsByClassName("box")[0];
+			box.style.left = "100px"
+
+		}
+		function move(left){
+			var box = document.getElementsByClassName("box")[0];
+			box.style.left = left + "px";
+		}
+		
+		function bc(color){
+			var bg = document.getElementsByTagName("body")[0];
+			bg.style.backgroundColor = color;
+		}
+
+		function bodyColor(color){
+			var bc = document.getElementsByTagName("body")[0];
+			bc.style.backgroundColor = color;
+		}
+
+	</script>
+			
+
+</body>
+</html>

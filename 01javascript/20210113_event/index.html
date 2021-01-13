@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>event</title>
+</head>
+	<script>
+		function init(){
+			var p = document.getElementById("p")
+			p.onmouseover = over; 
+			p.onmouseout = out;
+		}
+
+		function over(){
+			p.style.backgroundColor = "red";
+		}
+		function out(){
+			p.style.backgroundColor = "white";
+		}
+	</script>
+<body onload="init()">
+	<!-- 마우스오버 1 -->
+	<p onmouseover="this.style.backgroundColor='orchid'" onmouseout="this.style.backgroundColor='white'">마우스오버</p>
+
+	<!-- 마우스오버 2 -->
+<!-- 	<p id="p">
+		마우스오버 
+		</p>
+-->
+
+	<!-- 마우스오버 3 init	 -->
+		<p id="p">
+		마우스오버 
+		</p>
+
+	<!-- 마우스오버 4	 -->
+		<div class="box">
+		마우스오버 
+		</div>
+
+		<script>
+			var box = document.getElementsByClassName("box");
+			box[0].addEventListener("mouseover", bover); 
+			box[0].addEventListener("mouseout", bout); 
+
+			function bover(){
+				box[0].style.backgroundColor="blue";
+			}
+			function bout(){
+				box[0].style.backgroundColor="white";
+			}
+		</script>
+
+	<!-- 마우스오버 5 -->
+		<div class="box1">
+			프로퍼티로 이벤트 무명함수등록
+		</div>
+		<script>
+			var box1 = document.getElementsByClassName("box1");
+
+			box1[0].onmouseover = function(){
+				box1[0].style.fontSize="2em";
+			} //무명함수로 등록
+			box1[0].onmouseout = function(){
+				box1[0].style.fontSize="1em"
+			} //무명함수로 등록
+		</script>
+
+		<!-- 마우스오버 6 -->
+		<div class="box2">
+			이벤트 메소드를 활용한 무명함수등록
+		</div>
+		<script>
+			var box2 = document.getElementsByClassName("box2");
+
+			box2[0].addEventListener("mouseover", function(){}); 
+			box2[0].addEventListener("mouseout", function(){}); 
+		</script>
+</body>
+
+</html>
