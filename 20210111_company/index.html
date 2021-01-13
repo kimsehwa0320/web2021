@@ -12,14 +12,25 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function(){
-			$(".slider").bxSlider();
-
-			$(".slider1st").bxSlider({
-				controls:false,
-				pager:false
+			
+			var slider = $(".slider").bxSlider({controls:false});
+			$(".pBtn").click(function(){
+				slider.goToPrevSlide()
+			});
+			$(".nBtn").click(function(){
+				slider.goToNextSlide()
 			});
 
-		});
+
+			var slider1 = $(".slider1st").bxSlider({controls:false, pager:false});
+			$(".prevBtn").click(function(){
+				slider1.goToPrevSlide()
+			});
+			$(".nextBtn").click(function(){
+				slider1.goToNextSlide()
+			});
+
+			});
 	</script>
 </head>
 <body>
@@ -62,7 +73,7 @@
 					</div>
 				</li>
 				<li class="slider_3st">
-					<!-- <img src="images/mainimg02.jpg" alt=""> -->
+					<img src="images/mainimg03.jpg" alt="">
 					<div class="slider_txt3">
 						<h3>Lorem, ipsum dolor sit.</h3>
 						<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Impedit, voluptatibus.</p>
@@ -76,6 +87,26 @@
 					</div>
 				</li>	
 			</ul>
+			<div class="btn clearfix">
+				<img src="images/prev_btn.png" alt="" class="pBtn">
+				<img src="images/next_btn.png" alt="" class="nBtn">
+			</div>
+<!-- 			<div class="sliderControls">
+				<ul class="wrapControls clearfix">
+					<li>
+						<a href="#">First Look 2021</a>
+					</li>
+					<li>
+						<a href="#">First Look 2021</a>
+					</li>
+					<li>
+						<a href="#">First Look 2021</a>
+					</li>
+					<li>
+						<a href="#">First Look 2021</a>
+					</li>
+				</ul>
+			</div> -->
 		</div>
 		<div class="content">
 			<!-- ul.clearfix>li.ct$st*11 -->
