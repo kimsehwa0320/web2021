@@ -10,12 +10,15 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 }
 
 #header_top>h1{float: left; height: 80px;}
-#header_top>h1>a{float: left; padding: 15px; }
-#header_top>h1>a>img{width: 150px;}
+#header_top>h1>a{float: left; padding: 15px 120px; }
+#header_top>h1>a>img{width: 140px;}
 
-#main_menu{float: right;}
-#main_menu li{float: left; height: 80px;}
-#main_menu li a{display: block; line-height: 80px; padding:0 30px; font-weight:bold; font-size:14px; }
+#main_menu{float: right; padding-right: 110px;}
+#main_menu li{float: left; height: 80px; }
+#main_menu li a{
+	display: block; line-height: 80px; 
+	padding:0 30px; font-weight:bold; font-size:14px; 
+}
 .toggleMenu{display: none;}
 
 
@@ -29,7 +32,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 }
 .sliderWrap .slider_1st .slider_txt1{
 	position: absolute; color: white;
-	top: 25%; left: 120px;
+	top: 30%; left: 140px;
 }
 .slider_txt1 h3{font-size:48px; padding: 16px 0;}
 /*.sliderWrap .slider_txt h3:after{
@@ -48,7 +51,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 	text-align: center; padding: 10px 20px;
 	border: 1px solid #fff; background: #fff;
 	border-radius:20px; color: #25262a;
-	font-size: 14px;font-weight:bold;
+	font-size: 12px;font-weight:bold;
 }
 .slider_txt1 .txt1Btn2:hover{background-color:#000; border: 1px solid #000; color: #fff;}
 .slider_txt2 .txt1Btn3:hover{background-color:#fff; border: 3px solid #000; color: #000;}
@@ -57,7 +60,6 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .sliderWrap .slider_2st .slider_txt2{
 	position: absolute; color: black;
 	top: 25%; left: 120px; 
-	letter-spacing: -2px;
 }
 .slider_txt2 h3{font-size:48px; padding: 16px 0; letter-spacing: -5px;}
 .slider_txt2 .txt1Btn3{
@@ -65,7 +67,25 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 	text-align: center; padding: 10px 20px;
 	border: 1px solid #000; background: #000;
 	border-radius:20px; color: #fff;
-	font-size: 14px;font-weight:bold;
+	font-size: 12px;font-weight:bold;
+}
+
+/*.sliderWrap .slider_3st .slider_txt3{
+	position: absolute; color: black;
+}*/
+.slider_txt3 h3{
+	position: absolute;font-size:82px; 
+	top: 140px; font-weight:bold; left: 120px;}
+.slider_txt3 p{
+	font-size:58px; right: 170px; top: 310px;
+	font-weight:bold; position: absolute;}
+.slider_txt3 .txt1Btn4{
+	right: 645px; top: 415px;
+	position: absolute;
+	text-align: center; padding: 10px 20px;
+	border: 1px solid #000; background: #000;
+	border-radius:20px; color: #fff;
+	font-size: 12px;font-weight:bold;
 }
 
 
@@ -78,6 +98,12 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 }
 .sliderWrap .slider_2st{
 	background-image: url(../images/mainimg02.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.sliderWrap .slider_3st{
+	background-image: url(../images/mainimg03.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
