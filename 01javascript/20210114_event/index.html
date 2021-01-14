@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EVENT</title>
+	<style>
+		html,body{height: 100%;}
+		*{margin: 0;padding: 0;}
+	</style>
+</head>
+<body>
+	<!-- x, y 좌표 구하기 - client(브라우저)-->
+	<h2 onclick="mouse(event)" style="background:skyblue">
+	Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis ipsum excepturi, ex quos repellat porro! Consectetur, aperiam nihil reprehenderit eaque labore sequi inventore quasi sit dolore ut, quo accusantium, tempore.
+	</h2>
+	<!-- x, y 좌표 구하기 - offset -->
+	<h2 onclick="offm(event)" style="border: 1px solid #000; width:300px; height: 400px; margin-left: 50px;" >
+	Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae laborum voluptatem laudantium minus error nisi reiciendis molestias eos? Illo ratione odio libero officia explicabo inventore, ea laboriosam obcaecati modi rem?
+	</h2>
+	<p id="event"></p>
+	<script>
+		function mouse(e){ //인자 값인 event의 이벤트값을 받아서 e에 넣어줌
+			var x = e.clientX;
+			var y = e.clientY;
+			console.log("x값 : " + x + " Y값 : " + y);
+
+			// 방법1
+			var print = "x값 : " + x + " Y값 : " + y
+			document.getElementById("event").innerHTML = print;
+
+			//document.getElementById("event").innerHTML = "x값 : " + x + " Y값 : " + y; 방법2
+		}
+
+		function offm(e){
+			var x = e.offsetX;
+			var y = e.offsetY;
+			var print = "x offset 값 : " + x + " Y offset 값 : " + y
+			document.getElementById("event").innerHTML = print;
+		}
+	</script>
+</body>
+</html>
