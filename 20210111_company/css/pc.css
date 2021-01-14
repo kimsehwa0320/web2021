@@ -5,16 +5,17 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 
 /*header top*/
 #header_top{
-	width: 1260px; position: fixed; color: white;
-	left: 50%; transform: translateX(-50%); top: 40px;
-	z-index: 99999;
+	width: 100%; position: fixed; background: #fff;
+	left: 50%; transform: translateX(-50%); z-index: 99999;
 }
 
-#header_top>h1{float: left; height: 50px;}
-#header_top h1 a{color: white;}
+#header_top>h1{float: left; height: 80px;}
+#header_top>h1>a{float: left; padding: 15px; }
+#header_top>h1>a>img{width: 150px;}
+
 #main_menu{float: right;}
-#main_menu li{float: left; height: 50px;}
-#main_menu li a{display: block; line-height: 50px; padding:0 30px; color: white; }
+#main_menu li{float: left; height: 80px;}
+#main_menu li a{display: block; line-height: 80px; padding:0 30px; font-weight:bold; font-size:14px; }
 .toggleMenu{display: none;}
 
 
@@ -28,7 +29,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 }
 .sliderWrap .slider_1st .slider_txt1{
 	position: absolute; color: white;
-	top: 25%; left: 120px;letter-spacing: -2px;
+	top: 25%; left: 120px;
 }
 .slider_txt1 h3{font-size:48px; padding: 16px 0;}
 /*.sliderWrap .slider_txt h3:after{
@@ -55,7 +56,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 
 .sliderWrap .slider_2st .slider_txt2{
 	position: absolute; color: black;
-	top: 25%; left: 120px; letter-spacing: -2px;
+	top: 25%; left: 120px; 
 	letter-spacing: -2px;
 }
 .slider_txt2 h3{font-size:48px; padding: 16px 0; letter-spacing: -5px;}
