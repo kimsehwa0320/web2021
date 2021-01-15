@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>mousemove</title>
+</head>
+<body>
+	<img src="../images/testimg.jpg" alt="" onmousemove="where(e)">
+	<div id="div"></div> <!-- 타겟설정 -->
+	<script>
+		function where(e){
+			var txt = "버튼 = "+ e.button = "<br>";
+			txt += "이미지 안 좌표 offset X : = " + e.offsetX + ", 이미지 안 좌표 offset Y : = " + e.offsetY + "<br>";
+			document.getElementById("div").innerHTML = txr;
+		}
+	</script>
+</body>
+</html>

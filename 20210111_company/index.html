@@ -40,7 +40,26 @@
 				slider1.goToNextSlide()
 			});
 
+
+			$(".toggleMenu").click(function(){
+				var toggle = $(".toggleMenu").attr("class"); //get
+				console.log(toggle); // toggleMenu 찍힘
+				if(toggle == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$("#main_menu").stop().animate({left:0},300);
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$("#main_menu").stop().animate({left:"-100%"},300);
+				}
+
 			});
+
+			$(window).resize(function(){
+				$(".toggleMenu").removeClass("change");
+				$("#main_menu").removeAttr("style");
+			});
+
+		});
 	</script>
 </head>
 <body>

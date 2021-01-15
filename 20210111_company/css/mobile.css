@@ -1,22 +1,44 @@
 @charset "utf-8";
 
-
+html,body{height: 100%;} /*mobile에서 필수*/
 header#main_header{}
 
 
 /*header top*/
 #header_top{
-	width: 100%;
+	width: 100%; height: 80px;
 	position: fixed; color: white;
-	top: 0;z-index: 1;
+	top: 0;z-index: 999999; background: #fff;
 }
 
-#header_top>h1{float: left; height: 50px;}
-#header_top h1 a{color: white;}
-#main_menu{float: right;}
-#main_menu li{float: left; height: 50px;}
-#main_menu li a{display: block; line-height: 50px; padding:0 30px; color: white; }
-.toggleMenu{display: none;}
+#header_top>h1{float: left; height: 50px; margin-top: 10px;line-height:50px;}
+#main_menu{
+	background: #000; position: fixed; top: 0; left: -100%;
+	width: 100%; height: 100%; 
+
+}
+#main_menu ul{
+	background: #000; position: absolute;top: 50%;
+	transform: translateY(-50%);width: 100%;
+}
+#main_menu li{float: none; height: 50px;}
+#main_menu li a{display: block; line-height: 50px;color: white; text-align: center; }
+.toggleMenu{
+	display: block; width: 80px;height: 80px;
+	position: absolute;
+	top: 5px;right: 0; cursor: pointer; 
+}
+.toggleMenu div{
+	width: 35px; height: 5px; background-color: black;
+	border-radius: 20px; position: absolute;
+}
+.toggleMenu .bar1{top:24px;}
+.toggleMenu .bar2{top:34px;}
+.toggleMenu .bar3{top:44px;}
+
+.toggleMenu.change .bar1{transform:rotate(-45deg);top:18px;background:white;}
+.toggleMenu.change .bar2{opacity:0;}
+.toggleMenu.change .bar3{transform:rotate(45deg);top:18px;background:white}
 
 
 /*slider*/
