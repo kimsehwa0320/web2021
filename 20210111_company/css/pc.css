@@ -31,7 +31,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 	text-align: center; color: white; _background: blue;
 }
 .sliderWrap .slider_1st .slider_txt1{
-	position: absolute; color: white;
+	position: absolute; color: white; 
 	top: 30%; left: 140px;
 }
 .slider_txt1 h3{font-size:48px; padding: 16px 0;}

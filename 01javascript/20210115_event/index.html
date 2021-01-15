@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EVENT</title>
+</head>
+<style>
+	html,body{height: 500px;}
+</style>
+<body>
+	<!-- 계산식 -->
+	<script>
+		//var han = document.getElementById("han");
+		//han.innerHTML = "반갑습니다."
+
+		function calculate(){
+			var exp = document.getElementById("exp");
+			var result = document.getElementById("result");
+			console.log(eval(exp.value));
+
+			result.value = (eval(exp.value));
+		}
+	</script>
+	<h3 id="han">안녕하세요</h3>
+
+	<form>
+		<label for="exp">식 : </label>
+		<input type="text" id="exp" value="" name="cal">
+		<input type="text" id="result">
+		<input type="button" value="계산" onclick="calculate()">
+	</form>
+
+	<!-- font-size wheelDelta -->
+	<div id="txt">김세화</div>
+	<!-- image-size wheelDelta -->
+	<img src="../images/testimg.jpg" alt="" id="img">
+	<!-- wheelDelta -->
+	<script>
+		//var allBody = document.getElementByTagName("body")[0];
+		//allBody.onwheel = function(){};
+
+		var width = 10;
+		document.body.onwheel = function(e){
+			console.log(e.wheelDelta);
+			if(e.wheelDelta<0){ //아래로 내릴 때
+				width--; //width = width-1;
+				if(width<0){ //0에서 멈춤
+					width=0;
+				}
+			}else{
+				width++; //width = width+1;
+				if(width>20){ //20에서 멈춤
+					width=20;
+				}
+			}
+			console.log(width);
+
+			//font-size wheelDelta
+			document.getElementById("txt").style.fontSize = width + "em";
+
+			//image-size wheelDelta
+			document.getElementsByTagName("img")[0].style.width = (width*100) + "px";
+		}
+	</script>
+</body>
+</html>
