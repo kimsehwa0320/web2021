@@ -8,6 +8,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="../css/all.css">
 	<link rel="stylesheet" href="../css/animate.css">
@@ -23,21 +24,21 @@
 	<script>
 		$(document).ready(function(){
 			
-			var slider = $(".slider").bxSlider({controls:false});
+			var slider1 = $(".slider").bxSlider({controls:false});
 			$(".pBtn").click(function(){
-				slider.goToPrevSlide()
-			});
-			$(".nBtn").click(function(){
-				slider.goToNextSlide()
-			});
-
-
-			var slider1 = $(".slider1st").bxSlider({controls:false, pager:false});
-			$(".prevBtn").click(function(){
 				slider1.goToPrevSlide()
 			});
-			$(".nextBtn").click(function(){
+			$(".nBtn").click(function(){
 				slider1.goToNextSlide()
+			});
+
+
+			var slider2 = $(".slider1st").bxSlider({controls:false, pager:false});
+			$(".prevBtn").click(function(){
+				slider2.goToPrevSlide()
+			});
+			$(".nextBtn").click(function(){
+				slider2.goToNextSlide()
 			});
 
 
@@ -84,6 +85,14 @@
 		</div>
 		<div class="sliderWrap">
 			<ul class="slider">
+				<li class="slider_4st">
+					<video src="images/video.webm" width="1800" height="1005" autoplay muted playsinline loop></video>
+					<div class="slider_txt4">
+						<h3>Galaxy S21 Ultra 5G<br>사전판매</h3>
+						<a href="#" class="txt1Btn1">더 알아보기</a>
+						<a href="#" class="txt1Btn2">사전 구매하기</a> 
+					</div>
+				</li>
 				<li class="slider_1st"> <!-- bxslider por 자동으로 됨 -->
 					<div class="slider_txt1">
 						<h3>The First Look 2021</h3>
@@ -94,23 +103,18 @@
 				</li>
 				<li class="slider_2st">
 					<div class="slider_txt2">
-						<h3>당신의 모든 순간을</br>빛나고 특별하게</h3>
-						<p>Galaxy Unpacked | 2021년1월15일 00시</br>삼성닷컴에서 생방송으로 만나보세요</p>
-						<a href="#" class="txt1Btn3">사전판매 알림신청</a> 
+						<h3>Galaxy Buds Pro 런칭</h3>
+						<p>삼성닷컴 단독! 애니콜 스페셜 커버와</br>특별한 혜택을만나보세요</p>
+						<a href="#" class="txt1Btn3">구매 혜택 보기</a> 
 					</div>
 				</li>
 				<li class="slider_3st">
 					<div class="slider_txt3">
-						<h3 class="wow flipInX" style="color: white;"><strong>Better Normal</br>for All</strong></h3>
-						<p>Samsung @ CES 2021</p>
+						<div class="font1">
+							<h3 class="wow flipInX" style="color: white;"><strong>Better Normal</br>for All</strong></h3>
+							<p>Samsung@CES 2021</p>
+						</div>
 						<a href="#" class="txt1Btn4">더 알아보기</a> 
-					</div>
-				</li>
-				<li class="slider_4st">
-					<!-- <img src="images/mainimg02.jpg" alt=""> -->
-					<div class="slider_txt4">
-						<h3>Lorem, ipsum dolor sit.</h3>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Impedit, voluptatibus.</p>
 					</div>
 				</li>	
 			</ul>

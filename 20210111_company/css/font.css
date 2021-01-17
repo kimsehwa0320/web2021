@@ -1,0 +1,6 @@
+@font-face{
+	src : url("../fonts/Retroica.ttf");
+	font-family: "Retroica";
+}
+
+.slider_3st .slider_txt3 .font1{font-family: "Retroica";}

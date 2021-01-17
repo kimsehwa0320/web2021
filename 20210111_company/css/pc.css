@@ -23,15 +23,15 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 
 
 /*slider*/
-.sliderWrap{height: 690px; _position: relative;}
+.sliderWrap{height: 690px; position: relative;}
 /*.sliderWrap li img{width: 100%;}*/
-.sliderWrap .slider_txt{
-	position: absolute;width: 500px;
-	left: 50%; margin-left: -250px; top: 30%;
-	text-align: center; color: white; _background: blue;
-}
+
 .sliderWrap .slider_1st .slider_txt1{
 	position: absolute; color: white; 
+	top: 30%; left: 140px; z-index: 5;
+}
+.sliderWrap .slider_4st .slider_txt4{
+	position: absolute; color: black; 
 	top: 30%; left: 140px;
 }
 .slider_txt1 h3{font-size:48px; padding: 16px 0;}
@@ -39,29 +39,36 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 	content:""; display: block; width: 300px;height: 2px;
 	background: #fff; margin: 0 auto;
 }*/
+.slider_txt4 h3{font-size:48px; padding: 16px 0; font-weight: 900;}
 
-.slider_txt1 .txt1Btn1{
-	width:150px; line-height:100px; color: white;
+.slider_txt1 .txt1Btn1{color: white;}
+.slider_txt1 .txt1Btn2{color: #25262a;border: 1px solid #fff; background: #fff; }
+
+.slider_txt4 .txt1Btn1{color: black;}
+.slider_txt4 .txt1Btn2{color: white;border: 1px solid #000; background: #000;}
+
+.slider_txt1 .txt1Btn1,.slider_txt4 .txt1Btn1{
+	width:150px; line-height:100px;
 	font-weight:bold; font-size: 14px;
 	text-decoration:underline;
 	padding-right: 15px;
 }
-.slider_txt1 .txt1Btn2{
+.slider_txt1 .txt1Btn2,.slider_txt4 .txt1Btn2{
 	width:150px;line-height:100px;
-	text-align: center; padding: 10px 20px;
-	border: 1px solid #fff; background: #fff;
-	border-radius:20px; color: #25262a;
+	text-align: center; padding: 10px 20px; 
+	border-radius:20px; 
 	font-size: 12px;font-weight:bold;
 }
 .slider_txt1 .txt1Btn2:hover{background-color:#000; border: 1px solid #000; color: #fff;}
-.slider_txt2 .txt1Btn3:hover{background-color:#fff; border: 3px solid #000; color: #000;}
+.slider_txt2 .txt1Btn3,
+.slider_txt4 .txt1Btn2:hover{background-color:#fff; border: 3px solid #000; color: #000;}
 
 
 .sliderWrap .slider_2st .slider_txt2{
 	position: absolute; color: black;
 	top: 25%; left: 120px; 
 }
-.slider_txt2 h3{font-size:48px; padding: 16px 0; letter-spacing: -5px;}
+.slider_txt2 h3{font-size:48px; padding: 16px 0; font-weight: 900; }
 .slider_txt2 .txt1Btn3{
 	width:150px;line-height:100px; top: 15px;
 	text-align: center; padding: 10px 20px;
@@ -107,6 +114,18 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+.sliderWrap .slider_4st,
+.sliderWrap .slider_4st video{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.sliderWrap .slider_4st video{
+	position: absolute;
+	left: 50%; transform: translateX(-50%);
+	top: -65px;
 }
 
 .sliderWrap .bx-wrapper {
@@ -203,9 +222,8 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .content .ct3st .btn img{width: 38px; height: 38px;float: left; cursor:pointer;	} /*화살표붙임*/
 
 
-.sliderWrap .slider .nBtn{position: absolute;right: 0;top: 50%; } 
-.sliderWrap .slider .pBtn{position: absolute;left: 0;top: 50%;} 
-
+.nBtn{position: absolute; top: 345px; right: 10px; cursor: pointer;}
+.pBtn{position: absolute; top: 345px; left: 10px; cursor: pointer;}
 
 .bx-wrapper .bx-pager.bx-default-pager a{
     background: #666;
