@@ -34,12 +34,13 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 	position: absolute; color: black; 
 	top: 30%; left: 140px;
 }
+.slider h3{font-weight: bold;letter-spacing: -2px}
 .slider_txt1 h3{font-size:48px; padding: 16px 0;}
 /*.sliderWrap .slider_txt h3:after{
 	content:""; display: block; width: 300px;height: 2px;
 	background: #fff; margin: 0 auto;
 }*/
-.slider_txt4 h3{font-size:48px; padding: 16px 0; font-weight: 900;}
+.slider_txt4 h3{font-size:48px; padding: 16px 0;}
 
 .slider_txt1 .txt1Btn1{color: white;}
 .slider_txt1 .txt1Btn2{color: #25262a;border: 1px solid #fff; background: #fff; }
@@ -68,7 +69,8 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 	position: absolute; color: black;
 	top: 25%; left: 120px; 
 }
-.slider_txt2 h3{font-size:48px; padding: 16px 0; font-weight: 900; }
+.slider_txt2 h3{font-size:48px; padding: 16px 0; }
+.slider_txt2 p{letter-spacing: -1px }
 .slider_txt2 .txt1Btn3{
 	width:150px;line-height:100px; top: 15px;
 	text-align: center; padding: 10px 20px;
@@ -82,7 +84,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 }*/
 .slider_txt3 h3{
 	position: absolute;font-size:82px; 
-	top: 140px; font-weight:bold; left: 120px;}
+	top: 140px; left: 120px;}
 .slider_txt3 p{
 	font-size:58px; right: 170px; top: 310px;
 	font-weight:bold; position: absolute;}
@@ -125,7 +127,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .sliderWrap .slider_4st video{
 	position: absolute;
 	left: 50%; transform: translateX(-50%);
-	top: -65px;
+	top: -105px;
 }
 
 .sliderWrap .bx-wrapper {
@@ -184,28 +186,57 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 {display: block; width: 100px; margin: 0 auto; margin-bottom: 5px;}
 
 /*ct6st, ct7st, ct8st, ct11st txt*/
-.content div.txt{position: absolute; top: 40px; left: 20px; }
-.content div.txt h3:after{
+.content div.txt6{position: absolute; top: 50%; transform: translateY(-50%); left: 20px;}
+.content div.txt6 h3:after{
 	content: ""; display: block; 
 	width: 50px; height: 2px; 
-	background-color: #fff; margin: 20px 0;
+	background-color: #fff; margin: 10px 0;
 }
-.content div.txt p{font-size:2em;}
+.content div.txt6 p{font-size:1em;}
 
 /*modal layer*/
-.content .ct2st .bgImg{transition: 0.3s;} /*li X img O : 이미지 값 변동*/
-.content .ct2st:hover .bgImg{transform: scale(1.2);}
-.content .ct2st .play{
+.content .ct2st .bgImg,.content .ct6st .bgImg{transition: 0.3s;} /*li X img O : 이미지 값 변동*/
+.content .ct2st:hover .bgImg,
+.content .ct6st:hover .bgImg{transform: scale(1.2);}
+.content .ct2st .play,
+.content .ct6st .play{
 	position: absolute; left: 50%; top: 50%; 
-	transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%); width: 80px;
 }
 
 /*news bxslider*/
 .content .ct3st{}
-.content .ct3st h2{position: absolute; top: 40px;left: 40px;} /*txt와 동일*/
+.content .ct3st h3{position: absolute; top: 40px;left: 105px;} /*txt와 동일*/
+.content .ct3st h3:after{
+	content: ""; display: block; 
+	width: 110px; height: 2px; 
+	background-color: #000; margin: 15px 0; 
+}
+.content .ct3st .left p{padding-top: 10px;}
+.content .ct3st .left .leftBtn1{
+	top: 201px;left: 40px; 
+	position: absolute; text-align: center;
+	text-align: center; padding: 5px 35px;
+	border: 1px solid #000; background: #fff;
+	border-radius:40px; color: #000;
+	font-size: 10px;font-weight:bold;
+}
+.content .ct3st .left .leftBtn2{
+	top: 200px;left: 160px;
+	position: absolute;
+	text-align: center; padding: 10px 20px;
+	border: 1px solid #000; background: #000;
+	border-radius:20px; color: #fff;
+	font-size: 14px;font-weight:bold;
+}
+
+
 .content .sliderWrap{width: 630px; height: 315px;}
 .content .sliderWrap li.news{width: 630px; height: 315px;}
-.content .sliderWrap .left{float: left; width: 315px;height: 315px; padding: 80px 40px; position: relative;}
+.content .sliderWrap .left{
+	float: left; width: 315px;height: 315px; text-align: center;
+	padding: 100px 40px; position: relative; letter-spacing: -1px;
+}
 .content .sliderWrap .left:after{
 	content: "";display: block;
 	border-width:30px;

@@ -60,6 +60,16 @@
 				$("#main_menu").removeAttr("style");
 			});
 
+			$(".modal").colorbox({
+				rel:"modal" //modal을 묶어줘라 라는 뜻 사진에 옵션을 추가해서 화살표넘기면 사진 넘어감
+			});
+
+			$(".youtube").colorbox({
+				iframe:true,
+				innerWidth:560,
+				innerHeight:315
+			});
+
 		});
 	</script>
 </head>
@@ -86,7 +96,7 @@
 		<div class="sliderWrap">
 			<ul class="slider">
 				<li class="slider_4st">
-					<video src="images/video.webm" width="1800" height="1005" autoplay muted playsinline loop></video>
+					<video src="images/video.webm" width="1520" height="1005" autoplay muted playsinline loop></video>
 					<div class="slider_txt4">
 						<h3>Galaxy S21 Ultra 5G<br>사전판매</h3>
 						<a href="#" class="txt1Btn1">더 알아보기</a>
@@ -104,7 +114,7 @@
 				<li class="slider_2st">
 					<div class="slider_txt2">
 						<h3>Galaxy Buds Pro 런칭</h3>
-						<p>삼성닷컴 단독! 애니콜 스페셜 커버와</br>특별한 혜택을만나보세요</p>
+						<p>삼성닷컴 단독! 애니콜 스페셜 커버와</br>특별한 혜택을 만나보세요</p>
 						<a href="#" class="txt1Btn3">구매 혜택 보기</a> 
 					</div>
 				</li>
@@ -158,28 +168,43 @@
 					<div class="sliderWrap">
 						<ul class="slider1st">
 							<li class="news clearfix">
-								<div class="left">Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Facilis, veniam!
+								<div class="left">
+									<h4>갤럭시 S21 5G 자급제</h4>
+									<p style="font-size:12px;">SM-G991NZIEKOO</p>
+									<p style="font-size:14px;">회원가  999,900 원</p>
+									<a href="#" class="leftBtn1">트레이드인<br>신청하기</a> 
+									<a href="#" class="leftBtn2">사전 구매하기</a>
 								</div>
 								<div class="right">
-									<img src="images/img01_02.jpg" alt="img">
+									<img src="images/img01_02_01.jpg" alt="img">
 								</div>
 							</li>
 							<li class="news clearfix">
-								<div class="left">Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Facilis, veniam!
+								<div class="left">
+									<h4>갤럭시 S21+ 5G 자급제</h4>
+									<p style="font-size:12px;">SM-G996NZVEKOO</p>
+									<p style="font-size:14px;">회원가  1,199,000 원</p>
+									<a href="#" class="leftBtn1">트레이드인<br>신청하기</a> 
+									<a href="#" class="leftBtn2">사전 구매하기</a>
 								</div>
 								<div class="right">
-									<img src="images/img01_02.jpg" alt="img">
+									<img src="images/img01_02_02.jpg" alt="img">
 								</div>
 							</li>
 							<li class="news clearfix">
-								<div class="left">Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Facilis, veniam!
+								<div class="left">
+									<h4>갤럭시 버즈 프로</h4>
+									<p style="font-size:12px;">SM-R190NZVAKOO</p>
+									<p style="font-size:14px;">회원가  239,800 원</p>
+									<a href="#" class="leftBtn1">트레이드인<br>신청하기</a> 
+									<a href="#" class="leftBtn2">사전 구매하기</a> 
 								</div>
 								<div class="right">
-									<img src="images/img01_02.jpg" alt="img">
+									<img src="images/img01_02_03.jpg" alt="img">
 								</div>
 							</li>
 						</ul>
-						<h2>뉴스</h2>
+						<h3>새로운 갤럭시</h3>
 						<div class="btn clearfix">
 							<img src="images/btn01_01.jpg" alt="" class="prevBtn">
 							<img src="images/btn01_02.jpg" alt="" class="nextBtn">
@@ -199,12 +224,12 @@
 					</a>
 				</li>
 				<li class="ct6st">
-					<a href="#">
-						<img src="images/img01_03.jpg" alt="">
-						<div class="txt">
-							<h3>전력 및 에너지 플렌트</h3>
-							<p>세상을 밝히는<br>빛과 에너지</p>
+						<a href="https://www.youtube.com/embed/SW7hBnXKTX4" class="youtube"><img src="images/img01_03.jpg" alt="" class="bgImg">
+						<div class="txt6">
+							<h3>The Premiere</h3>
+							<p>더 혁신적인 디자인의 차이</p>
 						</div>
+						<img src="images/icon01_06.png" alt="실행" class="play">
 					</a>
 				</li>
 				<li class="ct7st">
