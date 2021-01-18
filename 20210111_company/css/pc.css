@@ -112,7 +112,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 	background-size: cover;
 }
 .sliderWrap .slider_3st{
-	background-image: url(../images/mainimg03.jpg);
+	background-image: url(../images/mainimg03.JPG);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -127,7 +127,6 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .sliderWrap .slider_4st video{
 	position: absolute;
 	left: 50%; transform: translateX(-50%);
-	/*top: -105px;*/
 }
 
 .sliderWrap .bx-wrapper {
