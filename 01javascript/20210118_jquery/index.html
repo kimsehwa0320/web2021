@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jquery</title>
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+			//window.onload = function(){
+			//document.getElementsByClassName("box")[0].style.display = "none";
+		//};
+
+		$(document).ready(function(){
+			//$(".box").hide(); //display:none,애니메이션 안됨
+			//$(".box").fadeOut(); //애니메이션 포함
+			$(".btnshow").hide();
+			$(".btn").click(function(){
+				$(".box").hide(); 
+				$(".btn").hide(); 
+				$(".btnshow").show();  
+			});
+
+			$(".btnshow").click(function(){
+				$(".box").show();
+				$(".btn").show(); 
+				$(".btnshow").hide();  
+			});
+		});
+	</script> 
+
+	<style>
+		.box{display: block;}
+	</style>
+</head>
+<body>
+	<button class="btn">누르시오</button>
+	<button class="btnshow">나타나기</button>
+	<div class="box">안녕</div>
+	<script>
+		//$(".box").hide(); //글자 사라짐
+		//document.getElementsByClassName("box")[0].style.display = "none";
+	</script>
+</body>
+</html>

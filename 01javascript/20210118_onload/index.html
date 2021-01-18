@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>onload</title>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script>
+		window.onload = function(){
+			//페이지 완전 로딩 후 실행
+			alert("안녕");
+		};
+		window.onload = function(){
+			//페이지 완전 로딩 후 실행
+			alert("안녕!!!!!!");
+		};
+		function gogo(){
+			alert("ㅂㄱㅂㄱ");
+		}
+		$(document).ready(function(){
+			alert("jquery1");
+		});
+		$(document).ready(function(){
+			alert("jquery2");
+		});
+	</script>
+</head>
+<body onload="gogo()">
+	
+</body>
+</html>
