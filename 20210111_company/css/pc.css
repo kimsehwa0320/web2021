@@ -127,7 +127,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .sliderWrap .slider_4st video{
 	position: absolute;
 	left: 50%; transform: translateX(-50%);
-	top: -105px;
+	/*top: -105px;*/
 }
 
 .sliderWrap .bx-wrapper {
