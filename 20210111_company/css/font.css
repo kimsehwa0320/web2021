@@ -7,8 +7,12 @@
 
 	src : url("../fonts/NEXON Lv2 Gothic Bold.ttf");
 	font-family: "NEXONTWO";
+
+	src : url("../fonts/GmarketSansTTFBold.ttf");
+	font-family: "Gmarket";
 }
 
+.font2{font-family: "Gmarket"; font-weight:bold;}
 .slider_3st .slider_txt3 .font1{font-family: "Retroica";}
 body{font-family: "NEXONONE";}
-.slider h3{font-family: "NEXONTWO";}
+/*.slider h3{font-family: "NEXONTWO";}*/
