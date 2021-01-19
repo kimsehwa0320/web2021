@@ -6,21 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>top menu</title>
   <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="css/jquery.bxslider.css">
-	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/jquery.bxslider.js"></script>
-	<script>
-		$(document).ready(function(){
-			$("ul.slider").bxSlider();
-		});
+  <link rel="stylesheet" href="../css/jquery.bxslider.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery.bxslider.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".slider").bxSlider();
+    });
 
-	</script>
+  </script>
   <style>
     .submenu{display: none;}
 
-    nav.gnb{width: 1000px; margin: 0 auto;}
+    nav.gnb{width: 1000px; margin: 0 auto; position: relative; z-index: 1;}
     /* nav.gnb>ul{background: yellow;} 서브메뉴나올 때 뒷 배경 */
-    nav.gnb>ul>li{width: 200px; float: left; background: #ff00ab; position: relative;}
+    nav.gnb>ul>li{width: 200px; float: left; background: #ff00ab;position: relative;}
     nav.gnb>ul>li:hover{background: pink;}
 
     /* nav.gnb>ul>li:nth-child(1) .submenu{display: block;} 서브메뉴 나옴 */
@@ -33,6 +33,9 @@
     nav.gnb>ul>li:hover .submenu{display: block;}
 
     .visual{background: #f54242; height: 400px;}
+    .visual img{width: 100%; z-index: 9999;}
+
+
   </style>
 </head>
 <body>
@@ -83,10 +86,10 @@
 
   <div class="visual">
     <ul class="slider">
-  		<li><img src="images/pc01.jpg" alt=""></li>
-  		<li><img src="images/pc02.jpg" alt=""></li>
-  		<li><img src="images/pc03.jpg" alt=""></li>
-  	</ul>
+      <li><img src="../images/pc01.jpg" alt=""></li>
+      <li><img src="../images/pc02.jpg" alt=""></li>
+      <li><img src="../images/pc03.jpg" alt=""></li>
+    </ul>
   </div>
 </body>
 </html>
