@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jqery</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<style>
+		.tabWrap{width: 1000px; margin: 0 auto;}
+		.tab li{float: left; width: 200px; text-align: center; line-height: 40px; cursor: pointer;}
+		.tab li.active{background: pink;}
+		.boxWrap div{display: none;border: 1px solid #000; padding: 20px;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			// $(".boxWrap>div").hide(); display: none으로 아예 안보이게		
+			$(".boxWrap>div").eq(0).fadeIn();
+
+			$(".tabWrap>ul>li").click(function(){
+				var num = $(this).index(); 
+				console.log(num);
+
+				$(".tabWrap>ul>li").removeClass(); //this라고 하면 안됨
+				$(this).addClass("active");
+
+				$(".boxWrap>div").hide();
+				$(".boxWrap>div").eq(num).fadeIn();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="tabWrap">
+		<ul class="tab clearfix">
+			<li class="active">menu1</li> <!-- 첫 페이지 로드 -->
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+		<div class="boxWrap">
+			<div>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugiat porro natus atque praesentium necessitatibus earum esse modi unde, libero neque, repellendus maiores sunt, nemo numquam illum tenetur itaque culpa!</div>
+			<div>2. Rem sint neque quo ducimus nostrum omnis, placeat repellat dolor. Enim, culpa vel pariatur saepe vero minima ut, dicta illum odit aut incidunt nobis est consequuntur accusamus iusto eveniet, debitis.</div>
+			<div>3. Sequi molestiae officiis veritatis! Quo nulla quas odit fugit cum harum sequi iste molestiae suscipit iusto dolorum nihil reiciendis dignissimos, alias placeat. Tempora dolores quaerat voluptates tenetur velit eum eos?</div>
+			<div>4. Praesentium sint a in? A libero culpa quidem quibusdam minus rem, illum nesciunt debitis maiores repudiandae unde dolor repellendus suscipit voluptatum quia praesentium? Aut, esse laboriosam corrupti nobis numquam, fugiat.</div>
+			<div>5. Nisi obcaecati, recusandae aliquid odit, vero iure esse libero tempora facilis quo at quod, mollitia quas fugit perferendis sint itaque? Error quae sapiente sint eveniet fuga dolore inventore aliquam sed?</div>
+		</div>
+	</div>
+</body>
+</html>

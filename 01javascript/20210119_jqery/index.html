@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jqery</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// $("p").hide();
+			// $("p").css("display","none"); //=$("p").hide();
+
+			//set
+			$("p").css("background-color","red"); //javascript = backgroundColor
+			//get
+			var pTag = $("p").css("background-color"); 
+			console.log(pTag);
+			console.log( "p태그 개수 : " + $("p").length);
+
+			$("p").eq(1).css("background-color","skyblue"); //nth-child와 유사
+			$("p").eq(3).css("background-color","blue").css("color","white").css("font-size",30);
+		});
+	</script>
+</head>
+<body>
+	<p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Non sunt a suscipit esse exercitationem corporis voluptatum, temporibus recusandae ad molestias. Tenetur enim rerum animi quaerat, tempore hic quae expedita dolorum.</p>
+	<p>Quod, omnis. Iusto facere, nisi, iste optio maiores alias, non modi sapiente suscipit labore illum aut accusamus libero ratione, mollitia esse quasi deleniti consequatur cumque exercitationem. Illo, facilis id eaque.</p>
+	<p>Deleniti, rerum pariatur, iste earum fugiat ab quia eveniet voluptas, reiciendis recusandae accusamus ullam, tempora obcaecati odit temporibus cumque velit facere! Dolore sequi earum error, voluptatum cumque similique delectus, quo.</p>
+	<p>Sapiente est cum quisquam ducimus autem, officiis rerum ratione cumque nobis placeat. Pariatur cumque, eveniet dolor sunt odit libero praesentium quod est cum exercitationem expedita laboriosam tempore voluptas reiciendis dignissimos.</p>
+
+
+
+	<!-- tabmanu -->
+	<style>
+		.tab{width: 300px;}
+		.tab li{float: left; width: 100px;text-align: center; line-height: 30px;}
+		div{width: 300px; padding: 10px; border: 1px solid #000;}
+	</style>
+
+	<script>
+		$(document).ready(function(){
+			$(".box1,.box2,.box3").hide();
+
+			$("ul>li").eq(0).click(function(){
+				$(".box1").fadeIn();
+				$(".box2").hide();
+				$(".box3").hide();
+			});
+			$("ul>li").eq(1).click(function(){
+				$(".box1").hide();
+				$(".box2").fadeIn();
+				$(".box3").hide();
+			});
+			$("ul>li").eq(2).click(function(){
+				$(".box1").hide();
+				$(".box2").hide();
+				$(".box3").fadeIn();
+			});
+		});
+	</script>
+
+	<ul class="tab clearfix">
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+	</ul>
+	<div class="box1">1. Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Tempore, exercitationem.</div>
+	<div class="box2">2. Non itaque, ea ex ipsa veritatis ipsam eum, a amet.</div>
+	<div class="box3">3. Accusantium quis voluptate ipsam perspiciatis, eaque veniam explicabo ducimus, doloremque!</div>
+</body>
+</html>
