@@ -174,7 +174,8 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .content li.ct5st a,
 .content li.ct9st a,
 .content li.ct10st a
-{text-align: center; display: block; height: 100%; padding-top:100px;font-weight:bold;}
+{text-align: center; display: block; height: 100%; padding-top:100px;font-weight:bold; line-height:40px;}
+
 
 .content li.ct1st img,
 .content li.ct5st img,
@@ -241,13 +242,23 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 
 .content .div_1:hover .txt7_2{display: block; /*opacity: 1;*/}
 
+.content .ct1st img,
+.content .ct5st img,
+.content .ct9st img,
+.content .ct10st img{transition: 0.3s;}
+
+.content .ct1st:hover img,
+.content .ct5st:hover img,
+.content .ct9st:hover img,
+.content .ct10st:hover img{transform: rotate(-45deg);}
 
 
 
 /*modal layer*/
-.content .ct2st .bgImg,.content .ct6st .bgImg,.content .ct8st .bgImg{transition: 0.3s;} /*li X img O : 이미지 값 변동*/
+.content .ct2st .bgImg,.content .ct6st .bgImg,.content .ct8st .bgImg,.content .ct11st .bgImg{transition: 0.3s;} /*li X img O : 이미지 값 변동*/
 .content .ct2st:hover .bgImg,
 .content .ct8st:hover .bgImg,
+.content .ct11st:hover .bgImg,
 .content .ct6st:hover .bgImg{transform: scale(1.2);}
 .content .ct2st .play,
 .content .ct8st .play,
