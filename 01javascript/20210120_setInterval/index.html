@@ -4,9 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>setinterval</title>
+  <script>
+    //setTimeout("myAlert()",1000);
+    function myAlert(){
+      alert("안녕하세요");
+    }
+    //setInterval("myAlert()",2000);
+  </script>
 </head>
 <body>
+  <p id="time"></p>
+  <button onclick="sTimer()">멈추기</button>
+  <script>
 
+    var d = new Date();
+    var t = d.toLocaleTimeString();
+    document.getElementById("time").innerHTML = t;
+
+    var myVar = setInterval("timer()",1000);
+    function timer(){
+      var d = new Date();
+      var t = d.toLocaleTimeString();
+      document.getElementById("time").innerHTML = t;
+    }
+
+    function sTimer(){
+      clearInterval(myVar);
+    }
+
+  </script>
 </body>
 </html>
