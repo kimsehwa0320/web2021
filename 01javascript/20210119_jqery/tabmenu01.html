@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>tebmenu</title>
+  <link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+  <script>
+    var viewImg = [
+    "../images/spring.jpg",
+    "../images/summer.jpg",
+    "../images/fall.jpg",
+    "../images/winter.jpg"
+  ];
+  //viewImg[]
+    $(document).ready(function(){
+      $(".wrapper li").click(function(){
+        var num = $(this).index();
+
+        //$(".image img").attr("src"); //get attr("a")
+        $(".image img").attr("src",viewImg[num]); //set attr("a","b")
+
+      })
+
+    })
+  </script>
+  <style>
+      .wrapper{width: 522px; margin: 0 auto;}
+      .wrapper li{float: left; width: 123px; margin-right: 10px;}
+      .wrapper li:last-child{margin-right: 0;}
+      img{display: block;}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <ul>
+      <li><img src="../images/btn1_1.jpg" alt="봄"></li>
+      <li><img src="../images/btn2_1.jpg" alt="여름"></li>
+      <li><img src="../images/btn3_1.jpg" alt="가을"></li>
+      <li><img src="../images/btn4_1.jpg" alt="겨울"></li>
+    </ul>
+
+    <div class="image">
+      <img src="../images/spring.jpg" alt="봄">
+    </div>
+  </div>
+
+</body>
+</html>
