@@ -16,8 +16,8 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 #main_menu{float: right; padding-right: 110px;}
 #main_menu li{float: left; height: 80px; }
 #main_menu li a{
-	display: block; line-height: 80px; 
-	padding:0 30px; font-weight:bold; font-size:14px; 
+	display: block; line-height: 80px;
+	padding:0 30px; font-weight:bold; font-size:14px;
 }
 .toggleMenu{display: none;}
 
@@ -27,11 +27,11 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 /*.sliderWrap li img{width: 100%;}*/
 
 .sliderWrap .slider_1st .slider_txt1{
-	position: absolute; color: white; 
+	position: absolute; color: white;
 	top: 30%; left: 140px; z-index: 5;
 }
 .sliderWrap .slider_4st .slider_txt4{
-	position: absolute; color: black; 
+	position: absolute; color: black;
 	top: 30%; left: 140px;
 }
 .slider h3{font-weight: bold;letter-spacing: -2px}
@@ -56,8 +56,8 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 }
 .slider_txt1 .txt1Btn2,.slider_txt4 .txt1Btn2{
 	width:150px;line-height:100px;
-	text-align: center; padding: 10px 20px; 
-	border-radius:20px; 
+	text-align: center; padding: 10px 20px;
+	border-radius:20px;
 	font-size: 12px;font-weight:bold;
 }
 .slider_txt1 .txt1Btn2:hover{background-color:#000; border: 1px solid #000; color: #fff;}
@@ -67,7 +67,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 
 .sliderWrap .slider_2st .slider_txt2{
 	position: absolute; color: black;
-	top: 25%; left: 120px; 
+	top: 25%; left: 120px;
 }
 .slider_txt2 h3{font-size:48px; padding: 16px 0; }
 .slider_txt2 p{letter-spacing: -1px }
@@ -83,7 +83,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 	position: absolute; color: black;
 }*/
 .slider_txt3 h3{
-	position: absolute;font-size:82px; 
+	position: absolute;font-size:82px;
 	top: 140px; left: 120px;}
 .slider_txt3 p{
 	font-size:58px; right: 170px; top: 310px;
@@ -144,7 +144,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 /*content*/
 .content{width: 1260px;position: absolute; left: 50%; transform: translateX(-50%);}
 .content>ul>li{
-	float: left; width: 25%;height: 315px;  
+	float: left; width: 25%;height: 315px;
 	position: relative; overflow: hidden;
 }
 .content>ul>li a{color:white;}
@@ -187,16 +187,16 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 /*ct6st, ct7st, ct8st, ct11st txt*/
 .content div.txt6{position: absolute; top: 50%; transform: translateY(-50%); left: 20px;}
 .content div.txt6 h3:after{
-	content: ""; display: block; 
-	width: 50px; height: 2px; 
+	content: ""; display: block;
+	width: 50px; height: 2px;
 	background-color: #fff; margin: 10px 0;
 }
 .content div.txt6 p{font-size:1em;}
 
 .content div.txt8{position: absolute; top: 50%;transform: translateY(-50%); left: 465px; color: white; text-align: right;}
 .content div.txt8 h3:after{
-	content: ""; display: block; 
-	width: 50px; height: 2px; 
+	content: ""; display: block;
+	width: 50px; height: 2px;
 	background-color: #fff; margin: 10px 0 10px 95px;
 }
 .content div.txt8 p{font-size:1em;}
@@ -204,10 +204,10 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .content div.txt11{
 	position: absolute; left: 50%;top: 110px;
 	transform: translateX(-50%); color: white;
-	text-align: center; 
+	text-align: center;
 }
 .content div.txt11 h3:after{
-	content: ""; display: block; 
+	content: ""; display: block;
 	width: 65px; height: 2px; left: 50px;
 	background-color: #fff; margin: 8px 0 8px 105px;
 }
@@ -221,7 +221,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .content .ct2st .play,
 .content .ct8st .play,
 .content .ct6st .play{
-	position: absolute; left: 50%; top: 50%; 
+	position: absolute; left: 50%; top: 50%;
 	transform: translate(-50%,-50%); width: 80px;
 }
 
@@ -229,13 +229,13 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .content .ct3st{}
 .content .ct3st h3{position: absolute; top: 40px;left: 105px;} /*txt와 동일*/
 .content .ct3st h3:after{
-	content: ""; display: block; 
-	width: 110px; height: 2px; 
-	background-color: #000; margin: 15px 0; 
+	content: ""; display: block;
+	width: 110px; height: 2px;
+	background-color: #000; margin: 15px 0;
 }
 .content .ct3st .left p{padding-top: 10px;}
 .content .ct3st .left .leftBtn1{
-	top: 201px;left: 40px; 
+	top: 201px;left: 40px;
 	position: absolute; text-align: center;
 	text-align: center; padding: 5px 35px;
 	border: 1px solid #000; background: #fff;
@@ -303,8 +303,8 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .container .section{width: 1260px; margin: 0 auto;}
 .container h4{text-align: center;}
 .container h4:after{
-	content:""; display: block; 
-	background-color: #fff; 
+	content:""; display: block;
+	background-color: #fff;
 	width: 50px; height: 3px;
 	margin: 20px auto;
 }
@@ -320,3 +320,56 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .container .section li .card_body h3{margin-bottom: 10px;} /*Engineering*/
 
 
+/* footer */
+.footer{width: 1260px;height: 160px; margin: 0 auto; _background: #000;}
+.footerTxt li{float: left; position: relative; font-size:12px; letter-spacing:-1px;color:#777777;}
+.footerTxt li:after{
+		content: ""; display: block;
+		width: 1px; height: 12px;
+		background-color: #d4d4d4;
+		position: absolute;
+		right: 0; top: 8px;
+}
+.footerTxt li:last-child:after{content: ""; display: none;}
+.footerTxt li{padding: 0 10px 0 10px; line-height: 30px;}
+.footerTxt li:nth-child(1){padding: 0 10px 0 0}
+.footerTxt span{
+	width: 50px; border: 1px solid #a6a6a6; color:white;
+	background: #a6a6a6; border-radius:30px ;
+	padding: 5px 10px 5px 10px ; margin-left: 10px;
+}
+.footer p{
+	font-size:12px; letter-spacing:-1px;
+	color:#777777; padding: 0 10px 0 0; line-height: 30px;
+}
+.footer .copy{font-size:11px; font-weight:bold; letter-spacing:0px;color:#777777;}
+
+.line:after{
+	content: ""; display: block;
+	border-top: 1px solid #dbdbdb; margin: 100px 0 15px 0;
+	width: 100%;height: 1px;
+}
+.line_2:before{
+	content: ""; display: block;
+	border-top: 1px solid #dbdbdb; margin: 30px 0;
+	width: 100%;height: 1px;
+}
+
+.footer2Txt li{
+	float: left; position: relative;
+	font-size:13px; letter-spacing:-2px;
+	color:#777777; font-weight:bold;
+}
+.footer2Txt li:after{
+		content: ""; display: block;
+		width: 1px; height: 12px;
+		background-color: #d4d4d4;
+		position: absolute;
+		top: 10px; right: 0;
+}
+
+.footer2Txt li:last-child:after,
+.footer2Txt li:nth-child(4):after,
+.footer2Txt li:nth-child(5):after{content: ""; display: none;}
+.footer2Txt li{padding: 0 10px; line-height: 30px;}
+.footer2Txt li:nth-child(1){padding: 0 10px 0 0}
