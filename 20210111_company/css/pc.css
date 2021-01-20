@@ -152,7 +152,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 
 /*content layout*/
 .half{width: 50% !important;}
-.content>ul>li.ct1st{background: #0394f5;}
+.content>ul>li.ct1st{background: #161515;}
 .content>ul>li.ct2st{}
 .content>ul>li.ct3st{width: 50%;}
 .content>ul>li.ct6st{width: 50%;}
@@ -164,21 +164,19 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .content>ul>li.ct4st{background: #d7d6dc;}
 .content>ul>li.ct5st{background: #413d3e;}
 .content>ul>li.ct9st{background: #ff6734;}
-.content>ul>li.ct10st{background: #6abdf9;}
+.content>ul>li.ct10st{background: #0394f5;}
 
 /*content icon cell*/
 .content li.ct1st p{color: white;}
 
 
 .content li.ct1st a,
-.content li.ct4st a,
 .content li.ct5st a,
 .content li.ct9st a,
 .content li.ct10st a
-{text-align: center; display: block; height: 100%; padding-top:85px ;}
+{text-align: center; display: block; height: 100%; padding-top:100px;font-weight:bold;}
 
 .content li.ct1st img,
-.content li.ct4st img,
 .content li.ct5st img,
 .content li.ct9st img,
 .content li.ct10st img
@@ -270,7 +268,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .content .ct3st .left .leftBtn1{
 	top: 201px;left: 40px;
 	position: absolute; text-align: center;
-	text-align: center; padding: 5px 35px;
+	padding: 5px 35px;
 	border: 1px solid #000; background: #fff;
 	border-radius:40px; color: #000;
 	font-size: 10px;font-weight:bold;
@@ -283,6 +281,21 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 	border-radius:20px; color: #fff;
 	font-size: 14px;font-weight:bold;
 }
+
+.content .ct4st h2,.content .ct4st p,.content .ct4st div{position: absolute; text-align:center;width: 300px;}
+.content .ct4st h2{top: 110px;left: 50%;transform:translateX(-50%);font-weight:bold;}
+.content .ct4st p{top: 85px;left: 50%;transform:translateX(-50%);font-weight:bold;font-size:12px;}
+.content .ct4st div{left: 50%;top: 50%; transform:translate(-50%,-50%);letter-spacing:-1px;font-size:11.5px;}
+.content .ct4st .ct4stBtn{
+	left: 50%;transform:translateX(-50%); top: 200px;
+	position: absolute; text-align: center;
+	padding: 10px 20px;
+	border: 1px solid #000; background: #fff;
+	border-radius:40px; color: #000;
+	font-size: 12px;font-weight:bold;
+}
+
+
 .content .ct8st{position: relative;}
 .content .ct8st img{position: absolute; top: -80px; cursor: pointer;}
 
