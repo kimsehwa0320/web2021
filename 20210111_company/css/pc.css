@@ -445,7 +445,7 @@ ul.sns li{float:left}
 .sns img:nth-child(1){margin-left: 0;}
 
 /* sub_menu */
-.sub_main{height: 690px; position: relative;}
+.sub_main{height: 520px; position: relative;}
 .subVideo, .subVideo video{
 	background-repeat: no-repeat;
 	background-position: center;
@@ -462,11 +462,16 @@ ul.sns li{float:left}
 .subVideo h2{font-weight:bold; font-size:36px; top:260px;}
 .subVideo p{font-size:14px; top:320px;}
 
-.subWrap{top: 457px;background: #000; width: 1260px; }
-.subWrap li{float: left; width:315px;border-right: 1px solid #fff;}
+.subWrap{top: 451px;background: #000; width: 1260px; }
+.subWrap li{float: left; width:315px;border-right: 1px solid #d7d6dc; border-bottom:5px solid #6868ff;}
 .subWrap li:last-child{border-right:none;}
-.subWrap li:hover a{background: #fff; color:black;}
+.subWrap li:hover a{background: #6868ff;}
 .subWrap li a{
 	display: block; line-height: 50px; color:white;
 	padding:0 30px; _font-weight:bold; font-size:14px;
 }
+.subPage{position: relative; width: 1260px; margin: 0 auto;}
+.subCategory li{float: left;font-size:12px; font-weight:bold; padding-right: 8px; margin: 10px 0;}
+.subCategory img{width: 13px;}
+.subCategory .sB{width: 6px;}
+.subCategory .vI{color:#6868ff;}
