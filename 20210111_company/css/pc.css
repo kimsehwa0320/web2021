@@ -255,7 +255,8 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 
 
 /*modal layer*/
-.content .ct2st .bgImg,.content .ct6st .bgImg,.content .ct8st .bgImg,.content .ct11st .bgImg{transition: 0.3s;} /*li X img O : 이미지 값 변동*/
+.content .ct2st .bgImg,.content .ct6st .bgImg,
+.content .ct8st .bgImg,.content .ct11st .bgImg{transition: 0.3s;} /*li X img O : 이미지 값 변동*/
 .content .ct2st:hover .bgImg,
 .content .ct8st:hover .bgImg,
 .content .ct11st:hover .bgImg,
@@ -358,14 +359,14 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 	background-size:cover; padding-top: 70px;
 }
 .container .section{width: 1260px; margin: 0 auto;}
-.container h4{text-align: center;}
+.container h4{text-align: center; font-size:20px;}
 .container h4:after{
 	content:""; display: block;
 	background-color: #fff;
-	width: 50px; height: 3px;
-	margin: 20px auto;
+	width: 70px; height: 3px;
+	margin: 15px auto;
 }
-.container .section>p{text-align: center; font-size: 2em; margin-bottom: 40px;}
+.container .section>p{text-align: center; font-size: 17px; margin-bottom: 40px; font-weight:bold;}
 .container .section ul li{
 	float: left; margin-right: 20px; width: 300px; height: 380px; padding-top: 70px; transition: 0.3s;
 }
@@ -390,7 +391,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .footerTxt li:last-child:after{content: ""; display: none;}
 .footerTxt li{padding: 0 10px 0 10px; line-height: 25px;}
 .footerTxt li:nth-child(1){padding: 0 10px 0 0}
-.footerTxt span{
+.footerTxt a{
 	width: 50px; border: 1px solid #a6a6a6; color:white;
 	background: #a6a6a6; border-radius:30px ;
 	padding: 5px 10px 5px 10px ; margin-left: 10px;
