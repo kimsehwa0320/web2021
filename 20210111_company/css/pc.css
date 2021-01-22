@@ -1,6 +1,11 @@
 @charset "utf-8";
 
 header#main_header{height: 1950px;position: relative; _background: pink; margin-bottom:100px;}
+.bar{
+  width: 90px;height: 3px; background: gray; position: relative;margin-top: -20px;
+  /* transform: scaleX(0);transition: 0.3s; */
+}
+/* #main_menu .menu li:hover .bar{ transform: scaleX(1); } */
 
 
 /*header top*/
@@ -438,3 +443,19 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 ul.sns li{float:left}
 .sns img{width: 35px; margin: 0 8px 10px 8px;}
 .sns img:nth-child(1){margin-left: 0;}
+
+/* sub_menu */
+.subVideo{height: 690px; position: relative;}
+.subVideo, .subVideo video{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.subVideo video{
+	position: absolute;
+	left: 50%; transform: translateX(-50%);
+}
+.subVideo h2,.subVideo p{
+  position: absolute; text-align:center;
+  color:white; left: 50%; top: 50%; transform:translate(-50%,-50%);
+ }
