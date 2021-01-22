@@ -368,13 +368,13 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 }
 .container .section>p{text-align: center; font-size: 17px; margin-bottom: 40px; font-weight:bold;}
 .container .section ul li{
-	float: left; margin-right: 20px; width: 300px; height: 380px; padding-top: 70px; transition: 0.3s;
+	float: left; margin-right: 20px; width: 300px; height: 500px; padding-top: 70px; transition: 0.3s;
 }
 .container .section ul li:last-child{margin-right: 0;}
 
 .container .section ul li:hover{box-shadow: 8px 8px 10px rgba(0,0,0,0.5);transform: translate(-10px,-10px);}
-.container .section li img{display: block;margin: 0 auto;}
-.container .section li .card_body{text-align: center; padding: 20px 40px;}
+.container .section li img{display: block;margin: 0 auto; width: 250px; }
+.container .section li .card_body{text-align: center; padding: -20px 40px;}
 .container .section li .card_body h3{margin-bottom: 10px;} /*Engineering*/
 
 
