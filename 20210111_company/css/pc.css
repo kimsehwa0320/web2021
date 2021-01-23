@@ -599,30 +599,37 @@ ul.sns li{float:left}
 	width: 100%;height: 1px;
 }
 
-/* vC1st */
-.vC1st .news .bottom h3:before{
+/* vC$st*/
+.vC1st .news .bottom h3:before,
+.vC3st .news .bottom h3:before{
   content:""; display: block; width: 30px; height: 3px;
   background: #274b85; margin: 20px 0;
 }
-.vC1st .news .bottom h3{
+.vC1st .news .bottom h3,
+.vC3st .news .bottom h3
+{
   top: 340px;color:#274b85; padding-bottom: 20px;
   letter-spacing: -1.5px;font-size:21px;left: 0; padding-left: 20px;
 }
-.vC1st .news .bottom p{
+.vC1st .news .bottom p,
+.vC3st .news .bottom p{
   text-align:left; padding: 100px 20px;line-height:25px;
   color:#8d8d8d; font-size:15px; font-weight:bold;
   letter-spacing: -0.5px;
 }
-/* vC2st */
-.vC2st .news .top h3:before{
+
+.vC2st .news .top h3:before,
+.vC4st .news .top h3:before{
   content:""; display: block; width: 30px; height: 3px;
   background: #274b85; margin: 20px 0;
 }
-.vC2st .news .top h3{
-  top: 340px;color:#274b85; padding-bottom: 20px;
+.vC2st .news .top h3,
+.vC4st .news .top h3{
+  top: 20px;color:#274b85; padding-bottom: 20px;
   letter-spacing: -1.5px;font-size:21px;left: 0; padding-left: 20px;
 }
-.vC2st .news .top p{
+.vC2st .news .top p,
+.vC4st .news .top p{
   text-align:left; padding: 100px 20px;line-height:25px;
   color:#8d8d8d; font-size:15px; font-weight:bold;
   letter-spacing: -0.5px;
