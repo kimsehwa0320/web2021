@@ -541,35 +541,47 @@ ul.sns li{float:left}
 }
 
 /* content */
-.vContent>ul>li.vCst{height: 630px;}
-.vContent{width: 1260px;height: 1260px;position: absolute; left: 50%; transform: translateX(-50%);}
+.vContent>ul>li.vC1st{height: 630px; background: #d7d6dc;}
+.vContent>ul>li.vC2st{height: 630px; background: #000;}
+.vContent>ul>li.vC3st{height: 630px; background: #f00;}
+.vContent>ul>li.vC4st{height: 630px; background: #0f0;}
+
+.vContent{width: 1260px;position: absolute; left: 50%; transform: translateX(-50%);}
 .vContent>ul>li{
-	float: left; width: 315px;height: 315px;
+	float: left; width: 25%;height: 315px;
 	position: relative; overflow: hidden;
 }
 .vContent>ul>li a{color:white;}
+.vContent>ul>li.vC2st .bottom,.vContent>ul>li.vC4st .bottom{position: absolute;bottom: 0;}
 
-.vContent .vCst{}
-.vContent .vCst h3{position: absolute; top: 40px;left: 105px;} /*txt와 동일*/
-.vContent .vCst h3:after{
+.vContent .ct3st{}
+.vContent h3{position: absolute; top: 40px;left: 105px;}
+.vContent h3:after{
 	vContent: ""; display: block;
 	width: 110px; height: 2px;
 	background-color: #000; margin: 15px 0;
 }
-.vContent .vCst .left p{padding-top: 10px;}
-.vContent .vCst .left .leftBtn1{
-	top: 201px;left: 40px;
-	position: absolute; text-align: center;
-	padding: 5px 35px;
-	border: 1px solid #000; background: #fff;
-	border-radius:40px; color: #000;
-	font-size: 10px;font-weight:bold;
+
+.vContent .sliderWrap{width: 315px; height: 630px;}
+.vContent .sliderWrap li.news{width: 315px; height: 630px;}
+.vContent .sliderWrap .left{
+	float: left; width: 315px;height: 315px; text-align: center;
+	padding: 100px 40px; position: relative; letter-spacing: -1px;
 }
-.vContent .vCst .left .leftBtn2{
-	top: 200px;left: 160px;
+.vContent .sliderWrap .top:after{
+	vContent: "";display: block;
+	border-width:30px;
+	border-style: solid;
+	border-color:white transparent transparent transparent; /*아래방향삼각형만들기*/
+	border-color:transparent transparent transparent white; /*오른쪽방향삼각형만들기*/
 	position: absolute;
-	text-align: center; padding: 10px 20px;
-	border: 1px solid #000; background: #000;
-	border-radius:20px; color: #fff;
-	font-size: 14px;font-weight:bold;
+	top: 50%; transform: translateY(-50%);
+	right: -59px;
+}
+.vContent .sliderWrap .bottom{width: 315px;height: 315px;}
+
+/* footer */
+.ftBar{
+  border: 0.6px solid #cacaca;;width: 100%;
+  margin:50px 0; background: #cacaca;
 }
