@@ -20,6 +20,38 @@
 	<script>
 		new WOW().init();
 	</script>
+  <script>
+    $(document).ready(function(){
+
+        var slider1 = $(".slider").bxSlider({
+          controls:false,
+          controls:false,
+          auto:true,
+          mode:'vertical'
+        });
+        $(".pBtn").click(function(){
+          slider1.goToPrevSlide()
+        });
+        $(".nBtn").click(function(){
+          slider1.goToNextSlide()
+        });
+
+
+        var slider2 = $(".slider1st").bxSlider({
+          controls:false,
+          pager:false,
+          controls:false,
+          auto:true,
+          mode:'vertical'
+        });
+        $(".prevBtn").click(function(){
+          slider2.goToPrevSlide()
+        });
+        $(".nextBtn").click(function(){
+          slider2.goToNextSlide()
+        });
+      });
+  </script>
   <style>
 		body{font-family: 'Gothic A1', sans-serif;}
 	</style>
@@ -96,7 +128,7 @@
         			<ul class="clearfix">
         				<li>
         					<div class="card">
-        						<img src="images/banner_icon01_01.png" alt="enginnering">
+        						<img src="images/card_1.png" alt="">
         						<div class="card_body">
         							<p class="cardTxt">법과 윤리 준수</p>
         							<p>개인의 존엄성과 다양성 존중은<br>
@@ -112,7 +144,7 @@
         				</li>
         				<li>
         					<div class="card">
-        						<img src="images/banner_icon01_02.png" alt="enginnering">
+        						<img src="images/card_2.png" alt="">
         						<div class="card_body">
         							<p class="cardTxt">Clean Organizational CULTURE</p>
         							<p>업무활동에서 공과 사를 엄격히 구분합니다.<br>
@@ -128,7 +160,7 @@
         				</li>
         				<li>
         					<div class="card">
-        						<img src="images/banner_icon01_03.png" alt="enginnering">
+        						<img src="images/card_3.png" alt="">
         						<div class="card_body">
         							<p class="cardTxt">글로벌 기업시민으로서의 책임</p>
         							<p>기업시민으로서 사회적 책무를 수행합니다.<br>
