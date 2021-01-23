@@ -172,7 +172,12 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .content>ul>li.ct10st{background: #0394f5;}
 
 /*content icon cell*/
-.content li.ct1st p{color: white;}
+.content li.ct1st p,
+.content li.ct4st p,
+.content li.ct5st p,
+.content li.ct6st p,
+.content li.ct9st p,
+.content li.ct10st p{color: white;}
 
 
 .content li.ct1st a,
@@ -189,7 +194,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 {display: block; width: 100px; margin: 0 auto; margin-bottom: 5px;}
 
 /*ct6st, ct7st, ct8st, ct11st txt*/
-.content div.txt6{position: absolute; top: 50%; transform: translateY(-50%); left: 20px;}
+.content div.txt6{position: absolute; color:white;top: 50%; transform: translateY(-50%); left: 20px;}
 .content div.txt6 h3:after{
 	content: ""; display: block;
 	width: 50px; height: 2px;
@@ -299,7 +304,8 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 	font-size: 14px;font-weight:bold;
 }
 
-.content .ct4st h2,.content .ct4st p,.content .ct4st div{position: absolute; text-align:center;width: 300px;}
+.content .ct4st{}
+.content .ct4st h2,.content .ct4st p,.content .ct4st div{position: absolute; text-align:center;width: 300px;color:white;}
 .content .ct4st h2{top: 110px;left: 50%;transform:translateX(-50%);font-weight:bold;}
 .content .ct4st p{top: 85px;left: 50%;transform:translateX(-50%);font-weight:bold;font-size:12px;}
 .content .ct4st div{left: 50%;top: 50%; transform:translate(-50%,-50%);letter-spacing:-1px;font-size:11.5px;}
@@ -531,11 +537,11 @@ ul.sns li{float:left}
   border: 0.6px solid #cacaca;;width: 100%;
   margin:50px 0; background: #cacaca;
 }
-.visionBt .btTxt1{
+.visionCb .Cb1{
   color:#6868ff; padding-bottom: 20px;font-weight:bold;
   letter-spacing: -1.5px;font-size:24px;
 }
-.visionBt .btTxt2{
+.visionCb .Cb2{
   font-size:14px;margin-bottom: 50px;
   font-weight:bold;letter-spacing: -0.5px; color:#4e4e4e;
 }
