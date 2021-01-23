@@ -639,3 +639,18 @@ ul.sns li{float:left}
   color:#8d8d8d; font-size:15px; font-weight:bold;
   letter-spacing: -0.5px;
 }
+
+/* submenu2 */
+.subTwo img{
+  /* background-image: url("../images/sub_menu2bg.jpg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;position: absolute;
+	/* left: 50%; transform: translateX(-50%); */
+}
+.subTwo h2,.subTwo p{
+  position: absolute; text-align:center;
+  color:white; left: 50%; transform:translateX(-50%);
+ }
+.subTwo h2{font-weight:bold; font-size:36px; top:210px; letter-spacing: 5px;}
+.subTwo p{font-size:14px; top:320px;}
