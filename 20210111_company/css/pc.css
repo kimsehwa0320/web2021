@@ -455,7 +455,7 @@ ul.sns li{float:left}
 .sns img{width: 35px; margin: 0 8px 10px 8px;}
 .sns img:nth-child(1){margin-left: 0;}
 
-/* sub_menu */
+/* sub_menu1 */
 .sub_main{height: 520px; position: relative;}
 .subVideo, .subVideo video{
 	background-repeat: no-repeat;
@@ -574,13 +574,12 @@ ul.sns li{float:left}
 	float: left; width: 315px;height: 315px;
 	position: relative;
 }
-.vContent .vC1st .sliderWrap .top:after{
+.vContent .vC2st .sliderWrap .top:after{
 	content: "";display: block;border-width:30px;
 	border-style: solid;
-	border-color:white transparent transparent transparent; /*아래방향삼각형만들기*/
-	border-color:transparent transparent transparent white; /*오른쪽방향삼각형만들기*/
+	border-color:black transparent transparent transparent; /*아래방향삼각형만들기*/
 	position: absolute;
-	transform: translateX(-50%);
+	top:50%; transform: translateY(-50%);
 	right: -59px;
 }
 .vContent .sliderWrap .bottom{width: 315px;height: 315px;}
