@@ -152,7 +152,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 	float: left; width: 25%;height: 315px;
 	position: relative; overflow: hidden;
 }
-.content>ul>li a{color:white;}
+.content>ul>li a.vContent>ul>li a{color:white;}
 /*.content>ul>li:nth-child(2n){background: red;}*/
 
 /*content layout*/
@@ -490,7 +490,7 @@ ul.sns li{float:left}
   content:"";display: block; width: 35px;
   height: 2px; background: #6868ff; margin: 0 auto; margin-bottom: 15px;
 }
-.visionTop .vTxt2{letter-spacing: -2.5px; font-size:23px;padding-bottom: 30px ;}
+.visionTop .vTxt2{letter-spacing: -1.5px; font-size:23px;padding-bottom: 30px ;}
 .visionTop .bracket{
   border: 2px solid #274b85;margin: 0 auto;
   width: 550px;height: 70px;
@@ -502,8 +502,8 @@ ul.sns li{float:left}
   top: 205px; left: 50%; transform:translateX(-50%)
 }
 .visionTop .vTxt4{
-  margin-top: 40px;font-size:12px;margin-bottom: 50px;
-  font-weight:bold;letter-spacing: -1px; color:#4e4e4e;
+  margin-top: 40px;font-size:14px;margin-bottom: 50px;
+  font-weight:bold;letter-spacing: -0.5px; color:#4e4e4e;
 }
 .visionTop .vTxt4Bar{
   border: 1.5px solid #274b85;;width: 100%;
@@ -512,7 +512,7 @@ ul.sns li{float:left}
 
 /* visionContainer */
 .vContainer{height: 760px;}
-.vContainer .card_body .cardTxt{color:#274b85; padding-bottom: 20px;letter-spacing: -2.3px;font-size:24px}
+.vContainer .card_body .cardTxt{color:#274b85; padding-bottom: 20px;letter-spacing: -1.5px;font-size:24px;}
 .vContainer .card_body .cardTxt:before{
   content:"";display: block; width: 30px;
   height: 2.2px; background: #274b85; margin: 0 auto;
@@ -520,10 +520,56 @@ ul.sns li{float:left}
 }
 .vContainer .card_body p{
   color:#8d8d8d; font-size:14px; font-weight:bold;
-  line-height:25px; text-align:center; letter-spacing: -2px;
+  line-height:25px; text-align:center; letter-spacing: -0.5px;
 }
 .vContainer .section ul li{
   float: left; margin-right: 20px;width: 406.67px;
   height: 580px; padding-top: 20px; transition: 0.3s;
 }
 .vContainer .section li img{display: block;margin: 0 auto; width: 250px;}
+.vContainer .vcardBar{
+  border: 0.6px solid #cacaca;;width: 100%;
+  margin:50px 0; background: #cacaca;
+}
+.visionBt .btTxt1{
+  color:#6868ff; padding-bottom: 20px;font-weight:bold;
+  letter-spacing: -1.5px;font-size:24px;
+}
+.visionBt .btTxt2{
+  font-size:14px;margin-bottom: 50px;
+  font-weight:bold;letter-spacing: -0.5px; color:#4e4e4e;
+}
+
+/* content */
+.vContent>ul>li.vCst{height: 630px;}
+.vContent{width: 1260px;height: 1260px;position: absolute; left: 50%; transform: translateX(-50%);}
+.vContent>ul>li{
+	float: left; width: 315px;height: 315px;
+	position: relative; overflow: hidden;
+}
+.vContent>ul>li a{color:white;}
+
+.vContent .vCst{}
+.vContent .vCst h3{position: absolute; top: 40px;left: 105px;} /*txt와 동일*/
+.vContent .vCst h3:after{
+	vContent: ""; display: block;
+	width: 110px; height: 2px;
+	background-color: #000; margin: 15px 0;
+}
+.vContent .vCst .left p{padding-top: 10px;}
+.vContent .vCst .left .leftBtn1{
+	top: 201px;left: 40px;
+	position: absolute; text-align: center;
+	padding: 5px 35px;
+	border: 1px solid #000; background: #fff;
+	border-radius:40px; color: #000;
+	font-size: 10px;font-weight:bold;
+}
+.vContent .vCst .left .leftBtn2{
+	top: 200px;left: 160px;
+	position: absolute;
+	text-align: center; padding: 10px 20px;
+	border: 1px solid #000; background: #000;
+	border-radius:20px; color: #fff;
+	font-size: 14px;font-weight:bold;
+}
