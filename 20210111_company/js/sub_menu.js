@@ -7,10 +7,10 @@
 
     //$("ul.menu>li").hover(function(){},function(){});
                            //mouse enter  mouse Leave
-    $("ul.menu>li").hover(function(){
-      var menuLi = $(this).index();
-      $(".bar").stop().animate({left:menuLi*90},50);
-    },function(){
-      $(".bar").stop().animate({left:menu*90},50);
-    });
+    // $("ul.menu>li").hover(function(){
+    //   var menuLi = $(this).index();
+    //   $(".bar").stop().animate({left:menuLi*90},50);
+    // },function(){
+    //   $(".bar").stop().animate({left:menu*90},50);
+    // });
   }
