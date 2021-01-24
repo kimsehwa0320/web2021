@@ -726,7 +726,7 @@ ul.sns li{float:left}
 }
 
 .subTxt6 .txt1Btn2:hover{
-  background-color:#e7e0e0; border: 3px solid #e7e0e0; color: #000;
+  background-color:#444040; border: 3px solid #444040; color: #fff;
 }
 
 .dContainer{height: 700px; color:#fff;
@@ -751,3 +751,16 @@ background-size:cover; padding-top: 70px; margin-bottom: 200px;
 
 .container_1 .section ul li:last-child{margin-right: 0;}
 .container_1 .card p{padding-top: 30px; text-align:left;}
+
+.container_1 .card .txt1Btn2{
+  color: #000;border: 1px solid #000;
+  background: #fff;
+  width:170px;line-height:100px;
+	text-align: center; padding: 12px 25px;
+	border-radius:50px; transition:0.3s;
+	font-size: 14px;font-weight:bold;
+}
+
+.container_1 .card .txt1Btn2:hover{
+  background-color:#e7e0e0; border: 1px solid #e7e0e0; color: #000;
+}
