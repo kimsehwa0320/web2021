@@ -670,3 +670,9 @@ ul.sns li{float:left}
 .subThree p{font-size:14px; top:320px;}
 
 .visionCb .deco{text-decoration:underline; font-weight:bold;}
+
+/* .gifImg{box-sizing:content-box; width: 315px; height: 315px;} */
+
+.vC3st .top,.vC2st .bottom{max-width:315px; height: 315px; overflow: hidden;}
+.vC3st .gifImg,.vC2st .gifImg{max-width: initial;}
+.vC2st .gifImg{width: 315px;}
