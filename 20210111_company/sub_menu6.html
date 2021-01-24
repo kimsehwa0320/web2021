@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>디지털 프라자</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../css/all.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+  <script src="js/sub_menu.js"></script>
+	<script src="js/wow.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+  <script>
+    $(document).ready(function(){
+        var slider2 = $(".slider1st").bxSlider({
+          controls:false,
+          pager:false,
+          controls:false,
+          auto:true,
+          mode:'vertical'
+        });
+        $(".prevBtn").click(function(){
+          slider2.goToPrevSlide()
+        });
+        $(".nextBtn").click(function(){
+          slider2.goToNextSlide()
+        });
+      });
+  </script>
+  <style>
+		body{font-family: 'Gothic A1', sans-serif;}
+	</style>
+</head>
+<body>
+  <header id="main_header">
+		<div id="header_top">
+			<h1 class="logo"><a href="index.html"><img src="images/samsung.JPG" alt=""></a></h1>
+			<nav id="main_menu">
+				<ul class="menu clearfix">
+          <li><a href="sub_menu1.html">회사소개</a></li>
+					<li><a href="sub_menu2.html">기획전</a></li>
+					<li><a href="sub_menu3.html">스토리</a></li>
+					<li><a href="sub_menu4.html">제품</a></li>
+					<li><a href="sub_menu5.html">솔루션</a></li>
+					<li><a href="sub_menu6.html" target="blank">디지털프라자<i class="fab fa-product-hunt"></i></a></li>
+				</ul>
+        <div class="bar"></div>
+			</nav>
+      <script>
+        nowMenu(0);
+      </script>
+			<div class="toggleMenu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>-
+				<div class="bar3"></div>
+			</div>
+		</div>
+
+
+    <div class="sub_main">
+      <div class="subVideo">
+        <video src="images/video2_1.webm" width="1520" autoplay muted playsinline loop></video>
+        <h2>새로운 미래 창조</h2>
+        <p>삼성전자의 새로운 미래의 창조와 더 나은 세상을 향한 열정</p>
+      </div>
+    <div class="subWrap clearfix">
+      <ul>
+        <li><a href="#">회사소개</a></li>
+        <li class="active"><a href=""sub_menu1.html"">비전</a></li>
+        <li><a href="#">기업정보</a></li>
+        <li><a href="#">사업정보</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="subPage">
+      <div class="subCategory clearfix">
+        <ul>
+          <li><a href="index.html"><img src="images/home.png" alt=""></a></li>
+          <li><img src="images/next_btn.png" alt="" class="sB"></li>
+          <li><a href="sub_menu1.html">회사소개</a></li>
+          <li><img src="images/next_btn.png" alt="" class="sB"></li>
+          <li><a href="sub_menu1.html" class="vI">비전</a></li>
+        </ul>
+
+      </div>
+
+      <div class="vision">
+          <div class="visionTop">
+            <img src="" alt="">
+            <p class="vTxt1" style="font-family:NEXONTWO">경영철학</p>
+            <p class="vTxt2">삼성전자는 사람과 사회를 생각하는 글로벌 일류기업을 추구합니다. </p>
+            <div class="bracket"></div>
+            <p class="vTxt3">SAMSUNG ELECTRONICS WILL<br>KEEP ITS PROMISE!</p>
+            <p class="vTxt4">‘경영이념, 핵심가치, 경영원칙’의 가치체계를 경영의 나침반으로 삼고,<br>
+              인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여 인류사회에 공헌하는 것을
+              궁극적인 목표로 삼고 있습니다.</p>
+            <div class="vTxt4Bar"></div>
+          </div>
+
+          <div class="vContainer">
+        		<div class="section">
+        			<ul class="clearfix">
+        				<li>
+        					<div class="card">
+        						<img src="images/card_1.png" alt="">
+        						<div class="card_body">
+        							<p class="cardTxt">법과 윤리 준수</p>
+        							<p>개인의 존엄성과 다양성 존중은<br>
+                        모든 사람의 기본적인 인권을 존중하는 것입니다.<br>
+                        법과 상도의에 따라 공정하게 경쟁해야 하며<br>
+                        사업활동에 있어서 뇌물, 향응을 주고 받지 않습니다.<br>
+                        정확한 회계기록으로 회계의 투명성을 유지하는 것은<br>
+                        회사의 재무적 변동 등 경영상의 주요사항 및<br>
+                        기업정보를 성실하게 공시합니다.
+                      </br></p>
+        						</div>
+        					</div>
+        				</li>
+        				<li>
+        					<div class="card">
+        						<img src="images/card_2.png" alt="">
+        						<div class="card_body">
+        							<p class="cardTxt">Clean Organizational CULTURE</p>
+        							<p>업무활동에서 공과 사를 엄격히 구분합니다.<br>
+                        직무상 취득한 정보를 이용하여 주식의 매매 등<br>
+                        유가증권에 관한 거래를 하지 않습니다.<br>
+                        회사와 타인의 지적 재산을 보호하고 존중합니다.<br>
+                        무단사용, 복제, 배포, 변경 등 일체 침해 행위를 금합니다.<br>
+                        건전한 조직 분위기 조성을 위해<br>
+                        건전한 관계를 해치는 일체의 언행을 하지 않습니다.
+                      </p>
+        						</div>
+        					</div>
+        				</li>
+        				<li>
+        					<div class="card">
+        						<img src="images/card_3.png" alt="">
+        						<div class="card_body">
+        							<p class="cardTxt">글로벌 기업시민으로서의 책임</p>
+        							<p>기업시민으로서 사회적 책무를 수행합니다.<br>
+                        현지의 사회ㆍ문화적 특성을 존중하고 상생을 실천합니다.<br>
+                        지역사회의 법, 문화와 가치관을 존중하고 <br>
+                        지역주민의 삶의 질 향상에 기여하여 사회 발전을 도모합니다.<br>
+                        사업파트너와 공존공영의 관계를 구축하기위해<br>
+                        사업파트너와 상호 신뢰의 기반 위에서 호혜적인 관계를 형성하고<br>
+                        사업파트너를 전략적 동반자로 인식합니다.
+                      </p>
+        						</div>
+        					</div>
+        				</li>
+        			</ul>
+              <div class="vcardBar"></div>
+        		</div>
+            <div class="visionCb">
+              <p class="Cb1">지속가능한 사회에 기여하기 위한 통합적 가치 창출</p>
+              <p class="Cb2">삼성전자는 글로벌 시민사회의 일원으로서 사회적 책임을 다하고<br>
+                혁신적 제품과 서비스를 제공하여 경제적·사회적·환경적 가치를 창출합니다.
+            </div>
+
+            <div class="vContent">
+        			<ul class="clearfix">
+                <li class="vC1st">
+                  <div class="sliderWrap">
+                    <ul class="slider1st">
+                      <li class="news clearfix">
+                        <div class="top">
+                          <img src="images/sub_img1.jpg" alt="img">
+                        </div>
+                        <div class="bottom">
+                          <h3>녹색경영 가치세계</h3><P>
+                          물류부문 에너지 효율 개선을 위해<br>
+                          온실가스 절감과제 추진,<br>
+                          화상회의 확대를 통한 해외출장<br>
+                          횟수를 저감 추진하고 있습니다.
+                        </p></div>
+                      </li>
+                      <li class="news clearfix">
+                        <div class="top">
+                          <img src="images/sub_img1_1.jpg" alt="img">
+                        </div>
+                        <div class="bottom">
+                          <h3>녹색경영 가치세계</h3><p>
+                          매월 온실가스 시스템으로<br>
+                          글로벌 사업장 별 배출량 분석,<br>
+                          향후 국내,미국,동남아 사업장으로<br>
+                          기술을 확대 적용 해 나갈 예정입니다.
+                        </p></div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="vC2st">
+                  <div class="sliderWrap">
+                    <ul class="slider1st">
+                      <li class="news clearfix">
+                        <div class="top">
+                        <h3>Responsible Labor Practice</h3>
+                        <p>삼성전자는 다양한 이해관계자들과 사회에서<br>
+                          기대하는 사회적, 윤리적 책임과<br>
+                          지속 가능한 공급망 구축을 위한 노력을<br>
+                          다하기 위해 노력하고 있습니다.
+                        </div>
+                        <div class="bottom">
+                          <img src="images/sub_img2.jpg" alt="img">
+                        </div>
+                      </li>
+                      <li class="news clearfix">
+                        <div class="top">
+                        <h3>Responsible Labor Practice</h3>
+                        <p>상호 이해 증진을 위한 이문화 체험,<br>
+                          조직활성화 행사, 이주근로자 방문행사 등<br>
+                          다양한 활동과 이주 근로자 가이드라인을<br>
+                          BSR(Business for Social Responsibility)과<br>
+                          함께 발표했습니다.
+                        </p>
+                        </div>
+                        <div class="bottom">
+                          <img src="images/sub_img2_1.jpg" alt="img">
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="vC3st">
+                  <div class="sliderWrap">
+                    <ul class="slider1st">
+                      <li class="news clearfix">
+                        <div class="top">
+                          <img src="images/sub_img3.jpg" alt="img">
+                        </div>
+                        <div class="bottom">
+                          <h3>지속가능경영 전략</h3>
+                          <p>이윤과 주주가치 극대화를 통한 경제적 가치,<br>
+                            글로벌 시민사회의 일원으로서<br>
+                            Citizenship 강화에 따른 사회적 가치를<br>
+                            결합한 통합적 가치 창출을 목표로 합니다.<br>
+                          </p>
+                        </div>
+                      </li>
+                      <li class="news clearfix">
+                        <div class="top">
+                          <img src="images/sub_img3_1.jpg" alt="img">
+                        </div>
+                        <div class="bottom">
+                          <h3>지속가능경영 가치</h3>
+                          <p>Economic Value:이윤과 주주가치 극대화<br>
+                           → 제품과 서비스의 혁신<br>
+                          Social Value:지속가능 사회를 위한 기여<br>
+                           → UN SDGs 달성<br>
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="vC4st">
+                  <div class="sliderWrap">
+                    <ul class="slider1st">
+                      <li class="news clearfix">
+                        <div class="top">
+                        <h3>보고서 & 정책</h3>
+                        <p>책임 있는 정보공개와 투명한 소통<br>
+                          지속가능 경영 성과를 위해<br>
+                          매년 지속가능경영 보고서를 발간,<br>
+                          관련 전책을 공개합니다.
+                        </p>
+                        </div>
+                        <div class="bottom">
+                          <img src="images/sub_img4.jpg" alt="img">
+                        </div>
+                      </li>
+                      <li class="news clearfix">
+                        <div class="top">
+                        <h3>보고서 & 정책</h3>
+                        <p>사회 및 환경적 책임에 대한 기대치 상승은<br>
+                          비즈니스 세계의 중요성을 높이고 있습니다.<br>
+                          이해관계자의 아이디어를 수렴하고<br>
+                          기업의 비전과 전략을 수립해오고 있습니다.
+                        </p>
+                        </div>
+                        <div class="bottom">
+                          <img src="images/sub_img4_1.jpg" alt="img">
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+        		</div>
+        </div>
+      </div>
+      <div class="ftAfter">
+        <div class="ftBar"></div>
+        <p>투자자 정보는 삼성전자 <a href="#">IR 페이지</a>에서 확인해 주십시오.</p>
+      </div>
+    </div>
+
+</body>
+
+<h3 class="subLine clearfix"></h3>
+<footer class="footer">
+<div class=footer_1>
+    <ul class="footerTxt clearfix">
+      <li>삼성전자 주식회사 대표이사 : 김기남</li>
+      <li>사업자등록번호 : 124-81-00998 <a href="">사업자 정보확인</a></li>
+      <li>통신판매업 신고 : 2000-경기수원-0515</li>
+    </ul>
+    <ul class="footerTxt clearfix">
+      <li>사업장주소 : 경기도 수원시 영통구 삼성로 129(매탄동)</li>
+      <li>호스팅서비스사업자 : 한국아이비엠(주)</li>
+      <li>대표번호 : 02-2255-0114</li>
+      <li>제품/서비스/멤버십: 1588-3366</li>
+      <li>구매문의 : 1588-6084</li>
+    </ul>
+    <p>본 사이트에서 판매되는 상품 중에는 등록된 개별 판매자가 판매하는 상품이 포함되어 있습니다.</p>
+    <p>개별 판매자 판매 상품의 경우 삼성전자(주)는 통신판매중개업자로서 통신판매의 당사자가 아니므로, 개별 판매자가 등록한 상품, 거래정보 및 거래 등에 대해 책임을 지지 않습니다.</p>
+    <p>본 사이트의 컨텐츠는 저작권법의 보호를 받는 바 무단 전재, 복사, 배포 등을 금합니다.</p>
+    <p class="copy">Copyright © 1995-2020 Samsung. All Rights Reserved.</p>
+</div>
+</footer>
+<h3 class="line_2 clearfix"></h3>
+<footer class="footer">
+<div class="footer_2 claerfix">
+  <ul class="footer2Txt clearfix">
+    <li><a href="">한국/한국어</a></li>
+    <li><a href="">이메일 무단 수집거부</a></li>
+    <li><a href="">아이디어 정책</a></li>
+    <li><a href="">사이트맵</a></li>
+    <li><a href="">이용약관</a></li>
+    <li><a href="">개인정보처리방침</a></li>
+  </ul>
+  <ul class="sns clearfix">
+    <li><a href="#"><img src="images/samsung.png" alt=""></li>
+    <li><a href="#"><img src="images/fb.jpg" alt=""></a></li>
+    <li><a href="#"><img src="images/you.jpg" alt=""></a></li>
+    <li><a href="#"><img src="images/insta.jpg" alt=""></a></li>
+    <li><a href="#"><img src="images/ee.jpg" alt=""></a></li>
+  </ul>
+</div>
+</footer>
+</html>
