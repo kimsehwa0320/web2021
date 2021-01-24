@@ -678,5 +678,5 @@ ul.sns li{float:left}
   position: absolute; text-align:center;
   color:white; left: 50%; transform:translateX(-50%);
  }
-.subFive h2{font-weight:bold; font-size:36px; top:210px; letter-spacing: 5px;}
-.subFive p{font-size:14px; top:320px;}
+.subFive h2{font-weight:bold; font-size:36px; top:250px;}
+.subFive p{font-size:14px; top:310px;}
