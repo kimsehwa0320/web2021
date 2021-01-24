@@ -370,7 +370,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
   background-size:cover; padding-top: 70px;
 }
 .container_1{
-  height: 760px; color:#000;margin-top: -550px;
+  height: 860px; color:#000;margin-top: -550px;
   background: #f2f2eb; margin-bottom: 200px;
   padding-top: 70px;
 }
@@ -741,12 +741,13 @@ background-size:cover; padding-top: 70px; margin-bottom: 200px;
   text-align: center; font-size: 17px;
   margin-bottom: 70px; font-weight:bold;
 }
+.container_1 .card h3{font-size:21px;padding-bottom: 10px;}
 .dContainer .card .card_body p{color:#fff;}
-.container_1 h4{text-align: center; font-size:32px; padding-top: 30px;}
+.container_1 h4{text-align: center; font-size:32px; padding-top: 60px;}
 .container_1 .section p{padding: 10px;}
 .container_1 .section ul li{
   float: left; margin-right: 20px;width: 406.67px;
-  height: 580px; padding-top: 40px; text-align:center;
+  height: 580px; padding-top: 70px; text-align:center; padding-bottom: 15px;
 }
 
 .container_1 .section ul li:last-child{margin-right: 0;}
