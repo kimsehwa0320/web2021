@@ -23,25 +23,6 @@
 	</style>
 	<script>
 		$(document).ready(function(){
-
-			var slider1 = $(".slider").bxSlider({controls:false});
-			$(".pBtn").click(function(){
-				slider1.goToPrevSlide()
-			});
-			$(".nBtn").click(function(){
-				slider1.goToNextSlide()
-			});
-
-
-			var slider2 = $(".slider1st").bxSlider({controls:false, pager:false});
-			$(".prevBtn").click(function(){
-				slider2.goToPrevSlide()
-			});
-			$(".nextBtn").click(function(){
-				slider2.goToNextSlide()
-			});
-
-
 			$(".toggleMenu").click(function(){
 				var toggle = $(".toggleMenu").attr("class"); //get
 				console.log(toggle); // toggleMenu 찍힘
@@ -97,11 +78,11 @@
 		<div class="sliderWrap">
 			<ul class="slider">
 				<li class="slider_4st">
-					<video src="images/video.webm" width="1520" autoplay muted playsinline loop></video>
+					<img src="images/sub_menu6bg.jpg" alt="">
 					<div class="subTxt6">
-						<h3 style="font-family:NEXONTWO"><strong>Galaxy S21 Ultra 5G<br>사전판매</h3></strong>
-						<a href="#" class="txt1Btn1">더 알아보기</a>
-						<a href="#" class="txt1Btn2">사전 구매하기</a>
+						<h3 style="font-family:NEXONTWO"><strong>삼성전자 세일 페스타</h3></strong>
+            <p>1년 중 단 한번, 삼성전자 새해 첫 대규모 세일 혜택</p>
+						<a href="#" class="txt1Btn2">특가 보러가기</a>
 					</div>
 				</li>
 				<!-- <li class="slider_1st">
@@ -132,7 +113,7 @@
 				<li class="ct3st">
 					<div class="sliderWrap">
 						<ul class="slider1st">
-							<li class="news clearfix">
+							<li class="news clearfix" style="background-color: #fff;">
 								<div class="left">
 									<h4>갤럭시 S21 5G 자급제</h4>
 									<p style="font-size:12px;">SM-G991NZIEKOO</p>
@@ -142,30 +123,6 @@
 								</div>
 								<div class="right">
 									<img src="images/img01_02_01.jpg" alt="img">
-								</div>
-							</li>
-							<li class="news clearfix">
-								<div class="left">
-									<h4>갤럭시 S21+ 5G 자급제</h4>
-									<p style="font-size:12px;">SM-G996NZVEKOO</p>
-									<p style="font-size:14px;">회원가  1,199,000 원</p>
-									<a href="#" class="leftBtn1">트레이드인<br>신청하기</a>
-									<a href="#" class="leftBtn2">사전 구매하기</a>
-								</div>
-								<div class="right">
-									<img src="images/img01_02_02.jpg" alt="img">
-								</div>
-							</li>
-							<li class="news clearfix">
-								<div class="left">
-									<h4>갤럭시 버즈 프로</h4>
-									<p style="font-size:12px;">SM-R190NZVAKOO</p>
-									<p style="font-size:14px;">회원가  239,800 원</p>
-									<a href="#" class="leftBtn1">트레이드인<br>신청하기</a>
-									<a href="#" class="leftBtn2">사전 구매하기</a>
-								</div>
-								<div class="right">
-									<img src="images/img01_02_03.jpg" alt="img">
 								</div>
 							</li>
 						</ul>
@@ -207,14 +164,14 @@
 	<!-- container -->
   <div class="container_1">
 		<div class="section">
-			<h4>이벤트</h4>
-			<p>Galaxy S21 Ultra 5G</p>
+			<h4>더할수록 커지는 <br>❝ 새해맞이 삼‧세‧페 삼성닷컴 단독 혜택 ❞</h4>
+			<p>2021.01.01 ~ 2021.01.31</p>
 			<ul class="clearfix">
 				<li>
 					<div class="card">
 						<div class="card_body">
-							<h3>이달의 혜택</h3>
-							<p>행사모델 한정수량 특가 <br>비스포크 키친 패키지 특별혜택 <br>+<br>의류케어 FULL 패키지 특별혜택</p>
+							<h3>더할수록 커지는 <br>새해맞이 삼‧세‧페 삼성닷컴 단독 혜택</h3>
+							<p>2021.01.01 ~ 2021.01.31</p>
 						</div>
 					</div>
 				</li>
@@ -224,12 +181,12 @@
 	</div>
 	<div class="dContainer">
 		<div class="section">
-			<h4>삼세페 구매 혜택 확인하셨나요?</h4>
+			<h4>삼‧세‧페 구매 혜택 확인하셨나요?</h4>
 			<p>블록버스터급 혜택가와 추가 사은품 혜택까지</p>
 			<ul class="clearfix">
 				<li>
 					<div class="card">
-						<img src="images/banner_icon01_01.png" alt="enginnering">
+						<img src="images/sb6_1.png" alt="enginnering">
 						<div class="card_body">
               <h3>최대 15만P 페이백</h3>
 							<p>결제 금액의 5% <br>네이버페이 포인트 지급</p>
@@ -238,7 +195,7 @@
 				</li>
 				<li>
 					<div class="card">
-						<img src="images/banner_icon01_02.png" alt="enginnering">
+						<img src="images/sb6_2.png" alt="enginnering">
 						<div class="card_body">
 							<h3>최대 20만원 할인</h3>
 							<p>삼성카드 5% 청구할인 <br>일부 행사제품 한정</p>
@@ -247,7 +204,7 @@
 				</li>
 				<li>
 					<div class="card">
-						<img src="images/banner_icon01_03.png" alt="enginnering">
+						<img src="images/sb6_3.png" alt="enginnering">
 						<div class="card_body">
 							<h3>5만원 신세계 상품권</h3>
 							<p>300만원 이상 구매 고객 <br>선착순 400명 한정</p>
