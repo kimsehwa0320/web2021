@@ -10,8 +10,3 @@
 }
 
 .menu li a{display: block; line-height:40px;text-align:center;}
-
-
-.bar{
-  width: 200px;height: 5px; background: red; position: relative;
-}

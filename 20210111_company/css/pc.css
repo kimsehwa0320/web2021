@@ -1,11 +1,16 @@
 @charset "utf-8";
 
 header#main_header{height: 1950px;position: relative; _background: pink; margin-bottom:100px;}
-.bar{
-  width: 90px;height: 3px; background: gray; position: relative;margin-top: -20px;
-  /* transform: scaleX(0);transition: 0.3s; */
-}
+
 /* #main_menu .menu li:hover .bar{ transform: scaleX(1); } */
+.menu li{position: relative;}
+.menu li:hover:after,
+.menu li.active:after{
+  content: ""; width: 133.33px; height: 5px;
+  background: #6867ff; position: absolute;
+  left: 50%; transform:translate(-50%); margin-top: -5px;
+}
+
 
 
 /*header top*/

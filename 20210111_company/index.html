@@ -20,6 +20,13 @@
 	</script>
 	<style>
 		body{font-family: 'Gothic A1', sans-serif;}
+		.menu li:hover:after,
+		.menu li.active:after{
+			content: ""; width: 133.33; height: 5px;
+			background: #6867ff; position: absolute;
+			left: 50%; transform:translate(-50%);
+		}
+
 	</style>
 	<script>
 		$(document).ready(function(){
