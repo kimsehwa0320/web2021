@@ -3,6 +3,7 @@
 header#main_header{height: 1950px;position: relative; _background: pink; margin-bottom:100px;}
 
 /* #main_menu .menu li:hover .bar{ transform: scaleX(1); } */
+
 .menu li{position: relative;}
 .menu li:hover:after,
 .menu li.active:after{
@@ -23,7 +24,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 #header_top>h1>a{float: left; padding: 15px 120px; }
 #header_top>h1>a>img{width: 140px;}
 
-#main_menu{float: right; padding-right: 110px;}
+#main_menu{float: right; padding-right: 110px; }
 #main_menu li{float: left; height: 80px; }
 #main_menu li a{
 	display: block; line-height: 80px;
