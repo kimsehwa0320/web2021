@@ -17,8 +17,12 @@
     #thumbnail div{float: left;}
     #thumbnail div.left,
     #thumbnail div.right{width: 32px; padding-top: 30px;padding-left: 9px;height: 95px;cursor: pointer;}
+    #thumbnail .container{width: 760px;height: 95px;background: orange; overflow: hidden;}
 
-    #thumbnail .container{width: 760px;height: 95px;background: orange;}
+    #thumbnail .container ul{width: 2280px; position: relative; left: 0;}
+    #thumbnail .container ul li{float: left; width: 120px; height: 95px;margin-left: 8px;}
+
+    .ml0{margin-left: 0 !important;}
   </style>
 </head>
 <body>
@@ -46,7 +50,34 @@
     </div>
       <div id="thumbnail" class="clearfix">
         <div class="left"><img src="images/btn_left.gif" alt="prev"></div>
-        <div class="container"></div>
+        <div class="container">
+          <ul class="clearfix">
+            <!-- 0~760 -->
+            <li class="ml0"><img src="images/thumb0.jpg" alt="thumb0">1</li>
+            <li><img src="images/thumb1.jpg" alt="thumb0">2</li>
+            <li><img src="images/thumb2.jpg" alt="thumb0">3</li>
+            <li><img src="images/thumb3.jpg" alt="thumb0">4</li>
+            <li><img src="images/thumb4.jpg" alt="thumb0">5</li>
+            <li><img src="images/thumb5.jpg" alt="thumb0">6</li>
+
+            <!-- 760~1520 -->
+            <li class="ml0"><img src="images/thumb6.jpg" alt="thumb0">7</li>
+            <li><img src="images/thumb7.jpg" alt="thumb0">8</li>
+            <li><img src="images/thumb8.jpg" alt="thumb0">9</li>
+            <li><img src="images/thumb9.jpg" alt="thumb0">10</li>
+            <li><img src="images/thumb10.jpg" alt="thumb0">11</li>
+            <li><img src="images/thumb11.jpg" alt="thumb0">12</li>
+
+            <!-- 1520~2280 -->
+            <li class="ml0"><img src="images/thumb12.jpg" alt="thumb0">13</li>
+            <li><img src="images/thumb13.jpg" alt="thumb0">14</li>
+            <li><img src="images/thumb14.jpg" alt="thumb0">15</li>
+            <li><img src="images/thumb15.jpg" alt="thumb0">16</li>
+            <li><img src="images/thumb16.jpg" alt="thumb0">17</li>
+            <li><img src="images/thumb17.jpg" alt="thumb0">18</li>
+          </ul>
+
+        </div>
         <div class="right"><img src="images/btn_right.gif" alt="next"></div>
       </div>
   </div>
