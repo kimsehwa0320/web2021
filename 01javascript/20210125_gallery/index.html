@@ -25,7 +25,8 @@
     .ml0{margin-left: 0 !important;}
   </style>
   <script>
-    $(document).ready(function(){
+    // $(document).ready(function(){});
+    $(function(){
       $("#thumbnail li").click(function(){
         var num = $(this).index();
         console.log(num);
@@ -33,20 +34,35 @@
         //$("#image>p").eq(num).show();
         $("#image>p").hide().eq(num).show();
       });
+
       //next
-      var current = 0; //현재 위치 값
+      var current = 0; //현재위치값
+
       $(".right").click(function(){
-        current = current + 1;
-        if(current==3){current=0;}
-        var cNum = current*760*-1;
-        console.log(cNum);
-        $(".container>ul").css("left",cNum);
+        //current = current + 1;
+        current++;
+        if(current==3){current=2;}
+
+        //var cNum = current * 760 *-1;
+        //$(".container>ul").css("left",cNum);
+
+        imgMove();
       });
+
       //prev
       $(".left").click(function(){
-        current = current - 1;
-        console.log(current);
+        //current = current - 1;
+        current--;
+        if(current == -1){current=0;}
+        imgMove();
       });
+
+      // move func
+      function imgMove(){
+        var cNum = current * 760 * -1;
+        //$(".container>ul").css("left",cNum);
+        $(".container>ul").stop().animate({left:cNum},300);
+      }
     });
   </script>
 </head>
