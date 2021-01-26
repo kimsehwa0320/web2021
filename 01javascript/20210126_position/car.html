@@ -18,6 +18,7 @@
       left: 50px; top: 190px;
     }
     .car{position: absolute; left: 50px; top: 120px;}
+    .rotate{transform:rotateY(180deg)}
   </style>
   <script>
     $(function(){
@@ -26,7 +27,8 @@
       var nStart = bar.position().left; //자동차 출발
       var nEnd = nStart + bar.width() - car.width(); //자동차 도착
       var nCurrent = nStart; //자동차 현재 위치
-      var nStep = 2; //자동차 현재 위치
+      var nStep = 10; //자동차 현재 위치
+      var nTimerId = 0;
 
       function carMove(){
         //nCurrent = nCurrent + nStep;
@@ -40,23 +42,37 @@
 
         if(nCurrent > nEnd){
           nStep = -2;
+          $(".car").addClass("rotate");
         }
 
         if(nCurrent < nStart){
           nStep = 2;
+          $(".car").removeClass("rotate");
         }
 
         car.css("left",nCurrent)
       }
-      setInterval(carMove,30) // 1000 - 1초
+      //setInterval(carMove,30) // 1000 - 1초
+
+      $(".btn_start").click(function(){
+        if(nTimerId==0){ //중복실행제거
+          nTimerId = setInterval(carMove,30);
+        }
+      });
+      $(".btn_stop").click(function(){
+        clearInterval(nTimerId);
+        nTimerId = 0; //다시시작
+      });
+
     });
   </script>
 </head>
 <body>
   <div id="panel">
     <div class="bar"></div>
-    <dib class="car"><img src="../images/car.png" alt=""></dib>
-  <button class="btn_start">시작</button>
+    <div class="car rotate"><img src="../images/car.png" alt=""></div>
   </div>
+  <button class="btn_start">시작</button>
+  <button class="btn_stop">멈춤</button>
 </body>
 </html>

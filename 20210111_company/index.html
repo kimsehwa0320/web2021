@@ -20,13 +20,6 @@
 	</script>
 	<style>
 		body{font-family: 'Gothic A1', sans-serif;}
-		.menu li:hover:after,
-		.menu li.active:after{
-			content: ""; width: 133.33; height: 5px;
-			background: #6867ff; position: absolute;
-			left: 50%; transform:translate(-50%);
-		}
-
 	</style>
 	<script>
 		$(document).ready(function(){
@@ -59,7 +52,16 @@
 					$(".toggleMenu").removeClass("change");
 					$("#main_menu").stop().animate({left:"-100%"},300);
 				}
+			});
 
+			$(".dBtn1,.dBtn2").hide();
+			$("footer2Txt>li").eq(4).click(function(){
+				$(".dBtn1").fadeIn();
+				$(".dBtn2").hide();
+			});
+			$("footer2Txt>li").eq(5).click(function(){
+				$(".dBtn2").fadeIn();
+				$(".dBtn1").hide();
 			});
 
 			$(window).resize(function(){
@@ -93,7 +95,6 @@
 					<li><a href="sub_menu5.html">솔루션</a></li>
 					<li><a href="sub_menu6.html" target="blank">디지털프라자<i class="fab fa-product-hunt"></i></a></li>
 				</ul>
-				<!-- <div class="bar"></div> -->
 			</nav>
 			<div class="toggleMenu">
 				<div class="bar1"></div>
@@ -353,27 +354,20 @@
 			<li><a href="">이메일 무단 수집거부</a></li>
 			<li><a href="">아이디어 정책</a></li>
 			<li><a href="">사이트맵</a></li>
-			<!-- <li><a href="">이용약관</a></li> -->
-			<!-- <li><a href="">개인정보처리방침</a></li> -->
-			<li class="droplistBtn01">
-				<!-- <button class="droplistBtn">이용약관</button> -->
-				<select name="list" id="list" class="list">
-						<option value="기준" selected="selected">이용약관</option>
-						<option value="이용약관1">삼성전자 대표사이트 이용약관</option>
-						<option value="이용약관2">삼성전자멤버십 이용약관</option>
-						<option value="이용약관3">Samsung 서비스 이용약관</option>
-				</select>
-			</li>
-			<li class="droplistBtn02">
-				<!-- <button class="droplistBtn">개인정보처리방침</button> -->
-				<select name="list" id="list" class="list">
-						<option value="기준" selected="selected">개인정보처리방침</option>
-						<option value="정보1">삼성닷컴 개인정보처리방침</option>
-						<option value="정보2">삼성전자멤버십 개인정보 처리방침</option>
-						<option value="정보3">멤버십블루 개인정보처리방침</option>
-				</select>
-			</li>
+			<li class="droplistBtn1 clearfix">이용약관</li>
+			<li class="droplistBtn2 clearfix">개인정보처리방침</li>
 		</ul>
+			<div class="dBtn1">
+				<li>삼성전자 대표사이트 이용약관</li>
+				<li>삼성전자멤버십 이용약관</li>
+				<li>Samsung 서비스 이용약관</li>
+			</div>
+			<div class="dBtn2">
+				<li>삼성닷컴 개인정보처리방침</li>
+				<li>삼성전자멤버십 개인정보 처리방침</li>
+				<li>멤버십블루 개인정보처리방침</li>
+			</div>
+
 		<ul class="sns clearfix">
 			<li><a href="#"><img src="images/samsung.png" alt=""></li>
 			<li><a href="#"><img src="images/fb.jpg" alt=""></a></li>
