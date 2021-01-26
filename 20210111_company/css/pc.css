@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-header#main_header{height: 1950px;position: relative; _background: pink; margin-bottom:100px;}
+header#main_header{height: 1950px;position: relative; margin-bottom:100px;}
 
 /* #main_menu .menu li:hover .bar{ transform: scaleX(1); } */
 
@@ -130,6 +130,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 }
 .sliderWrap .slider_4st,
 .sliderWrap .slider_4st video{
+  width: 1520px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;

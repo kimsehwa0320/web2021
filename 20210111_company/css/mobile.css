@@ -14,7 +14,7 @@ header#main_header{}
 #header_top>h1{float: left; height: 50px; margin-top: 10px;line-height:50px;}
 #main_menu{
 	background: #000; position: fixed; top: 0; left: -100%;
-	width: 100%; height: 100%; 
+	width: 100%; height: 100%;
 
 }
 #main_menu ul{
@@ -26,7 +26,7 @@ header#main_header{}
 .toggleMenu{
 	display: block; width: 80px;height: 80px;
 	position: absolute;
-	top: 5px;right: 0; cursor: pointer; 
+	top: 5px;right: 0; cursor: pointer;
 }
 .toggleMenu div{
 	width: 35px; height: 5px; background-color: black;
@@ -42,62 +42,37 @@ header#main_header{}
 
 
 /*slider*/
-.sliderWrap{height: 500px;}
-/*.sliderWrap li img{width: 100%;}*/
-.sliderWrap .slider_txt{
-	position: absolute;width: 500px;
-	left: 50%; margin-left: -250px; top: 50%;
-	text-align: center; color: white;
-}
+.sliderWrap{height: 500px;position: relative;}
+.sliderWrap li img{width: 100%;}
+
 .sliderWrap .slider_1st .slider_txt1{
-	position: absolute; color: white;
-	top: 25%; left: 120px;letter-spacing: -2px;
+	position: absolute; color: white; _width: 500px;
+	top: 50%; left: 8%; z-index: 1;
 }
-.slider_txt1 h3{font-size:1em; padding: 16px 0;}
-/*.sliderWrap .slider_txt h3:after{
-	content:""; display: block; width: 300px;height: 2px;
-	background: #fff; margin: 0 auto;
-}*/
-
-.slider_txt1 .txt1Btn1{
-	width:150px; line-height:100px; color: white;
-	font-weight:bold; font-size: 14px;
-	text-decoration:underline;
-	padding-right: 15px;
-}
-.slider_txt1 .txt1Btn2{
-	width:150px;line-height:100px;
-	text-align: center; padding: 10px 20px;
-	border: 1px solid #fff; background: #fff;
-	border-radius:20px; color: #25262a;
-	font-size: 14px;font-weight:bold;
-}
-.slider_txt1 .txt1Btn2:hover{background-color:#000; border: 1px solid #000; color: #fff;}
-.slider_txt2 .txt1Btn3:hover{background-color:#fff; border: 3px solid #000; color: #000;}
-
-
 .sliderWrap .slider_2st .slider_txt2{
 	position: absolute; color: black;
-	top: 25%; left: 120px; letter-spacing: -2px;
-	letter-spacing: -2px;
+	top: 50%; left: 8%; z-index: 2;
 }
-.slider_txt2 h3{font-size:1em; padding: 16px 0; letter-spacing: -5px;}
-.slider_txt2 .txt1Btn3{
-	width:150px;line-height:100px; top: 15px;
-	text-align: center; padding: 10px 20px;
-	border: 1px solid #000; background: #000;
-	border-radius:20px; color: #fff;
-	font-size: 14px;font-weight:bold;
+.sliderWrap .slider_4st .slider_txt4{
+	position: absolute; color: black;
+	top: 50%; left: 8%; z-index: 3;
 }
+.slider_txt3 h3{
+	position: absolute;
+	top: 20%; left: 8%;
+}
+.slider_txt3 p{
+	top: 70%; left: 8%;
+	font-weight:bold; position: absolute;}
+.slider h3{font-weight: bold;letter-spacing: -2px}
 
-.sliderWrap{height: 400px;}
-.sliderWrap li{
-	height: 400px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;}
-.sliderWrap .slider_1st{background-image: url(../images/mainimg01.jpg);}
-.sliderWrap .slider_2st{background-image: url(../images/mainimg02.jpg);}
+.slider_txt1 .txt1Btn1{color: white;}
+.slider_txt1 .txt1Btn2{color: #25262a;border: 1px solid #fff; background: #fff;}
+
+.slider_txt4 .txt1Btn1{color: black;}
+.slider_txt4 .txt1Btn2{color: white;border: 1px solid #000; background: #000;}
+
+
 
 .sliderWrap .bx-wrapper {
     -moz-box-shadow: none;
@@ -106,9 +81,11 @@ header#main_header{}
     border: 0 none;
     margin-bottom: 0;
 }
+
 .sliderWrap .bx-wrapper .bx-pager{
 	bottom: 10px;
 }
+
 
 
 /*content*/
@@ -158,8 +135,8 @@ header#main_header{}
 /*ct6st, ct7st, ct8st, ct11st txt*/
 .content div.txt{position: absolute; top: 40px; left: 20px; }
 .content div.txt h3:after{
-	content: ""; display: block; 
-	width: 50px; height: 2px; 
+	content: ""; display: block;
+	width: 50px; height: 2px;
 	background-color: #fff; margin: 20px 0;
 }
 .content div.txt p{font-size:2em;}
@@ -168,7 +145,7 @@ header#main_header{}
 .content .ct2st .bgImg{transition: 0.3s;} /*li X img O : 이미지 값 변동*/
 .content .ct2st:hover .bgImg{transform: scale(1.2);}
 .content .ct2st .play{
-	position: absolute; left: 50%; top: 50%; 
+	position: absolute; left: 50%; top: 50%;
 	transform: translate(-50%,-50%);
 }
 
@@ -194,27 +171,12 @@ header#main_header{}
 .content .ct3st .btn img{width: 38px; height: 38px;float: left; cursor:pointer;	} /*화살표붙임*/
 
 
-.sliderWrap .slider .nBtn{position: absolute;right: 0;top: 50%; } 
-.sliderWrap .slider .pBtn{position: absolute;left: 0;top: 50%;} 
+.sliderWrap .slider .nBtn{position: absolute;right: 0;top: 50%; }
+.sliderWrap .slider .pBtn{position: absolute;left: 0;top: 50%;}
 
-
-.bx-wrapper .bx-pager.bx-default-pager a{
-    background: #666;
-    text-indent: -9999px;
-    display: block;
-    width: 85px;
-    height: 3px;
-    margin: 0 5px;
-    outline: 0;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    margin-right: 20px;
-}
-
+.bx-wrapper .bx-pager.bx-default-pager a{display: none;}
 
 /*container*/
 .container{
 	display: none;
 }
-
-

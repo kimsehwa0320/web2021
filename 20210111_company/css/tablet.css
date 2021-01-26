@@ -109,7 +109,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 
 /*content layout*/
 .half{width: 50% !important;}
-.content>ul>li.ct1st{background: #0394f5;}
+.content>ul>li.ct1st{}
 .content>ul>li.ct2st{}
 .content>ul>li.ct3st{width: 50%;}
 .content>ul>li.ct6st{width: 50%;}
@@ -118,10 +118,10 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 .content>ul>li.ct11st{width: 50%;}
 
 
-.content>ul>li.ct4st{background: #d7d6dc;}
-.content>ul>li.ct5st{background: #413d3e;}
-.content>ul>li.ct9st{background: #ff6734;}
-.content>ul>li.ct10st{background: #6abdf9;}
+.content>ul>li.ct4st{}
+.content>ul>li.ct5st{}
+.content>ul>li.ct9st;}
+.content>ul>li.ct10st{}
 
 /*content icon cell*/
 .content li.ct1st p{color: white;}
