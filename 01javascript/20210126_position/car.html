@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>car</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <style>
+    #panel{width: 600px;height: 300px;
+    border: 1px solid #000;
+    margin: 0 auto;position: relative;
+    }
+    .bar{
+      width: 500px; height: 20px;
+      background: #000;position: absolute;
+      left: 50px; top: 190px;
+    }
+    .car{position: absolute; left: 50px; top: 120px;}
+  </style>
+  <script>
+    $(function(){
+      var bar = $(".bar"); //바 dom
+      var car = $(".car"); //자동차 dom
+      var nStart = bar.position().left; //자동차 출발
+      var nEnd = nStart + bar.width() - car.width(); //자동차 도착
+      var nCurrent = nStart; //자동차 현재 위치
+      var nStep = 2; //자동차 현재 위치
+
+      function carMove(){
+        //nCurrent = nCurrent + nStep;
+        nCurrent += nStep;
+
+        //if(nCurrent > nEnd){
+        //  car.css("left",nEnd)
+        //}else{
+        //  car.css("left",nCurrent)
+        //} 쭉 가서 멈춤
+
+        if(nCurrent > nEnd){
+          nStep = -2;
+        }
+
+        if(nCurrent < nStart){
+          nStep = 2;
+        }
+
+        car.css("left",nCurrent)
+      }
+      setInterval(carMove,30) // 1000 - 1초
+    });
+  </script>
+</head>
+<body>
+  <div id="panel">
+    <div class="bar"></div>
+    <dib class="car"><img src="../images/car.png" alt=""></dib>
+  <button class="btn_start">시작</button>
+  </div>
+</body>
+</html>
