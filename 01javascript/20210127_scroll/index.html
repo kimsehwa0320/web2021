@@ -13,7 +13,7 @@
       var car1Pos = $("#car1").offset().top;
       var car2Pos = $("#car2").offset().top;
 
-      $(".menuPos").html(menuPos + "px");
+      $(".menuPos").html(parseInt(menuPos) + "px");
 
 
       //$(window).on("scroll",function(){});
@@ -21,7 +21,7 @@
         var scrollY = $(window).scrollTop();
         console.log(scrollY);
 
-        $(".scrollY").html(scrollY + "px");
+        $(".scrollY").html(parseInt(scrollY) + "px");
 
         //menu fixed
         if(scrollY > menuPos){
@@ -68,7 +68,6 @@
   <div class="box1">
     스크롤위치 : <span class="scrollY"></span><br>
     메뉴 위치 : <span class="menuPos"></span><br>
-    위치 : <span></span>
   </div>
   <div id="wrapper">
     <p>01</p>
