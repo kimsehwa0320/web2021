@@ -12,9 +12,11 @@
       var menuPos = $(".nav").offset().top;
       var car1Pos = $("#car1").offset().top;
       var car2Pos = $("#car2").offset().top;
+      var bHeight = $("document").height();
 
       $(".menuPos").html(parseInt(menuPos) + "px");
 
+      $(".car2").addClass("rotate");
 
       //$(window).on("scroll",function(){});
       $(window).scroll(function(){
@@ -25,26 +27,39 @@
 
         //menu fixed
         if(scrollY > menuPos){
-          $(".nav").addClass("fixed")
+          $(".nav").addClass("fixed");
         }else{
-          $(".nav").removeClass("fixed")
+          $(".nav").removeClass("fixed");
         }
 
         //car1 fixed
         if(scrollY > car1Pos - 300){
-          $("#car1").addClass("move")
+          $("#car1").addClass("move");
         }else{
-          $("#car1").removeClass("move")
+          $("#car1").removeClass("move");
         }
 
         //car2 fixed
         if(scrollY > car2Pos - 300){
-          $("#car2").addClass("move2")
+          $("#car2").addClass("move2");
         }else{
-          $("#car2").removeClass("move2")
+          $("#car2").removeClass("move2");
         }
-      });
-    })
+
+        //topView
+        if(scrollY > bHeight/2){
+          $(".top").addClass("view");
+        }else{
+          $(".top").removeClass("view");
+        }
+      }); //scroll
+
+      $(".top").click(function(){
+        $("html,body").animate({scrollTop:0},300);
+      })
+
+
+    });
   </script>
 <style>
   .box1{
@@ -57,6 +72,20 @@
   }
   .nav li:hover{background: blue;color:#fff;}
   .nav.fixed{width: 100%; position: fixed; top: 0; left: 0;}
+  .rotate{transform:rotateY(180deg);}
+  .top{
+    position: fixed; width: 100px; height: 100px;
+    right: 50px; bottom: 50px; background: #000;
+    border-radius:50px; color:#fff; text-align:center;
+    line-height:100px; opacity: 0; transition:0.3s;
+    animation:viewTop 1s infinite alternate; cursor: pointer;
+  }
+  .top.view{opacity: 1;}
+
+  @keyframes viewTop{
+    from{transform:translateY(-20px)}
+    to{transform:translateY(0px)}
+  }
 
   #car1{position: absolute; left: 0; top: 1300px;transition:0.3s;opacity: 0;}
   #car2{position: absolute; right: 0; top: 1300px;transition:0.3s;opacity: 0;}
@@ -150,7 +179,7 @@
     <p>68</p>
     <p>69</p>
     <p>70</p>
-    <img src="../../images/car.png" alt="" id="car2">
+    <img src="../../images/car.png" alt="" id="car2" class="rotate">
     <p>71</p>
     <p>72</p>
     <p>73</p>
@@ -182,6 +211,6 @@
     <p>99</p>
     <p>100</p>
   </div>
-
+  <div class="top">TOP</div>
 </body>
 </html>
