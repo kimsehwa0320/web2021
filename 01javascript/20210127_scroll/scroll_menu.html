@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>scroll menu</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery.mousewheel.min.js"></script>
+  <style>
+  nav.menu{width: 100%; background: #cdcdcd;}
+  nav.men ul{width: 1000px; margin: 0 auto;}
+  nav.menu.fixed{position: fixed; background: red;}
+  nav.menu li{float: left; width: 20%;}
+  nav.menu li a{display: block; line-height:40px;text-align:center;}
+
+  .content{height: 3000px;}
+  </style>
+  <script>
+    $(function(){
+      $(document).mousewheel(function(event,delta){
+        console.log(delta);
+        $(window).scroll(function(){
+          var scrollY = $(window).scrollTop();
+
+          //아래로 스크롤 시에 메뉴안나옴
+          if(scrollY > 200){
+            if(delta>0){
+              $(".menu").addClass("fixed");
+            }else{
+              $(".menu").removeClass("fixed");
+            }
+          }else{
+            $(".menu").removeClass("fixed");
+          }
+
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="menu fixed">
+      <ul class="clearfix">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+      </ul>
+    </nav>
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum nemo tempore at impedit, veritatis ab libero maiores, unde doloribus amet. Sapiente sit odio tenetur consequuntur minus eum saepe debitis veritatis cum vitae perferendis natus illum aut dolorum, dolorem optio quae, nihil quas quod alias, quam! Similique repellat pariatur laboriosam asperiores doloremque ut adipisci provident obcaecati nihil ab rem nemo ipsam nisi quidem, ipsum perspiciatis, repudiandae ullam molestiae esse error nesciunt maiores minima animi. Corrupti culpa iste beatae, ex exercitationem possimus architecto nihil ipsam. Rem nobis harum corporis quaerat sequi optio, magni facilis delectus reprehenderit nostrum omnis, assumenda. Tempore, ad.</div>
+    </div>
+</body>
+</html>
