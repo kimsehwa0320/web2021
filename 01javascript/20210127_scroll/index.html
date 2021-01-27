@@ -55,10 +55,8 @@
       }); //scroll
 
       $(".top").click(function(){
-        $("html,body").animate({scrollTop:0},300);
-      })
-
-
+        $("html,body").animate({scrollTop:0},500);
+      });
     });
   </script>
 <style>
@@ -78,7 +76,7 @@
     right: 50px; bottom: 50px; background: #000;
     border-radius:50px; color:#fff; text-align:center;
     line-height:100px; opacity: 0; transition:0.3s;
-    animation:viewTop 1s infinite alternate; cursor: pointer;
+    animation:viewTop 0.5s infinite alternate; cursor: pointer;
   }
   .top.view{opacity: 1;}
 
