@@ -1,17 +1,16 @@
 @charset "utf-8";
 
-body{background-color: red;}
 
 header#main_header{height: 1950px;position: relative; _background: pink; margin-bottom:100px;}
 
 
 /*header top*/
 #header_top{
-	width: 1260px; position: fixed; color: white;
+	width: 100%; position: fixed; color: white; height: 80px;
 	left: 50%; transform: translateX(-50%); top: 40px;
 	z-index: 99999;
 }
-#header_top>h1{float: left; height: 50px; position: absolute;}
+#header_top>h1{float: left; height: 100%; position: absolute;}
 #header_top h1 a{color: white;position: absolute;}
 #main_menu{float: right; background: #fff; width: 100%;position: absolute; }
 #main_menu li{float: left; height: 50px;}
@@ -55,7 +54,7 @@ header#main_header{height: 1950px;position: relative; _background: pink; margin-
 }
 .slider_txt1 .txt1Btn2:hover{background-color:#000; border: 1px solid #000; color: #fff;}
 .slider_txt2 .txt1Btn3:hover{background-color:#fff; border: 3px solid #000; color: #000;}
-
+.sliderWrap .slider_4st .video_1{display: none;}
 
 .sliderWrap .slider_2st .slider_txt2{
 	position: absolute; color: black;
