@@ -38,26 +38,78 @@
     .menu a{display: inline-block; line-height:40px;width: 100px; text-align:center;}
     .menu a.on{background: #f00; color:white;}
   </style>
+  <script>
+    $(function(){ //방법 3가지
+      /*//1st menu
+      var oneTop = $("#v01s").offset().top;
+      var twoTop = $("#v02s").offset().top;
+      var threeTop = $("#v03s").offset().top;
+
+      $(".menu>a").eq(0).click(function(){
+        $("html").animate({scrollTop:oneTop},300); //menu1로 이동
+      });
+      $(".menu>a").eq(1).click(function(){
+        $("html").animate({scrollTop:twoTop},300); //menu2로 이동
+      });
+      $(".menu>a").eq(2).click(function(){
+        $("html").animate({scrollTop:threeTop},300); //menu3로 이동
+      }); */
+
+      /*//2st menu
+      var menu = $(".menu>a");
+      var section = $(".scene");
+
+      menu.click(function(){
+        var i = $(this).index();
+        var st = section.eq(i).offset().top
+        $("html").animate({scrollTop:st},300);
+      }); */
+
+      //3st menu
+      $(".menu>a").click(function(){
+        var target = $(this.hash);
+        console.log(target);
+        var st = target.offset().top; //해시의 선택자 넣어줌 #v01s....
+        $("html").animate({scrollTop:st},300);
+      });
+
+      $(window).scroll(function(){
+        var scrollY = $(window).scrollTop();
+
+        if(scrollY >= $(".scene").eq(0).offset().top ){
+          $(".menu>a").removeClass("on").eq(0).addClass("on");
+        }
+        if(scrollY >= $(".scene").eq(1).offset().top ){
+          $(".menu>a").removeClass("on").eq(1).addClass("on");
+        }
+        if(scrollY >= $(".scene").eq(2).offset().top ){
+          $(".menu>a").removeClass("on").eq(2).addClass("on");
+        }
+      });
+    });
+
+
+  </script>
 </head>
 <body>
   <nav class="menu">
-    <a href="#" class="on">menu1</a>
-    <a href="#">menu2</a>
-    <a href="#">menu3</a>
+    <a href="#v01s" class="on">menu1</a>
+    <a href="#v02s">menu2</a>
+    <a href="#v03s">menu3</a>
   </nav>
-  <section class="scene one">
+  <section class="scene one" id="v01s">
     <div>
       <h1>Lorem ipsum dolor sit amet.</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi porro ab iusto perferendis accusantium qui praesentium, consequatur atque quibusdam, a assumenda iste tempora aliquid, in eum harum, facere expedita natus.</p>
     </div>
   </section>
-  <section class="scene two">
+  <section class="scene two" id="v02s">
   <div>
     <h1>Lorem ipsum dolor sit amet.</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi porro ab iusto perferendis accusantium qui praesentium, consequatur atque quibusdam, a assumenda iste tempora aliquid, in eum harum, facere expedita natus.</p>
   </div>
   </section>
-  <section class="scene three">
+  <section class="scene three" id="v03s">
   <div>
     <h1>Lorem ipsum dolor sit amet.</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi porro ab iusto perferendis accusantium qui praesentium, consequatur atque quibusdam, a assumenda iste tempora aliquid, in eum harum, facere expedita natus.</p>
