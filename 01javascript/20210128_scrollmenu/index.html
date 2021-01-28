@@ -66,6 +66,7 @@
       }); */
 
       /*//3st menu
+      //1st menu on
       $(".menu>a").click(function(){
         var target = $(this.hash);
         console.log(target);
@@ -76,6 +77,7 @@
       $(window).scroll(function(){
         var scrollY = $(window).scrollTop();
 
+        //1st menu on
         /*if(scrollY >= $(".scene").eq(0).offset().top ){
           $(".menu>a").removeClass("on").eq(0).addClass("on");
         }
@@ -85,11 +87,22 @@
         if(scrollY >= $(".scene").eq(2).offset().top ){
           $(".menu>a").removeClass("on").eq(2).addClass("on");
         }*/
-        for(var i=0;i<3;i++){
+
+        //2st menu on
+        /*for(var i=0;i<3;i++){
           if(scrollY >= $(".scene").eq(i).offset().top){
             $(".menu>a").removeClass("on").eq(i).addClass("on");
           }
-        }
+        }*/
+
+        //3st menu on
+        $(".scene").each(function(index){
+          console.log("값"+index);
+          if(scrollY >= $(this).offset().top){
+            $(".menu>a").removeClass("on").eq(index).addClass("on");
+          }
+
+        })
       });
     });
 
