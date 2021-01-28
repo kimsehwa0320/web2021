@@ -434,6 +434,7 @@ header#main_header{height: 1950px;position: relative; margin-bottom:100px;}
 	background: #a6a6a6; border-radius:30px ;
 	padding: 5px 10px 5px 10px ; margin-left: 10px;
 }
+.footer_1 span{display: none;}
 .footer p{
 	font-size:12px; letter-spacing:-1px;
 	color:#777777; padding: 0 10px 0 0; line-height: 25px;

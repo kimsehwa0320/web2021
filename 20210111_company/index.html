@@ -24,7 +24,7 @@
 	<script>
 		$(document).ready(function(){
 
-			var slider1 = $(".slider").bxSlider({controls:false});
+			var slider1 = $(".slider").bxSlider({controls:false,auto:true});
 			$(".pBtn").click(function(){
 				slider1.goToPrevSlide()
 			});
@@ -33,7 +33,11 @@
 			});
 
 
-			var slider2 = $(".slider1st").bxSlider({controls:false, pager:false});
+			var slider2 = $(".slider1st").bxSlider({
+				controls:false,
+				pager:false,
+				auto:true
+			});
 			$(".prevBtn").click(function(){
 				slider2.goToPrevSlide()
 			});
@@ -98,7 +102,7 @@
 			</nav>
 			<div class="toggleMenu">
 				<div class="bar1"></div>
-				<div class="bar2"></div>-
+				<div class="bar2"></div>
 				<div class="bar3"></div>
 			</div>
 		</div>
@@ -328,8 +332,8 @@
 	</div>
 </body>
 	<h3 class="line clearfix"></h3>
-<footer class="footer">
-	<div class=footer_1>
+<footer class="footer mobileFt">
+	<div class="footer_1 mobileFt2">
 			<ul class="footerTxt clearfix">
 				<li>삼성전자 주식회사 대표이사 : 김기남</li>
 				<li>사업자등록번호 : 124-81-00998 <a href="">사업자 정보확인</a></li>
@@ -343,14 +347,14 @@
 				<li>구매문의 : 1588-6084</li>
 			</ul>
 			<p>본 사이트에서 판매되는 상품 중에는 등록된 개별 판매자가 판매하는 상품이 포함되어 있습니다.</p>
-			<p>개별 판매자 판매 상품의 경우 삼성전자(주)는 통신판매중개업자로서 통신판매의 당사자가 아니므로, 개별 판매자가 등록한 상품, 거래정보 및 거래 등에 대해 책임을 지지 않습니다.</p>
+			<p>개별 판매자 판매 상품의 경우 삼성전자(주)는 통신판매중개업자로서 통신판매의 당사자가 아니므로, <span><br></span>개별 판매자가 등록한 상품, 거래정보 및 거래 등에 대해 책임을 지지 않습니다.</p>
 			<p>본 사이트의 컨텐츠는 저작권법의 보호를 받는 바 무단 전재, 복사, 배포 등을 금합니다.</p>
 			<p class="copy">Copyright © 1995-2020 Samsung. All Rights Reserved.</p>
 	</div>
 </footer>
 	<h3 class="line_2 clearfix"></h3>
-<footer class="footer">
-	<div class="footer_2 claerfix">
+<footer class="footer mobileFt">
+	<div class="footer_2 mobileFt2 claerfix">
 		<ul class="footer2Txt clearfix">
 			<li><a href="">한국/한국어</a></li>
 			<li><a href="">이메일 무단 수집거부</a></li>
@@ -369,7 +373,6 @@
 				<li>삼성전자멤버십 개인정보 처리방침</li>
 				<li>멤버십블루 개인정보처리방침</li>
 			</div>
-
 		<ul class="sns clearfix">
 			<li><a href="#"><img src="images/samsung.png" alt=""></li>
 			<li><a href="#"><img src="images/fb.jpg" alt=""></a></li>
