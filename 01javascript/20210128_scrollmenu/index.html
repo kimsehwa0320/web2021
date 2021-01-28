@@ -65,18 +65,18 @@
         $("html").animate({scrollTop:st},300);
       }); */
 
-      //3st menu
+      /*//3st menu
       $(".menu>a").click(function(){
         var target = $(this.hash);
         console.log(target);
         var st = target.offset().top; //해시의 선택자 넣어줌 #v01s....
         $("html").animate({scrollTop:st},300);
-      });
+      });*/
 
       $(window).scroll(function(){
         var scrollY = $(window).scrollTop();
 
-        if(scrollY >= $(".scene").eq(0).offset().top ){
+        /*if(scrollY >= $(".scene").eq(0).offset().top ){
           $(".menu>a").removeClass("on").eq(0).addClass("on");
         }
         if(scrollY >= $(".scene").eq(1).offset().top ){
@@ -84,6 +84,11 @@
         }
         if(scrollY >= $(".scene").eq(2).offset().top ){
           $(".menu>a").removeClass("on").eq(2).addClass("on");
+        }*/
+        for(var i=0;i<3;i++){
+          if(scrollY >= $(".scene").eq(i).offset().top){
+            $(".menu>a").removeClass("on").eq(i).addClass("on");
+          }
         }
       });
     });
