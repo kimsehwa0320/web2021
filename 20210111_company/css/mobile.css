@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 html,body{height: 100%;} /*mobile에서 필수*/
-header#main_header{height: 2500px;position: relative;margin-bottom:100px;}
+header#main_header{height: 1950px;position: relative;margin-bottom:100px;}
 
 /*header top*/
 #header_top{
