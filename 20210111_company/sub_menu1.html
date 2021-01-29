@@ -35,7 +35,44 @@
         $(".nextBtn").click(function(){
           slider2.goToNextSlide()
         });
-      });
+        $(".toggleMenu").click(function(){
+  				var toggle = $(".toggleMenu").attr("class"); //get
+  				console.log(toggle); // toggleMenu 찍힘
+  				if(toggle == "toggleMenu"){
+  					$(".toggleMenu").addClass("change");
+  					$("#main_menu").stop().animate({left:0},300);
+  				}else{
+  					$(".toggleMenu").removeClass("change");
+  					$("#main_menu").stop().animate({left:"-100%"},300);
+  				}
+  			});
+
+  			$(".dBtn1,.dBtn2").hide();
+  			$("footer2Txt>li").eq(4).click(function(){
+  				$(".dBtn1").fadeIn();
+  				$(".dBtn2").hide();
+  			});
+  			$("footer2Txt>li").eq(5).click(function(){
+  				$(".dBtn2").fadeIn();
+  				$(".dBtn1").hide();
+  			});
+
+  			$(window).resize(function(){
+  				$(".toggleMenu").removeClass("change");
+  				$("#main_menu").removeAttr("style");
+  			});
+
+  			// $(".modal").colorbox({
+  			// 	rel:"modal"
+  			// });
+
+  			$(".youtube").colorbox({
+  				iframe:true,
+  				innerWidth:560,
+  				innerHeight:315
+  			});
+
+  		});
   </script>
   <style>
 		body{font-family: 'Gothic A1', sans-serif;}
@@ -60,7 +97,7 @@
       </script>
 			<div class="toggleMenu">
 				<div class="bar1"></div>
-				<div class="bar2"></div>-
+				<div class="bar2"></div>
 				<div class="bar3"></div>
 			</div>
 		</div>
@@ -326,8 +363,8 @@
 	</div>
 </footer>
 	<h3 class="line_2 clearfix"></h3>
-  <footer class="footer">
-  	<div class="footer_2 claerfix">
+  <footer class="footer mobileFt">
+  	<div class="footer_2 mobileFt2 claerfix">
   		<ul class="footer2Txt clearfix">
   			<li><a href="">한국/한국어</a></li>
   			<li><a href="">이메일 무단 수집거부</a></li>

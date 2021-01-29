@@ -403,7 +403,7 @@ ul.sns li{float:left; }
 .subCategory{margin-left: 10px;}
 .subCategory li{
 	float: left;font-size:12px; font-weight:bold;
-	padding-right: 8px; margin-top: 10px;
+	padding-right: 8px; margin-top: 10px; margin-bottom: 10%;
 }
 .subCategory img{width: 13px;}
 .subCategory .sB{width: 6px;}
@@ -426,8 +426,9 @@ ul.sns li{float:left; }
   letter-spacing: -1px; font-size:27px; color:#274b85;
   background: #fff; height: 70px; width: 400px;
   font-weight:bold; position: absolute;
-  top: 205px; left: 50%; transform:translateX(-50%)
+  top: 253px; left: 50%; transform:translateX(-50%)
 }
+.visionTop .vTxt3_2{position: absolute;top: 230px;}
 .visionTop .vTxt4{
   margin-top: 40px;font-size:14px;margin-bottom: 50px;
   font-weight:bold;letter-spacing: -0.5px; color:#4e4e4e;
@@ -466,7 +467,7 @@ ul.sns li{float:left; }
 .vContainer .section li img,
 .dContainer .section li img{display: block;margin: 0 auto; width: 150px;}
 .vContainer .vcardBar,.dContainer .vcardBar{
-	position: absolute; bottom: -20px;
+	position: absolute; bottom: 20px;
   border: 0.6px solid #cacaca;;width: 100%;
 	background: #cacaca;
 }
@@ -555,21 +556,32 @@ ul.sns li{float:left; }
 }
 
 /* submenu2 */
-.subTwo img,.subThree img{
-  /* background-image: url("../images/sub_menu2bg.jpg"); */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;position: absolute;
-	/* left: 50%; transform: translateX(-50%); */
+.subTwo,.subThree,.subFive{
+	overflow: hidden;position: relative;
+	width: 100%;height: 506px;
 }
+.subTwo img,.subThree img,.subGif img{
+	width: 520px;height: 506px;
+	object-fit: cover;
+}
+.subTwo .subIMG,.subThree .subIMG.subGif .subIMG{
+	position: absolute;width: 100%;height: 506px;
+}
+
 .subTwo h2,.subTwo p,.subThree h2,.subThree p{
   position: absolute; text-align:center;
   color:white; left: 50%; transform:translateX(-50%);
  }
-.subTwo h2{font-weight:bold; font-size:36px; top:210px; letter-spacing: 5px;}
-.subTwo p,.subThree p{font-size:14px; top:320px;}
+.subTwo h2,.subThree h2{font-weight:bold; font-size:36px; top:255px; letter-spacing: 4px;width: 400px;}
+.subTwo p,.subThree p{font-size:14px; top:325px;}
 
-.subThree h2{font-weight:bold; font-size:36px; top:260px;}
+.subFive h2,.subFive p{
+  position: absolute; text-align:center;
+  color:white; left: 50%; transform:translateX(-50%);
+ }
+.subFive h2{font-weight:bold; font-size:36px; top:250px;}
+.subFive p{font-size:14px; top:310px;}
+
 
 .visionCb .deco{text-decoration:underline; font-weight:bold;}
 
@@ -580,24 +592,6 @@ ul.sns li{float:left; }
 	width: 315px;height:315px;
 	object-fit: cover;
 }
-
-.subFive .subGif{
-  overflow: hidden; max-height: 505.5px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-	left: 50%; transform: translateX(-50%);
-}
-.subGif img{max-height: initial; width: 1600px; margin-top: -10%;}
-.subFive h2,.subFive p{
-  position: absolute; text-align:center;
-  color:white; left: 50%; transform:translateX(-50%);
- }
-.subFive h2{font-weight:bold; font-size:36px; top:250px;}
-.subFive p{font-size:14px; top:310px;}
-
-
 
 .subTxt6{
 	position: absolute; color: #fff;

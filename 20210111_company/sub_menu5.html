@@ -35,7 +35,45 @@
         $(".nextBtn").click(function(){
           slider2.goToNextSlide()
         });
-      });
+
+        $(".toggleMenu").click(function(){
+  				var toggle = $(".toggleMenu").attr("class"); //get
+  				console.log(toggle); // toggleMenu 찍힘
+  				if(toggle == "toggleMenu"){
+  					$(".toggleMenu").addClass("change");
+  					$("#main_menu").stop().animate({left:0},300);
+  				}else{
+  					$(".toggleMenu").removeClass("change");
+  					$("#main_menu").stop().animate({left:"-100%"},300);
+  				}
+  			});
+
+  			$(".dBtn1,.dBtn2").hide();
+  			$("footer2Txt>li").eq(4).click(function(){
+  				$(".dBtn1").fadeIn();
+  				$(".dBtn2").hide();
+  			});
+  			$("footer2Txt>li").eq(5).click(function(){
+  				$(".dBtn2").fadeIn();
+  				$(".dBtn1").hide();
+  			});
+
+  			$(window).resize(function(){
+  				$(".toggleMenu").removeClass("change");
+  				$("#main_menu").removeAttr("style");
+  			});
+
+  			// $(".modal").colorbox({
+  			// 	rel:"modal"
+  			// });
+
+  			$(".youtube").colorbox({
+  				iframe:true,
+  				innerWidth:560,
+  				innerHeight:315
+  			});
+
+  		});
   </script>
   <style>
 		body{font-family: 'Gothic A1', sans-serif;}
@@ -60,7 +98,7 @@
       </script>
 			<div class="toggleMenu">
 				<div class="bar1"></div>
-				<div class="bar2"></div>-
+				<div class="bar2"></div>
 				<div class="bar3"></div>
 			</div>
 		</div>
@@ -69,17 +107,17 @@
     <div class="sub_main">
       <div class="subFive">
         <div class="subGif">
-          <img src="images/sub_menu5bg.gif" alt="">
+          <img src="images/sub_menu5bg.gif" alt="" class="subGIF">
         </div>
         <h2>Samsung Knox</h2>
         <p>안전한 기기가 믿을 수 있는 기기입니다</p>
       </div>
     <div class="subWrap clearfix">
       <ul>
-        <li class="active"><a href=""sub_menu1.html"">Samsung Knox</a></li>
+        <li class="active"><a href=""sub_menu1.html""><span class="blind">Samsung</span> Knox</a></li>
         <li><a href="#">링크 리치</a></li>
-        <li><a href="#">삼성 모바일케어</a></li>
-        <li><a href="#">스마트 컨택센터</a></li>
+        <li><a href="#">삼성 <span class="blind">모바일</span>케어</a></li>
+        <li><a href="#"><span class="blind">스마트</span> 컨택센터</a></li>
       </ul>
     </div>
     </div>
@@ -100,11 +138,11 @@
           <div class="visionTop">
             <img src="" alt="">
             <p class="vTxt1" style="font-family:NEXONTWO">Knox 솔루션</p>
-            <p class="vTxt2">당신의 비즈니스와 다양한 요구사항을 어떻게 발전시킬 수 있는지 경험해 보세요. </p>
+            <p class="vTxt2">당신의 비즈니스와 다양한 요구사항을 <span class="blind2"><br></span>어떻게 발전시킬 수 있는지 경험해 보세요. </p>
             <div class="bracket"></div>
             <p class="vTxt3">OUR SAFE DEVICES<br>ARE RELIABLE DEVICE!</p>
-            <p class="vTxt4">Knox 플랫폼에는 침입이나 악성 프로그램 및 악의적인 위협으로부터 기기를 보호하는 다중 보안 메커니즘 적용,<br>
-              기기를 강력하게 보호할 수 있도록 탄력적이고 사용자 친화적인 Knox 솔루션을 개발했습니다.</p>
+            <p class="vTxt4">Knox 플랫폼에는 침입이나 악성 프로그램 및 악의적인 위협으로부터<span class="blind2"><br></span> 기기를 보호하는 다중 보안 메커니즘 적용,<br>
+              기기를 강력하게 보호할 수 있도록 탄력적이고 사용자 친화적인<span class="blind2"><br></span> Knox 솔루션을 개발했습니다.</p>
             <div class="vTxt4Bar"></div>
           </div>
 

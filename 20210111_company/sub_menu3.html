@@ -35,7 +35,45 @@
         $(".nextBtn").click(function(){
           slider2.goToNextSlide()
         });
-      });
+
+        $(".toggleMenu").click(function(){
+  				var toggle = $(".toggleMenu").attr("class"); //get
+  				console.log(toggle); // toggleMenu 찍힘
+  				if(toggle == "toggleMenu"){
+  					$(".toggleMenu").addClass("change");
+  					$("#main_menu").stop().animate({left:0},300);
+  				}else{
+  					$(".toggleMenu").removeClass("change");
+  					$("#main_menu").stop().animate({left:"-100%"},300);
+  				}
+  			});
+
+  			$(".dBtn1,.dBtn2").hide();
+  			$("footer2Txt>li").eq(4).click(function(){
+  				$(".dBtn1").fadeIn();
+  				$(".dBtn2").hide();
+  			});
+  			$("footer2Txt>li").eq(5).click(function(){
+  				$(".dBtn2").fadeIn();
+  				$(".dBtn1").hide();
+  			});
+
+  			$(window).resize(function(){
+  				$(".toggleMenu").removeClass("change");
+  				$("#main_menu").removeAttr("style");
+  			});
+
+  			// $(".modal").colorbox({
+  			// 	rel:"modal"
+  			// });
+
+  			$(".youtube").colorbox({
+  				iframe:true,
+  				innerWidth:560,
+  				innerHeight:315
+  			});
+
+  		});
   </script>
   <style>
 		body{font-family: 'Gothic A1', sans-serif;}
@@ -60,7 +98,7 @@
       </script>
 			<div class="toggleMenu">
 				<div class="bar1"></div>
-				<div class="bar2"></div>-
+				<div class="bar2"></div>
 				<div class="bar3"></div>
 			</div>
 		</div>
@@ -68,16 +106,16 @@
 
     <div class="sub_main">
       <div class="subThree">
-        <img src="images/sub_menu3bg.png" alt="" style="height: 505.5px;">
+        <img src="images/sub_menu3bg.png" alt="" class="subIMG">
         <h2>Samsung Within</h2>
         <p>5G로 달라질 당신의 삶을 상상해보세요.<br>
           프리미엄 상품을 삼성닷컴 고객분들께 선정하여 선보입니다.</p>
       </div>
-    <div class="subWrap clearfix">
+    <div class="subWrap sub3Wrap clearfix">
       <ul>
-        <li class="active"><a href=""sub_menu1.html"">Samsung Within</a></li>
+        <li class="active"><a href=""sub_menu1.html"">S<span class="blind">amsung</span> Within</a></li>
         <li><a href="#">건강</a></li>
-        <li><a href="#">엔터테인먼트</a></li>
+        <li><a href="#">엔터<span class="blind">테인먼트</span></a></li>
         <li><a href="#">커뮤뮤티</a></li>
       </ul>
     </div>
@@ -99,12 +137,12 @@
           <div class="visionTop">
             <img src="" alt="">
             <p class="vTxt1" style="font-family:NEXONTWO;letter-spacing:0px;">Samsung Within</p>
-            <p class="vTxt2">삼성전자가 선보일 다양한 기술들이 게임, 창작 등의 활동을 어떻게 변화시킬지 알아보세요.</p>
+            <p class="vTxt2">삼성전자가 선보일 다양한 기술들이 게임, 창작 등의 활동을<span class="blind2"><br></span> 어떻게 변화시킬지 알아보세요.</p>
             <div class="bracket"></div>
             <p class="vTxt3">Let's meet the future today.<br>Creativity explodes.
             </p>
             <p class="vTxt4">‘경영이념, 핵심가치, 경영원칙’의 가치체계를 경영의 나침반으로 삼고,<br>
-              인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여 인류사회에 공헌하는 것을
+              인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여<span class="blind2"><br></span> 인류사회에 공헌하는 것을
               궁극적인 목표로 삼고 있습니다.</p>
             <div class="vTxt4Bar"></div>
           </div>
