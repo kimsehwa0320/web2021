@@ -32,16 +32,73 @@
     .section.page1{background-image: url(images/bg1.jpg);}
     .section.page2{background-image: url(images/bg2.jpg);}
     .section.page3{background-image: url(images/bg3.jpg);}
-    .section.page4{background-image: url(images/bg4.jpg);}
-  </style>
+    .section.page4{background-image: url(images/bg4.jpg);text-align:center;}
+
+    /*.main{width: 400px; margin: 0 auto;} 중앙정렬*/
+    .main{
+      width: 400px; position: absolute;
+      top: 50%;transform:translateY(-50%)
+    }
+    .main.one,.main.three{
+      left: 200px;
+    }
+    .main.two{
+      right: 200px;
+    }
+    .main h3{font-size: 3em;}
+    .main p{margin-bottom: 20px;}
+    .main a{
+      display: block; text-align:center;
+      width: 150px; border: 1px solid #fff;
+      line-height:40px; border-radius:10px;
+      color:white; transition:0.3s;
+    }
+    .main a:hover{background-color: #fff; color:#000}
+
+    #onView2st{right: -400px;transition:0.3s;} /*=right-100%*/
+    #onView2st.move{right: 200px;}
+
+    #onView3st{left: -400px;transition:0.3s;}
+    #onView3st.move{left: 200px;}
+
+    .scroll{
+      position: absolute; bottom: 20px; left: 50%;
+      transform:translateX(-50%);
+      animation-name:xScroll;
+      animation-duration:0.8s;
+      animation-iteration-count:infinite;
+      animation-direction:alternate;
+    }
+    @keyframes xScroll{
+      from{bottom: 20px;}
+      to{bottom: 40px;}
+    }
+    </style>
   <script>
     $(function(){
       $("#fullpage").fullpage({
           menu:"#topMenu", //메뉴지
           anchors:["m1st","m2st","m3st","m4st"], //이동 위치 지정
-          navigation:true
+          navigation:true,
+          afterLoad:function(anchorslink,index){
+            console.log(anchorslink + "," + index);
+            if(index == 2){
+              $("#onView2st").addClass("move");
+            }else{
+              $("#onView2st").removeClass("move");
+            }
+
+            if(index == 2){
+              $("#onView3st").addClass("move");
+            }else{
+              $("#onView3st").removeClass("move");
+            }
+
+          }
       });
     });
+
+
   </script>
 </head>
 <body>
@@ -54,10 +111,43 @@
     </ul>
   </nav>
   <div id="fullpage">
-    <div class="section page1" data-anchor="m1st"></div>
-    <div class="section page2" data-anchor="m2st"></div>
-    <div class="section page3" data-anchor="m3st"></div>
-    <div class="section page4" data-anchor="m4st"></div>
+    <!-- section 1st -->
+    <div class="section page1" data-anchor="m1st">
+      <div class="main one" id="onView1st">
+        <h3>Lorem ipsum.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, est!</p>
+        <a href="#">more</a>
+      </div>
+      <div class="scroll">
+        <a href="#m2st"><img src="images/btn_scroll.png" alt=""></a>
+      </div>
+      </div>
+
+    <!-- section 2st -->
+    <div class="section page2" data-anchor="m2st">
+      <div class="main two" id="onView2st">
+        <h3>Lorem ipsum.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, est!</p>
+        <a href="#">more</a>
+      </div>
+    </div>
+
+    <!-- section 3st -->
+    <div class="section page3" data-anchor="m3st">
+      <div class="main three" id="onView3st">
+        <h3>Lorem ipsum.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, est!</p>
+        <a href="#">more</a>
+      </div>
+    </div>
+
+    <!-- section 4st -->
+    <div class="section page4" data-anchor="m4st">
+      <div class="slide"><h1>Simple Demo</h1></div>
+      <div class="slide"><h1>Only text</h1></div>
+      <div class="slide"><h1>And text</h1></div>
+      <div class="slide"><h1>And more text</h1></div>
+    </div>
   </div>
 </body>
 </html>
