@@ -265,8 +265,8 @@ header#main_header{height: 2500px;position: relative;margin-bottom:100px;}
   background-size:cover; margin-top: -860px;
 }
 .container_1{
-  height: 1700px; color:#000;margin-top: -860px;
-  background: #f2f2eb; margin-bottom: 200px;
+  height: 2100px; color:#000;margin-top: -860px;
+  background: #f2f2eb; margin-bottom: 100px;
   padding-top: 70px;
 }
 .container .section,
@@ -462,7 +462,7 @@ ul.sns li{float:left; }
 }
 .dContainer .section ul li{
   float: left; margin-right: 20px;width: 406.67px;
-  height: 400px; padding-top: 20px; transition: 0.3s;
+  height: 300px; padding-top: 20px; transition: 0.3s;
 }
 .vContainer .section li img,
 .dContainer .section li img{display: block;margin: 0 auto; width: 150px;}
@@ -560,13 +560,22 @@ ul.sns li{float:left; }
 	overflow: hidden;position: relative;
 	width: 100%;height: 506px;
 }
+.sub_4st{
+	overflow: hidden;position: relative;
+	width: 100%;height: 1000px;
+}
 .subTwo img,.subThree img,.subGif img{
 	width: 520px;height: 506px;
+	object-fit: cover;
+}
+.sub_4st img{
+	width: 520px;height: 1000px;
 	object-fit: cover;
 }
 .subTwo .subIMG,.subThree .subIMG.subGif .subIMG{
 	position: absolute;width: 100%;height: 506px;
 }
+.sub_4st .subIMG{position: absolute;width: 100%;height: 1000px;}
 
 .subTwo h2,.subTwo p,.subThree h2,.subThree p{
   position: absolute; text-align:center;
@@ -594,31 +603,34 @@ ul.sns li{float:left; }
 }
 
 .subTxt6{
-	position: absolute; color: #fff;
-	top: 45%; left: 60px;
+	position: absolute; color: #fff; width: 450px;
+	top: 15%; left: 50%; transform:translateX(-50%)
 }
-.subTxt6 p{font-weight:bold; font-size:14px; padding: 10px;0}
-.subTxt6 h3{font-weight: bold;letter-spacing: -2px; font-size:48px; padding: 16px 0;}
+.subTxt6 p{
+	font-weight:bold; font-size:17px;padding: 10px 0;
+	text-align:center; padding-bottom: 40px;
+}
+.subTxt6 h3{font-weight: bold;letter-spacing: -3px; font-size:48px; padding: 20px 0;}
 
 .subTxt6 .txt1Btn2{
   color: #000;border: 1px solid #fff;
-  background: #fff;
-  width:170px;line-height:100px;
-	text-align: center; padding: 12px 25px;
+  background: #fff;position: absolute;
+	text-align: center; padding: 25px 35px;
 	border-radius:50px; transition:0.3s;
-	font-size: 14px;font-weight:bold;
+	font-size: 19px;font-weight:bold;
+	left: 50%; transform:translateX(-50%)
 }
 
 .subTxt6 .txt1Btn2:hover{
   background-color:#444040; border: 3px solid #444040; color: #fff;
 }
 
-.dContainer{height: 700px; color:#fff;
+.dContainer{height: 1200px; color:#fff;
 background:url(../images/contentsbg02.gif) no-repeat center fixed;
 background-size:cover; padding-top: 70px; margin-bottom: 200px;
 }
 .dContainer .section h4{
-  text-align: center; font-size:32px;
+  text-align: center; font-size:27px;
   padding-bottom: 10px;padding-top: 40px;
 }
 .dContainer .section>p{
