@@ -347,8 +347,7 @@ header#main_header{height: 1950px;position: relative;margin-bottom:100px;}
 .footer2Txt li{
    float: left;position: relative;
    font-size:14px;
-   color:#777777; font-weight:bold;
-
+   font-weight:bold;
 }
 .footer2Txt li:after{
       content: ""; display: block;
@@ -357,10 +356,10 @@ header#main_header{height: 1950px;position: relative;margin-bottom:100px;}
       left:-1px;top: 3px;background-color:#d4d4d4;
 }
 .footer2Txt li a{padding:0 10px;}
-.footer2Txt li:nth-child(1){margin-left: -10px;}
+.footer2Txt li:nth-child(6) a{padding-left: 0;}
 
 .footer2Txt li:nth-child(5):after,
-.footer2Txt li:nth-child(6):after{content: ""; display: none;}
+.footer2Txt li:nth-child(6):after{display: none;}
 
 .sns{
 	position: absolute;left: 50%; transform:translate(-50%);width: 300px;z-index: 10;
@@ -661,19 +660,22 @@ background-size:cover; padding-top: 70px; margin-bottom: 200px;
 .container_1 .card .txt1Btn2:hover{
   background-color:#e7e0e0; border: 1px solid #e7e0e0; color: #000;
 }
-.droplistBtn1{margin: 15px 0;}
-.droplistBtn1,.droplistBtn2{
-  border: 1px solid #ccc; border-radius:10px ;
-  appearance:none;-ms-expand:none;
+.tabWrap{width: 100%;margin: 0 auto;}
+.tabWrap li a{padding-left: 10px;}
+.tabWrap li{
+  border: 1px solid #ccc; border-radius:20px ;
   background-image: url(../images/selectbtn.jpg);
   background-repeat: no-repeat;
-  background-position: 470px 50%;
-  background-size:18px ; position: relative;
-  font-size:12.5px; font-weight:bold; width: 100%;
+  background-position: 95% 50%;
+  background-size:21px ; cursor: pointer;
+  font-size:14px; font-weight:bold;line-height:40px;
+  width: 400px; margin: 15px 0 1px 10px;
+  float: left;cursor: pointer;
 }
-.droplistBtn1 a,.droplistBtn2 a{
-	position: absolute;padding: 20px;color:#000;
-	font-weight:bold;line-height: 50px;
-}
+.tabWrap li:nth-child(2){margin-top: 2px;}
 
-.dBtn1,.dBtn2{border: 1px solid #ccc; width: 170px; padding: 10px; border-radius:10px ;}
+.boxWrap div{
+  display: none;border: 1px solid #ccc; width:400px;
+  padding: 10px; border-radius:10px ;cursor: pointer;
+	margin-top: 3px;margin-left:2%;
+}

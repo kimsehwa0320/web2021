@@ -465,12 +465,12 @@ header#main_header{height: 1950px;position: relative; margin-bottom:100px;}
 		position: absolute;
 		top: 5px; right: 0;
 }
-
 .footer2Txt li:last-child:after,
 .footer2Txt li:nth-child(4):after,
 .footer2Txt li:nth-child(5):after{content: ""; display: none;}
 .footer2Txt li{padding: 0 10px; line-height: 25px;}
 .footer2Txt li:nth-child(1){padding: 0 10px 0 0}
+
 
 
 .sns {position: absolute;right: 0;top:0;
