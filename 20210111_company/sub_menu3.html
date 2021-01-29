@@ -376,35 +376,52 @@
 			<p class="copy">Copyright © 1995-2020 Samsung. All Rights Reserved.</p>
 	</div>
 </footer>
+<script>
+$(document).ready(function(){
+	$(".boxWrap>div").eq(0).hide();
+	$(".tabWrap>ul>li").click(function(){
+		var num = $(this).index();
+		$(".tabWrap>ul>li").removeClass();
+		$(this).addClass("active");
+		$(".boxWrap>div").hide();
+		$(".boxWrap>div").eq(num).fadeIn();
+	});
+});
+</script>
 	<h3 class="line_2 clearfix"></h3>
-  <footer class="footer">
-  	<div class="footer_2 claerfix">
-  		<ul class="footer2Txt clearfix">
-  			<li><a href="">한국/한국어</a></li>
-  			<li><a href="">이메일 무단 수집거부</a></li>
-  			<li><a href="">아이디어 정책</a></li>
-  			<li><a href="">사이트맵</a></li>
-  			<li class="droplistBtn1 clearfix">이용약관</li>
-  			<li class="droplistBtn2 clearfix">개인정보처리방침</li>
-  		</ul>
-  			<div class="dBtn1">
-  				<li>삼성전자 대표사이트 이용약관</li>
-  				<li>삼성전자멤버십 이용약관</li>
-  				<li>Samsung 서비스 이용약관</li>
-  			</div>
-  			<div class="dBtn2">
-  				<li>삼성닷컴 개인정보처리방침</li>
-  				<li>삼성전자멤버십 개인정보 처리방침</li>
-  				<li>멤버십블루 개인정보처리방침</li>
-  			</div>
-
-  		<ul class="sns clearfix">
-  			<li><a href="#"><img src="images/samsung.png" alt=""></li>
-  			<li><a href="#"><img src="images/fb.jpg" alt=""></a></li>
-  			<li><a href="#"><img src="images/you.jpg" alt=""></a></li>
-  			<li><a href="#"><img src="images/insta.jpg" alt=""></a></li>
-  			<li><a href="#"><img src="images/ee.jpg" alt=""></a></li>
-  		</ul>
-  	</div>
-  </footer>
-  </html>
+<footer class="footer mobileFt">
+	<div class="footer_2 mobileFt2 claerfix">
+		<ul class="footer2Txt clearfix">
+			<li><a href="">한국/한국어</a></li>
+			<li><a href="">이메일 무단 수집거부</a></li>
+			<li><a href="">아이디어 정책</a></li>
+			<li><a href="">사이트맵</a></li>
+			<div class="tabWrap">
+				<ul class="tab clearfix">
+					<li class="droplistBtn1 active"><a href="#"></a>이용약관</a></li> <!-- 첫 페이지 로드 -->
+					<li class="droplistBtn2"><a href="#"></a>개인정보처리방침</a></li>
+				</ul>
+				<div class="boxWrap">
+					<div class="bx1">
+						<p>삼성전자 대표사이트 이용약관</p>
+						<p>삼성전자멤버십 이용약관</p>
+						<p>Samsung 서비스 이용약관</p>
+					</div>
+					<div class="bx2">
+						<p>삼성닷컴 개인정보처리방침</p>
+						<p>삼성전자멤버십 개인정보 처리방침</p>
+						<p>멤버십블루 개인정보처리방침</p>
+					</div>
+				</div>
+			</div>
+		</ul>
+		<ul class="sns clearfix">
+			<li><a href="#"><img src="images/samsung.png" alt=""></li>
+			<li><a href="#"><img src="images/fb.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/you.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/insta.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/ee.jpg" alt=""></a></li>
+		</ul>
+	</div>
+</footer>
+</html>
