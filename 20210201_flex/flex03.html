@@ -27,8 +27,27 @@
       align-items:flex-end;
       color:#fff;
     }
-    .container .viewTxt h2{width: 350px;_text-align:right}
-    .container .viewTxt p{width: 350px;_text-align:right}
+    .container .viewTxt h2{ width: 350px;_text-align:right }
+    .container .viewTxt p{ width: 350px;_text-align:right }
+
+    .banOption{ height: 110px; display: flex; }
+    .banOption .banner{
+      background: orange; padding: 20px;
+      flex-grow:1; color:#fff;
+    }
+    .banner .txt{margin-bottom: 10px;}
+
+    @media screen and (max-width:760px){
+
+      .container .viewTxt{
+        align-items:center;
+        text-align:center;
+        font-size:1.5em;
+      }
+      .banOption{ flex-direction:column;height: auto; }
+      .banOption .banner a{display: none;}
+      .banOption .banner{ padding: 10px; margin-bottom: 1px;}
+    }
   </style>
 </head>
 <body>
@@ -36,21 +55,21 @@
     <div class="container">
       <div class="viewTxt">
         <h2>Lorem ipsum dolor.</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, aliquam?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur. aliquam?</p>
       </div>
       <div class="banOption">
         <div class="banner">
-          <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, repellendus.</div>
+          <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
           <a href="#">more</a>
         </div>
 
           <div class="banner">
-            <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, repellendus.</div>
+            <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
             <a href="#">more</a>
           </div>
 
             <div class="banner">
-              <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, repellendus.</div>
+              <div class="txt">Lorem ipsum dolor sit, elit. Laborum, repellendus.</div>
               <a href="#">more</a>
             </div>
       </div>
