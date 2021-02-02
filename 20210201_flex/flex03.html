@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    .visual{
+      background-image: url(../images/pc01.jpg);
+      height: 600px;
+      background-position: center;
+      -webkit-background-size: cover;
+      background-size: cover;
+      display: flex;justify-content: center;
+    }
+    .container{
+      width: 1000px;
+      display: flex;flex-direction:column;
+      justify-content:space-between
+    }
+    .container .viewTxt{
+      flex-grow:1;
+      display: flex;flex-direction:column;
+      justify-content: center;
+      align-items:flex-end;
+      color:#fff;
+    }
+    .container .viewTxt h2{width: 350px;_text-align:right}
+    .container .viewTxt p{width: 350px;_text-align:right}
+  </style>
+</head>
+<body>
+  <div class="visual">
+    <div class="container">
+      <div class="viewTxt">
+        <h2>Lorem ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, aliquam?</p>
+      </div>
+      <div class="banOption">
+        <div class="banner">
+          <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, repellendus.</div>
+          <a href="#">more</a>
+        </div>
+
+          <div class="banner">
+            <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, repellendus.</div>
+            <a href="#">more</a>
+          </div>
+
+            <div class="banner">
+              <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, repellendus.</div>
+              <a href="#">more</a>
+            </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

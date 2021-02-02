@@ -26,9 +26,9 @@
       current++; //current = current+1
       if(current == banCount){current=0;}
 
-      move(current,"-100%",0); //그다음이미지
+      move(current,"100%",0); //그다음이미지
     }
-    setInterval(slider,3000);
+    setInterval(slider,5000);
 
     function move(i,start,end){
       banner.eq(i).css("left",start).animate({left:end},500);
