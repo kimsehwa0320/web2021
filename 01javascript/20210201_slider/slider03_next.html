@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+<style>
+  img{display: block; width: 500px;}
+  .wrapper{width: 500px;height: 220px;margin: 20px auto;}
+  .wrapper ul{width: 500px;height: 200px;position: relative;overflow: hidden;}
+  .wrapper li{position: absolute; left: 100%}
+  .wrapper li:nth-child(1){left: 0;} /*첫번쨰 페이지 첫 페이지로 */
+</style>
+<script>
+  $(function(){
+    var current = 0;
+    var banner = $(".wrapper li");
+    var banCount = banner.length;
+    var i;
+
+    function nextSlide(){
+
+      i = current+1;
+      var currentEl = banner.eq(current);
+      var nextEl = banner.eq(i);
+
+      currentEl.css({left:0}).animate({left:"-100%"},1000);
+      nextEl.css({left:"100%"}).animate({left:0},1000);
+
+      current = i;
+    }
+
+    $(".next").click(function(){
+      nextSlide();
+    });
+  });
+</script>
+</head>
+<body>
+  <div class="wrapper">
+    <ul>
+      <li><img src="../images/images01.jpg" alt="i1"></li>
+      <li><img src="../images/images02.jpg" alt="i2"></li>
+      <li><img src="../images/images03.jpg" alt="i3"></li>
+      <li><img src="../images/images04.jpg" alt="i3"></li>
+      <li><img src="../images/images05.jpg" alt="i3"></li>
+    </ul>
+    <div class="btn">
+      <span class="prev">이전</span>
+      <span class="next">다음</span>
+    </div>
+  </div>
+</body>
+</html>
