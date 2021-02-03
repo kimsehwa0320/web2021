@@ -33,69 +33,73 @@
         }
 
 
-          var currentEl = banner.eq(current);
-          var nextEl = banner.eq(i);
+        var currentEl = banner.eq(current);
+         var nextEl = banner.eq(i);
 
-          currentEl.css({left:0}).stop().animate({left:"-100%"},1000);
-          nextEl
-          .css({left:"100%"})
-          .stop()
-          .animate({left:0},{duration:1000,complete:function(){
-            overBtn=false;
-          }});
+         currentEl.css({left:0}).stop().animate({left:"-100%"},1000);
+         nextEl.css({left:"100%"}).stop()
+         .animate({
+           left:0
+           },{
+           duration:1000,
+           complete:function(){
+             overBtn=false;
+           }
+         });
+
+         current = i;
+       }
+     }
+
+     function prevSlide(){
+       if(overBtn == false){
+         overBtn = true;
+         i = current - 1;
+         if(i == -1){
+           i = banCount - 1;
+           current = 0;
+         }
+         var currentEl = banner.eq(current);
+         var nextEl = banner.eq(i);
+
+         currentEl.css({left:0}).stop().animate({left:"100%"},1000);
+         nextEl.css({left:"-100%"}).stop().animate({left:0},{duration:1000,complete:function(){overBtn=false;}});
+
+         current = i;
+         }
+     }
+
+     $(".next").click(function(){
+       nextSlide();
+     });
+     $(".prev").click(function(){
+       prevSlide();
+     });
+
+     function trigger(){
+       $(".next").trigger("click");
+     }
+
+     setInterval(trigger,3000);
 
 
-          current = i;
-        }
-      }
-    function prevSlide(){
-      if(overBtn==false){
-          overBtn = true;
-          i = current-1;
-          if(i==banCount){
-          i=0;//다음 이미지 이어서 나오게
-          current = banCount-1; //이전 이미지 이어서 나오게
-        }
 
-
-          var currentEl = banner.eq(current);
-          var prevEl = banner.eq(i);
-
-          currentEl.css({right:0}).stop().animate({right:"-100%"},1000);
-          nextEl
-          .css({right:"100%"})
-          .stop()
-          .animate({right:0},{duration:1000,complete:function(){
-            overBtn=false;
-          }});
-
-
-          current = i;
-        }
-    }
-
-    $(".next").click(function(){
-      nextSlide();
-    });
-    $(".prev").click(function(){
-      prevSlide();
-    });
-  });
-</script>
+   });
+ </script>
 </head>
 <body>
-  <div class="wrapper">
-    <ul>
-      <li><img src="../images/images01.jpg" alt="i1"></li>
-      <li><img src="../images/images02.jpg" alt="i2"></li>
-      <li><img src="../images/images03.jpg" alt="i3"></li>
-      <li><img src="../images/images04.jpg" alt="i3"></li>
-      <li><img src="../images/images05.jpg" alt="i3"></li>
-    </ul>
-    <div class="btn">
-      <span class="prev">이전</span>
-      <span class="next">다음</span>
-    </div>
-  </div>
+ <div class="wrapper">
+   <ul>
+     <li><img src="../images/images01.jpg" alt="img1"></li>
+     <li><img src="../images/images02.jpg" alt="img2"></li>
+     <li><img src="../images/images03.jpg" alt="img3"></li>
+     <li><img src="../images/images04.jpg" alt="img4"></li>
+     <li><img src="../images/images05.jpg" alt="img5"></li>
+   </ul>
+   <div class="btn">
+     <span class="prev">이전</span>
+     <span class="next">다음</span>
+   </div>
+ </div>
 </body>
 </html>
