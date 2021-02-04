@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AJAX</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script>
+    var han = ["car1","car2","car3"];
+    var text = ""; //문자형태 변수 선언
+
+    $(function(){
+      for(var i=0;i<han.length;i++){
+        //text = text + han[i];
+        text += "<li>" + han[i] + "</li>";
+      }
+      console.log(text);
+      $(".han").append(text); //.wrap안으로 text 대입
+    });
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <ul class="han">
+
+    </ul>
+  </div>
+</body>
+</html>

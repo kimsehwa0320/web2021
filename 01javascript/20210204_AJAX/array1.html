@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script>
+    //2차원배열 생성
+    var view = [
+      ["잉꼬","img1.jpg"],
+      ["장미","img2.jpg"],
+      ["거위","img3.jpg"],
+      ["바이킹","img4.jpg"],
+      ["놀이동산","img5.jpg"],
+      ["양","img6.jpg"],
+      ["잉꼬","img7.jpg"],
+      ["거위","img3.jpg"]
+    ];
+
+    var text = "";
+    $(function(){
+      for(var i=0;i<view.length;i++){
+        text += "<li>";
+        text += "<img src='../images/"+ view[i][1] +"'>"; //이미지 출력
+        text += "<div class='bg'></div>"
+        text += "<span class='txt'>" + view[i][0] + "</span>"; //글자 출
+        text += "</li>";
+        //class 넣으면 블럭단위로 바뀜
+
+      }
+      console.log(text);
+      $(".han").append(text);
+    });
+  </script>
+  <style>
+    .wrap{width: 1000px;margin: 0 auto;}
+    .han li{
+      float: left;width: 242.5px;margin-right: 10px;
+      position: relative;cursor: pointer; margin-bottom: 10px;
+      overflow: hidden; /*hover img 에서 사진 넘침 방지*/
+    }
+    .han li:nth-child(4n){margin-right: 0;}
+    .han img{width: 100%;display: block;transition:0.3s;}
+    .bg{
+      background: orange; position: absolute;
+      width: 100%;height: 100%;top: 0;left: 0;
+      opacity: 0;transition:0.3s;
+    }
+    .han .txt{
+      position: absolute;width: 100%;height: 100%;
+      display: flex; justify-content:center; align-items:center;
+      top: 0;left: 0; color:white; font-weight:bold;font-size:2em;
+    }
+    .han li:hover .bg{opacity: 0.5;}
+    .han li:hover img{transform:scale(1.2)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <ul class="han clearfix">
+
+    </ul>
+  </div>
+</body>
+</html>
