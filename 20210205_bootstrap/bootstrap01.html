@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</head>
+<style>
+
+</style>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 col-md-4 col-xl-3 bg-primary">menu1</div> <!--셀 생성 -->
+      <div class="col-sm-3 col-md-4 col-xl-3 bg-success">menu2</div>
+      <div class="col-sm-3 col-md-4 col-xl-3 bg-info">menu3</div>
+      <div class="col-sm-3 d-md-none d-xl-block col-xl-3 bg-danger">menu4</div>
+    </div>
+  </div>
+  <!-- bootstrap에서 padding,margin사용시 가능한 수
+  0 - 0rem
+  1 - 0.25rem
+  2 - 0.5rem
+  3 - 1rem (16px)
+  4 - 1.5rem (24px)
+  5 - 3rem (48px)
+
+  p-5=padding:5px
+  py-3=padding:3px 0
+  px-3=padding:0 3px
+  pt-3=padding-top:3px
+  mt-3=margin-top:3px
+  -->
+
+<div class="container p-4">
+  <div class="row">
+    <button type="button" class="btn btn-primary px-5 mr-2">basic</button>
+    <button class="btn btn-outline-info px-5 mr-2">info</button>
+    <div class="btn btn-success px-5 mr-2">success</div>
+    <a href="!#" class="btn btn-danger px-5 mr-2 active">danger</a> <!--active=선택되어 있게함-->
+
+    <div class="btn-group">
+      <button class="btn btn-primary">apple</button>
+      <button class="btn btn-success active">samsung</button>
+      <button class="btn btn-danger">sony</button>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="btn-group">
+      <button class="btn btn-primary">apple</button>
+      <button class="btn btn-primary">apple</button>
+      <div class="btn-group">
+        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">sony</button>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item">tablet</a>
+          <a href="#" class="dropdown-item">smartphone</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- https://hackerthemes.com/bootstrap-cheatsheet/ -->
+<div class="container">
+  <div class="row">
+  <div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary">Left</button>
+  <button type="button" class="btn btn-secondary">Middle</button>
+  <button type="button" class="btn btn-secondary">Right</button>
+</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle"
+          type="button" id="dropdownMenu1" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+    Dropdown
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <a class="dropdown-item" href="#!">Action</a>
+    <a class="dropdown-item" href="#!">Another action</a>
+  </div>
+</div>
+  </div>
+</div>
+</body>
+</html>
