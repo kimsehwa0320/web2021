@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bootstrap</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+
+
+
+<!-- collapse : 무너뜨리다 -->
+<div class="bg-dark"><!-- 상단바 가득 차게 색 맞춤  -->
+  <div class="container px-0"> <!-- 콘텐츠와 맞추기  -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark"> <!-- fixed-top :상단바 고정-->
+      <a href="#" class="navbar-brand">LOGO</a>
+
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+        <!-- data-toggle="collapse" 토글 누르면 없앰-->
+        <span class="navbar-toggler-icon"></span> <!--text,img대체 가능-->
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link">MENU1</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">MENU2</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">MENU3</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- card -->
+<!-- <div class="col">
+  <div class="card">
+    <div class="card-header">head</div>
+    <div class="card-body">body</div>
+    <div class="card-footer">footer</div>
+  </div>
+</div> -->
+<div class="container px-0 py-5"> <!--px-0:padding여백 제거 -->
+  <div class="row"><!--px-sm-0 : 모바일 일때만 패딩값을 처리-->
+    <div class="col-sm-6 col-md-3 mb-3 mb-sm-0">
+      <div class="card">
+        <!-- <div class="card-header">head</div> -->
+        <img src="../images/testimg.jpg" class="card-img-top" alt="cardimg">
+        <!-- class="card-img-top" -> 이미지 모서리 radius -->
+        <div class="card-body">
+          <div class="card-title">card-title</div>
+          <div class="card-text mb-3">Lorem ipsum dolor sit amet, consectetur.</div>
+          <a href="#" class="btn btn-primary d-block d-sm-inline">profile</a>
+          <!-- d-block -> block 사용시 사용 -->
+      </div>
+        <!-- <div class="card-footer">footer</div> -->
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3 mb-3 mb-sm-0">
+      <div class="card">
+        <img src="../images/testimg.jpg" class="card-img-top" alt="cardimg">
+        <!-- class="card-img-top" -> 이미지 모서리 radius -->
+        <div class="card-body">
+          <div class="card-title">card-title</div>
+          <div class="card-text">Lorem ipsum dolor sit amet, consectetur.</div>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3 mb-3 mb-sm-0">
+      <div class="card">
+        <img src="../images/testimg.jpg" class="card-img-top" alt="cardimg">
+        <!-- class="card-img-top" -> 이미지 모서리 radius -->
+        <div class="card-body">
+          <div class="card-title">card-title</div>
+          <div class="card-text">Lorem ipsum dolor sit amet, consectetur.</div>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-header">head</div>
+        <div class="card-body">body</div>
+        <div class="card-footer">footer</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

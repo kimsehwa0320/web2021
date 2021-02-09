@@ -184,3 +184,51 @@
   </div>
 </div>
 </div>
+
+
+<style>
+/* .box{font-size:2em} 2em으로 할 경우 box에 상속된 box에 계속곱해져서 2em -> 4em -> 8em이됨 */
+body{font-size:10px}
+.box{font-size:2rem}
+</style>
+text10
+<span style="font-size:1em">textem</span>
+<span style="font-size:16px">text16</span>
+<span style="font-size:1rem">text16</span> <!--rem은 기본 베이스로 고정됨 -->
+<div class="box">test <!--2em-->
+  <div class="box">text<!--4em-->
+    <div class="box">text<!--8em-->
+    </div>
+  </div>
+
+
+<!-- collapse : 무너뜨리다 -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a href="#" class="navbar-brand">LOGO</a>
+
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+    <!-- data-toggle="collapse" 토글 누르면 없앰-->
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarMenu">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link">MENU1</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">MENU2</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">MENU3</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+</body>
+</html>
