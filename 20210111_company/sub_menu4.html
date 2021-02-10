@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>제품</title>
+  <title>회사소개</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
-	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="../css/all.css">
@@ -35,7 +35,6 @@
         $(".nextBtn").click(function(){
           slider2.goToNextSlide()
         });
-
         $(".toggleMenu").click(function(){
   				var toggle = $(".toggleMenu").attr("class"); //get
   				console.log(toggle); // toggleMenu 찍힘
@@ -80,7 +79,9 @@
 	</style>
 </head>
 <body>
-  <header id="main_header">
+
+  <!-- nav -->
+  <header id="main_header_sub" class="sub">
 		<div id="header_top">
 			<h1 class="logo"><a href="index.html"><img src="images/samsung.JPG" alt=""></a></h1>
 			<nav id="main_menu">
@@ -103,246 +104,299 @@
 			</div>
 		</div>
 
-    <div class="sub_main">
-      <div class="subVideo">
-          <div class="myVideo"><video src="images/video3.webm" width="100%" autoplay muted playsinline loop ></video></div>
+    <div class="visualSub company">
+      <video id="myvideo">
+        <source src="images/video3.webm" type="video/webm" autoplay muted playsinline loop>
+      </video>
+      <div class="visualSubTxt">
         <h2>Smart Home</h2>
         <p>가전을 스마트싱스로 연결하면, <span class="blind2"><br></span>우리집도 스마트홈</p>
       </div>
-    <div class="subWrap clearfix">
-      <ul>
-        <li><a href="#">신제품</a></li>
-        <li class="active"><a href=""sub_menu1.html"">스마트홈</a></li>
-        <li><a href="#">BESPOKE</a></li>
-        <li><a href="#">추천모델</a></li>
+      <div class="subMenuTab">
+        <ul>
+          <li>신제품</li>
+          <li>스마트홈</li>
+          <li>BESPOKE</li>
+          <li>추천모델</li>
+        </ul>
+      </div>
+    </div>
+</header>
+
+<script>
+  $(function(){
+    $(".subContent nav").hide().eq(0).show();
+    $(".subMenuTab li").click(function(){
+      var i = $(this).index();
+      $(".subContent nav").hide().eq(i).fadeIn();
+
+      if(i == 0){
+        $(".loc_dep2,.visionTop>p").html("신제품");
+      }else if(i == 1){
+        $(".loc_dep2,.visionTop>p").html("스마트홈");
+      }else if(i == 2){
+        $(".loc_dep2,.visionTop>p").html("BESPOKE");
+      }else if(i == 3){
+        $(".loc_dep2,.visionTop>p").html("추천모델");
+      }
+    });
+  });
+</script>
+
+<div class="contents">
+  <div class="subCategory">
+    <ul class="clearfix">
+      <li><a href="index.html"><img src="images/home.png" alt=""></a></li>
+      <li><img src="images/next_btn.png" alt="" class="sB"></li>
+      <li><a href="sub_menu1.html">제품</a></li>
+      <li><img src="images/next_btn.png" alt="" class="sB"></li>
+      <li><a href="sub_menu1.html" class="vI"><span class="loc_dep2">스마트홈</span></a></li>
+    </ul>
+  </div>
+
+  <div class="visionTop">
+    <p class="vTxt1" style="font-family:NEXONTWO">스마트홈</p>
+    <h4 class="vTxt2">스마트홈에 살고 있는 사람들의 이야기를 만나보세요. </h4>
+  </div>
+
+  <div class="subContent">
+
+    <!-- content1ST -->
+    <nav class="menu1st">
+      <div class="blind">
+        <div class="bracket"></div>
+        <p class="vTxt3">ONLY ONE SMART DEVICE<br>CONTROL THE HOUSE!</p>
+        <p class="vTxt4">‘경영이념, 핵심가치, 경영원칙’의 가치체계를 경영의 나침반으로 삼고,<br>
+          인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여 인류사회에<span class="blind2"><br></span> 공헌하는 것을
+          궁극적인 목표로 삼고 있습니다.</p>
+        <div class="vTxt4Bar"></div>
+      </div>
+
+      <ul class="section clearfix">
+        <li class="card">
+          <img src="images/c4.png" alt="">
+          <div class="card_body">
+            <p class="cardTxt">앱 하나로 언제 어디서나 관리</p>
+            <p>집 안 상태를 한눈에 확인하세요.<br>
+              세탁은 진행됐는지, 공기청정기 필터는 깨끗한지,<br>
+              집 안 곳곳에 있는 기기의 상태를<br>
+              앉은 자리에서 확인하세요.<br>
+              집 안 기기를 자유롭게 제어할 수 있습니다.<br>
+              심지어 집 밖에서도 가능하죠.<br>
+              어디서든 기기를 원하는 대로 제어하세요.
+            </br></p>
+          </div>
+        </li>
+        <li class="card">
+          <img src="images/c4_2.png" alt="">
+          <div class="card_body">
+            <p class="cardTxt">Welcome Cooling</p>
+            <p>웰컴 쿨링 기능으로 당신이 집에 도착하기 전,<br>
+              미리 에어컨을 가동해 집 안을 쾌적하게 만듭니다.<br>
+              침실에서 거실에 있는 에어컨을 끄고,<br>
+              거실에서 다용도실에 있는 세탁기를 작동시킬 수 있습니다.<br>
+              집 안 기기를 자유롭게 제어하세요.<br>
+              어디서든 기기를 원하는 대로 제어하고<br>
+              집에 들어가자마자 기분 좋은 시원함을 느껴보세요.
+            </p>
+            </div>
+        </li>
+        <li class="card">
+          <img src="images/c4_3.png" alt="">
+          <div class="card_body">
+            <p class="cardTxt">말 한 마디로 기기를 내 마음대로</p>
+            <p>눈뜰 때부터 잠들 때까지 오직 당신 생각뿐<br>
+              당신의 생활 패턴에 맞춰 기기를 알아서 제어합니다.<br>
+              예를 들어 일어날 때가 되면 블라인드를 열어주고,  <br>
+              잘 시간이 되면 조명을 어둡게 해주는 거죠.<br>
+              기상알람에서 SmartThings 기기를 설정하여 <br>
+              기분 좋은 아침을 맞이해 보세요.<br>
+              SmartThings는 오직 당신만 생각하고 움직입니다.
+            </p>
+            </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- content2ST -->
+    <nav class="menu2st">
+      <div class="blind">
+        <div class="bracket"></div>
+        <p class="vTxt3">LOREM IPSUM DOLOR AMET.<br>AND, CONSECTETUR.</p>
+        <p class="vTxt4">‘경영이념, 핵심가치, 경영원칙’의 가치체계를 경영의 나침반으로 삼고,<br>
+          인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여 인류사회에<span class="blind2"><br></span> 공헌하는 것을
+          궁극적인 목표로 삼고 있습니다.</p>
+        <div class="vTxt4Bar"></div>
+      </div>
+      <img src="images/card1.jpg" alt="">
+    </nav>
+    <!-- content3ST -->
+    <nav class="menu3st">
+      <div class="blind">
+        <div class="bracket"></div>
+        <p class="vTxt3">CONSECTETUR ADISICING IT,<br>VOLUPTATEM, CULPA!</p>
+        <p class="vTxt4">‘경영이념, 핵심가치, 경영원칙’의 가치체계를 경영의 나침반으로 삼고,<br>
+          인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여 인류사회에<span class="blind2"><br></span> 공헌하는 것을
+          궁극적인 목표로 삼고 있습니다.</p>
+        <div class="vTxt4Bar"></div>
+      </div>
+      <img src="images/card3.jpg" alt="">
+    </nav>
+    <!-- content4ST -->
+    <nav class="menu4st">
+      <div class="blind">
+        <div class="bracket"></div>
+        <p class="vTxt3">DELECTUS NULLA VOLUPTEM,<br>HARUM CUM REPELLAT!</p>
+        <p class="vTxt4">‘경영이념, 핵심가치, 경영원칙’의 가치체계를 경영의 나침반으로 삼고,<br>
+          인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여 인류사회에<span class="blind2"><br></span> 공헌하는 것을
+          궁극적인 목표로 삼고 있습니다.</p>
+        <div class="vTxt4Bar"></div>
+      </div>
+      <img src="images/card2.jpg" alt="">
+    </nav>
+
+    <div class="vcardBar"></div>
+  <ul class="visionCb">
+    <p class="Cb1">SmartThings로 완성되는 진정한 스마트홈</p>
+    <p class="Cb2"><span class="blind">집에 있는 모든 기기를 집 안에서는 물론, 집 밖에서도 제어할 수 있다면 얼마나 편할까요? 당신의 생활 패턴에 맞춰 필요한 걸 알아서 준비해준다면 더할나위 없이 완벽하겠죠.<br></span>
+    SmartThings 앱 하나면 우리가 꿈꾸던 스마트홈이 아주 쉽게 완성됩니다. 일상을 놀랍도록 편리하게 바꿔줄 SmartThings를 만나보세요.
+  </ul>
+
+    <div class="vContent">
+      <ul class="clearfix">
+        <li class="vC1st">
+          <div class="sliderWrap">
+            <ul class="slider1st">
+              <li class="news clearfix">
+                <div class="top">
+                  <img src="images/card_1_4.JPG" alt="img">
+                </div>
+                  <div class="bottom">
+                  <h3>펫 · 키즈 모니터링</h3><P>
+                  세상 편한 <반려 가족 하우스>를 만들다.<br>
+                  로봇청소기, 공기청정기, TV연동으로<br>
+                  스마트 싱스앱을 사용한 기능,<br>
+                  쾌적환 공기 순환이 가능합니다.
+                  </p></div>
+              </li>
+              <li class="news clearfix">
+                <div class="top">
+                  <img src="images/card_1_4_1.JPG" alt="img">
+                </div>
+                  <div class="bottom">
+                  <h3>펫 · 키즈 모니터링</h3><p>
+                  반려가족과 조화로운 삶을 만드는 방법<br>
+                  반려가족을 위한 커머스 플랫폼 '비엔비엔'<br>
+                  브랜드 대표, 엄마 그리고 동시에 <br>
+                  반려생활을 해내는 방법을 확인해보세요.
+                  </p></div>
+              </li>
+            </ul>
+          </div>
+              </li>
+              <li class="vC2st">
+                <div class="sliderWrap">
+                  <ul class="slider1st">
+                  <li class="news clearfix">
+                  <div class="top">
+                  <h3>Home training</h3>
+                  <p>세상 편한 <건강 라이프>를 만들다.<br>
+                  요가와 명상을 리추얼처럼 해 온<br>
+                  자아성장 큐래이션 플랫폼<br>
+                  집에서도 수련할 수 있는 노하우!
+                  </p>
+                  </div>
+                  <div class="bottom">
+                  <img src="images/card_2_4.gif" alt="img" class="gifImg">
+                  </div>
+                  </li>
+                  <li class="news clearfix">
+                  <div class="top">
+                  <h3>Home training</h3>
+                  <p>진짜 나를 찾을 수 있는<br>
+                  자아성장 큐래이션 플랫폼 '밑미'<br>
+                  운동을 하고, 명상을 하고, 요가를 할 때<br>
+                  세상 편한 건강 라이프를 만들어 드립니다.<br>
+                  </p>
+                  </div>
+                  <div class="bottom">
+                  <img src="images/card_2_4_1.JPG" alt="img">
+                  </div>
+                  </li>
+                  </ul>
+                  </div>
+                  </li>
+                  <li class="vC3st">
+                  <div class="sliderWrap">
+                  <ul class="slider1st">
+                  <li class="news clearfix">
+                  <div class="top">
+                  <img src="images/card_3_4.gif" alt="img" class="gifImg">
+                  </div>
+                  <div class="bottom">
+                  <h3>열공 모드</h3>
+                  <p>세상 편한 <재택 공간>을 만들다.<br>
+                    빠르게 변하는 시대 속 슬로우 디자인을<br>
+                    표방하는 브랜드 셀렉 온라인숍 'KKOMACK'<br>
+                    "나에게 충분히 집중할 수 있는 공간"<br>
+                  </p>
+                  </div>
+                  </li>
+                  <li class="news clearfix">
+                  <div class="top">
+                  <img src="images/card_3_4_1.jpg" alt="img">
+                  </div>
+                  <div class="bottom">
+                  <h3>열공 모드</h3>
+                  <p>일과 삶의 균형을 맞추는<br>
+                   재택 근무 공간!<br>
+                  집은 자기 자신의 모습을 가장<br>
+                   잘 보여주는 공간입니다.<br>
+                  </p>
+                  </div>
+                  </li>
+                  </ul>
+                  </div>
+                  </li>
+                  <li class="vC4st">
+                  <div class="sliderWrap">
+                  <ul class="slider1st">
+                  <li class="news clearfix">
+                  <div class="top">
+                  <h3>스마트홈 업그레이드</h3>
+                  <p>세상 편한 <나만의 생활>을 만들다.<br>
+                  의뢰인에게 꼭 맞는 '핏'을 선사하는<br>
+                  브랜딩 스튜디오 서비스 센터의<br>
+                  아날로그함과 일상이 윤택해지는 기술!
+                  </p>
+                  </div>
+                  <div class="bottom">
+                  <img src="images/card_4_4.jpg" alt="img">
+                  </div>
+                  </li>
+                  <li class="news clearfix">
+                  <div class="top">
+                  <h3>스마트홈 업그레이드</h3>
+                  <p>어디서든 스마트폰으로 컨트롤<br>
+                  "심리적 편안함"<br>
+                  집은 나의 의식주가 담기는 공간입니다.<br>
+                  라이프 스타일의 진화를 확인해보세요.
+                  </p>
+                  </div>
+                  <div class="bottom">
+                  <img src="images/card_4_4_1.jpg" alt="img">
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </div>
+    <div class="ftAfter">
+      <div class="ftBar"></div>
+      <p>투자자 정보는 삼성전자 <a href="#">IR 페이지</a>에서 확인해 주십시오.</p>
     </div>
-
-    <div class="subPage">
-      <div class="subCategory clearfix">
-        <ul>
-          <li><a href="index.html"><img src="images/home.png" alt=""></a></li>
-          <li><img src="images/next_btn.png" alt="" class="sB"></li>
-          <li><a href="sub_menu1.html">제품</a></li>
-          <li><img src="images/next_btn.png" alt="" class="sB"></li>
-          <li><a href="sub_menu1.html" class="vI">스마트홈</a></li>
-        </ul>
-
-      </div>
-
-      <div class="vision">
-          <div class="visionTop">
-            <img src="" alt="">
-            <p class="vTxt1" style="font-family:NEXONTWO">스마트홈</p>
-            <p class="vTxt2">스마트홈에 살고 있는 사람들의 이야기를 만나보세요. </p>
-            <div class="bracket"></div>
-            <p class="vTxt3 vTxt3_2">ONLY ONE SMART DEVICE<br>CONTROL THE HOUSE!</p>
-            <p class="vTxt4">‘경영이념, 핵심가치, 경영원칙’의 가치체계를 경영의 나침반으로 삼고,<br>
-              인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여<span class="blind2"><br></span> 인류사회에 공헌하는 것을
-              궁극적인 목표로 삼고 있습니다.</p>
-            <div class="vTxt4Bar"></div>
-          </div>
-
-          <div class="vContainer">
-        		<div class="section">
-        			<ul class="clearfix">
-        				<li>
-        					<div class="card">
-        						<img src="images/c4.png" alt="">
-        						<div class="card_body">
-        							<p class="cardTxt">앱 하나로 언제 어디서나 관리</p>
-        							<p>집 안 상태를 한눈에 확인하세요.<br>
-                        세탁은 진행됐는지, 공기청정기 필터는 깨끗한지,<br>
-                        집 안 곳곳에 있는 기기의 상태를<br>
-                        앉은 자리에서 확인하세요.<br>
-                        집 안 기기를 자유롭게 제어할 수 있습니다.<br>
-                        심지어 집 밖에서도 가능하죠.<br>
-                        어디서든 기기를 원하는 대로 제어하세요.
-                      </br></p>
-        						</div>
-        					</div>
-        				</li>
-        				<li>
-        					<div class="card">
-        						<img src="images/c4_2.png" alt="">
-        						<div class="card_body">
-        							<p class="cardTxt">Welcome Cooling</p>
-        							<p>웰컴 쿨링 기능으로 당신이 집에 도착하기 전,<br>
-                        미리 에어컨을 가동해 집 안을 쾌적하게 만듭니다.<br>
-                        침실에서 거실에 있는 에어컨을 끄고,<br>
-                        거실에서 다용도실에 있는 세탁기를 작동시킬 수 있습니다.<br>
-                        집 안 기기를 자유롭게 제어하세요.<br>
-                        어디서든 기기를 원하는 대로 제어하고<br>
-                        집에 들어가자마자 기분 좋은 시원함을 느껴보세요.
-                      </p>
-        						</div>
-        					</div>
-        				</li>
-        				<li>
-        					<div class="card">
-        						<img src="images/c4_3.png" alt="">
-        						<div class="card_body">
-        							<p class="cardTxt">말 한 마디로 기기를 내 마음대로</p>
-        							<p>눈뜰 때부터 잠들 때까지 오직 당신 생각뿐<br>
-                        당신의 생활 패턴에 맞춰 기기를 알아서 제어합니다.<br>
-                        예를 들어 일어날 때가 되면 블라인드를 열어주고,  <br>
-                        잘 시간이 되면 조명을 어둡게 해주는 거죠.<br>
-                        기상알람에서 SmartThings 기기를 설정하여 <br>
-                        기분 좋은 아침을 맞이해 보세요.<br>
-                        SmartThings는 오직 당신만 생각하고 움직입니다.
-                      </p>
-        						</div>
-        					</div>
-        				</li>
-        			</ul>
-              <div class="vcardBar"></div>
-        		</div>
-            <div class="visionCb">
-              <p class="Cb1">SmartThings로 완성되는 진정한 스마트홈</p>
-              <p class="Cb2"><span class="blind">집에 있는 모든 기기를 집 안에서는 물론, 집 밖에서도 제어할 수 있다면 얼마나 편할까요? 당신의 생활 패턴에 맞춰 필요한 걸 알아서 준비해준다면 더할나위 없이 완벽하겠죠.<br></span>
-              SmartThings 앱 하나면 우리가 꿈꾸던 스마트홈이 아주 쉽게 완성됩니다. 일상을 놀랍도록 편리하게 바꿔줄 SmartThings를 만나보세요.
-            </div>
-
-            <div class="vContent">
-        			<ul class="clearfix">
-                <li class="vC1st">
-                  <div class="sliderWrap">
-                    <ul class="slider1st">
-                      <li class="news clearfix">
-                        <div class="top">
-                          <img src="images/card_1_4.JPG" alt="img">
-                        </div>
-                        <div class="bottom">
-                          <h3>펫 · 키즈 모니터링</h3><P>
-                          세상 편한 <반려 가족 하우스>를 만들다.<br>
-                          로봇청소기, 공기청정기, TV연동으로<br>
-                          스마트 싱스앱을 사용한 기능,<br>
-                          쾌적환 공기 순환이 가능합니다.
-                        </p></div>
-                      </li>
-                      <li class="news clearfix">
-                        <div class="top">
-                          <img src="images/card_1_4_1.JPG" alt="img">
-                        </div>
-                        <div class="bottom">
-                          <h3>펫 · 키즈 모니터링</h3><p>
-                          반려가족과 조화로운 삶을 만드는 방법<br>
-                          반려가족을 위한 커머스 플랫폼 '비엔비엔'<br>
-                          브랜드 대표, 엄마 그리고 동시에 <br>
-                          반려생활을 해내는 방법을 확인해보세요.
-                        </p></div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="vC2st">
-                  <div class="sliderWrap">
-                    <ul class="slider1st">
-                      <li class="news clearfix">
-                        <div class="top">
-                        <h3>Home training</h3>
-                        <p>세상 편한 <건강 라이프>를 만들다.<br>
-                          요가와 명상을 리추얼처럼 해 온<br>
-                          자아성장 큐래이션 플랫폼<br>
-                          집에서도 수련할 수 있는 노하우!
-                        </p>
-                        </div>
-                        <div class="bottom">
-                          <img src="images/card_2_4.gif" alt="img" class="gifImg">
-                        </div>
-                      </li>
-                      <li class="news clearfix">
-                        <div class="top">
-                        <h3>Home training</h3>
-                        <p>진짜 나를 찾을 수 있는<br>
-                          자아성장 큐래이션 플랫폼 '밑미'<br>
-                          운동을 하고, 명상을 하고, 요가를 할 때<br>
-                          세상 편한 건강 라이프를 만들어 드립니다.<br>
-                        </p>
-                        </div>
-                        <div class="bottom">
-                          <img src="images/card_2_4_1.JPG" alt="img">
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="vC3st">
-                  <div class="sliderWrap">
-                    <ul class="slider1st">
-                      <li class="news clearfix">
-                        <div class="top">
-                          <img src="images/card_3_4.gif" alt="img" class="gifImg">
-                        </div>
-                        <div class="bottom">
-                          <h3>열공 모드</h3>
-                          <p>세상 편한 <재택 공간>을 만들다.<br>
-                            빠르게 변하는 시대 속 슬로우 디자인을<br>
-                            표방하는 브랜드 셀렉 온라인숍 'KKOMACK'<br>
-                            "나에게 충분히 집중할 수 있는 공간"<br>
-                          </p>
-                        </div>
-                      </li>
-                      <li class="news clearfix">
-                        <div class="top">
-                          <img src="images/card_3_4_1.jpg" alt="img">
-                        </div>
-                        <div class="bottom">
-                          <h3>열공 모드</h3>
-                          <p>일과 삶의 균형을 맞추는<br>
-                           재택 근무 공간!<br>
-                          집은 자기 자신의 모습을 가장<br>
-                           잘 보여주는 공간입니다.<br>
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="vC4st">
-                  <div class="sliderWrap">
-                    <ul class="slider1st">
-                      <li class="news clearfix">
-                        <div class="top">
-                        <h3>스마트홈 업그레이드</h3>
-                        <p>세상 편한 <나만의 생활>을 만들다.<br>
-                          의뢰인에게 꼭 맞는 '핏'을 선사하는<br>
-                          브랜딩 스튜디오 서비스 센터의<br>
-                          아날로그함과 일상이 윤택해지는 기술!
-                        </p>
-                        </div>
-                        <div class="bottom">
-                          <img src="images/card_4_4.jpg" alt="img">
-                        </div>
-                      </li>
-                      <li class="news clearfix">
-                        <div class="top">
-                        <h3>스마트홈 업그레이드</h3>
-                        <p>어디서든 스마트폰으로 컨트롤<br>
-                          "심리적 편안함"<br>
-                          집은 나의 의식주가 담기는 공간입니다.<br>
-                          라이프 스타일의 진화를 확인해보세요.
-                        </p>
-                        </div>
-                        <div class="bottom">
-                          <img src="images/card_4_4_1.jpg" alt="img">
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-        		</div>
-        </div>
-      </div>
-      <div class="ftAfter">
-        <div class="ftBar"></div>
-        <p>투자자 정보는 삼성전자 <a href="#">IR 페이지</a>에서 확인해 주십시오.</p>
-      </div>
-    </div>
-
-</body>
+  </div>
+</div>
 
 <h3 class="subLine clearfix"></h3>
 <footer class="footer">
@@ -413,4 +467,5 @@ $(document).ready(function(){
 		</ul>
 	</div>
 </footer>
+</body>
 </html>
