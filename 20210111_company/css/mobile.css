@@ -359,7 +359,7 @@ header#main_header{height: 1950px;position: relative;margin-bottom:100px;}
 .footer2Txt li:nth-child(6) a{padding-left: 0;}
 
 .footer2Txt li:nth-child(5):after,
-.footer2Txt li:nth-child(6):after{display: none;}
+.footer2Txt li:last-child:after{display: none;}
 
 .sns{
 	position: absolute;left: 50%; transform:translate(-50%);width: 300px;z-index: 10;
@@ -388,7 +388,7 @@ ul.sns li{float:left; }
   left: 50%; transform:translateX(-50%);
 }
 .subMenuTab>ul>li{
-  float: left; width:120px;border-right: 1px solid #d7d6dc;
+  float: left; width:25%;border-right: 1px solid #d7d6dc;
   border-bottom:5px solid #6868ff; cursor: pointer;
 }
 .subMenuTab>ul>li:last-child{border-right:none;}
