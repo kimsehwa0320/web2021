@@ -5,7 +5,7 @@ header#main_header_sub{height: 500px;position: relative; margin-bottom:20px; }
 .blind2{display: none;}
 body{height: 100%;}
 /* #main_menu .menu li:hover .bar{ transform: scaleX(1); } */
-.subTwo{}
+.visualSub_2{}
 .menu li{position: relative;}
 .menu li:hover:after,
 .menu li.active:after{
@@ -719,6 +719,13 @@ ul.sns li{float:left}
   position: absolute; text-align:center;
   color:white; left: 50%; transform:translateX(-50%);
   font-weight:bold; font-size:36px; top:210px;
+}
+/* visualSub_3 */
+.visualSub_3{
+  background-image: url("../images/sub_menu3bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 

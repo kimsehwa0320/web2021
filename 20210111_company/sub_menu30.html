@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>스토리</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../css/all.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+  <script src="js/sub_menu.js"></script>
+	<script src="js/wow.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+  <script>
+    $(document).ready(function(){
+        var slider2 = $(".slider1st").bxSlider({
+          controls:false,
+          pager:false,
+          controls:false,
+          auto:true,
+          mode:'vertical'
+        });
+        $(".prevBtn").click(function(){
+          slider2.goToPrevSlide()
+        });
+        $(".nextBtn").click(function(){
+          slider2.goToNextSlide()
+        });
+
+        $(".toggleMenu").click(function(){
+  				var toggle = $(".toggleMenu").attr("class"); //get
+  				console.log(toggle); // toggleMenu 찍힘
+  				if(toggle == "toggleMenu"){
+  					$(".toggleMenu").addClass("change");
+  					$("#main_menu").stop().animate({left:0},300);
+  				}else{
+  					$(".toggleMenu").removeClass("change");
+  					$("#main_menu").stop().animate({left:"-100%"},300);
+  				}
+  			});
+
+  			$(".dBtn1,.dBtn2").hide();
+  			$("footer2Txt>li").eq(4).click(function(){
+  				$(".dBtn1").fadeIn();
+  				$(".dBtn2").hide();
+  			});
+  			$("footer2Txt>li").eq(5).click(function(){
+  				$(".dBtn2").fadeIn();
+  				$(".dBtn1").hide();
+  			});
+
+  			$(window).resize(function(){
+  				$(".toggleMenu").removeClass("change");
+  				$("#main_menu").removeAttr("style");
+  			});
+
+  			// $(".modal").colorbox({
+  			// 	rel:"modal"
+  			// });
+
+  			$(".youtube").colorbox({
+  				iframe:true,
+  				innerWidth:560,
+  				innerHeight:315
+  			});
+
+  		});
+  </script>
+  <style>
+		body{font-family: 'Gothic A1', sans-serif;}
+	</style>
+</head>
+<body>
+  <header id="main_header">
+		<div id="header_top">
+			<h1 class="logo"><a href="index.html"><img src="images/samsung.JPG" alt=""></a></h1>
+			<nav id="main_menu">
+				<ul class="menu clearfix">
+          <li><a href="sub_menu1.html">회사소개</a></li>
+					<li><a href="sub_menu2.html">기획전</a></li>
+					<li><a href="sub_menu3.html">스토리</a></li>
+					<li><a href="sub_menu4.html">제품</a></li>
+					<li><a href="sub_menu5.html">솔루션</a></li>
+					<li><a href="sub_menu6.html" target="blank">디지털프라자<i class="fab fa-product-hunt"></i></a></li>
+				</ul>
+			</nav>
+      <script>
+        nowMenu(2);
+      </script>
+			<div class="toggleMenu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</div>
+
+
+    <div class="sub_main">
+      <div class="subThree">
+        <img src="images/sub_menu3bg.png" alt="" class="subIMG">
+        <h2>Samsung Within</h2>
+        <p>5G로 달라질 당신의 삶을 상상해보세요.<br>
+          프리미엄 상품을 삼성닷컴 고객분들께 선정하여 선보입니다.</p>
+      </div>
+    <div class="subWrap sub3Wrap clearfix">
+      <ul>
+        <li class="active"><a href=""sub_menu1.html"">S<span class="blind">amsung</span> Within</a></li>
+        <li><a href="#">건강</a></li>
+        <li><a href="#">엔터<span class="blind">테인먼트</span></a></li>
+        <li><a href="#">커뮤뮤티</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="subPage">
+      <div class="subCategory clearfix">
+        <ul>
+          <li><a href="index.html"><img src="images/home.png" alt=""></a></li>
+          <li><img src="images/next_btn.png" alt="" class="sB"></li>
+          <li><a href="sub_menu1.html">스토리</a></li>
+          <li><img src="images/next_btn.png" alt="" class="sB"></li>
+          <li><a href="sub_menu1.html" class="vI">Samsung Within</a></li>
+        </ul>
+
+      </div>
+
+      <div class="vision">
+          <div class="visionTop">
+            <img src="" alt="">
+            <p class="vTxt1" style="font-family:NEXONTWO;letter-spacing:0px;">Samsung Within</p>
+            <p class="vTxt2">삼성전자가 선보일 다양한 기술들이 게임, 창작 등의 활동을<span class="blind2"><br></span> 어떻게 변화시킬지 알아보세요.</p>
+            <div class="bracket"></div>
+            <p class="vTxt3">Let's meet the future today.<br>Creativity explodes.
+            </p>
+            <p class="vTxt4">‘경영이념, 핵심가치, 경영원칙’의 가치체계를 경영의 나침반으로 삼고,<br>
+              인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여<span class="blind2"><br></span> 인류사회에 공헌하는 것을
+              궁극적인 목표로 삼고 있습니다.</p>
+            <div class="vTxt4Bar"></div>
+          </div>
+
+          <div class="vContainer">
+        		<div class="section">
+        			<ul class="clearfix">
+        				<li>
+        					<div class="card">
+        						<img src="images/c3.png" alt="">
+        						<div class="card_body">
+        							<p class="cardTxt">5G의 오늘과 내일</p>
+        							<p>삼성전자는 당신이 5G의 압도적인 속도를 어디서나<br>
+                        누리게 해줄 최신 네트워크 장치를 만듭니다.<br>
+                        간단한 스캔으로 음식에 대한<br>
+                        상세한 정보를 확인할 수 있게 됩니다.<br>
+                        어디서, 어떻게 키웠는지<br>
+                        그리고 당신의 냉장고에 있는 어떤 식재료와<br>
+                        어울릴지까지 알려줄 것입니다.<br>
+                        기업정보를 성실하게 공시합니다.
+                      </br></p>
+        						</div>
+        					</div>
+        				</li>
+        				<li>
+        					<div class="card">
+        						<img src="images/c3_2.png" alt="">
+        						<div class="card_body">
+        							<p class="cardTxt">Smart phone for fans</p>
+        							<p>팬들의 팬들에 의한 팬들을 위한 스마트폰.<br>
+                        우리는 갤럭시 팬들의 의견을 끊임없이 듣고,<br>
+                        팬들에게 배우고, 그 결과를 토대로<br>
+                        혁신적인 제품을 세상에 내놓습니다.<br>
+                        갤럭시 S20 FE 5G도 그렇게 탄생한 스마트폰이죠.<br>
+                        직접 만든 콘텐츠를 효과적으로 보여주고,<br>
+                        멋진 사진을 찍고, 게임을 끊김 없이 즐겨보세요.<br>
+                        건전한 관계를 해치는 일체의 언행을 하지 않습니다.
+                      </p>
+        						</div>
+        					</div>
+        				</li>
+        				<li>
+        					<div class="card">
+        						<img src="images/c3_3.png" alt="">
+        						<div class="card_body">
+        							<p class="cardTxt">함께라서 힘이 되는 사람, 가족</p>
+        							<p>슈퍼 히어로보다 더 히어로 같은 어머니의 능력,<br>
+                        그녀처럼 다재다능한 갤럭시 탭 S6 Lite.<br>
+                        가장 즐거운 건 아버지와 함께 몸을 움직이며 놀 때가 아닐까요?<br>
+                        멀리 가지 않아도 집에서<br>
+                        스마트한 삼성 QLED로 함께 홈트를 할 수 있습니다.<br>
+                        점핑 잭, 버피, 스쿼트 등을 하면서<br>
+                        운동도 게임처럼 즐겨보세요.
+                      </p>
+        						</div>
+        					</div>
+        				</li>
+        			</ul>
+              <div class="vcardBar"></div>
+        		</div>
+            <div class="visionCb">
+              <p class="Cb1">삼성과 함께하는 #스마일캠페인</p>
+              <p class="Cb2">무엇이 당신을 미소짓게 하나요? <a href="#" class="deco">#SamsungSmileStories</a><br>
+                <a href="#" class="deco">#withGalaxy</a> <a href="#" class="deco">@samsung</a>과 함께 인스타그램에 공유해주세요.
+
+            </div>
+
+            <div class="vContent">
+        			<ul class="clearfix">
+                <li class="vC1st">
+                  <div class="sliderWrap">
+                    <ul class="slider1st">
+                      <li class="news clearfix">
+                        <div class="top">
+                          <img src="images/card_1_3.JPG" alt="img">
+                        </div>
+                        <div class="bottom">
+                          <h3>혁신</h3><P>
+                          드디어 본격적인 5G 시대가 시작됩니다. <br>
+                          5G와 함께 2019년에 선보일<br>
+                          다양한 기술들이 게임, 창작 등의<br>
+                          활동을 어떻게 변화시킬지 알아보세요.
+                        </p></div>
+                      </li>
+                      <li class="news clearfix">
+                        <div class="top">
+                          <img src="images/card_1_3_1.JPG" alt="img">
+                        </div>
+                        <div class="bottom">
+                          <h3>혁신</h3><p>
+                          AR, 현실이 곧 게임이 됩니다<br>
+                          우리는 단순하지만,<br>
+                          완전히 새로운 세계를 경험했죠.<br>
+                          하지만 이는 증강현실(AR)의 맛보기에 불과합니다.
+                        </p></div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="vC2st">
+                  <div class="sliderWrap">
+                    <ul class="slider1st">
+                      <li class="news clearfix">
+                        <div class="top">
+                        <h3>For a healthy life</h3>
+                        <p>스마트 패브릭과 센서의 발전<br>
+                          웨어러블 기기의 스마트 워치 이상의 역할!<br>
+                          신발, 셔츠 등 입을 수 있는 모든 것들에<br>
+                          이런 기술이 적용됩니다.
+                        </div>
+                        <div class="bottom">
+                          <img src="images/card_2_3.JPG" alt="img">
+                        </div>
+                      </li>
+                      <li class="news clearfix">
+                        <div class="top">
+                        <h3>For a healthy life</h3>
+                        <p>모든 정보를 수시로 의사와 공유합니다.<br>
+                          즉, 병원 문을 들어서기 전부터 <br>
+                          의사는 이미 당신의 건강 상태를 알고 있고 <br>
+                          그에 따른 처방도 계획하고 있을 것입니다.<br>
+                          의사는 더 정확하게 치료할 수 있고,<br>
+                          환자들의 대기 시간도 줄일 수 있을 것입니다.
+                        </p>
+                        </div>
+                        <div class="bottom">
+                          <img src="images/card_2_3_1.JPG" alt="img">
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="vC3st">
+                  <div class="sliderWrap">
+                    <ul class="slider1st">
+                      <li class="news clearfix">
+                        <div class="top">
+                          <img src="images/card_3_3.JPG" alt="img">
+                        </div>
+                        <div class="bottom">
+                          <h3>디자인 스토리</h3>
+                          <p>공간과 사람을 이어주는 오브제.<br>
+                            두께감과 균형 잡힌 알파벳 I 모양 덕분에<br>
+                            The Serif를 선반처럼 사용할 수 있습니다. <br>
+                            인테리어가 콜라주라면<br>
+                            The Serif는 언제든지 들어맞는 조각입니다.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="news clearfix">
+                        <div class="top">
+                          <img src="images/card_3_3_1.JPG" alt="img">
+                        </div>
+                        <div class="bottom">
+                          <h3>The Serif</h3>
+                          <p>부훌렉 형제가 디자인한 The Serif.<br>
+                           새로운 미의 기준을 제시합니다.<br>
+                          로낭과 에르완 부훌렉 형제는 평범한 사물에 <br>
+                          감성적인 가치를 더합니다.<br>
+                          에르완 부훌렉의 이야기를 들어보세요.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="vC4st">
+                  <div class="sliderWrap">
+                    <ul class="slider1st">
+                      <li class="news clearfix">
+                        <div class="top">
+                        <h3>놀라움의 새로운 기준</h3>
+                        <p>모두가 원하는 모든 것을 갖춘 기준,<br>
+                        <p>최신 기술과 합리적인 가격 사이의 고민,<br>
+                          갤럭시 S20 FE 5G는 그런 고민을<br>
+                          없애 주는 스마트폰입니다.<br>
+                          갤럭시 S20 FE 5G입니다.
+                        </p>
+                        </div>
+                        <div class="bottom">
+                          <img src="images/card_4_3.JPG" alt="img">
+                        </div>
+                      </li>
+                      <li class="news clearfix">
+                        <div class="top">
+                        <h3>놀라움의 새로운 기준</h3>
+                        <p>한눈에 알아보는 특별한 컬러<br>
+                          액세서리는 당신을 표현하는 데 <br>
+                          중요한 역할을 합니다.<br>
+                          스마트폰도 자신만의 스타일을 드러내는<br>
+                          개성 있는 액세서리가 될 수 있죠.
+                        </p>
+                        </div>
+                        <div class="bottom">
+                          <img src="images/card_4_3_1.JPG" alt="img">
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+        		</div>
+        </div>
+      </div>
+      <div class="ftAfter">
+        <div class="ftBar"></div>
+        <p>투자자 정보는 삼성전자 <a href="#">IR 페이지</a>에서 확인해 주십시오.</p>
+      </div>
+    </div>
+
+</body>
+
+<h3 class="subLine clearfix"></h3>
+<footer class="footer">
+	<div class=footer_1>
+			<ul class="footerTxt clearfix">
+				<li>삼성전자 주식회사 대표이사 : 김기남</li>
+				<li>사업자등록번호 : 124-81-00998 <a href="">사업자 정보확인</a></li>
+				<li>통신판매업 신고 : 2000-경기수원-0515</li>
+			</ul>
+			<ul class="footerTxt clearfix">
+				<li>사업장주소 : 경기도 수원시 영통구 삼성로 129(매탄동)</li>
+				<li>호스팅서비스사업자 : 한국아이비엠(주)</li>
+				<li>대표번호 : 02-2255-0114</li>
+				<li>제품/서비스/멤버십: 1588-3366</li>
+				<li>구매문의 : 1588-6084</li>
+			</ul>
+			<p>본 사이트에서 판매되는 상품 중에는 등록된 개별 판매자가 판매하는 상품이 포함되어 있습니다.</p>
+			<p>개별 판매자 판매 상품의 경우 삼성전자(주)는 통신판매중개업자로서 통신판매의 당사자가 아니므로, 개별 판매자가 등록한 상품, 거래정보 및 거래 등에 대해 책임을 지지 않습니다.</p>
+			<p>본 사이트의 컨텐츠는 저작권법의 보호를 받는 바 무단 전재, 복사, 배포 등을 금합니다.</p>
+			<p class="copy">Copyright © 1995-2020 Samsung. All Rights Reserved.</p>
+	</div>
+</footer>
+<script>
+$(document).ready(function(){
+	$(".boxWrap>div").eq(0).hide();
+	$(".tabWrap>ul>li").click(function(){
+		var num = $(this).index();
+		$(".tabWrap>ul>li").removeClass();
+		$(this).addClass("active");
+		$(".boxWrap>div").hide();
+		$(".boxWrap>div").eq(num).fadeIn();
+	});
+});
+</script>
+	<h3 class="line_2 clearfix"></h3>
+<footer class="footer mobileFt">
+	<div class="footer_2 mobileFt2 claerfix">
+		<ul class="footer2Txt clearfix">
+			<li><a href="">한국/한국어</a></li>
+			<li><a href="">이메일 무단 수집거부</a></li>
+			<li><a href="">아이디어 정책</a></li>
+			<li><a href="">사이트맵</a></li>
+			<div class="tabWrap">
+				<ul class="tab clearfix">
+					<li class="droplistBtn1 active"><a href="#"></a>이용약관</a></li> <!-- 첫 페이지 로드 -->
+					<li class="droplistBtn2"><a href="#"></a>개인정보처리방침</a></li>
+				</ul>
+				<div class="boxWrap">
+					<div class="bx1">
+						<p>삼성전자 대표사이트 이용약관</p>
+						<p>삼성전자멤버십 이용약관</p>
+						<p>Samsung 서비스 이용약관</p>
+					</div>
+					<div class="bx2">
+						<p>삼성닷컴 개인정보처리방침</p>
+						<p>삼성전자멤버십 개인정보 처리방침</p>
+						<p>멤버십블루 개인정보처리방침</p>
+					</div>
+				</div>
+			</div>
+		</ul>
+		<ul class="sns clearfix">
+			<li><a href="#"><img src="images/samsung.png" alt=""></li>
+			<li><a href="#"><img src="images/fb.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/you.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/insta.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/ee.jpg" alt=""></a></li>
+		</ul>
+	</div>
+</footer>
+</html>
