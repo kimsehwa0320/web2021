@@ -515,7 +515,7 @@ ul.sns li{float:left}
 
 /* content */
 .contents{
-  position: relative; width: 1260px; height: 2060px;
+  position: relative; width: 1260px; height: 2030px;
   left: 50%; transform:translateX(-50%);
 }
 /* .subCategory{display: block; } */
@@ -538,6 +538,7 @@ ul.sns li{float:left}
   height: 2px; background: #6868ff; margin: 0 auto; margin-bottom: 15px;
 }
 .visionTop .vTxt2{letter-spacing: -1.5px; font-size:23px;padding-bottom: 30px ;}
+
 /* subContent */
 .subContent .bracket{
   border: 2px solid #274b85;margin: 0 auto;
@@ -557,6 +558,32 @@ ul.sns li{float:left}
   border: 1.5px solid #274b85;;width: 100%;
   margin:50px 0; background: #274b85;
 }
+
+/* section card */
+.section{width: 1260px; margin: 0 auto; margin-top: 70px;}
+.section .card:last-child{margin-right: 0;}
+.section .card:hover{
+  box-shadow: 8px 8px 10px rgba(0,0,0,0.5);transform: translate(-10px,-10px);
+}
+.section .card .card_body{text-align: center; padding: -20px 40px;}
+.section .card .card_body h3{margin-bottom: 10px;}
+.section .card_body .cardTxt{
+  color:#274b85; padding-bottom: 20px;letter-spacing: -1.5px;font-size:24px;
+}
+.section .card_body .cardTxt:before{
+   content:"";display: block; width: 30px;
+   height: 2.2px; background: #274b85; margin: 0 auto;
+   margin-bottom: 20px; margin-top: 20px;
+ }
+ .section .card_body p{
+  color:#8d8d8d; font-size:14px; font-weight:bold;
+  line-height:25px; text-align:center; letter-spacing: -0.5px;
+}
+.section .card{
+ float: left; margin-right: 20px;width: 400px;
+ height: 530px; padding-top: 20px; transition: 0.3s;
+}
+.section .card img{display: block;margin: 0 auto; width: 200px;}
 
 /* visionContainer */
 .dContainer .card_body .cardTxt{
