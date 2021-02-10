@@ -5,7 +5,7 @@ header#main_header_sub{height: 500px;position: relative; margin-bottom:20px; }
 .blind2{display: none;}
 body{height: 100%;}
 /* #main_menu .menu li:hover .bar{ transform: scaleX(1); } */
-.visualSub_2{}
+.visualSub{}
 .menu li{position: relative;}
 .menu li:hover:after,
 .menu li.active:after{
@@ -489,6 +489,25 @@ ul.sns li{float:left}
   width: 100%; height: 100%;
   object-fit:cover;
 }
+/* visualSub_2 */
+.visualSub_2{
+  background-image: url("../images/sub_menu2bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.visualSubTxt h3{
+  position: absolute; text-align:center;
+  color:white; left: 50%; transform:translateX(-50%);
+  font-weight:bold; font-size:36px; top:210px;
+}
+/* visualSub_3 */
+.visualSub_3{
+  background-image: url("../images/sub_menu3bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 /* subMenuTab */
 .subMenuTab{
@@ -706,26 +725,6 @@ ul.sns li{float:left}
   text-align:left; padding: 100px 20px;line-height:25px;
   color:#8d8d8d; font-size:15px; font-weight:bold;
   letter-spacing: -0.5px;
-}
-
-/* visualSub_2 */
-.visualSub_2{
-  background-image: url("../images/sub_menu2bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.visualSubTxt h3{
-  position: absolute; text-align:center;
-  color:white; left: 50%; transform:translateX(-50%);
-  font-weight:bold; font-size:36px; top:210px;
-}
-/* visualSub_3 */
-.visualSub_3{
-  background-image: url("../images/sub_menu3bg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 
