@@ -5,7 +5,7 @@ header#main_header_sub{height: 500px;position: relative; margin-bottom:20px; }
 .blind2{display: none;}
 body{height: 100%;}
 /* #main_menu .menu li:hover .bar{ transform: scaleX(1); } */
-.container{}
+.subContent{}
 .menu li{position: relative;}
 .menu li:hover:after,
 .menu li.active:after{
@@ -128,12 +128,10 @@ body{height: 100%;}
 	background-position: center;
 	background-size: cover;
 }
-.sliderWrap .slider_4st,
+.sliderWrap .slider_4st{width: 100%; height: 1005px;position: relative;}
 .sliderWrap .slider_4st .video{
-  width: 1520px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+  width: 100%; height: 100%;
+  object-fit:cover;
 }
 
 .sliderWrap .slider_4st .video{
