@@ -5,7 +5,7 @@ header#main_header_sub{height: 500px;position: relative; margin-bottom:20px; }
 .blind2{display: none;}
 body{height: 100%;}
 /* #main_menu .menu li:hover .bar{ transform: scaleX(1); } */
-
+.subTwo{}
 .menu li{position: relative;}
 .menu li:hover:after,
 .menu li.active:after{
@@ -708,14 +708,20 @@ ul.sns li{float:left}
   letter-spacing: -0.5px;
 }
 
-/* submenu2 */
-.subTwo img,.subThree img{
-  /* background-image: url("../images/sub_menu2bg.jpg"); */
+/* visualSub_2 */
+.visualSub_2{
+  background-image: url("../images/sub_menu2bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;position: absolute;
-	/* left: 50%; transform: translateX(-50%); */
+  background-size: cover;
 }
+.visualSubTxt h3{
+  position: absolute; text-align:center;
+  color:white; left: 50%; transform:translateX(-50%);
+  font-weight:bold; font-size:36px; top:210px;
+}
+
+
 .subTwo h2,.subTwo p,.subThree h2,.subThree p{
   position: absolute; text-align:center;
   color:white; left: 50%; transform:translateX(-50%);
