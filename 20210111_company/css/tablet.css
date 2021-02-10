@@ -177,7 +177,7 @@ header#main_header_sub{height: 500px;position: relative; margin-bottom:20px; }
 /*content*/
 .content{width: 100%;}
 .content>ul>li{
-	float: left;width: 50px;position: relative;
+	float: left;position: relative;
 	overflow: hidden;transition:0.3s;
 	height: 315px;
 }
@@ -185,60 +185,64 @@ header#main_header_sub{height: 500px;position: relative; margin-bottom:20px; }
 
 /*content layout*/
 .half{width: 50% !important;}
-.content>ul>li.ct1st{background: #161515;width: 50%;}
-.content>ul>li.ct2st{width: 50%;}
+.content>ul>li.ct1st{display: none;}
+.content>ul>li.ct2st{display: none;}
 .content>ul>li.ct3st{display: none;}
-.content>ul>li.ct6st{display: none;}
+.content>ul>li.ct6st{width: 60%;}
 .content>ul>li.ct7st{display: none;}
-.content>ul>li.ct8st{display: none;}
+.content>ul>li.ct8st{width: 60%;}
 .content>ul>li.ct11st{display: none;}
 
-.content>ul>li.ct4st{background: #d7d6dc;width: 50%;}
-.content>ul>li.ct5st{background: #413d3e;width: 50%;}
-.content>ul>li.ct9st{display: none;}
+.content>ul>li.ct4st{display: none;}
+.content>ul>li.ct5st{background: #413d3e;width: 40%;}
+.content>ul>li.ct9st{background: #ff6734;width: 40%;}
 .content>ul>li.ct10st{display: none;}
 
 /*content icon cell*/
-.content li.ct1st p,
+.content li.ct9st p,
 .content li.ct5st p{color: white;}
-.content li.ct1st a,
+.content li.ct9st a,
 .content li.ct5st a{
 	text-align: center; display: block;
 	height: 100%; padding-top:100px;
 	font-weight:bold; line-height:40px;
 }
-
-.content li.ct1st img,
+.content li.ct5st{width: 100%;}
+.content li.ct9st img,
 .content li.ct5st img{display: block; width: 100px; margin: 0 auto; margin-bottom: 5px;}
 
-.content .ct1st img,
+.content .ct9st img,
 .content .ct5st img{transition: 0.3s; width: 100px;}
 
-.content .ct1st:hover img,
+.content .ct9st:hover img,
 .content .ct5st:hover img{transform: rotate(-45deg);}
 
-/*modal layer*/
-.content .ct2st .bgImg{transition: 0.3s;} /*li X img O : 이미지 값 변동*/
-.content .ct2st:hover .bgImg{transform: scale(1.2);}
-.content .ct2st .play{
+.content div.txt6{position: absolute; color:white;top: 50%; transform: translateY(-50%); left: 20px;}
+.content div.txt6 h3:after{
+	content: ""; display: block;
+	width: 50px; height: 2px;
+	background-color: #fff; margin: 10px 0;
+}
+.content div.txt6 p{font-size:1em;}
+
+.content div.txt8{position: absolute; top: 50%;transform: translateY(-50%); right: 20px; color: white; text-align: right;}
+.content div.txt8 h3:after{
+	content: ""; display: block;
+	width: 50px; height: 2px;
+	background-color: #fff; margin: 10px 0 10px 95px;
+}
+.content div.txt8 p{font-size:1em;}
+.content .ct8st{position: relative;}
+.content .ct8st img{position: absolute; top: -80px;left: -40px; cursor: pointer;}
+.content .ct8st .bgImg,.content .ct6st .bgImg{transition: 0.3s;}
+.content .ct8st:hover .bgImg,
+.content .ct6st:hover .bgImg{transform: scale(1.2);}
+.content .ct6st .play{
 	position: absolute; left: 50%; top: 50%;
 	transform: translate(-50%,-50%); width: 80px;
 }
 
 /*news bxslider*/
-.content .ct4st{}
-.content .ct4st h2,.content .ct4st p,.content .ct4st div{position: absolute; text-align:center;width: 300px;color:white;}
-.content .ct4st h2{top: 110px;left: 50%;transform:translateX(-50%);font-weight:bold;}
-.content .ct4st p{top: 85px;left: 50%;transform:translateX(-50%);font-weight:bold;font-size:12px;}
-.content .ct4st div{left: 50%;top: 50%; transform:translate(-50%,-50%);letter-spacing:-1px;font-size:11.5px;}
-.content .ct4st .ct4stBtn{
-	left: 50%;transform:translateX(-50%); top: 200px;
-	position: absolute; text-align: center;
-	padding: 10px 20px;
-	border: 1px solid #000; background: #fff;
-	border-radius:40px; color: #000;
-	font-size: 12px;font-weight:bold;
-}
 .nBtn{
 	position: absolute; top: 50%; right: 10px; cursor: pointer;
 	transform:translateY(-50%); width: 20px;
@@ -247,7 +251,6 @@ header#main_header_sub{height: 500px;position: relative; margin-bottom:20px; }
 	position: absolute; top: 50%; left: 10px; cursor: pointer;
 	transform:translateY(-50%); width: 20px;
 }
-
 .bx-wrapper .bx-pager.bx-default-pager a{
     background: #fff;text-indent: -9999px;
     display: block;width: 30px;height: 3px;
@@ -265,7 +268,7 @@ header#main_header_sub{height: 500px;position: relative; margin-bottom:20px; }
   background-size:cover; margin-top: -300px;
 }
 .container_1{
-  height: 2100px; color:#000;margin-top: -300px;
+  height: 2100px; color:#000;margin-top: -750px;
   background: #f2f2eb; margin-bottom: 70px;
   padding-top: 30px;
 }
