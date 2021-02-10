@@ -384,6 +384,26 @@ ul.sns li{float:left; }
   padding:0 30px; _font-weight:bold; font-size:14px;
 }
 
+/* visualSub_2 */
+.visualSub_2{
+  background-image: url("../images/sub_menu2bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.visualSubTxt h3{
+  position: absolute; text-align:center;
+  color:white; left: 50%; transform:translateX(-50%);
+  font-weight:bold; font-size:30px; top:250px; width: 400px;
+}
+/* visualSub_3 */
+.visualSub_3{
+  background-image: url("../images/sub_menu3bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .contents{
   position: relative; width: 100%;
   left: 50%; transform:translateX(-50%);
