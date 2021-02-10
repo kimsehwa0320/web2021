@@ -583,6 +583,7 @@ ul.sns li{float:left}
  height: 530px; padding-top: 20px; transition: 0.3s;
 }
 .section .card img{display: block;margin: 0 auto; width: 200px;}
+.menu1st img,.menu3st img,.menu4st img{width: 100%;}
 
 /* visionContainer */
 .dContainer .card_body .cardTxt{
