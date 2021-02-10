@@ -3,6 +3,7 @@
 html,body{height: 100%;} /*mobile에서 필수*/
 header#main_header{height: 1950px;position: relative;margin-bottom:100px;}
 .blind{display: none;}
+.container_1{}
 /*header top*/
 #header_top{
 	width: 100%; height: 80px;
@@ -265,12 +266,14 @@ header#main_header{height: 1950px;position: relative;margin-bottom:100px;}
 }
 .container_1{
   height: 2100px; color:#000;margin-top: -300px;
-  background: #f2f2eb; margin-bottom: 100px;
-  padding-top: 70px;
+  background: #f2f2eb; margin-bottom: 70px;
+  padding-top: 30px;
 }
 .vContainer .section,
-.dContainer .section,
-.container_1 .section{position: absolute;left: 50%;transform:translate(-50%); }
+.dContainer .section_2,
+.container_1 .section_3{position: absolute;left: 50%;transform:translate(-50%); }
+.container_1 .section_3 ul li{margin: 0 auto; text-align:center;}
+.container_1 .section_3 h4{font-size:24px;}
 .container h4{text-align: center; font-size:19px; padding-top: 70px;}
 .container h4:after{
 	content:""; display: block;
@@ -278,14 +281,15 @@ header#main_header{height: 1950px;position: relative;margin-bottom:100px;}
 	width: 50px; height: 2px;
 	margin: 15px auto;
 }
-.container_1 .section>p{text-align: center;font-size: 15px;font-weight:bold;}
-.dContainer .section ul li:last-child{margin-right: 0;}
-.dContainer .section ul li:hover,
+.container_1 .section_3>p{text-align: center;font-size: 15px;font-weight:bold;}
+.dContainer .section_2 ul li:last-child{margin-right: 0;}
+.container_1 .section_3 ul li:hover,
+.dContainer .section_2 ul li:hover,
 .vContainer .section ul li:hover{box-shadow: 8px 8px 10px rgba(0,0,0,0.5);transform: translate(-10px,-10px);}
-.dContainer .section li .card_body{text-align: center; padding: -20px 40px;font-size:14px;}
+.dContainer .section_2 li .card_body{text-align: center; padding: -20px 40px;font-size:14px;}
 .vContainer .section li .card_body{text-align: center;font-size:14px;}
 .container .section li .card_body h3,
-.dContainer .section li .card_body h3,
+.dContainer .section_2 li .card_body h3,
 .vContainer.section li .card_body h3{margin-bottom: 10px;font-size:17px;}
 
 
@@ -480,12 +484,12 @@ ul.sns li{float:left; }
   float: left; margin-right: 20px;width: 406.67px;
   height: 500px; padding-top: 20px; transition: 0.3s;
 }
-.dContainer .section ul li{
+.dContainer .section_2 ul li{
   float: left; margin-right: 20px;width: 406.67px;
   height: 300px; padding-top: 20px; transition: 0.3s;
 }
 .vContainer .section li img,
-.dContainer .section li img{display: block;margin: 0 auto; width: 150px;}
+.dContainer .section_2 li img{display: block;margin: 0 auto; width: 150px;}
 .vContainer .vcardBar,.dContainer .vcardBar{
 	position: absolute; bottom: 20px;
   border: 0.6px solid #cacaca;;width: 100%;
@@ -580,40 +584,6 @@ ul.sns li{float:left; }
 }
 
 /* submenu2 */
-.subTwo,.subThree,.subFive{
-	overflow: hidden;position: relative;
-	width: 100%;height: 506px;
-}
-.sub_4st{
-	overflow: hidden;position: relative;
-	width: 100%;height: 1000px;
-}
-.subTwo img,.subThree img,.subGif img{
-	width: 520px;height: 506px;
-	object-fit: cover;
-}
-.sub_4st img{
-	width: 520px;height: 1000px;
-	object-fit: cover;
-}
-.subTwo .subIMG,.subThree .subIMG.subGif .subIMG{
-	position: absolute;width: 100%;height: 506px;
-}
-.sub_4st .subIMG{position: absolute;width: 100%;height: 1000px;}
-
-.subTwo h2,.subTwo p,.subThree h2,.subThree p{
-  position: absolute; text-align:center;
-  color:white; left: 50%; transform:translateX(-50%);
- }
-.subTwo h2,.subThree h2{font-weight:bold; font-size:36px; top:255px; letter-spacing: 4px;width: 400px;}
-.subTwo p,.subThree p{font-size:14px; top:325px;}
-
-.subFive h2,.subFive p{
-  position: absolute; text-align:center;
-  color:white; left: 50%; transform:translateX(-50%);
- }
-.subFive h2{font-weight:bold; font-size:36px; top:250px;}
-.subFive p{font-size:14px; top:310px;}
 
 
 .visionCb .deco{text-decoration:underline; font-weight:bold;}
@@ -653,25 +623,26 @@ ul.sns li{float:left; }
 background:url(../images/contentsbg02.gif) no-repeat center fixed;
 background-size:cover; padding-top: 70px; margin-bottom: 200px;
 }
-.dContainer .section h4{
+.dContainer .section_2 h4{
   text-align: center; font-size:27px;
   padding-bottom: 10px;padding-top: 40px;
 }
-.dContainer .section>p{
+.dContainer .section_2>p{
   text-align: center; font-size: 17px;
   margin-bottom: 70px; font-weight:bold;
 }
+.container_1 .section_3{text-align: center;}
 .container_1 .card h3{font-size:21px;padding-bottom: 10px;}
 .dContainer .card .card_body p{color:#fff;}
 .container_1 h4{text-align: center; font-size:32px; padding-top: 60px;}
-.container_1 .section p{padding: 10px;}
-.container_1 .section ul li{
-  float: left; margin-right: 20px;width: 406.67px;
+.container_1 .section_3 p{padding: 10px;}
+.container_1 .section_3 ul li{
+  float: left; margin-right: 20px;width: 450px; transition: 0.3s;
   height: 580px; padding-top: 70px; text-align:center; padding-bottom: 15px;
 }
 
-.container_1 .section ul li:last-child{margin-right: 0;}
-.container_1 .card p{padding-top: 30px; text-align:left;}
+.container_1 .section_3 ul li:last-child{margin-right: 0;}
+.container_1 .card p{padding-top: 30px;}
 
 .container_1 .card .txt1Btn2{
   color: #000;border: 1px solid #000;
