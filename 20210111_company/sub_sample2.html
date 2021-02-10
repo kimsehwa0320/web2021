@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>회사소개</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../css/all.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+  <script src="js/sub_menu.js"></script>
+	<script src="js/wow.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+  <script>
+    $(document).ready(function(){
+        var slider2 = $(".slider1st").bxSlider({
+          controls:false,
+          pager:false,
+          controls:false,
+          auto:true,
+          mode:'vertical'
+        });
+        $(".prevBtn").click(function(){
+          slider2.goToPrevSlide()
+        });
+        $(".nextBtn").click(function(){
+          slider2.goToNextSlide()
+        });
+        $(".toggleMenu").click(function(){
+  				var toggle = $(".toggleMenu").attr("class"); //get
+  				console.log(toggle); // toggleMenu 찍힘
+  				if(toggle == "toggleMenu"){
+  					$(".toggleMenu").addClass("change");
+  					$("#main_menu").stop().animate({left:0},300);
+  				}else{
+  					$(".toggleMenu").removeClass("change");
+  					$("#main_menu").stop().animate({left:"-100%"},300);
+  				}
+  			});
+
+  			$(".dBtn1,.dBtn2").hide();
+  			$("footer2Txt>li").eq(4).click(function(){
+  				$(".dBtn1").fadeIn();
+  				$(".dBtn2").hide();
+  			});
+  			$("footer2Txt>li").eq(5).click(function(){
+  				$(".dBtn2").fadeIn();
+  				$(".dBtn1").hide();
+  			});
+
+  			$(window).resize(function(){
+  				$(".toggleMenu").removeClass("change");
+  				$("#main_menu").removeAttr("style");
+  			});
+
+  			// $(".modal").colorbox({
+  			// 	rel:"modal"
+  			// });
+
+  			$(".youtube").colorbox({
+  				iframe:true,
+  				innerWidth:560,
+  				innerHeight:315
+  			});
+
+        $("nav.subWrap>ul>li.sbM").hover(function(){
+          $(this).find(".submenu").fadeIn();
+        },function(){
+          $(this).find(".submenu").hide();
+        });
+
+  		});
+  </script>
+  <style>
+		body{font-family: 'Gothic A1', sans-serif;}
+    #main_header.sub{height:80px;margin-bottom:initial;}
+	</style>
+</head>
+<body>
+
+  <!-- nav -->
+  <header id="main_header" class="sub">
+		<div id="header_top">
+			<h1 class="logo"><a href="index.html"><img src="images/samsung.JPG" alt=""></a></h1>
+			<nav id="main_menu">
+				<ul class="menu clearfix">
+          <li><a href="sub_menu1.html">회사소개</a></li>
+					<li><a href="sub_menu2.html">기획전</a></li>
+					<li><a href="sub_menu3.html">스토리</a></li>
+					<li><a href="sub_menu4.html">제품</a></li>
+					<li><a href="sub_menu5.html">솔루션</a></li>
+					<li><a href="sub_menu6.html" target="blank">디지털프라자<i class="fab fa-product-hunt"></i></a></li>
+				</ul>
+			</nav>
+      <script>
+        nowMenu(0);
+      </script>
+			<div class="toggleMenu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</div>
+</header>
+<style>
+  .visualSub{width: 100%;height:300px;background:#ccc;position: relative;overflow: hidden;}
+  .visualSub #sVideo{width: 100%;height: 100%;object-fit:cover;}
+  .visualSub .txt{position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:white;}
+  .visualSub .subMenuTab{width: 1260px;
+    position: absolute;left:50%;transform:translateX(-50%);color:white;bottom:0;
+  }
+  .visualSub .subMenuTab ul{background:pink;}
+  .visualSub .subMenuTab li{float: left;width: 25%;text-align: center;}
+  .visualSub .subMenuTab li a{display: block;line-height:40px;color:white;}
+
+  /*contents*/
+  .contents{width: 1126px;margin: 0 auto}
+  .contents .subContent div{
+    height: 1000px;background:gray;
+  }
+</style>
+<script>
+  $(function(){
+    $(".subContent div").hide().eq(0).show();
+    $(".subMenuTab li").click(function(){
+      var i = $(this).index();
+      $(".subContent div").hide().eq(i).fadeIn();
+
+      if(i == 0){
+        $(".loc_dep2,.title>h3").html("회사소개");
+      }else if(i == 1){
+        $(".loc_dep2,.title>h3").html("기업정보");
+      }else if(i == 2){
+        $(".loc_dep2,.title>h3").html("사업정보");
+      }else if(i == 3){
+        $(".loc_dep2,.title>h3").html("비젼");
+      }
+
+    });
+  });
+</script>
+<div class="visualSub company">
+  <video id="sVideo" autoplay muted loop>
+    <source src="images/video2_1.webm" type="video/webm">
+  </video>
+  <div class="txt">
+    <h2>새로운 미래 창조</h2>
+     <p>삼성전자의 새로운 미래의 창조와<span class="blind2"><br></span>더 나은 세상을 향한 열정</p>
+  </div>
+  <div class="subMenuTab">
+    <ul>
+      <li><a href="#">회사소개</a></li>
+      <li><a href="#">기업정보</a></li>
+      <li><a href="#">사업정보</a></li>
+      <li><a href="#">비젼</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="contents">
+  <div class="loc">
+    home > 회사소개 > <span class="loc_dep2">회사소개</span>
+  </div>
+  <div class="title">
+    <h3>회사소개</h3>
+  </div>
+  <div class="subContent">
+
+    <!-- content1ST -->
+    <div class="menu1st">
+      1content
+    </div>
+    <!-- content2ST -->
+    <div class="menu2st">
+      2content
+    </div>
+    <!-- content3ST -->
+    <div class="menu3st">
+      3content
+    </div>
+    <!-- content4ST -->
+    <div class="menu4st">
+      4content
+    </div>
+  </div>
+
+</div>
+
+
+<footer class="footer">
+	footer
+</footer>
+</body>
+</html>

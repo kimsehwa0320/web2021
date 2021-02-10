@@ -71,16 +71,6 @@
   				innerWidth:560,
   				innerHeight:315
   			});
-
-        $(".subMenuTab").hover(function(){
-          $(this).find(".menu1st").hide();
-        },function(){
-          $(this).find(".menu2st").fadeIn();
-        },function(){
-          $(this).find(".menu3st").hide();
-        },function(){
-          $(this).find(".menu4st").hide();
-        });
   		});
   </script>
   <style>
@@ -132,6 +122,26 @@
     </div>
 </header>
 
+<script>
+  $(function(){
+    $(".subContent nav").hide().eq(0).show();
+    $(".subMenuTab li").click(function(){
+      var i = $(this).index();
+      $(".subContent nav").hide().eq(i).fadeIn();
+
+      if(i == 0){
+        $(".loc_dep2,.visionTop>p").html("회사소개");
+      }else if(i == 1){
+        $(".loc_dep2,.visionTop>p").html("경영철학");
+      }else if(i == 2){
+        $(".loc_dep2,.visionTop>p").html("사업정보");
+      }else if(i == 3){
+        $(".loc_dep2,.visionTop>p").html("기업정보");
+      }
+    });
+  });
+</script>
+
 <div class="contents">
   <div class="subCategory">
     <ul class="clearfix">
@@ -139,27 +149,27 @@
       <li><img src="images/next_btn.png" alt="" class="sB"></li>
       <li><a href="sub_menu1.html">회사소개</a></li>
       <li><img src="images/next_btn.png" alt="" class="sB"></li>
-      <li><a href="#" class="vI">비전</a></li>
+      <li><a href="#" class="vI"><span class="loc_dep2">비젼</span></a></li>
     </ul>
   </div>
 
   <div class="visionTop">
         <p class="vTxt1" style="font-family:NEXONTWO">경영철학</p>
-        <p class="vTxt2">삼성전자는 사람과 사회를 생각하는<span class="blind2"><br></span>글로벌 일류기업을 추구합니다. </p>
+        <h4 class="vTxt2">삼성전자는 사람과 사회를 생각하는<span class="blind2"><br></span>글로벌 일류기업을 추구합니다. </h4>
   </div>
 
   <div class="subContent">
     <!-- content1ST -->
-    <div class="menu1st">
+    <nav class="menu1st">
       <div class="bracket"></div>
-      <p class="vTxt3">SAMSUNG ELECTRONICS WILL<br>KEEP ITS PROMISE!</p>
+      <p class="vTxt3">LOREM IPSUM DOLOR SIT AMET.<br>AND, CONSECTETUR.</p>
       <p class="vTxt4">‘1, 2, 3’의 가치체계를 경영의 나침반으로 삼고,<br>
         인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여 인류사회에<span class="blind2"><br></span> 공헌하는 것을
         궁극적인 목표로 삼고 있습니다.</p>
       <div class="vTxt4Bar"></div>
-    </div>
+    </nav>
     <!-- content2ST -->
-    <div class="menu2st">
+    <nav class="menu2st">
       <div class="bracket"></div>
       <p class="vTxt3">SAMSUNG ELECTRONICS WILL<br>KEEP ITS PROMISE!</p>
       <p class="vTxt4">‘경영이념, 핵심가치, 경영원칙’의 가치체계를 경영의 나침반으로 삼고,<br>
@@ -211,25 +221,25 @@
             </div>
         </li>
       </ul>
-    </div>
+    </nav>
     <!-- content3ST -->
-    <div class="menu3st">
+    <nav class="menu3st">
       <div class="bracket"></div>
       <p class="vTxt3">SAMSUNG ELECTRONICS WILL<br>KEEP ITS PROMISE!</p>
       <p class="vTxt4">‘1, 2, 3’의 가치체계를 경영의 나침반으로 삼고,<br>
         인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여 인류사회에<span class="blind2"><br></span> 공헌하는 것을
         궁극적인 목표로 삼고 있습니다.</p>
       <div class="vTxt4Bar"></div>
-    </div>
+    </nav>
     <!-- content4ST -->
-    <div class="menu4st">
+    <nav class="menu4st">
       <div class="bracket"></div>
       <p class="vTxt3">SAMSUNG ELECTRONICS WILL<br>KEEP ITS PROMISE!</p>
       <p class="vTxt4">‘1, 2, 3’의 가치체계를 경영의 나침반으로 삼고,<br>
         인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여 인류사회에<span class="blind2"><br></span> 공헌하는 것을
         궁극적인 목표로 삼고 있습니다.</p>
       <div class="vTxt4Bar"></div>
-    </div>
+    </nav>
 
     <div class="vcardBar"></div>
   <ul class="visionCb">
