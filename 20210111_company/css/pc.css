@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 header#main_header{height: 1950px;position: relative; margin-bottom:100px;}
+header#main_header_sub{height: 500px;position: relative; margin-bottom:20px; }
 
 /* #main_menu .menu li:hover .bar{ transform: scaleX(1); } */
 
@@ -12,6 +13,7 @@ header#main_header{height: 1950px;position: relative; margin-bottom:100px;}
   left: 50%; transform:translate(-50%); margin-top: -5px;
 }
 .blind2{display: none;}
+body{height: 100%;}
 
 
 /*header top*/
@@ -480,47 +482,47 @@ ul.sns li{float:left}
 .sns img:nth-child(1){margin-left: 0;}
 
 /* sub_menu1 */
-.sub_main{height: 500px; position: relative;}
-.subVideo, .subVideo video{
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-}
-.subVideo video{
-	position: absolute; top: -6px;
-	left: 50%; transform: translateX(-50%);
-}
-.subVideo h2,.subVideo p,.subWrap{
+
+/* video */
+.visualSub{width: 100%; height: 500px; top: 0;position: relative;}
+.visualSub h2,.visualSub p{
   position: absolute; text-align:center;
   color:white; left: 50%; transform:translateX(-50%);
  }
-.subVideo h2{font-weight:bold; font-size:36px; top:260px;}
-.subVideo p{font-size:14px; top:320px;}
+.visualSub h2{font-weight:bold; font-size:36px; top:260px;}
+.visualSub p{font-size:14px; top:320px;}
+#myvideo{
+  width: 100%; height: 100%;
+  object-fit:cover;
+}
 
-/* .subWrap{bottom: 0;background: #000; width: 1260px; } */
-nav.subWrap{
+/* subMenuTab */
+.subMenuTab{
   width: 1260px; position: absolute;
   z-index: 1; bottom: 0; background: #000;
-}
-nav.subWrap .sbM{
-  float: left; width:315px;border-right: 1px solid #d7d6dc;
-  border-bottom:5px solid #6868ff;
-}
-nav.subWrap .sbM:last-child{border-right:none;}
-nav.subWrap .sbM:nth-child(2) .submenu{display: block;}
-.subWrap .sbM:hover a,
-.subWrap .sbM.active{background: #6868ff;}
-.subWrap .sbM a{
-	display: block; line-height: 50px; color:white;
-	padding:0 30px; _font-weight:bold; font-size:14px;
-}
-.submenu{display: none;}
-.submenu{
-  position: absolute; width: 1260px; background:#fff;
   left: 50%; transform:translateX(-50%);
 }
-.subPage{position: relative; width: 1260px; margin: 0 auto;margin-top: 500px;}
-..subCategory{display: block; }
+
+.subMenuTab>ul>li{
+  float: left; width:315px;border-right: 1px solid #d7d6dc;
+  border-bottom:5px solid #6868ff; cursor: pointer;
+}
+.subMenuTab>ul>li:last-child{border-right:none;}
+/* .subMenuTab>ul>li:nth-child(2) .submenu{display: block;} */
+.subMenuTab>ul>li:hover,
+.subMenuTab>ul>li:nth-child(2){background: #6868ff;}
+.subMenuTab>ul>li{
+  display: block; line-height: 50px; color:white; text-align:center;
+  padding:0 30px; _font-weight:bold; font-size:14px;
+}
+
+/* content */
+.contents{
+  position: relative; width: 1260px; height: 1900px;
+  left: 50%; transform:translateX(-50%);
+}
+/* .subCategory{display: block; } */
+.subCategory{top: 0;}
 .subCategory li{
   float: left;font-size:12px; font-weight:bold;
   padding-right: 8px; margin: 10px 0;
@@ -529,7 +531,8 @@ nav.subWrap .sbM:nth-child(2) .submenu{display: block;}
 .subCategory .sB{width: 6px;}
 .subCategory .vI{color:#6868ff;}
 
-.vision{text-align:center; }
+/* visionTop */
+.visionTop,.subContent{text-align:center; }
 .visionTop .vTxt1{
   color:#6868ff; font-size:23px;font-weight:bold;
   letter-spacing: -2.5px;padding-bottom: 50px ;}
@@ -538,21 +541,22 @@ nav.subWrap .sbM:nth-child(2) .submenu{display: block;}
   height: 2px; background: #6868ff; margin: 0 auto; margin-bottom: 15px;
 }
 .visionTop .vTxt2{letter-spacing: -1.5px; font-size:23px;padding-bottom: 30px ;}
-.visionTop .bracket{
+/* subContent */
+.subContent .bracket{
   border: 2px solid #274b85;margin: 0 auto;
   width: 550px;height: 70px;
 }
-.visionTop .vTxt3{
+.subContent .vTxt3{
   letter-spacing: -1px; font-size:34px; color:#274b85;
   background: #fff; height: 100px; width: 510px;
   font-weight:bold; position: absolute;
-  top: 205px; left: 50%; transform:translateX(-50%)
+  top: 185px; left: 50%; transform:translateX(-50%)
 }
-.visionTop .vTxt4{
+.subContent .vTxt4{
   margin-top: 40px;font-size:14px;margin-bottom: 50px;
   font-weight:bold;letter-spacing: -0.5px; color:#4e4e4e;
 }
-.visionTop .vTxt4Bar{
+.subContent .vTxt4Bar{
   border: 1.5px solid #274b85;;width: 100%;
   margin:50px 0; background: #274b85;
 }
