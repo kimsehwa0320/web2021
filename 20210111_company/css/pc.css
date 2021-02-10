@@ -5,7 +5,7 @@ header#main_header_sub{height: 500px;position: relative; margin-bottom:20px; }
 .blind2{display: none;}
 body{height: 100%;}
 /* #main_menu .menu li:hover .bar{ transform: scaleX(1); } */
-.subContent{}
+.menu3st{}
 .menu li{position: relative;}
 .menu li:hover:after,
 .menu li.active:after{
@@ -606,7 +606,7 @@ ul.sns li{float:left}
  height: 530px; padding-top: 20px; transition: 0.3s;
 }
 .section .card img{display: block;margin: 0 auto; width: 200px;}
-.menu1st img,.menu3st img,.menu4st img{width: 100%;}
+.menu2st img,.menu3st img,.menu4st img{width: 100%;}
 
 /* visionContainer */
 .dContainer .card_body .cardTxt{
