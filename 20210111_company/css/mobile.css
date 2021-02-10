@@ -3,7 +3,7 @@
 html,body{height: 100%;} /*mobile에서 필수*/
 header#main_header{height: 1950px;position: relative;margin-bottom:100px;}
 .blind{display: none;}
-.container_1{}
+.container{}
 /*header top*/
 #header_top{
 	width: 100%; height: 80px;
@@ -260,15 +260,16 @@ header#main_header{height: 1950px;position: relative;margin-bottom:100px;}
 
 /*container*/
 .container{
-  width: 100%;height: 1700px; color:#fff;
+  width: 100%;height: 2100px; color:#fff;
   background:url(../images/contentsbg01.jpg) no-repeat center fixed;
-  background-size:cover; margin-top: -860px;
+  background-size:cover; margin-top: -300px;
 }
 .container_1{
   height: 2100px; color:#000;margin-top: -300px;
   background: #f2f2eb; margin-bottom: 70px;
   padding-top: 30px;
 }
+.container .section_1,
 .vContainer .section,
 .dContainer .section_2,
 .container_1 .section_3{position: absolute;left: 50%;transform:translate(-50%); }
@@ -281,16 +282,26 @@ header#main_header{height: 1950px;position: relative;margin-bottom:100px;}
 	width: 50px; height: 2px;
 	margin: 15px auto;
 }
+.container .section_1>p{text-align: center;font-size: 15px;font-weight:bold;padding-bottom: 30px;}
 .container_1 .section_3>p{text-align: center;font-size: 15px;font-weight:bold;}
+.container .section_1 ul li{ transition: 0.3s;}
 .dContainer .section_2 ul li:last-child{margin-right: 0;}
+.container .section_1 ul li:hover,
 .container_1 .section_3 ul li:hover,
 .dContainer .section_2 ul li:hover,
 .vContainer .section ul li:hover{box-shadow: 8px 8px 10px rgba(0,0,0,0.5);transform: translate(-10px,-10px);}
 .dContainer .section_2 li .card_body{text-align: center; padding: -20px 40px;font-size:14px;}
 .vContainer .section li .card_body{text-align: center;font-size:14px;}
-.container .section li .card_body h3,
+.container .section_1 li .card_body{text-align: center;font-size:14px; padding-top: 15px;}
+.container .section_1 li img{display: block;margin: 0 auto; width: 250px; }
+.container .section_1 li .card_body h3,
 .dContainer .section_2 li .card_body h3,
 .vContainer.section li .card_body h3{margin-bottom: 10px;font-size:17px;}
+
+.container .section_1 .card{
+	width: 400px; height: 450px;
+	padding: 20px 0;
+ }
 
 
 
@@ -596,6 +607,12 @@ ul.sns li{float:left; }
 	object-fit: cover;
 }
 
+.sliderWrap .sub_4st{
+	background-image: url("../images/sub_menu6bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
 .subTxt6{
 	position: absolute; color: #fff; width: 450px;
 	top: 15%; left: 50%; transform:translateX(-50%)
