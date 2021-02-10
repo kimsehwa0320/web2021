@@ -413,7 +413,7 @@ body{height: 100%;}
 
 
 /* footer */
-.footer{width: 1260px;height: 160px; margin: 0 auto; _background: #000;}
+.footer{width: 1260px;height: 160px; margin: 0 auto;padding-top: 15px;}
 .footerTxt li{float: left; position: relative; font-size:12px; letter-spacing:-1px;color:#777777;}
 .footerTxt li:after{
 		content: ""; display: block;
