@@ -378,8 +378,7 @@ ul.sns li{float:left; }
 }
 .subMenuTab>ul>li:last-child{border-right:none;}
 /* .subMenuTab>ul>li:nth-child(2) .submenu{display: block;} */
-.subMenuTab>ul>li:hover,
-.subMenuTab>ul>li:nth-child(2){background: #6868ff;}
+.subMenuTab>ul>li:hover{background: #6868ff;}
 .subMenuTab>ul>li{
   display: block; line-height: 50px; color:white; text-align:center;
   padding:0 30px; _font-weight:bold; font-size:14px;
