@@ -403,6 +403,12 @@ ul.sns li{float:left; }
   background-position: center;
   background-size: cover;
 }
+.visualSub_5{
+  background-image: url("../images/sub_menu5bg.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 .contents{
   position: relative; width: 100%;

@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>솔루션</title>
+  <title>회사소개</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
-	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="../css/all.css">
@@ -35,7 +35,6 @@
         $(".nextBtn").click(function(){
           slider2.goToNextSlide()
         });
-
         $(".toggleMenu").click(function(){
   				var toggle = $(".toggleMenu").attr("class"); //get
   				console.log(toggle); // toggleMenu 찍힘
@@ -80,7 +79,9 @@
 	</style>
 </head>
 <body>
-  <header id="main_header">
+
+  <!-- nav -->
+  <header id="main_header_sub" class="sub">
 		<div id="header_top">
 			<h1 class="logo"><a href="index.html"><img src="images/samsung.JPG" alt=""></a></h1>
 			<nav id="main_menu">
@@ -103,248 +104,295 @@
 			</div>
 		</div>
 
-
-    <div class="sub_main">
-      <div class="subFive">
-        <div class="subGif">
-          <img src="images/sub_menu5bg.gif" alt="" class="subGIF">
-        </div>
+    <div class="visualSub visualSub_5">
+      <div class="visualSubTxt">
         <h2>Samsung Knox</h2>
-        <p>안전한 기기가 믿을 수 있는 기기입니다</p>
+         <p>안전한 기기가 믿을 수 있는 기기입니다</p>
       </div>
-    <div class="subWrap clearfix">
-      <ul>
-        <li class="active"><a href=""sub_menu1.html""><span class="blind">Samsung</span> Knox</a></li>
-        <li><a href="#">링크 리치</a></li>
-        <li><a href="#">삼성 <span class="blind">모바일</span>케어</a></li>
-        <li><a href="#"><span class="blind">스마트</span> 컨택센터</a></li>
+      <div class="subMenuTab">
+        <ul>
+          <li><span class="blind">Samsung</span> Knox</li>
+          <li>링크 리치</li>
+          <li>삼성 <span class="blind">모바일</span>케어</li>
+          <li><span class="blind">스마트</span> 컨택센터</li>
+        </ul>
+      </div>
+    </div>
+</header>
+
+<script>
+  $(function(){
+    $(".subContent nav").hide().eq(0).show();
+    $(".subMenuTab li").click(function(){
+      var i = $(this).index();
+      $(".subContent nav").hide().eq(i).fadeIn();
+
+      if(i == 0){
+        $(".loc_dep2,.visionTop>p").html("Samsung Knox");
+      }else if(i == 1){
+        $(".loc_dep2,.visionTop>p").html("링크 리치");
+      }else if(i == 2){
+        $(".loc_dep2,.visionTop>p").html("삼성 모바일 케어");
+      }else if(i == 3){
+        $(".loc_dep2,.visionTop>p").html("스마트 컨택센터");
+      }
+    });
+  });
+</script>
+
+<div class="contents">
+  <div class="subCategory">
+    <ul class="clearfix">
+      <li><a href="index.html"><img src="images/home.png" alt=""></a></li>
+      <li><img src="images/next_btn.png" alt="" class="sB"></li>
+      <li><a href="sub_menu1.html">솔루션</a></li>
+      <li><img src="images/next_btn.png" alt="" class="sB"></li>
+      <li><a href="sub_menu1.html" class="vI"><span class="loc_dep2">Samsung Knox</span></a></li>
+    </ul>
+  </div>
+
+  <div class="visionTop">
+        <p class="vTxt1" style="font-family:NEXONTWO">Samsung Knox</p>
+        <h4 class="vTxt2">당신의 비즈니스와 다양한 요구사항을 <span class="blind2"><br></span>어떻게 발전시킬 수 있는지 경험해 보세요. </h4>
+  </div>
+
+  <div class="subContent">
+
+    <!-- content1ST -->
+    <nav class="menu1st">
+      <div class="blind">
+        <div class="bracket"></div>
+        <p class="vTxt3">OUR SAFE DEVICES<br>ARE RELIABLE DEVICE!</p>
+        <p class="vTxt4">Knox 플랫폼에는 침입이나 악성 프로그램 및 악의적인 위협으로부터<span class="blind2"><br></span> 기기를 보호하는 다중 보안 메커니즘 적용,<br>
+          기기를 강력하게 보호할 수 있도록 탄력적이고 사용자 친화적인<span class="blind2"><br></span> Knox 솔루션을 개발했습니다.</p>
+        <div class="vTxt4Bar"></div>
+      </div>
+
+      <ul class="section clearfix">
+        <li class="card">
+          <img src="images/c5.png" alt="">
+          <div class="card_body">
+            <p class="cardTxt">Knox Configure</p>
+            <p>❛ 삼성 디바이스 맞춤 설정 ❜<br>
+              비즈니스 목적으로 대량의 단말 및 디바이스를<br>
+              특정 목적에 맞도록 설정하는 클라우드 기반의 서비스<br>
+              초기 설정 시에 특정 비즈니스 설정에 맞춰 디바이스를<br>
+              자동으로 원활하게 미세 조정할 수 있습니다.<br>
+              다양한 디바이스 설정을 세밀하게 변경하고<br>
+              기업 소유 디바이스를 완전히 제어할 수 있습니다.
+            </br></p>
+          </div>
+        </li>
+        <li class="card">
+            <img src="images/c5_2.png" alt="">
+            <div class="card_body">
+              <p class="cardTxt">Knox Platform for Enterprise</p>
+              <p>❛ 개인용과 업무영역을 분리하는 컨테이너 ❜<br>
+                칩셋 기반의 보안 솔루션으로 개인영역(컨테이너 방식)과<br>
+                업무 영역이 분리되어 데이터의 효율적 관리가 가능합니다.<br>
+                최종 사용자 활동뿐만 아니라 데이터 트래픽 사용까지 <br>
+                모니터링하는 강력한 도구를 제공하며,<br>
+                IT에서 모든 디바이스의 사용을 제어할 수 있습니다.<br>
+                삼성 DeX 사용을 통한 휴대폰 미러링을 위한 정책을 설정하세요.
+              </p>
+            </div>
+        </li>
+        <li class="card">
+          <img src="images/c5_3.png" alt="">
+          <div class="card_body">
+            <p class="cardTxt">Knox Manage</p>
+            <p>❛ 다중 OS 지원 ❜<br>
+              비즈니스 효율성을 높이고 기업 데이터를 보호하는 클라우드 기반<br>
+              EMM 솔루션으로 대량의 디바이스를 관리합니다. <br>
+              IT 관리자가 원격으로 디바이스 설정을 관리 및 구성을 지원하며,<br>
+              시스템 통합이 필요하지 않습니다.<br>
+              또한, 내장 도구를 사용하면 사용자가 추가 개발 작업 없이 <br>
+              디바이스를 키오스크 모드로 설정할 수 있습니다.
+            </p>
+            </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- content2ST -->
+    <nav class="menu2st">
+      <div class="blind">
+        <div class="bracket"></div>
+        <p class="vTxt3">IF YOUTH ONLY KNEW:<br>IF AGE ONLY COULD.</p>
+        <p class="vTxt4">‘경영이념, 핵심가치, 경영원칙’의 가치체계를 경영의 나침반으로 삼고,<br>
+          인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여 인류사회에<span class="blind2"><br></span> 공헌하는 것을
+          궁극적인 목표로 삼고 있습니다.</p>
+        <div class="vTxt4Bar"></div>
+      </div>
+      <img src="images/cardcard5.jpg" alt="">
+    </nav>
+    <!-- content3ST -->
+    <nav class="menu3st">
+      <div class="blind">
+        <div class="bracket"></div>
+        <p class="vTxt3">DOST THOU LOVE LIFE?<br>THEN DO NOT SQUANDER TIME!</p>
+        <p class="vTxt4">‘경영이념, 핵심가치, 경영원칙’의 가치체계를 경영의 나침반으로 삼고,<br>
+          인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여 인류사회에<span class="blind2"><br></span> 공헌하는 것을
+          궁극적인 목표로 삼고 있습니다.</p>
+        <div class="vTxt4Bar"></div>
+      </div>
+      <img src="images/cardcard5_1.jpg" alt="">
+    </nav>
+    <!-- content4ST -->
+    <nav class="menu4st">
+      <div class="blind">
+        <div class="bracket"></div>
+        <p class="vTxt3">THE SECRET OF YOUTH,<br>IS ARRESTED DEVELOPMENT!</p>
+        <p class="vTxt4">‘경영이념, 핵심가치, 경영원칙’의 가치체계를 경영의 나침반으로 삼고,<br>
+          인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여 인류사회에<span class="blind2"><br></span> 공헌하는 것을
+          궁극적인 목표로 삼고 있습니다.</p>
+        <div class="vTxt4Bar"></div>
+      </div>
+      <img src="images/cardcard5_2.jpg" alt="">
+    </nav>
+
+    <div class="vcardBar"></div>
+  <ul class="visionCb">
+    <p class="Cb1">Knox Platform에 통합할 수 있는 Knox SDK를 제공</p>
+    <p class="Cb2">Knox는 삼성의 안전을 보장하며, 안전한 기기를 이용해 언제 어디서든 당신이 원하는 방식으로 업무와 엔터테인먼트를 즐길 수 있습니다.<br>
+      개인 사진을 비공개로 저장할 때도, 수많은 비즈니스 스마트폰을 원격으로 관리할 때도 언제나 Knox가 보호해줍니다.
+  </ul>
+
+    <div class="vContent">
+      <ul class="clearfix">
+        <li class="vC1st">
+          <div class="sliderWrap">
+            <ul class="slider1st">
+              <li class="news clearfix">
+                <div class="top">
+                  <img src="images/card_1_5.jpg" alt="img">
+                </div>
+                <div class="bottom">
+                  <h3>의사 결정사</h3><P>
+                  더 효율적으로 비즈니스를<br>
+                  운영할 수 있습니다.<br>
+                  Knox Suite로 보호, 배포, 관리<br>
+                  비즈니스에 집중할 수 있는<br>
+                  환경을 만들어드립니다.
+                </p></div>
+              </li>
+              <li class="news clearfix">
+                <div class="top">
+                  <img src="images/card_1_5_1.jpg" alt="img">
+                </div>
+                <div class="bottom">
+                  <h3>의사 결정사</h3><p>
+                  어떤 일에서도 안전한 보안<br>
+                  고급 보안관리 기능이 탑재된 다중 계층의<br>
+                  방어 능력이 뛰어난 보안 플랫폼을 통해<br>
+                  비즈니스를 보호하세요.
+                </p></div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="vC2st">
+          <div class="sliderWrap">
+            <ul class="slider1st">
+              <li class="news clearfix">
+                <div class="top">
+                <h3>개발자와 파트너</h3>
+                <p>혁신적인 제품 개발 및 판매를 추진하기 위해<br>
+                  삼성과 협력하는 데 필요한 도구와 리소스를<br>
+                  전략적 비즈니스 파트너에게 <br>
+                  제공하도록 설계되었습니다.
+                </div>
+                <div class="bottom">
+                  <img src="images/card_2_5.jpg" alt="img">
+                </div>
+              </li>
+              <li class="news clearfix">
+                <div class="top">
+                <h3>개발자와 파트너</h3>
+                <p>엔터프라이즈 모빌리티 분야의 글로벌 리더와 <br>
+                  협력하고 삼성의 풍부한 정보 리소스에 <br>
+                  액세스하여 Samsung Knox와 <br>
+                  삼성의 비즈니스에 대해 알아보세요.
+                </p>
+                </div>
+                <div class="bottom">
+                  <img src="images/card_2_5_1.jpg" alt="img">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="vC3st">
+          <div class="sliderWrap">
+            <ul class="slider1st">
+              <li class="news clearfix">
+                <div class="top">
+                  <img src="images/card_3_5.jpg" alt="img">
+                </div>
+                <div class="bottom">
+                  <h3>Partner Program</h3>
+                  <p>당사의 개발 도구 및 리소스, 샘플 앱, <br>
+                    삼성의 직접 지원을 통해<br>
+                    보안 및 세분화 된 제어를<br>
+                    솔루션에 주입하십시오.<br>
+                  </p>
+                </div>
+              </li>
+              <li class="news clearfix">
+                <div class="top">
+                  <img src="images/card_3_5_1.jpg" alt="img">
+                </div>
+                <div class="bottom">
+                  <h3>Partner Program</h3>
+                  <p>검증 된 파트너를위한<br>
+                   새로운 마케팅 채널뿐만 아니라<br>
+                  고품질 마케팅 자료를 생성하는 데<br>
+                  마케팅 리소스에 액세스하십시오.<br>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="vC4st">
+          <div class="sliderWrap">
+            <ul class="slider1st">
+              <li class="news clearfix">
+                <div class="top">
+                <h3>리셀러</h3>
+                <p>Knox 솔루션 라이선스를 구입하거나<br>
+                  Knox Configure & Knox Mobile Enrollment<br>
+                  지원하는 삼성 디바이스를 구입하려면<br>
+                  지역 리셀러에게 문의하세요.
+                </p>
+                </div>
+                <div class="bottom">
+                  <img src="images/card_4_5.jpg" alt="img">
+                </div>
+              </li>
+              <li class="news clearfix">
+                <div class="top">
+                <h3>리셀러</h3>
+                <p>영업 팀에 문의<br>
+                  → 비즈니스의 옵션을 논의하세요.<br>
+                  소비자 지원 : <br>
+                  → 개인용 디바이스의 FAQ를 찾아보세요.
+                </p>
+                </div>
+                <div class="bottom">
+                  <img src="images/card_4_5_1.jpg" alt="img">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </div>
+    <div class="ftAfter">
+      <div class="ftBar"></div>
+      <p>투자자 정보는 삼성전자 <a href="#">IR 페이지</a>에서 확인해 주십시오.</p>
     </div>
-
-    <div class="subPage">
-      <div class="subCategory clearfix">
-        <ul>
-          <li><a href="index.html"><img src="images/home.png" alt=""></a></li>
-          <li><img src="images/next_btn.png" alt="" class="sB"></li>
-          <li><a href="sub_menu1.html">솔루션</a></li>
-          <li><img src="images/next_btn.png" alt="" class="sB"></li>
-          <li><a href="sub_menu1.html" class="vI">Samsung Knox</a></li>
-        </ul>
-
-      </div>
-
-      <div class="vision">
-          <div class="visionTop">
-            <img src="" alt="">
-            <p class="vTxt1" style="font-family:NEXONTWO">Knox 솔루션</p>
-            <p class="vTxt2">당신의 비즈니스와 다양한 요구사항을 <span class="blind2"><br></span>어떻게 발전시킬 수 있는지 경험해 보세요. </p>
-            <div class="bracket"></div>
-            <p class="vTxt3">OUR SAFE DEVICES<br>ARE RELIABLE DEVICE!</p>
-            <p class="vTxt4">Knox 플랫폼에는 침입이나 악성 프로그램 및 악의적인 위협으로부터<span class="blind2"><br></span> 기기를 보호하는 다중 보안 메커니즘 적용,<br>
-              기기를 강력하게 보호할 수 있도록 탄력적이고 사용자 친화적인<span class="blind2"><br></span> Knox 솔루션을 개발했습니다.</p>
-            <div class="vTxt4Bar"></div>
-          </div>
-
-          <div class="vContainer">
-        		<div class="section">
-        			<ul class="clearfix">
-        				<li>
-        					<div class="card">
-        						<img src="images/c5.png" alt="">
-        						<div class="card_body">
-        							<p class="cardTxt">Knox Configure</p>
-        							<p>❛ 삼성 디바이스 맞춤 설정 ❜<br>
-                        비즈니스 목적으로 대량의 단말 및 디바이스를<br>
-                        특정 목적에 맞도록 설정하는 클라우드 기반의 서비스<br>
-                        초기 설정 시에 특정 비즈니스 설정에 맞춰 디바이스를<br>
-                        자동으로 원활하게 미세 조정할 수 있습니다.<br>
-                        다양한 디바이스 설정을 세밀하게 변경하고<br>
-                        기업 소유 디바이스를 완전히 제어할 수 있습니다.
-                      </br></p>
-        						</div>
-        					</div>
-        				</li>
-        				<li>
-        					<div class="card">
-        						<img src="images/c5_2.png" alt="">
-        						<div class="card_body">
-        							<p class="cardTxt">Knox Platform for Enterprise</p>
-        							<p>❛ 개인용과 업무영역을 분리하는 컨테이너 ❜<br>
-                        칩셋 기반의 보안 솔루션으로 개인영역(컨테이너 방식)과<br>
-                        업무 영역이 분리되어 데이터의 효율적 관리가 가능합니다.<br>
-                        최종 사용자 활동뿐만 아니라 데이터 트래픽 사용까지 <br>
-                        모니터링하는 강력한 도구를 제공하며,<br>
-                        IT에서 모든 디바이스의 사용을 제어할 수 있습니다.<br>
-                        삼성 DeX 사용을 통한 휴대폰 미러링을 위한 정책을 설정하세요.
-                      </p>
-        						</div>
-        					</div>
-        				</li>
-        				<li>
-        					<div class="card">
-        						<img src="images/c5_3.png" alt="">
-        						<div class="card_body">
-        							<p class="cardTxt">Knox Manage</p>
-        							<p>❛ 다중 OS 지원 ❜<br>
-                        비즈니스 효율성을 높이고 기업 데이터를 보호하는 클라우드 기반<br>
-                        EMM 솔루션으로 대량의 디바이스를 관리합니다. <br>
-                        IT 관리자가 원격으로 디바이스 설정을 관리 및 구성을 지원하며,<br>
-                        시스템 통합이 필요하지 않습니다.<br>
-                        또한, 내장 도구를 사용하면 사용자가 추가 개발 작업 없이 <br>
-                        디바이스를 키오스크 모드로 설정할 수 있습니다.
-                      </p>
-        						</div>
-        					</div>
-        				</li>
-        			</ul>
-              <div class="vcardBar"></div>
-        		</div>
-            <div class="visionCb">
-              <p class="Cb1">Knox Platform에 통합할 수 있는 Knox SDK를 제공</p>
-              <p class="Cb2">Knox는 삼성의 안전을 보장하며, 안전한 기기를 이용해 언제 어디서든 당신이 원하는 방식으로 업무와 엔터테인먼트를 즐길 수 있습니다.<br>
-                개인 사진을 비공개로 저장할 때도, 수많은 비즈니스 스마트폰을 원격으로 관리할 때도 언제나 Knox가 보호해줍니다.
-            </div>
-
-            <div class="vContent">
-        			<ul class="clearfix">
-                <li class="vC1st">
-                  <div class="sliderWrap">
-                    <ul class="slider1st">
-                      <li class="news clearfix">
-                        <div class="top">
-                          <img src="images/card_1_5.jpg" alt="img">
-                        </div>
-                        <div class="bottom">
-                          <h3>의사 결정사</h3><P>
-                          더 효율적으로 비즈니스를<br>
-                          운영할 수 있습니다.<br>
-                          Knox Suite로 보호, 배포, 관리<br>
-                          비즈니스에 집중할 수 있는<br>
-                          환경을 만들어드립니다.
-                        </p></div>
-                      </li>
-                      <li class="news clearfix">
-                        <div class="top">
-                          <img src="images/card_1_5_1.jpg" alt="img">
-                        </div>
-                        <div class="bottom">
-                          <h3>의사 결정사</h3><p>
-                          어떤 일에서도 안전한 보안<br>
-                          고급 보안관리 기능이 탑재된 다중 계층의<br>
-                          방어 능력이 뛰어난 보안 플랫폼을 통해<br>
-                          비즈니스를 보호하세요.
-                        </p></div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="vC2st">
-                  <div class="sliderWrap">
-                    <ul class="slider1st">
-                      <li class="news clearfix">
-                        <div class="top">
-                        <h3>개발자와 파트너</h3>
-                        <p>혁신적인 제품 개발 및 판매를 추진하기 위해<br>
-                          삼성과 협력하는 데 필요한 도구와 리소스를<br>
-                          전략적 비즈니스 파트너에게 <br>
-                          제공하도록 설계되었습니다.
-                        </div>
-                        <div class="bottom">
-                          <img src="images/card_2_5.jpg" alt="img">
-                        </div>
-                      </li>
-                      <li class="news clearfix">
-                        <div class="top">
-                        <h3>개발자와 파트너</h3>
-                        <p>엔터프라이즈 모빌리티 분야의 글로벌 리더와 <br>
-                          협력하고 삼성의 풍부한 정보 리소스에 <br>
-                          액세스하여 Samsung Knox와 <br>
-                          삼성의 비즈니스에 대해 알아보세요.
-                        </p>
-                        </div>
-                        <div class="bottom">
-                          <img src="images/card_2_5_1.jpg" alt="img">
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="vC3st">
-                  <div class="sliderWrap">
-                    <ul class="slider1st">
-                      <li class="news clearfix">
-                        <div class="top">
-                          <img src="images/card_3_5.jpg" alt="img">
-                        </div>
-                        <div class="bottom">
-                          <h3>Partner Program</h3>
-                          <p>당사의 개발 도구 및 리소스, 샘플 앱, <br>
-                            삼성의 직접 지원을 통해<br>
-                            보안 및 세분화 된 제어를<br>
-                            솔루션에 주입하십시오.<br>
-                          </p>
-                        </div>
-                      </li>
-                      <li class="news clearfix">
-                        <div class="top">
-                          <img src="images/card_3_5_1.jpg" alt="img">
-                        </div>
-                        <div class="bottom">
-                          <h3>Partner Program</h3>
-                          <p>검증 된 파트너를위한<br>
-                           새로운 마케팅 채널뿐만 아니라<br>
-                          고품질 마케팅 자료를 생성하는 데<br>
-                          마케팅 리소스에 액세스하십시오.<br>
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="vC4st">
-                  <div class="sliderWrap">
-                    <ul class="slider1st">
-                      <li class="news clearfix">
-                        <div class="top">
-                        <h3>리셀러</h3>
-                        <p>Knox 솔루션 라이선스를 구입하거나<br>
-                          Knox Configure & Knox Mobile Enrollment<br>
-                          지원하는 삼성 디바이스를 구입하려면<br>
-                          지역 리셀러에게 문의하세요.
-                        </p>
-                        </div>
-                        <div class="bottom">
-                          <img src="images/card_4_5.jpg" alt="img">
-                        </div>
-                      </li>
-                      <li class="news clearfix">
-                        <div class="top">
-                        <h3>리셀러</h3>
-                        <p>영업 팀에 문의<br>
-                          → 비즈니스의 옵션을 논의하세요.<br>
-                          소비자 지원 : <br>
-                          → 개인용 디바이스의 FAQ를 찾아보세요.
-                        </p>
-                        </div>
-                        <div class="bottom">
-                          <img src="images/card_4_5_1.jpg" alt="img">
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-        		</div>
-        </div>
-      </div>
-      <div class="ftAfter">
-        <div class="ftBar"></div>
-        <p>투자자 정보는 삼성전자 <a href="#">IR 페이지</a>에서 확인해 주십시오.</p>
-      </div>
-    </div>
-
-</body>
+  </div>
+</div>
 
 <h3 class="subLine clearfix"></h3>
 <footer class="footer">
@@ -415,4 +463,5 @@ $(document).ready(function(){
 		</ul>
 	</div>
 </footer>
+</body>
 </html>
