@@ -1,4 +1,4 @@
-body{font-family: 'Gothic A1', sans-serif;}
+body{font-family: 'Gothic A1', sans-serif; height: 100%;}
 nav#navTop>#topMenu>li,
 nav#navTop>#topMenu_2>li{font-family: 'Beue'; font-size:18px;letter-spacing: -2.2px;}
 nav#navTop>#topMenu_2>li a{color: #2c2c2c;}
