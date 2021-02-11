@@ -75,10 +75,10 @@ nav#navTop #topMenu li.active a{
   font-size:16px; text-align:center; line-height: 25px;
 }
 .section.page1 .vWrap a{
-  position: absolute;font-size:14px;
+  position: absolute;font-size:12px;
   display: block; text-align:center;
-  width: 60px; border: 1px solid #fff;
-  line-height:60px; border-radius:30px;
+  width: 100px; border: 0.2px solid #fff;
+  line-height:40px; letter-spacing: -1px;
   color:white; transition:0.3s;margin-top: 20px;
   left: 50%; transform: translateX(-50%);
 }
