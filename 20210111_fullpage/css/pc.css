@@ -1,4 +1,4 @@
-body{font-family: 'Gothic A1', sans-serif; height: 100%;}
+body{font-family: 'NEXONONE'; height: 100%;}
 nav#navTop>#topMenu>li,
 nav#navTop>#topMenu_2>li{font-family: 'Beue'; font-size:18px;letter-spacing: -2.2px;}
 nav#navTop>#topMenu_2>li a{color: #2c2c2c;}
@@ -33,17 +33,17 @@ nav#navTop #topMenu li.active a{
   -webkit-background-size: cover;
   background-size: cover;
 }
-.section.page1{position: relative;background-image: url(../images/bg1.jpg);}
+.section.page1{position: relative;background-image: url(../images/bg1.jpg);color:#fff;}
 .section.page2{background-image: url(../images/bg2.jpg);}
 .section.page3{background-image: url(../images/bg3.jpg);}
 .section.page4{background-image: url(../images/bg4.jpg);text-align:center;}
 .section.page5{background-image: url(../images/bg4.jpg);text-align:center;}
 .section.page6{background-image: url(../images/bg4.jpg);text-align:center;}
 
-.section.page1 .bg1_ani{width: 600px;}
+.section.page1 .bg1_ani{width: 700px; stroke: rgb(0,0,0)}
 .section.page1 .bg1_ani{
   position: absolute;
-  bottom: 0; left: 40%;
+  bottom: 0; left: 50%;
   animation-name :bg1_ani;
   animation-duration :1.5s;
   animation-fill-mode:forwards;
@@ -51,16 +51,51 @@ nav#navTop #topMenu li.active a{
   animation-timing-function:ease;
 }
 @keyframes bg1_ani{
-  from{ left: 40%;bottom: -100%; }
+  from{ left: 50%;bottom: -100%; }
   to{ left: 40%;bottom: 0; }
 }
 
 /*.main{width: 400px; margin: 0 auto;} 중앙정렬*/
 .main{
-  width: 400px; position: absolute;
+  width: 550px; position: absolute;
   top: 50%;transform:translateY(-50%)
 }
-.main.one,.main.three{
+/* .section.page1  */
+.section.page1 .main.one{
+  width: 550px; position: absolute;
+  top: 35%;transform:translateY(-50%)
+}
+.section.page1 .main,.section.page1 .vWrap{left: 10%;}
+.section.page1 .main.one h3{
+  font-family:"Beue"; letter-spacing: -2px;
+  padding-bottom: 20px; text-align:center;
+}
+.section.page1 .main.one p{
+  letter-spacing: -1.5px;
+  font-size:16px; text-align:center; line-height: 25px;
+}
+.section.page1 .vWrap a{
+  position: absolute;
+  display: block; text-align:center;
+  width: 150px; border: 1px solid #fff;
+  line-height:40px; border-radius:10px;
+  color:white; transition:0.3s;margin-top: 10px;
+  left: 50%; transform: translateX(-50%);
+}
+.vWrap{
+  position: absolute;padding-left: 5%; 
+  width: 550px; height: 400px;
+}
+#bg1_video{
+  width: 400px; height: 250px;
+  object-fit:cover;
+}
+
+
+
+
+
+.main.three{
   left: 200px;
 }
 .main.two{
