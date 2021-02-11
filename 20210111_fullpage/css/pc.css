@@ -33,7 +33,7 @@ nav#navTop #topMenu li.active a{
   -webkit-background-size: cover;
   background-size: cover;
 }
-.section.page1{background-image: url(../images/bg1.jpg);}
+.section.page1{position: relative;background-image: url(../images/bg1.jpg);}
 .section.page2{background-image: url(../images/bg2.jpg);}
 .section.page3{background-image: url(../images/bg3.jpg);}
 .section.page4{background-image: url(../images/bg4.jpg);text-align:center;}
