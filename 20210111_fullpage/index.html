@@ -26,7 +26,7 @@
     $(function(){
       $("#fullpage").fullpage({
           menu:"#topMenu", //메뉴지
-          anchors:["m1st","m2st","m3st","m4st"], //이동 위치 지정
+          anchors:["m1st","m2st","m3st","m4st","m5st"], //이동 위치 지정
           navigation:true,
           afterLoad:function(anchorslink,index){
             console.log(anchorslink + "," + index);
@@ -44,6 +44,12 @@
 
           }
       });
+
+      $("#fullpage").fullpage({
+          menu:"#topMenu_2", //메뉴지
+          anchors:["m6st"], //이동 위치 지정
+          navigation:true
+      });
     });
 
 
@@ -57,13 +63,11 @@
       </li>
       <li data-menuanchor="m2st" class="ctg"><a href="#m2st">BRAND</a></li>
       <li data-menuanchor="m3st"><a href="#m3st">SHOP</a></li>
-      <li data-menuanchor="m4st"><a href="#m4st">SERVICE</a></li>
+      <li data-menuanchor="m4st"><a href="#m4st">EVENT</a></li>
+      <li data-menuanchor="m5st"><a href="#m5st">SERVICE</a></li>
     </ul>
     <ul class="clearfix" id="topMenu_2">
-      <li><a href="#">sns1</a></li>
-      <li><a href="#">sns2</a></li>
-      <li><a href="#">sns3</a></li>
-      <li><a href="#">sns4</a></li>
+      <li data-menuanchor="m6st"><a href="#m6st">KR</a></li>
     </ul>
   </nav>
   <div id="fullpage">
@@ -99,6 +103,22 @@
 
     <!-- section 4st -->
     <div class="section page4" data-anchor="m4st">
+      <div class="slide"><h1>Simple Demo</h1></div>
+      <div class="slide"><h1>Only text</h1></div>
+      <div class="slide"><h1>And text</h1></div>
+      <div class="slide"><h1>And more text</h1></div>
+    </div>
+
+    <!-- section 5st -->
+    <div class="section page4" data-anchor="m5st">
+      <div class="slide"><h1>Simple Demo</h1></div>
+      <div class="slide"><h1>Only text</h1></div>
+      <div class="slide"><h1>And text</h1></div>
+      <div class="slide"><h1>And more text</h1></div>
+    </div>
+
+    <!-- footer -->
+    <div class="section page4" data-anchor="m6st">
       <div class="slide"><h1>Simple Demo</h1></div>
       <div class="slide"><h1>Only text</h1></div>
       <div class="slide"><h1>And text</h1></div>
