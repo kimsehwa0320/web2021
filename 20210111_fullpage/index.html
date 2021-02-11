@@ -5,75 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>투쿨포스쿨 | 김세화</title>
-  <link rel="stylesheet" href="css/fullpage.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fullpage.css">
   <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/animate.css">
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/jquery.fullpage.js"></script>
   <script src="/js/jquery.bxslider.js"></script>
-  <style>
-    nav#navTop{
-      position: fixed; background: #cdcdcd;
-      width: 100%;padding-left: 10px; z-index:1;
-    }
-    nav#navTop li{float: left;}
-    nav#navTop li a{
-      display: block; line-height:50px;
-      text-align:center; padding: 0 10px;
-    }
-    nav#navTop li.active{background: white;}
-    nav#navTop li.active a{color:blue;}
-    .section{
-      background-position: center;
-      background-repeat: no-repeat;
-      -webkit-background-size: cover;
-      background-size: cover;
-    }
-    .section.page1{background-image: url(images/bg1.jpg);}
-    .section.page2{background-image: url(images/bg2.jpg);}
-    .section.page3{background-image: url(images/bg3.jpg);}
-    .section.page4{background-image: url(images/bg4.jpg);text-align:center;}
-
-    /*.main{width: 400px; margin: 0 auto;} 중앙정렬*/
-    .main{
-      width: 400px; position: absolute;
-      top: 50%;transform:translateY(-50%)
-    }
-    .main.one,.main.three{
-      left: 200px;
-    }
-    .main.two{
-      right: 200px;
-    }
-    .main h3{font-size: 3em;}
-    .main p{margin-bottom: 20px;}
-    .main a{
-      display: block; text-align:center;
-      width: 150px; border: 1px solid #fff;
-      line-height:40px; border-radius:10px;
-      color:white; transition:0.3s;
-    }
-    .main a:hover{background-color: #fff; color:#000}
-
-    #onView2st{right: -400px;transition:0.3s;} /*=right-100%*/
-    #onView2st.move{right: 200px;}
-
-    #onView3st{left:-400px;transition:0.3s}
-    #onView3st.move{left: 200px;}
-
-    .scroll{
-      position: absolute; bottom: 20px; left: 50%;
-      transform:translateX(-50%);
-      animation-name:xScroll;
-      animation-duration:0.8s;
-      animation-iteration-count:infinite;
-      animation-direction:alternate;
-    }
-    @keyframes xScroll{
-      from{bottom: 20px;}
-      to{bottom: 40px;}
-    }
-    </style>
+  <script src="js/wow.js"></script>
+  <script>
+    new WOW().init();
+  </script>
   <script>
     $(function(){
       $("#fullpage").fullpage({
@@ -104,10 +52,12 @@
 <body>
   <nav id="navTop">
     <ul class="clearfix" id="topMenu">
-      <li data-menuanchor="m1st"><a href="#m1st">menu1</a></li>
-      <li data-menuanchor="m2st"><a href="#m2st">menu2</a></li>
-      <li data-menuanchor="m3st"><a href="#m3st">menu3</a></li>
-      <li data-menuanchor="m4st"><a href="#m4st">menu4</a></li>
+      <li data-menuanchor="m1st">
+        <a href="#m1st"><img src="images/hd-logo.jpg" alt="" class="hd_logo"></a>
+      </li>
+      <li data-menuanchor="m2st"><a href="#m2st">BRAND</a></li>
+      <li data-menuanchor="m3st"><a href="#m3st">SHOP</a></li>
+      <li data-menuanchor="m4st"><a href="#m4st">SERVICE</a></li>
     </ul>
   </nav>
   <div id="fullpage">
