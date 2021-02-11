@@ -1,29 +1,30 @@
 body{font-family: 'Gothic A1', sans-serif;}
 nav#navTop>#topMenu>li{
-  font-family: 'Beue'; font-size:19px;
-  letter-spacing: -2px;
+  font-family: 'Beue'; font-size:18px;
+  letter-spacing: -2.2px;
 }
 nav#navTop{
   position: fixed; background: #fff;
   width: 100%;z-index:1;
 }
-nav#navTop li{float: left;position: relative;}
-nav#navTop .hd_logo{width: 110px; position: absolute;}
+nav#navTop #topMenu li{float: left;position: relative;}
+nav#navTop #topMenu_2{position: absolute; right: 0; top: 0;}
+nav#navTop #topMenu_2 li{float: left;}
 
-nav#navTop li:nth-child(2) a,
-nav#navTop li:nth-child(3) a,
-nav#navTop li:nth-child(4) a{
+nav#navTop #topMenu .hd_logo{width: 110px; position: absolute; z-index: 2;}
+nav#navTop #topMenu .ctg{padding-left:110px ;}
+
+nav#navTop #topMenu li:nth-child(2) a,
+nav#navTop #topMenu li:nth-child(3) a,
+nav#navTop #topMenu li:nth-child(4) a,
+nav#navTop #topMenu_2 li{
   display: block; line-height:40px;
-  text-align:center; padding: 27px 25px; _padding-top: 30px;
+  text-align:center; padding: 27px 25px;
 }
-/* nav#navTop li.active{background:#fef200;} */
+nav#navTop #topMenu li.active a{
+  color:#fef200;
+}
 
-nav#navTop li:hover:after,
-nav#navTop li.active:after{
-  content: ""; width: 100%; height: 3px;
-  background: #fef200; position: absolute;
-  left: 50%; transform:translate(-50%); margin-top: -5px;
-}
 
 .section{
   background-position: center;
