@@ -32,7 +32,7 @@ body{height: 100%;}
 }
 .toggleMenu{display: none;}
 
-
+.subP{margin-top: -15px;}
 /*slider*/
 .sliderWrap{height: 690px; position: relative;}
 /*.sliderWrap li img{width: 100%;}*/
