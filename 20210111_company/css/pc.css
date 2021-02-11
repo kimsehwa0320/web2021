@@ -5,7 +5,7 @@ header#main_header_sub{height: 500px;position: relative; margin-bottom:20px; }
 .blind2{display: none;}
 body{height: 100%;}
 /* #main_menu .menu li:hover .bar{ transform: scaleX(1); } */
-.menu3st{}
+.contents{}
 .menu li{position: relative;}
 .menu li:hover:after,
 .menu li.active:after{
@@ -537,7 +537,7 @@ ul.sns li{float:left}
 
 /* content */
 .contents{
-  position: relative; width: 1260px; height: 2030px;
+  position: relative; width: 1260px; height: 1842px;
   left: 50%; transform:translateX(-50%);
 }
 /* .subCategory{display: block; } */
