@@ -63,15 +63,15 @@ nav#navTop #topMenu li.active a{
 /* .section.page1  */
 .section.page1 .main.one{
   width: 550px; position: absolute;
-  top: 35%;transform:translateY(-50%)
+  top: 25%;transform:translateY(-50%)
 }
 .section.page1 .main,.section.page1 .vWrap{left: 10%;}
 .section.page1 .main.one h3{
-  font-family:"Beue"; letter-spacing: -2px;
+  font-family:"Beue"; letter-spacing: -2px;font-size: 38px;
   padding-bottom: 20px; text-align:center;
 }
 .section.page1 .main.one p{
-  letter-spacing: -1.5px;
+  letter-spacing: -1.7px;
   font-size:16px; text-align:center; line-height: 25px;
 }
 .section.page1 .vWrap a{
@@ -79,11 +79,11 @@ nav#navTop #topMenu li.active a{
   display: block; text-align:center;
   width: 150px; border: 1px solid #fff;
   line-height:40px; border-radius:10px;
-  color:white; transition:0.3s;margin-top: 10px;
+  color:white; transition:0.3s;margin-top: 30px;
   left: 50%; transform: translateX(-50%);
 }
 .vWrap{
-  position: absolute;padding-left: 5%; 
+  position: absolute;padding-left: 5%;
   width: 550px; height: 400px;
 }
 #bg1_video{
@@ -101,8 +101,8 @@ nav#navTop #topMenu li.active a{
 .main.two{
   right: 200px;
 }
-.main h3{font-size: 3em;}
-.main p{margin-bottom: 20px;}
+
+
 .main a{
   display: block; text-align:center;
   width: 150px; border: 1px solid #fff;
