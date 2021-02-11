@@ -34,26 +34,47 @@ nav#navTop #topMenu li.active a{
   background-size: cover;
 }
 .section.page1{position: relative;background-image: url(../images/bg1.jpg);color:#fff;}
-.section.page2{background-image: url(../images/bg2.jpg);}
+.section.page2{background-image: url(../images/bg2.jpg);position: relative;}
 .section.page3{background-image: url(../images/bg3.jpg);}
 .section.page4{background-image: url(../images/bg4.jpg);text-align:center;}
 .section.page5{background-image: url(../images/bg4.jpg);text-align:center;}
 .section.page6{background-image: url(../images/bg4.jpg);text-align:center;}
 
-.section.page1 .bg1_ani{width: 700px; stroke: rgb(0,0,0)}
+/* animation bg1_ani */
 .section.page1 .bg1_ani{
-  position: absolute;
+  position: absolute;width: 700px;
   bottom: 0; left: 50%;
   animation-name :bg1_ani;
-  animation-duration :1.5s;
+  animation-duration :2s;
   animation-fill-mode:forwards;
   animation-iteration-count:1;
   animation-timing-function:ease;
 }
 @keyframes bg1_ani{
   from{ left: 50%;bottom: -100%; }
-  to{ left: 40%;bottom: 0; }
+  to{ left: 50%;bottom: 0; }
 }
+
+.section.page1 .bg2_ani{position: absolute;}
+.bg2_ani1{
+  top: 0;position: absolute;
+}
+.main.two{
+  right: 200px;
+}
+
+#onView1st{top: -100%;transition:0.3s;} /*=right-100%*/
+#onView1st.move{top: 0;}
+
+#onView2st{bottom: -100%;transition:0.3s}
+#onView2st.move{bottom: 0;}
+
+#onView3st{left:100%;transition:0.3s}
+#onView3st.move{left: 0}
+
+/* #onView4st{left:-400px;transition:0.3s}
+#onView4st.move{left: 200px;} */
+
 
 /*.main{width: 400px; margin: 0 auto;} 중앙정렬*/
 .main{
@@ -77,7 +98,7 @@ nav#navTop #topMenu li.active a{
 .section.page1 .vWrap a{
   position: absolute;font-size:12px;
   display: block; text-align:center;
-  width: 100px; border: 0.2px solid #fff;
+  width: 130px; border: 0.2px solid #fff;
   line-height:40px; letter-spacing: -1px;
   color:white; transition:0.3s;margin-top: 20px;
   left: 50%; transform: translateX(-50%);
@@ -94,16 +115,6 @@ nav#navTop #topMenu li.active a{
 
 
 
-
-
-.main.three{
-  left: 200px;
-}
-.main.two{
-  right: 200px;
-}
-
-
 .main a{
   display: block; text-align:center;
   width: 150px; border: 1px solid #fff;
@@ -112,11 +123,7 @@ nav#navTop #topMenu li.active a{
 }
 .main a:hover{background-color: #fff; color:#000}
 
-#onView2st{right: -400px;transition:0.3s;} /*=right-100%*/
-#onView2st.move{right: 200px;}
 
-#onView3st{left:-400px;transition:0.3s}
-#onView3st.move{left: 200px;}
 
 .scroll{
   position: absolute; bottom: 20px; left: 50%;
