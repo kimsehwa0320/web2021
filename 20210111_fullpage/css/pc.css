@@ -32,6 +32,7 @@ nav#navTop #topMenu li.active a{
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  position: relative;
 }
 .section.page1{background-image: url(../images/bg1.jpg);color:#fff; z-index:5;}
 .section.page2{background-image: url(../images/bg2.jpg);}
