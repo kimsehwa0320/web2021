@@ -1,0 +1,62 @@
+body{font-family: 'Gothic A1', sans-serif;}
+nav#navTop{
+  position: fixed; background: #cdcdcd;
+  width: 100%;padding-left: 10px; z-index:1;
+}
+nav#navTop li{float: left;}
+nav#navTop li a{
+  display: block; line-height:50px;
+  text-align:center; padding: 0 10px;
+}
+nav#navTop li.active{background: white;}
+nav#navTop li.active a{color:blue;}
+.section{
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.section.page1{background-image: url(../images/bg1.jpg);}
+.section.page2{background-image: url(../images/bg2.jpg);}
+.section.page3{background-image: url(../images/bg3.jpg);}
+.section.page4{background-image: url(../images/bg4.jpg);text-align:center;}
+
+/*.main{width: 400px; margin: 0 auto;} 중앙정렬*/
+.main{
+  width: 400px; position: absolute;
+  top: 50%;transform:translateY(-50%)
+}
+.main.one,.main.three{
+  left: 200px;
+}
+.main.two{
+  right: 200px;
+}
+.main h3{font-size: 3em;}
+.main p{margin-bottom: 20px;}
+.main a{
+  display: block; text-align:center;
+  width: 150px; border: 1px solid #fff;
+  line-height:40px; border-radius:10px;
+  color:white; transition:0.3s;
+}
+.main a:hover{background-color: #fff; color:#000}
+
+#onView2st{right: -400px;transition:0.3s;} /*=right-100%*/
+#onView2st.move{right: 200px;}
+
+#onView3st{left:-400px;transition:0.3s}
+#onView3st.move{left: 200px;}
+
+.scroll{
+  position: absolute; bottom: 20px; left: 50%;
+  transform:translateX(-50%);
+  animation-name:xScroll;
+  animation-duration:0.8s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+}
+@keyframes xScroll{
+  from{bottom: 20px;}
+  to{bottom: 40px;}
+}

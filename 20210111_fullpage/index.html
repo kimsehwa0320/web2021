@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>투쿨포스쿨 | 김세화</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fullpage.css">
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery.fullpage.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+  <script src="js/wow.js"></script>
+  <script>
+    new WOW().init();
+
+    $(function(){
+      $("#fullpage").fullpage({
+          menu:"#topMenu", //메뉴지
+          anchors:["m1st","m2st","m3st","m4st","m5st"], //이동 위치 지정
+          navigation:true,
+          afterLoad:function(anchorslink,index){
+            console.log(anchorslink + "," + index);
+            if(index == 2){
+              $("#onView1st").addClass("move");
+            }else{
+              $("#onView1st").removeClass("move");
+            }
+
+            if(index == 2){
+              $("#onView2st").addClass("move");
+            }else{
+              $("#onView2st").removeClass("move");
+            }
+
+            if(index == 2){
+              $("#onView3st").addClass("move");
+            }else{
+              $("#onView3st").removeClass("move");
+            }
+
+            if(index == 2){
+              $("#onView4st").addClass("move");
+            }else{
+              $("#onView4st").removeClass("move");
+            }
+
+          }
+        });
+      $("#fullpage").fullpage({
+          menu:"#topMenu_2", //메뉴지
+          anchors:["m6st"], //이동 위치 지정
+          navigation:true
+      });
+    });
+
+
+  </script>
+</head>
+<body>
+  <nav id="navTop">
+    <ul class="clearfix" id="topMenu">
+      <li data-menuanchor="m1st">
+        <a href="#m1st"><img src="images/hd-logo.jpg" alt="" class="hd_logo"></a>
+      </li>
+      <li data-menuanchor="m2st" class="ctg"><a href="#m2st">BRAND</a></li>
+      <li data-menuanchor="m3st"><a href="#m3st">SHOP</a></li>
+      <li data-menuanchor="m4st"><a href="#m4st">EVENT</a></li>
+      <li data-menuanchor="m5st"><a href="#m5st">SERVICE</a></li>
+    </ul>
+    <ul class="clearfix" id="topMenu_2">
+      <li data-menuanchor="m6st"><a href="#m6st">
+        <i class="fab fa-sketch" style="width: 30px;"></i></a>
+      </li>
+    </ul>
+  </nav>
+  <div id="fullpage">
+    <!-- section 1st -->
+    <div class="section page1" data-anchor="m1st">
+      <div class="main one wow fadeIn" data-wow-delay="0.5s">
+        <h3>TOO COOL FOR SCHOOL</h3>
+        <p>too cool for school(투쿨포스쿨)의 school은 ‘(물고기등의)떼’ 라는 어원으로<br>
+        ‘그무리 속에서 너무 멋진’ 이라는 뜻을 가지고 있습니다.</p>
+        <p>'제품'이 아닌 '작품'을 만드는 Contemporary Art Cosmetic</p>
+      </div>
+      <div class="vWrap wow fadeIn" data-wow-delay="0.5s">
+        <video id="bg1_video" src="images/bg1_video.mp4" autoplay muted loop>
+        </video>
+        <a href="https://www.toocoolforschool.com/shop/page.html?id=1" target="blank" class="wow fadeIn" data-wow-delay="0.5s">GO BRAND</a>
+      </div>
+        <div class="scroll">
+          <a href="#m2st"><img src="images/btn_scroll.png" alt=""></a>
+        </div>
+          <img src="images/bg1_ani.png" alt="bg1_ani" class="bg1_ani">
+    </div>
+
+    <!-- section 2st -->
+    <div class="section page2" data-anchor="m2st">
+      <div class="main two">
+        <!-- <h3>Lorem ipsum.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, est!</p>
+        <a href="#">more</a> -->
+      </div>
+      <div class="bg2_ani">
+        <img src="images/bg2_ani1.png" alt="bg2_ani1" class="bg2_ani1" id="onView1st">
+        <img src="images/bg2_ani2.png" alt="bg2_ani2" class="bg2_ani2" id="onView2st">
+        <img src="images/bg2_ani3.png" alt="bg2_ani3" class="bg2_ani3" id="onView3st">
+        <img src="images/bg2_ani4.png" alt="bg2_ani4" class="bg2_ani4" id="onView4st">
+      </div>
+    </div>
+
+    <!-- section 3st -->
+    <div class="section page3" data-anchor="m3st">
+      <div class="main three" id="onView3st">
+        <h3>Lorem ipsum.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, est!</p>
+        <a href="#">more</a>
+      </div>
+    </div>
+
+    <!-- section 4st -->
+    <div class="section page4" data-anchor="m4st">
+      <div class="slide"><h1>Simple Demo</h1></div>
+      <div class="slide"><h1>Only text</h1></div>
+      <div class="slide"><h1>And text</h1></div>
+      <div class="slide"><h1>And more text</h1></div>
+    </div>
+
+    <!-- section 5st -->
+    <div class="section page5" data-anchor="m5st">
+      <div class="slide"><h1>Simple Demo</h1></div>
+      <div class="slide"><h1>Only text</h1></div>
+      <div class="slide"><h1>And text</h1></div>
+      <div class="slide"><h1>And more text</h1></div>
+    </div>
+
+    <!-- footer -->
+    <div class="section page6" data-anchor="m6st">
+      <div class="slide"><h1>Simple Demo</h1></div>
+      <div class="slide"><h1>Only text</h1></div>
+      <div class="slide"><h1>And text</h1></div>
+      <div class="slide"><h1>And more text</h1></div>
+    </div>
+  </div>
+</body>
+</html>
