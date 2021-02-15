@@ -108,8 +108,8 @@ nav#navTop #topMenu li.active a{
 }
 /* .section.page2  */
 .section.page2 .main.two{right: 30%;}
-.section.page2 .main.two img{right: 200px;}
-.section.page2 .main.two p{color:#fff;letter-spacing: -2px;font-size:24px;font-weight:100; }
+.section.page2 .main.two p{
+  color:#fff;letter-spacing: -2px;font-size:21px;font-weight:100;}
 /* .section.page3  */
 .section.page3 .bg3{position: relative;width: 100%;margin: 0 auto;}
 .section.page3 .bg3_1,.bg3_2{width: 450px;position: absolute;}
