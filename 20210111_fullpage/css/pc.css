@@ -107,9 +107,25 @@ nav#navTop #topMenu li.active a{
   object-fit:cover;
 }
 /* .section.page2  */
-.section.page2 .main.two{right: 30%;}
+.section.page2 .main.two{right: 35%;}
 .section.page2 .main.two p{
-  color:#fff;letter-spacing: -2px;font-size:21px;font-weight:100;}
+  color:#fff;letter-spacing: -2px;
+  font-size:19px;font-weight:100;
+}
+.section.page2 .main.two h6{
+  color:block;letter-spacing: -2px;font-size:21px;
+  padding-top: 15px;font-weight:400;
+}
+.section.page2 .bg2_1{
+  position: absolute;right: 0;width: 450px;
+  top: 50%;transform:translateY(-50%)
+}
+.section.page2 .bg2_2{
+  position: absolute;height: 450px; right: 22%;
+  top: 55%;transform:translateY(-50%)
+
+}
+
 /* .section.page3  */
 .section.page3 .bg3{position: relative;width: 100%;margin: 0 auto;}
 .section.page3 .bg3_1,.bg3_2{width: 450px;position: absolute;}
