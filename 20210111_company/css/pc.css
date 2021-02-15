@@ -646,7 +646,7 @@ ul.sns li{float:left}
 .vContent>ul>li.vC3st{height: 630px; _background: #f00;}
 .vContent>ul>li.vC4st{height: 630px; _background: #0f0;}
 
-.vContent{width: 1260px;position: absolute;bottom: 100px; left: 50%; transform: translateX(-50%);}
+.vContent{width: 1260px;position: absolute; left: 50%; transform: translateX(-50%);}
 .vContent>ul>li{
 	float: left; width: 25%;height: 315px;
 	position: relative; overflow: hidden;
@@ -681,7 +681,7 @@ ul.sns li{float:left}
 /* footer */
 .ftBar{
   border: 0.6px solid #e7e3e3;;width: 100%;
-  margin:35px 0; background: #e7e3e3;;
+  margin:35px 0; background: #e7e3e3;margin-top: 800px;
 }
 .ftAfter{text-align:center;}
 .ftAfter p>a{color:#3668b8;}
