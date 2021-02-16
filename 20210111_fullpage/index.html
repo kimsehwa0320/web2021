@@ -53,6 +53,25 @@
               $("#onView4st").removeClass("move");
             }
 
+            if(index == 2){
+              $("#onView5st").addClass("move");
+            }else{
+              $("#onView5st").removeClass("move");
+            }
+
+            if(index == 2){
+              $("#onView6st").addClass("move");
+            }else{
+              $("#onView6st").removeClass("move");
+            }
+
+            if(index == 3){
+              $("#onView7st").addClass("move");
+            }else{
+              $("#onView7st").removeClass("move");
+            }
+
+
           }
         });
       $("#fullpage").fullpage({
@@ -108,31 +127,49 @@
         <img src="images/bg2_5.png" alt="bg2_5">
         <p>RED 컬러 베리에이션,<br>하루의 시작과 끝이 교집합 되는 <br>차갑고 나른한 새벽 5시의 레드</p>
         <h6>#RED BE OK #RED BE ALRIGHT<br>
-        #RED BE OK #RED BE ALRIGHT</h6>
+        #NEW TAG #LAZY_RED_DAWN</h6>
       </div>
       <img src="images/bg2_ani1.png" alt="bg2_ani1" class="bg2_ani1" id="onView1st">
       <img src="images/bg2_ani2.png" alt="bg2_ani2" class="bg2_ani2" id="onView2st">
       <img src="images/bg2_ani3.png" alt="bg2_ani3" class="bg2_ani3" id="onView3st">
       <img src="images/bg2_ani4.png" alt="bg2_ani4" class="bg2_ani4" id="onView4st">
-      <img src="images/bg2_1.jpg" alt="bg2_1" class="bg2_1">
-      <img src="images/bg2_2.jpg" alt="bg2_2" class="bg2_2">
+      <img src="images/bg2_1.jpg" alt="bg2_1" class="bg2_1" id="onView5st">
+      <img src="images/bg2_2.jpg" alt="bg2_2" class="bg2_2" id="onView6st">
     </div>
 
     <!-- section 3st -->
     <div class="section page3" data-anchor="m3st">
       <div class="bg3">
-        <img src="images/bg3_1.png" alt="" class="bg3_1">
-        <img src="images/bg3_2.png" alt="" class="bg3_2">
-        <div class="main" id="onView3st">
-          <h3>Lorem ipsum.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, est!</p>
-          <a href="#">more</a>
+        <div id="onView7st">
+          <img src="images/bg3_1.png" alt="" class="bg3_1">
+          <img src="images/bg3_2.png" alt="" class="bg3_2">
+        </div>
+        <div class="main">
+          <ul class="menuList">
+            <li><a href="#">ART CLASS</a></li>
+            <li><a href="#">DINOPLATZ</a></li>
+            <li><a href="#">GLAM ROCK</a></li>
+            <li><a href="#">CHECK</a></li>
+            <li><a href="#">ARTIFY</a></li>
+            <h4>MAKE UP LINES<i class="fas fa-caret-up f1"></i></h4>
+          </ul>
+          <div class="line1"></div>
+          <!-- <h3>YOU ARE TOO COOL<br> FOR SCHOOL!</h3> -->
+          <ul class="menuList">
+            <h4>SKIN CARE LINES<i class="fas fa-caret-down f2"></i></h4>
+            <li><a href="#">CAVIAR LIME</a></li>
+            <li><a href="#">PINK SALT</a></li>
+            <li><a href="#">RULES OF SKIN</a></li>
+            <li><a href="#">COCONUT</a></li>
+            <li><a href="#">MOROCCO</a></li>
+          </ul>
         </div>
       </div>
     </div>
 
     <!-- section 4st -->
     <div class="section page4" data-anchor="m4st">
+      <video id="bg4_video" src="images/bg4_video.mp4" autoplay muted loop>
       <div class="slide"><h1>Simple Demo</h1></div>
       <div class="slide"><h1>Only text</h1></div>
       <div class="slide"><h1>And text</h1></div>
