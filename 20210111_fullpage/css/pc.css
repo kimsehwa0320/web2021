@@ -35,8 +35,7 @@ nav#navTop #topMenu li.active a{color:#fef200;}
 .section.page2{background-image: url(../images/bg2.jpg);}
 .section.page3{background-color: #fff;z-index:6;}
 .section.page4{background-image: url(../images/bg4.jpg);}
-.section.page5{background-image: url(../images/bg4.jpg);}
-.section.page6{background-image: url(../images/bg4.jpg);}
+.section.page5{background: #000;}
 
 /* section.page1 animation*/
 .section.page1 .bg1_ani{
@@ -192,6 +191,30 @@ nav#navTop #topMenu li.active a{color:#fef200;}
 .section.page4 .bg4_3{right: 15%;}
 
 /* .section.page5 */
+.section.page5{text-align:center;color:#fff;}
+.section.page5 ul{width: 1015px;height:163px;margin: 0 auto}
+.section.page5 .slide ul li{float: left;width: 163px;margin-right:50px;}
+.section.page5 .slide{font-size:13px; font-weight: bold}
+.section.page5 .slide ul li:last-child{margin-right:0;}
+.section.page5 .bg5_6{width: 1015px;height:163px;margin: 0 auto}
+.section.page5 .bg5_6 p{
+  position: absolute;width: 1015px;
+  height:163px;margin: 0 auto; top: 26%;
+  font-size:38px;font-weight: 100;letter-spacing: -4px;
+}
+
+.fp-controlArrow.fp-prev{
+    left: 15px;
+    width: 0;
+    border-width: 24.5px 20px 24.5px 0;
+    border-color: transparent #fff transparent transparent;
+    opacity: 0.3;
+  }
+  .fp-controlArrow.fp-next {
+    right: 15px;opacity: 0.3;
+    border-width: 24.5px 0 24.5px 20px;
+    border-color: transparent transparent transparent #fff;
+}
 
 
 
