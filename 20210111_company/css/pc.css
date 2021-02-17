@@ -5,7 +5,7 @@ header#main_header_sub{height: 500px;position: relative; margin-bottom:20px; }
 .blind2{display: none;}
 body{height: 100%;}
 /* #main_menu .menu li:hover .bar{ transform: scaleX(1); } */
-.subP{}
+.card_body{}
 .menu li{position: relative;}
 .menu li:hover:after,
 .menu li.active:after{

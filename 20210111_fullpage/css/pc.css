@@ -174,13 +174,24 @@ nav#navTop #topMenu li.active a{color:#fef200;}
     background-color: black;background-position: center center;
     object-fit: cover;
 }
+.section.page4 .color{
+  position: absolute;background: #000;opacity: 0.1;
+  width: 100%;height: 100%;
+  top: 50%;transform: translateY(-50%);cursor: pointer;
+}
 .section.page4 img{
   position: absolute;width: 300px;
-  top: 50%;transform: translateY(-50%);
+  top: 50%;transform: translateY(-50%);cursor: pointer;
 }
-.section.page4 .bg4_1{left: 10%;}
+.section.page4 ul li{transition: 0.3s;}
+.section.page4 ul li:hover{
+  box-shadow: 8px 8px 10px rgba(0,0,0,1);transform: translate(-10px,-10px);
+}
+.section.page4 .bg4_1{left: 15%;}
 .section.page4 .bg4_2{left: 40%}
-.section.page4 .bg4_3{right: 10%;}
+.section.page4 .bg4_3{right: 15%;}
+
+/* .section.page5 */
 
 
 
