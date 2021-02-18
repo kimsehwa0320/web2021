@@ -79,6 +79,12 @@
           anchors:["m6st"], //이동 위치 지정
           navigation:true
       });
+
+      $(".subContent div").hide().eq(0).show();
+      $(".subMenuTab li").click(function(){
+        var i = $(this).index();
+        $(".subContent div").hide().eq(i).fadeIn();
+      });
     });
 
 
@@ -184,10 +190,10 @@
     <div class="section page5" data-anchor="m5st">
       <div class="slide">
         <li class="bg5_6">
-          <img src="images/bg5_6.png" alt="">
+          <img src="images/bg5_6_1.png" alt="">
           <p>AWARD</p>
         </li>
-        <ul>
+        <ul class="bg5_6_1">
           <li>
             <img src="images/bg5_1.png" alt="">
             <p>2014 - 2015<br>대한민국 브랜드 파워 대상<br>2년 연속 수상</p>
@@ -210,18 +216,28 @@
           </li>
         </ul>
       </div>
-      <div class="slide"><h1>Only text</h1></div>
-      <div class="slide"><h1>And text</h1></div>
-      <div class="slide"><h1>And more text</h1></div>
+      <div class="slide">
+        <li class="bg5_62">
+          <img src="images/ftt.png" alt="">
+          <p>PERFORMANCE</p>
+        </li>
+        <ul class="bg5_6_2">
+          <li><img src="images/bg5_1.jpg" alt=""></li>
+          <li><img src="images/bg5_2.jpg" alt=""></li>
+          <li><img src="images/bg5_3.jpg" alt=""></li>
+          <li><img src="images/bg5_4.jpg" alt=""></li>
+          <li><img src="images/bg5_5.jpg" alt=""></li>
+          <li><img src="images/bg5_6.jpg" alt=""></li>
+        </ul>
+        <li class="bg5_6_3">
+          <h2>신선한 에너지를 전달하는 투쿨포스쿨만의 '예술실험' 퍼포먼스</h2>
+          <p>독특한 퍼포먼스를 통해 투쿨포스쿨만의 새로운 문화 체험을 제공합니다.</p>
+        </li>
+      </div>
+      <div class="slide">
 
-      <!-- <ul class="clearfix" id="footerMenu">
-        <a href="#!"><img src="images/hd-logo.jpg" alt="" class="hd_logo"></a>
-        <li> CUSTOMER SERVICE</li>
-        <li>080-080-0168</li>
-        <li>운영시간 AM 10:00 ~ PM 05:00</li>
-        <li>점심시간 PM 12:00 ~ PM 13:00</li>
-        <li>토,일요일 공휴일 휴무</li>
-      </ul> -->
+      </div>
+      <div class="slide"><h1>And more text</h1></div>
     </div>
 
     <!-- footer -->
