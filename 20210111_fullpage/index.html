@@ -31,37 +31,17 @@
             console.log(anchorslink + "," + index);
             if(index == 2){
               $("#onView1st").addClass("move");
-            }else{
-              $("#onView1st").removeClass("move");
-            }
-
-            if(index == 2){
               $("#onView2st").addClass("move");
-            }else{
-              $("#onView2st").removeClass("move");
-            }
-
-            if(index == 2){
               $("#onView3st").addClass("move");
-            }else{
-              $("#onView3st").removeClass("move");
-            }
-
-            if(index == 2){
               $("#onView4st").addClass("move");
-            }else{
-              $("#onView4st").removeClass("move");
-            }
-
-            if(index == 2){
               $("#onView5st").addClass("move");
-            }else{
-              $("#onView5st").removeClass("move");
-            }
-
-            if(index == 2){
               $("#onView6st").addClass("move");
             }else{
+              $("#onView1st").removeClass("move");
+              $("#onView2st").removeClass("move");
+              $("#onView3st").removeClass("move");
+              $("#onView4st").removeClass("move");
+              $("#onView5st").removeClass("move");
               $("#onView6st").removeClass("move");
             }
 
@@ -91,6 +71,7 @@
   </script>
 </head>
 <body>
+<div class="header_top">
   <nav id="navTop">
     <ul class="clearfix" id="topMenu">
       <li data-menuanchor="m1st">
@@ -107,6 +88,7 @@
       </li>
     </ul>
   </nav>
+</div>
   <div id="fullpage">
     <!-- section 1st -->
     <div class="section page1" data-anchor="m1st">
