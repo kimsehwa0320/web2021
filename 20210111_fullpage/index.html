@@ -36,6 +36,7 @@
               $("#onView4st").addClass("move");
               $("#onView5st").addClass("move");
               $("#onView6st").addClass("move");
+              $("#onView8st").addClass("move");
             }else{
               $("#onView1st").removeClass("move");
               $("#onView2st").removeClass("move");
@@ -43,6 +44,7 @@
               $("#onView4st").removeClass("move");
               $("#onView5st").removeClass("move");
               $("#onView6st").removeClass("move");
+              $("#onView8st").removeClass("move");
             }
 
             if(index == 3){
@@ -50,8 +52,6 @@
             }else{
               $("#onView7st").removeClass("move");
             }
-
-
           }
         });
       $("#fullpage").fullpage({
@@ -65,6 +65,24 @@
         var i = $(this).index();
         $(".subContent div").hide().eq(i).fadeIn();
       });
+
+      $(".menu-trigger").click(function(){
+        var toggle = $(".menu-trigger").attr("class"); //get
+        console.log(toggle); // menu-trigger 찍힘
+        if(toggle == "menu-trigger"){
+          $(".menu-trigger").addClass("change");
+          $("#main_menu").stop().animate({left:0},300);
+        }else{
+          $(".menu-trigger").removeClass("change");
+          $("#main_menu").stop().animate({left:"-100%"},300);
+        }
+      });
+
+      $(window).resize(function(){
+        $(".menu-trigger").removeClass("change");
+        $("#main_menu").removeAttr("style");
+      });
+
     });
 
 
@@ -73,20 +91,25 @@
 <body>
 <div class="header_top">
   <nav id="navTop">
-    <ul class="clearfix" id="topMenu">
-      <li data-menuanchor="m1st">
-        <a href="#m1st"><img src="images/hd-logo.jpg" alt="" class="hd_logo"></a>
-      </li>
-      <li data-menuanchor="m2st" class="ctg"><a href="#m2st">BRAND</a></li>
-      <li data-menuanchor="m3st"><a href="#m3st">SHOP</a></li>
-      <li data-menuanchor="m4st"><a href="#m4st">EVENT</a></li>
-      <li data-menuanchor="m5st"><a href="#m5st">SERVICE</a></li>
-    </ul>
-    <ul class="clearfix" id="topMenu_2">
-      <li data-menuanchor="m6st"><a href="#m6st">
-        <i class="fab fa-sketch" style="width: 30px;"></i></a>
-      </li>
-    </ul>
+    <h1 class="logo_mobile"><a href="index.html"><img src="images/logo_m.jpg" alt=""></a></h1>
+    <div id="main_menu">
+      <ul class="clearfix" id="topMenu">
+        <li data-menuanchor="m1st">
+          <a href="#m1st"><img src="images/hd-logo.jpg" alt="" class="hd_logo">HOME</a>
+        </li>
+        <li data-menuanchor="m2st" class="ctg"><a href="#m2st">BRAND</a></li>
+        <li data-menuanchor="m3st"><a href="#m3st">SHOP</a></li>
+        <li data-menuanchor="m4st"><a href="#m4st">EVENT</a></li>
+        <li data-menuanchor="m5st"><a href="#m5st">SERVICE</a></li>
+      </ul>
+    </div>
+    <div class="bar">
+      <div class="menu-trigger">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
   </nav>
 </div>
   <div id="fullpage">
@@ -103,7 +126,7 @@
         </video>
         <a href="https://www.toocoolforschool.com/shop/page.html?id=1" target="blank" class="wow fadeIn" data-wow-delay="0.5s">GO BRAND</a>
       </div>
-        <div class="scroll">
+        <div class="scroll blind">
           <a href="#m2st"><img src="images/btn_scroll.png" alt=""></a>
         </div>
           <img src="images/bg1_ani.png" alt="bg1_ani" class="bg1_ani">
@@ -111,6 +134,7 @@
 
     <!-- section 2st -->
     <div class="section page2" data-anchor="m2st">
+      <img src="images/bg2_1.jpg" alt="bg2_11" class="bg2_11" id="onView8st">
       <div class="main two">
         <img src="images/bg2_5.png" alt="bg2_5">
         <p>RED 컬러 베리에이션,<br>하루의 시작과 끝이 교집합 되는 <br>차갑고 나른한 새벽 5시의 레드</p>
@@ -123,6 +147,9 @@
       <img src="images/bg2_ani4.png" alt="bg2_ani4" class="bg2_ani4" id="onView4st">
       <img src="images/bg2_1.jpg" alt="bg2_1" class="bg2_1" id="onView5st">
       <img src="images/bg2_2.jpg" alt="bg2_2" class="bg2_2" id="onView6st">
+      <div class="scroll blind2">
+        <a href="#m2st"><img src="images/btn_scroll.png" alt=""></a>
+      </div>
     </div>
 
     <!-- section 3st -->
@@ -132,6 +159,7 @@
           <img src="images/bg3_1.png" alt="" class="bg3_1">
           <img src="images/bg3_2.png" alt="" class="bg3_2">
         </div>
+        <div class="color2"></div>
         <div class="main">
           <ul class="menuList">
             <li><a href="#">ART CLASS</a></li>
@@ -216,13 +244,8 @@
           <p>독특한 퍼포먼스를 통해 투쿨포스쿨만의 새로운 문화 체험을 제공합니다.</p>
         </li>
       </div>
-      <div class="slide">
-
-      </div>
       <div class="slide"><h1>And more text</h1></div>
     </div>
-
-    <!-- footer -->
   </div>
 </body>
 </html>

@@ -1,17 +1,13 @@
 body{font-family: 'NEXONONE'; height: 100%;}
-nav#navTop>#topMenu>li,
-nav#navTop>#topMenu_2>li{font-family: 'Beue'; font-size:18px;letter-spacing: -2.2px;}
-nav#navTop>#topMenu_2>li a{color: #2c2c2c;}
+.logo_mobile,.menu-trigger,.bg2_11,.blind2{display: none;}
+nav#navTop>#topMenu>li{font-family: 'Beue'; font-size:18px;letter-spacing: -2.2px;}
 nav#navTop{
   position: fixed; background: #fff;
   width: 100%;z-index:1;padding-left: 10px;
 }
 nav#navTop #topMenu li{float: left;position: relative;}
-nav#navTop #topMenu_2{position: absolute; right: 0; top: 0;}
-nav#navTop #topMenu_2 li{float: left;}
-
 nav#navTop #topMenu .hd_logo{width: 110px; position: absolute; z-index: 2;}
-nav#navTop #topMenu .ctg{padding-left:110px ;}
+nav#navTop #topMenu .ctg{padding-left:80px ;}
 
 nav#navTop #topMenu li:nth-child(2) a,
 nav#navTop #topMenu li:nth-child(3) a,
