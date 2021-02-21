@@ -6,35 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>modal</title>
   <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/colorbox.css">
   <script src="../js/jquery-3.1.1.min.js"></script>
-	<script src="../js/jquery.colorbox-min.js"></script>
   <script>
     //$(document).ready(function(){});
     //jquery(document).ready(function(){});
     //$(function(){});
-
     $(function(){
       //$("body").append("han").prepend("안녕하세요");
       $("body").append("<div id=\"glayLayer\"></div><div id=\"overLayer\"></div>");
       //$("#overLayer").html(" <img src=\"../images/tourgallery_j1a.jpg\"> ");
+
       $("a.modal").click(function(e){
         e.preventDefault();
+        //return false;
         var ahref = $(this).attr("href");
+        console.log(ahref);
         $("#glayLayer").show();
-        $("#overLayer").show().html("<img src=\""+ahref+"\">");
+        $("#overLayer").show().html("<img src=\"" + ahref + "\">");
       });
       $("#glayLayer,#overLayer").click(function(){
         $("#glayLayer,#overLayer").hide();
       });
-      $(".group1").colorbox({
-        rel:"modal"
-      });
+
+
     });
-
-
-
-
   </script>
   <style>
     .box{width: 100px;height: 100px;background: #f00;}
@@ -50,28 +45,18 @@
       left: 50%;top: 50%;transform:translate(-50%,-50%);
       display: none;
     }
-    .layer{width: 470px;margin: 0 auto}
-    .layer li{float: left;margin-right:10px;width: 150px;margin-bottom: 10px;}
-    .layer li:nth-child(3n){margin-right:0;}
-    .layer li img{display: block; position: relative;}
-
-    #cboxClose {
-        width: 30px;
-        height: 305px;
-
-    }
-
+    ul.layer{width: 470px;margin: 0 auto}
+    ul.layer li{float: left;margin-right:10px;width: 150px;margin-bottom: 10px;}
+    ul.layer li:nth-child(3n){margin-right:0;}
+    ul.layer li img{display: block;}
   </style>
 </head>
-
 <body>
   <!-- <div class="box"></div> -->
-  <!-- 이미지 클릭하면 크게 나오게 -->
   <ul class="layer clearfix">
     <li>
       <a href="../images/tourgallery_j1a.jpg" class="modal">
         <img src="../images/tourgallery_j1.jpg" alt="">
-
       </a>
     </li>
     <li>
@@ -102,10 +87,9 @@
     </li>
   </ul>
 
-<div class=layer clearfix>
-  <ul class="colorbox">
+  <ul class="layer clearfix">
     <li>
-      <a href="../images/tourgallery_j1a.jpg" class="group1 modal">
+      <a href="../images/tourgallery_j1a.jpg" class="group1">
         <img src="../images/tourgallery_j1.jpg" alt="">
       </a>
     </li>
@@ -136,6 +120,6 @@
       </a>
     </li>
   </ul>
-</div>
+
 </body>
 </html>

@@ -228,15 +228,15 @@ nav#navTop #topMenu li.active a{color:#fef200;}
 
 
 .fp-controlArrow.fp-prev{
-    left: 10%;
+    left: 4%;
     width: 0;
-    border-width: 24.5px 20px 24.5px 0;
+    border-width: 14.5px 10px 14.5px 0;
     border-color: transparent #fff transparent transparent;
     opacity: 0.3;
   }
   .fp-controlArrow.fp-next {
-    right: 10%;opacity: 0.3;
-    border-width: 24.5px 0 24.5px 20px;
+    right: 4%;opacity: 0.3;
+    border-width: 14.5px 0 14.5px 10px;
     border-color: transparent transparent transparent #fff;
 }
 
