@@ -229,10 +229,7 @@ nav#navTop #topMenu li.active a{color:#fef200;}
 }
 
 /* 3st */
-.section.page5 .subMenuTab{width: 1015px; margin: 0 auto; margin-top: -40px;}
-.section.page5 .subMenuTab ul li{float: left;display: block;border: 1px solid #fff; border-right:0 none;padding: 10px 15px;}
-.section.page5 .subMenuTab ul li:nth-child(1){border-bottom: 0 none;}
-.section.page5 .subMenuTab ul li a{color:#fff; font-size:15px; font-weight:100;}
+
 
 
 .fp-controlArrow.fp-prev{
