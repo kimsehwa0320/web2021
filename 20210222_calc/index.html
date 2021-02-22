@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>calc</title>
+  <style>
+    *{padding: 0;margin: 0;}
+    li{list-style:none}
+    .clearfix:after{content:"";display: block;clear:both}
+    <!-- html,body{height: 100%;} -->
+    .box{
+      width: calc(100% - 40px) ;height: calc(100vh - 40px);
+      background: #f00;position: absolute;
+      left:50%;top: 50%;transform:translate(-50%,-50%)
+    }
+    .box ul{
+      width: 90%;border: 1px solid #000;
+      position: absolute;
+      left:50%;top: 50%;transform:translate(-50%,-50%)
+    }
+    .box li{
+      float: left;width:calc(100% / 6 - 10px);background:pink;
+    }
+    .box li + li{margin-left: calc(60px / 5);}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <ul class="clearfix">
+      <li>Lorem ipsum.</li>
+      <li>Placeat, molestias.</li>
+      <li>Debitis, harum!</li>
+      <li>Debitis, harum!</li>
+      <li>Debitis, harum!</li>
+      <li>Debitis, harum!</li>
+    </ul>
+  </div>
+</body>
+</html>
