@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+  :root{
+    --primary-color1:#4458cc;
+    --primary-color2:#854fee;
+    --black-color:#000;
+    --bg-color1:#efefef;
+    --bg-color2:#f0f0f0;
+    --text-color:#777;
+    --border-color:#20f1f1;
+    --gradient-color:linear-gradient(90deg,#4458dc 0%,#854fee 100%);
+    --shadow-color:0px 10px 30px rgba(118,85,225,0.3);
+    --box-shadow:0px 10px 20px rgba(57,56,61,0.3);
+  }
+  body,html{width: 100%; height: 100%;}
+  body{padding-bottom: 200px;}
+  .headerWrap{background-color: var(--black-color);}
+  .headerWrap .nav-item{
+    font-size:1em;border-bottom:4px solid transparent;
+    transition: 0.3s;margin-right: 15px;opacity: 0.8;
+  }
+  .headerWrap .nav-item:last-child{margin-right: 0;}
+  /* transparent : 밑줄 색 없애기 */
+  .headerWrap .nav-item:hover{border-bottom: 4px solid var(--primary-color2);}
+  .headerWrap.fixed-top{box-shadow: 0 0 20px gray; transition: 0.3s;}
+  .visualWrap{
+    background: url(assets/slider-bg.svg) no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .button.primary-button{box-shadow:var(--box-shadow);background: var(--gradient-color); color:#fff;}
+  .secondary-button{box-shadow:var(--box-shadow);}
+  /* content */
+  .content{background: var(--bg-color1);}
+
+  /* service */
+  .service h2.title:after,
+  .portfolio h2.title:after,
+  .customer h2.title:after{
+    content:"";display: block;margin: 10px auto;
+    width: 200px;height: 2px;
+    background: var(--primary-color1);
+  }
+  .service p.subtitle,
+  .portfolio p.subtitle,
+  .customer p.subtitle{color:var(--text-color)}
+  .service .card img{height: 200px;}
+  .service .card{background: var(--bg-color2);border: 0 none;transition: 0.3s;cursor: pointer;}
+  .service .card:hover{box-shadow: var(--box-shadow);transform: scale(1.1)}
+  /* portfolio */
+  .portfolio .button-group button{
+    background: none; border: 0 none; font-weight:bold; outline:none; font-size:1.1em;
+  }
+  .portfolio .button-group button+button{margin-left: 30px;}
+  .portfolio .button-group button.active{color:var(--primary-color2)}
+  .portfolio .element-item img{border-radius: 5px;transition: 0.3s;}
+  .portfolio .element-item img:hover{box-shadow: var(--box-shadow)}
+  /* slider  */
+  .customer .sliderView{
+    padding: 30px; border-radius: 5px;
+    background: var(--bg-color2);
+  }
+  /* footer */
+  .footer ul.icon li{
+    margin-left: 25px;
+  }
+  .footer .icon a{
+    display: block; width: 40px; height: 40px;transition: 0.3s;
+    border-radius:20px;text-align:center;line-height: 40px;background: transparent;
+  }
+  .footer .icon a:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  .footer .icon img{max-width:20px}
