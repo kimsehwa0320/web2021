@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -21,6 +22,7 @@
   <script src="js/isotope.pkgd.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
 
 </head>
 <body>
@@ -30,7 +32,7 @@
   <div class="container pl-0 pr-0">
     <nav class="navbar navbar-expand-lg navbar-light">
       <a href="#" class="navbar-brand">
-        <img src="assets/logo.svg" alt="" class="img-fluid">
+        <img src="assets/logo.png" alt="" class="img-fluid">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -42,15 +44,6 @@
           </li>
           <li class="nav-item">
             <a href="#!" class="nav-link text-white">가이드</a>
-          </li>
-          <li class="nav-item">
-            <a href="#!" class="nav-link text-white">커뮤니티</a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link text-white">랭킹</a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link text-white">상점</a>
           </li>
           <li class="nav-item">
             <a href="about.html" class="nav-link text-white">자료실</a>
@@ -65,21 +58,39 @@
 </div>
   <!-- headerWrap end -->
   <!-- visual start -->
-<div class="visualWrap bg-light" >
-  <div class="container py-5">
-    <div class="row"> <!-- row 안에 flex 있음 -->
-      <div class="col-md-6 col-lg-4 align-self-center mb-4 mb-md-0">
-        <h2 class="text-center text-md-left">Lorem ipsum dolor sit.</h2>
-        <p class="mb-3 text-center text-md-left">Lorem ipsum dolor sit amet, consectetur.</p>
-        <a href="#!" class="btn button primary-button px-4 d-block d-md-inline-block mb-3 mb-md-0">MORE</a>
-        <a href="#!" class="btn button secondary-button btn-outline-primary px-4 d-block d-md-inline-block">EMAIL</a>
-      </div>
-      <div class="col-md-6 col-lg-8 text-center">
-        <img src="assets/slider.svg" alt="" class="img-fluid">
+<ul class="wrapper">
+  <li class="visualWrap bg-light" >
+    <div class="container py-5">
+      <div class="row"> <!-- row 안에 flex 있음 -->
+        <div class="col-md-6 col-lg-5 align-self-center mb-4 mb-md-0">
+          <img src="assets/pubg_bn1_ft.png" alt="" class="img-fluid">
+          <a href="#!" class="btn button primary-button px-4 d-block d-md-inline-block mb-3 mb-md-0">MORE</a>
+          <a href="#!" class="btn button secondary-button btn-outline-warning px-4 d-block d-md-inline-block">GAME START</a>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </li>
+  <li class="visualWrap2 bg-light" >
+    <div class="container py-5">
+      <div class="row text-center" style="width: 100%"> <!-- row 안에 flex 있음 -->
+        <div class="col-md-6 col-lg-5 align-self-center mb-4 mb-md-0" style="width: 50%; float:none; margin:0 auto">
+          <img src="assets/pubg_bn2_ft.png" alt="" class="img-fluid">
+          <a href="#!" class="btn button secondary-button btn-outline-danger px-4 d-block d-md-inline-block text-center">GAME START</a>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="visualWrap3 bg-light" >
+    <div class="container py-5">
+      <div class="row"> <!-- row 안에 flex 있음 -->
+        <div class="col-md-6 col-lg-5 align-self-center mb-4 mb-md-0">
+          <img src="assets/pubg_bn1_ft.png" alt="" class="img-fluid" style="width:500px">
+          <a href="#!" class="btn button secondary-button btn-outline-danger px-4 d-block d-md-inline-block">GAME START</a>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
 <!-- visual end -->
 <!-- content start -->
 <div class="content bg-light">
@@ -366,6 +377,21 @@
       600:{items:1},
       1000:{items:2}
     }
+  });
+
+  $(function(){
+    var current = 0;
+    var banner = $(".wrapper li");
+
+      function slider(){
+        banner.eq(current).css("left",0).animate({left:"-100%"},1000);
+
+        current++;
+        if(current==3){current=0}
+
+        banner.eq(current).css("left","100%").animate({left:0},1000);
+    }
+    setInterval(slider,3000);
   });
 
 </script>
