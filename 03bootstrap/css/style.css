@@ -62,9 +62,9 @@
   .content{background: var(--bg-color1);}
 
   /* service */
-  .service h2,.portfolio h2,.customer h2,.vedio h2{font-size:21px; font-weight:bold}
+  .service h2,.portfolio h2,.customer h2,.video h2{font-size:21px; font-weight:bold}
   .service h2.title:after,
-  .vedio h2.title:after,
+  .video h2.title:after,
   .portfolio h2.title:after,
   .customer h2.title:after{
     content:"";display: block;margin: 10px auto;
