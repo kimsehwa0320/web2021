@@ -58,7 +58,7 @@
 </div>
   <!-- headerWrap end -->
   <!-- visual start -->
-<ul class="wrapper">
+<ul class="wrapper bg-dark">
   <li class="visualWrap bg-light" >
     <div class="container py-5">
       <div class="row"> <!-- row 안에 flex 있음 -->
@@ -72,8 +72,8 @@
   </li>
   <li class="visualWrap2 bg-light" >
     <div class="container py-5">
-      <div class="row text-center" style="width: 100%"> <!-- row 안에 flex 있음 -->
-        <div class="col-md-6 col-lg-5 align-self-center mb-4 mb-md-0" style="width: 50%; float:none; margin:0 auto">
+      <div class="row text-center justify-content-center"> <!-- row 안에 flex 있음 -->
+        <div class="col-md-6 col-lg-5 align-self-center mb-4 mb-md-0" >
           <img src="assets/pubg_bn2_ft.png" alt="" class="img-fluid">
           <a href="#!" class="btn button secondary-button btn-outline-danger px-4 d-block d-md-inline-block text-center">GAME START</a>
         </div>
@@ -83,38 +83,90 @@
   <li class="visualWrap3 bg-light" >
     <div class="container py-5">
       <div class="row"> <!-- row 안에 flex 있음 -->
-        <div class="col-md-6 col-lg-5 align-self-center mb-4 mb-md-0">
-          <img src="assets/pubg_bn1_ft.png" alt="" class="img-fluid" style="width:500px">
-          <a href="#!" class="btn button secondary-button btn-outline-danger px-4 d-block d-md-inline-block">GAME START</a>
+        <div class="col-md-6 col-lg-5 align-self-center mb-4 mb-md-0 py-5">
+          <img src="assets/pubg_bn3_ft.png" alt="" class="img-fluid">
+          <a href="#!" class="btn button primary-button px-4 d-block d-md-inline-block mb-3 mb-md-0">MORE</a>
         </div>
       </div>
     </div>
   </li>
 </ul>
 <!-- visual end -->
-<!-- content start -->
-<div class="content bg-light">
+
+
+<!-- 새소식 strart -->
+
+<div class="portfolio bg-light">
   <div class="container py-5">
-    <div class="row">
-      <div class="col-md-6 text-center order-2 order-md-1">
-        <img src="assets/sobre.svg" alt="" class="img-fluid">
+    <h2 class="title text-center">새소식</h2>
+    <div class="button-group mb-3 mt-5">
+      <button type="button" data-filter="*" class="active" id="btn1">전체</button>
+      <button type="button" data-filter=".website">공지사항</button>
+      <button type="button" data-filter=".illust">업데이트</button>
+      <button type="button" data-filter=".photoshop">대회소식</button>
+    </div>
+    <div class="row view">
+      <!--  -->
+
+      <div class="col-md-6 col-lg-3 mb-3 mb-lg-0 element-item website">
+        <div class="card pt-4 pl-3 pr-3 text-center">
+          <a href="assets/notice/1.jpg" class="popup_link d-block mb-3">
+            <img src="assets/notice/1.jpg" alt="" class="img-fluid">
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">홈페이지 경쟁전 SOLO 랭킹</h6>
+            <p class="card-text">홈페이지의 경쟁전 랭킹(순위표)에 SOLO 정보가 추가되었습니다.<br>
+              자세한 내용은 공지사항을 통해 확인하여 주시기 바랍니다.</p>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6 order-1 order-md-2 text-center text-md-left mb-5 mb-md-0">
-        <!-- order-1 : 자식요소의 몇번째 요소 나오게 할지 (글자를 먼저 나오게 함) -->
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, consequuntur.</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ipsam, fugiat voluptates eaque deserunt quia, similique in ab ipsum temporibus hic facere! Id reiciendis aperiam hic nisi quidem, porro dolore.</p>
-        <a href="#!" class="btn button primary-button px-3 d-block d-md-inline-block">ENTER CONTACT</a>
+        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0 element-item illust">
+          <div class="card pt-4 pl-3 pr-3 text-center">
+            <a href="assets/notice/2.jpg" class="popup_link d-block mb-3">
+              <img src="assets/notice/2.jpg" alt="" class="img-fluid">
+            </a>
+            <div class="card-body">
+              <h6 class="card-title">무기 사운드 선택 및 함께하기</h6>
+              <p class="card-text">무기 사운드 선택 시스템 및 함께하기 이모트와 저사양 PC를 위한 성능 최적화를
+                 만나보실 수 있습니다.<br> 자세한 내용을 확인해보세요.
+                자세한 내용은 공지사항을 통해 확인하여 주시기 바랍니다.</p>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-6 col-lg-3 mb-3 mb-lg-0 element-item website">
+            <div class="card pt-4 pl-3 pr-3 text-center">
+              <a href="assets/notice/3.jpg" class="popup_link d-block mb-3">
+                <img src="assets/notice/3.jpg" alt="" class="img-fluid">
+              </a>
+              <div class="card-body">
+                <h6 class="card-title">PGI.S 승자 예측 이벤트 안내</h6>
+                <p class="card-text">PGI.S를 맞이하여 PUBG 이스포츠를 즐길 수 있는 또다른 재미, 승자 예측
+                 이벤트가 돌아왔습니다!<br>이벤트 내용을 확인해보세요~!</p>
+              </div>
+            </div>
+          </div>
+            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0 element-item photoshop">
+              <div class="card pt-4 pl-3 pr-3 text-center">
+                <a href="assets/notice/4.png" class="popup_link d-block mb-3">
+                  <img src="assets/notice/4.png" alt="" class="img-fluid">
+                </a>
+                <div class="card-body">
+                  <h6 class="card-title">PGI.S 이벤트 매치: 서바이벌 토너먼트</h6>
+                  <p class="card-text">PGI.S의 대장정이 절반 가까이 지났습니다. 후반전에 돌입하기에 앞서,
+                    다음 주차는 PGI.S 이벤트 매치: 서바이벌 토너먼트가 진행됩니다!
+                    자세한 내용은 공지사항을 통해 확인하여 주시기 바랍니다.</p>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<!-- content end -->
+<!-- 새소식 end -->
 
 <!-- service start -->
 <div class="service bg-light">
   <div class="container py-5">
-    <h2 class="title text-center">SERVICE</h2>
+    <h2 class="title text-center">UPDATE</h2>
     <p class="subtitle text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, perferendis.</p>
     <div class="row">
 
@@ -159,85 +211,25 @@
 </div>
 <!-- service end -->
 
-<!-- portfolio -->
-<div class="portfolio bg-light">
-  <div class="container py-5">
-    <h2 class="title text-center">PORTFOLIO</h2>
-    <p class="subtitle text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, perferendis.</p>
-    <div class="button-group mb-3">
-      <button type="button" data-filter="*" class="active" id="btn1">ALL</button>
-      <button type="button" data-filter=".website">WEBSITE</button>
-      <button type="button" data-filter=".illust">ILLUST</button>
-      <button type="button" data-filter=".photoshop">PHOTOSHOP</button>
-    </div>
-    <div class="row view">
-      <!--  -->
-      <div class="col-6 col-lg-3 element-item website mb-3">
-        <a href="assets/servicos/1.jpg" class="popup_link d-block mb-3">
-          <img src="assets/servicos/1.jpg" alt="" class="img-fluid">
-        </a>
-        <h4 class="mb-0">Lorem ipsum.</h4>
-        <p>Lorem ipsum dolor sit.</p>
+<!-- vedio -->
+<div class="vedio mb-5 bg-light">
+  <div class="container">
+    <h2 class="title text-center">vedio</h2>
+    <div class="row">
+      <div class="owl-carousel owl-theme">
+        <div class="item-video" data-merge="3"><a class="owl-video" href="https://vimeo.com/23924346"></a></div>
+        <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=JpxsRwnRwCQ"></a></div>
+        <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=FBu_jxT1PkA"></a></div>
+        <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=oy18DJwy5lI"></a></div>
+        <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=H3jLkJrhHKQ"></a></div>
+        <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=g3J4VxWIM6s"></a></div>
+        <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=0fhoIate4qI"></a></div>
+        <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=EF_kj2ojZaE"></a></div>
       </div>
-      <!--  -->
-      <div class="col-6 col-lg-3 element-item illust mb-3">
-        <a href="assets/servicos/2.jpg" class="popup_link d-block mb-3">
-          <img src="assets/servicos/2.jpg" alt="" class="img-fluid">
-        </a>
-        <h4 class="mb-0">Lorem ipsum.</h4>
-        <p>Lorem ipsum dolor sit.</p>
-      </div>
-      <!--  -->
-      <div class="col-6 col-lg-3 element-item website mb-3">
-        <a href="assets/servicos/3.jpg" class="popup_link d-block mb-3">
-          <img src="assets/servicos/3.jpg" alt="" class="img-fluid">
-        </a>
-        <h4 class="mb-0">Lorem ipsum.</h4>
-        <p>Lorem ipsum dolor sit.</p>
-      </div>
-      <!--  -->
-      <div class="col-6 col-lg-3 element-item photoshop mb-3">
-        <a href="assets/servicos/4.jpg" class="popup_link d-block mb-3">
-          <img src="assets/servicos/4.jpg" alt="" class="img-fluid">
-        </a>
-        <h4 class="mb-0">Lorem ipsum.</h4>
-        <p>Lorem ipsum dolor sit.</p>
-      </div>
-      <!--  -->
-      <div class="col-6 col-lg-3 element-item illust mb-3">
-        <a href="assets/servicos/5.jpg" class="popup_link d-block mb-3">
-          <img src="assets/servicos/5.jpg" alt="" class="img-fluid">
-        </a>
-        <h4 class="mb-0">Lorem ipsum.</h4>
-        <p>Lorem ipsum dolor sit.</p>
-      </div>
-      <!--  -->
-      <div class="col-6 col-lg-3 element-item photoshop mb-3">
-        <a href="assets/servicos/5.jpg" class="popup_link d-block mb-3">
-          <img src="assets/servicos/5.jpg" alt="" class="img-fluid">
-        </a>
-        <h4 class="mb-0">Lorem ipsum.</h4>
-        <p>Lorem ipsum dolor sit.</p>
-      </div>
-      <!--  -->
-      <div class="col-6 col-lg-3 element-item illust mb-3">
-        <a href="assets/servicos/3.jpg" class="popup_link d-block mb-3">
-          <img src="assets/servicos/3.jpg" alt="" class="img-fluid">
-        </a>
-        <h4 class="mb-0">Lorem ipsum.</h4>
-        <p>Lorem ipsum dolor sit.</p>
-      </div>
-      <!--  -->
-      <div class="col-6 col-lg-3 element-item photoshop mb-3">
-        <a href="assets/servicos/6.jpg" class="popup_link d-block mb-3">
-          <img src="assets/servicos/6.jpg" alt="" class="img-fluid">
-        </a>
-        <h4 class="mb-0">Lorem ipsum.</h4>
-        <p>Lorem ipsum dolor sit.</p>
-      </div>
-    </div>
+   </div>
   </div>
 </div>
+<!-- vedio -->
 
 
 <!-- slider (customer) -->
@@ -393,6 +385,24 @@
     }
     setInterval(slider,3000);
   });
+
+  $(".vedio .owl-carousel").owlCarousel({
+    items:1,
+    merge:true,
+    loop:true,
+    margin:10,
+    video:true,
+    lazyLoad:true,
+    center:true,
+    responsive:{
+        480:{
+            items:2
+        },
+        600:{
+            items:4
+        }
+    }
+});
 
 </script>
 </body>

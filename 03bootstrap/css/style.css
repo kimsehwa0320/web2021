@@ -39,9 +39,21 @@
     -webkit-background-size: cover;
     background-size: cover;
   }
-  .visualWrap{background: url(../assets/pubg_bn1.png) no-repeat center;}
-  .visualWrap2{background: url(../assets/pubg_bn2.png) no-repeat center;}
-  .visualWrap3{background: url(../assets/pubg_bn2.png) no-repeat center;}
+  .visualWrap{
+    width: 100%;height: 600px;
+    background: url(../assets/pubg_bn1.png) no-repeat center;
+    background-size: cover;
+  }
+  .visualWrap2{
+    width: 100%;height: 600px;
+    background: url(../assets/pubg_bn2.png) no-repeat center;
+    background-size: cover;
+  }
+  .visualWrap3{
+    width: 100%;height: 600px;
+    background: url(../assets/pubg_bn3.png) no-repeat center;
+    background-size: cover;
+  }
 
 
   .button.primary-button{box-shadow:var(--box-shadow);background: var(--gradient-color); color:#fff;}
@@ -50,22 +62,27 @@
   .content{background: var(--bg-color1);}
 
   /* service */
+  .service h2,.portfolio h2,.customer h2,.vedio h2{font-size:21px; font-weight:bold}
   .service h2.title:after,
+  .vedio h2.title:after,
   .portfolio h2.title:after,
   .customer h2.title:after{
     content:"";display: block;margin: 10px auto;
-    width: 200px;height: 2px;
+    width: 200px;height: 4px;
     background: var(--primary-color1);
   }
   .service p.subtitle,
   .portfolio p.subtitle,
   .customer p.subtitle{color:var(--text-color)}
-  .service .card img{height: 200px;}
-  .service .card{background: var(--bg-color2);border: 0 none;transition: 0.3s;cursor: pointer;}
-  .service .card:hover{box-shadow: var(--box-shadow);transform: scale(1.1)}
+  /* .portfolio .card img{height: 200px;} */
+  .portfolio .card{border: 0 none;transition: 0.3s;cursor: pointer;}
+  .portfolio .card:hover{box-shadow: var(--box-shadow);transform: scale(1.1)}
+  .portfolio .card-body{height: 250px;  }
+  .portfolio h6{font-weight:bold; font-size:17px; letter-spacing: -2px}
+  .portfolio p{font-size:15px;letter-spacing: -1px}
   /* portfolio */
   .portfolio .button-group button{
-    background: none; border: 0 none; font-weight:bold; outline:none; font-size:1.1em;
+    background: none; border: 0 none; font-weight:bold; outline:none; font-size:1em;
   }
   .portfolio .button-group button+button{margin-left: 30px;}
   .portfolio .button-group button.active{color:var(--primary-color2)}
