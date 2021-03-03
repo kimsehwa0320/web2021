@@ -6,6 +6,7 @@
     --black-color:#000;
     --bg-color1:#efefef;
     --bg-color2:#f0f0f0;
+    --bg-color3:#d9d9d9;
     --text-color:#777;
     --border-color:#20f1f1;
     --gradient-color:linear-gradient(90deg,#fec107 0%,#fac34c 100%);
@@ -13,7 +14,6 @@
     --box-shadow:0px 10px 20px rgba(57,56,61,0.3);
   }
   body,html{width: 100%; height: 100%;}
-  body{padding-bottom: 200px;}
   img { max-width: 100%; height: auto; }
   .headerWrap{background-color: var(--black-color);}
   .headerWrap .nav-item{
@@ -22,7 +22,7 @@
   }
   .headerWrap .nav-item:last-child{margin-right: 0;}
   /* transparent : 밑줄 색 없애기 */
-  .headerWrap .nav-item:hover{border-bottom: 4px solid var(--primary-color2);}
+  .headerWrap .nav-item:hover{border-bottom: 4px solid var(--primary-color1);}
   .headerWrap.fixed-top{box-shadow: 0 0 20px gray; transition: 0.3s;}
   /* .wrapper img{display: block;} */
   .wrapper{
@@ -52,16 +52,35 @@
 
  /* video */
   .video{
-    height: 600px;
+    height: 500px;
     background: url(../assets/video_bg.png) no-repeat center;
     -webkit-background-size: cover;
     background-size: cover;
   }
   .video h2{padding-top: 70px; color:white}
-  .video .item-video{height: 400px; padding-top: 30px;}
+  .video .item-video{height: 300px; padding-top: 30px;}
   .owl-theme .owl-dots{
       display: none;
     }
+  .owl-carousel .owl-video-tn {
+  background-size: cover;
+  padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+}
+
+.owl-video-frame {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.owl-video-frame iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 
 
   /* service */
@@ -82,14 +101,14 @@
   .portfolio .card{border: 0 none;transition: 0.3s;cursor: pointer;}
   .portfolio .card:hover{box-shadow: var(--box-shadow);transform: scale(1.1)}
   .portfolio .card-body{height: 250px;  }
-  .portfolio h6{font-weight:bold; font-size:17px; letter-spacing: -2px}
-  .portfolio p{font-size:15px;letter-spacing: -1px}
+  .portfolio h6{font-weight:bold; font-size:16px; letter-spacing: -2px}
+  .portfolio p{font-size:14px;letter-spacing: -1px}
   /* portfolio */
   .portfolio .button-group button{
     background: none; border: 0 none; font-weight:bold; outline:none; font-size:1em;
   }
   .portfolio .button-group button+button{margin-left: 30px;}
-  .portfolio .button-group button.active{color:var(--primary-color2)}
+  .portfolio .button-group button.active{color:var(--primary-color1)}
   .portfolio .element-item img{border-radius: 5px;transition: 0.3s;}
   .portfolio .element-item img:hover{box-shadow: var(--box-shadow)}
 
@@ -104,7 +123,7 @@
   .customer p{font-size:14px;letter-spacing: -1px}
   .customer .sliderView{
     padding: 30px; border-radius: 5px;
-    background: var(--bg-color2);
+    background: white;
   }
 
 
@@ -117,7 +136,7 @@
   }
   .footer .ft_logo,.footer ul{}
   .footer ul.icon li{
-    margin-left: 25px;
+    margin-left: 10px;
   }
   .footer .icon a{
     display: block; width: 40px; height: 40px;transition: 0.3s;
