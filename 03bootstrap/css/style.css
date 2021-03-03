@@ -39,27 +39,30 @@
     -webkit-background-size: cover;
     background-size: cover;
   }
-  .visualWrap{
-    width: 100%;height: 600px;
-    background: url(../assets/pubg_bn1.png) no-repeat center;
-    background-size: cover;
-  }
-  .visualWrap2{
-    width: 100%;height: 600px;
-    background: url(../assets/pubg_bn2.png) no-repeat center;
-    background-size: cover;
-  }
-  .visualWrap3{
-    width: 100%;height: 600px;
-    background: url(../assets/pubg_bn3.png) no-repeat center;
-    background-size: cover;
-  }
+  .visualWrap{background: url(../assets/pubg_bn1.png) no-repeat center;}
+  .visualWrap2{background: url(../assets/pubg_bn2.png) no-repeat center;}
+  .visualWrap3{background: url(../assets/pubg_bn3.png) no-repeat center;}
 
 
   .button.primary-button{box-shadow:var(--box-shadow);background: var(--gradient-color); color:#fff;}
   .secondary-button{box-shadow:var(--box-shadow);}
+
   /* content */
   .content{background: var(--bg-color1);}
+
+ /* video */
+  .video{
+    height: 600px;
+    background: url(../assets/video_bg.png) no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .video h2{padding-top: 70px; color:white}
+  .video .item-video{height: 400px; padding-top: 30px;}
+  .owl-theme .owl-dots{
+      display: none;
+    }
+
 
   /* service */
   .service h2,.portfolio h2,.customer h2,.video h2{font-size:21px; font-weight:bold}
@@ -75,6 +78,7 @@
   .portfolio p.subtitle,
   .customer p.subtitle{color:var(--text-color)}
   /* .portfolio .card img{height: 200px;} */
+  .portfolio{padding-bottom: 50px;padding-top: 30px;}
   .portfolio .card{border: 0 none;transition: 0.3s;cursor: pointer;}
   .portfolio .card:hover{box-shadow: var(--box-shadow);transform: scale(1.1)}
   .portfolio .card-body{height: 250px;  }
@@ -88,12 +92,30 @@
   .portfolio .button-group button.active{color:var(--primary-color2)}
   .portfolio .element-item img{border-radius: 5px;transition: 0.3s;}
   .portfolio .element-item img:hover{box-shadow: var(--box-shadow)}
+
   /* slider  */
+  .customer{padding-top: 30px; padding-bottom: 50px;}
+  .customer h2{padding-bottom: 30px;}
+  .customer h4{
+    text-align:center; font-size:19px;
+    font-weight:bold;padding: 15px 0;
+    letter-spacing: -2px;
+  }
+  .customer p{font-size:14px;letter-spacing: -1px}
   .customer .sliderView{
     padding: 30px; border-radius: 5px;
     background: var(--bg-color2);
   }
+
+
   /* footer */
+  .footer{
+    height: 200px;
+    background: url(../assets/footer-bg.png) no-repeat;
+    background-position: center -127px;
+    padding-top: 50px;
+  }
+  .footer .ft_logo,.footer ul{}
   .footer ul.icon li{
     margin-left: 25px;
   }
