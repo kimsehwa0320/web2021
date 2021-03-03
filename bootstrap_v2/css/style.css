@@ -6,10 +6,57 @@
     --third-color:#a951ed;
 }
 
+/* header */
+
 #headerWrap .bgcolor{
   position: absolute;
-  width: 100%; height: 660px;
-  background: linear-gradient(160deg, #02ccba 0%,#aa7ecd 100%);
-  transform: skew(0deg, -15deg);
-  left: 0;top: -275px;
+  width: 100%;height: 660px;
+  background:linear-gradient(160deg, #02ccba 0%,#aa7ecd 100%);
+  transform:skew(0deg,-15deg);
+  left:0;top:-275px;z-index:-100
+}
+#headerWrap .video video{
+  object-fit:fill;width: 100%;border-radius:5px;
+  box-shadow: 10px 10px 25px rgb(46 61 73);
+}
+
+.card-view li{
+  border-radius: 5px;overflow: hidden;
+  box-shadow: 10px 10px 25px rgb(46 61 73);
+}
+
+
+/* slider */
+.slider .row{position: relative;}
+.slider .slider-title{color:#7d97ad;font-size:15px}
+.slider .row h4{font-weight:normal;font-size:18px}
+
+.slider .swiper-button-next{
+  height: 40px;position: absolute;right:0;
+  background-image: url(../images/right-arrow.svg);
+}
+.slider .swiper-button-prev{
+  height: 40px;position: absolute;left:0;
+  background-image: url(../images/left-arrow.svg);
+}
+
+/* banner */
+.banner .row .card-img{position: relative;}
+.banner .row .mask{
+  width: 100%;height: 100%;
+  position: absolute;top:0;left: 0;
+}
+.banner .row>div:nth-child(1) .mask{
+  background-color:rgba(2,179,228,0.6);
+}
+.banner .row>div:nth-child(2) .mask{
+  background-color:rgba(2,240,186,0.6);
+}
+.banner .row>div:nth-child(3) .mask{
+  background-color:rgba(169,81,237,0.6);
+}
+
+.banner .card{
+  overflow: hidden;border:0 none;
+  box-shadow: 10px 10px 25px rgb(46 61 73);
 }

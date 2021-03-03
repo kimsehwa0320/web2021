@@ -52,35 +52,16 @@
 
  /* video */
   .video{
-    height: 500px;
+    height: 520px;
     background: url(../assets/video_bg.png) no-repeat center;
     -webkit-background-size: cover;
     background-size: cover;
   }
-  .video h2{padding-top: 70px; color:white}
+  .video h2{padding-top: 55px; color:white}
   .video .item-video{height: 300px; padding-top: 30px;}
   .owl-theme .owl-dots{
       display: none;
     }
-  .owl-carousel .owl-video-tn {
-  background-size: cover;
-  padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-}
-
-.owl-video-frame {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-.owl-video-frame iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
 
 
   /* service */
@@ -97,7 +78,7 @@
   .portfolio p.subtitle,
   .customer p.subtitle{color:var(--text-color)}
   /* .portfolio .card img{height: 200px;} */
-  .portfolio{padding-bottom: 50px;padding-top: 30px;}
+  .portfolio{padding-bottom: 50px;padding-top: 10px;}
   .portfolio .card{border: 0 none;transition: 0.3s;cursor: pointer;}
   .portfolio .card:hover{box-shadow: var(--box-shadow);transform: scale(1.1)}
   .portfolio .card-body{height: 250px;  }
