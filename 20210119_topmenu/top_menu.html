@@ -5,90 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>top menu</title>
-  <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/jquery.bxslider.css">
+  <link rel="stylesheet" href="../css/reset.css">
   <script src="../js/jquery-3.1.1.min.js"></script>
   <script src="../js/jquery.bxslider.js"></script>
-  <script>
-    $(document).ready(function(){
-      $(".slider").bxSlider();
-    });
 
-  </script>
+
   <style>
     .submenu{display: none;}
 
-    nav.gnb{width: 1000px; margin: 0 auto; position: relative; z-index: 1;}
-    /* nav.gnb>ul{background: yellow;} 서브메뉴나올 때 뒷 배경 */
-    nav.gnb>ul>li{width: 200px; float: left; background: #ff00ab;position: relative;}
-    nav.gnb>ul>li:hover{background: pink;}
+    nav.gnb{width: 1000px;margin: 0 auto;position: relative;z-index:99999}
+    nav.gnb>ul{background:pink;}
+    nav.gnb>ul>li{float: left;width:200px;background: #0e359a;position: relative;}
+    nav.gnb>ul>li>a{display: block;text-align: center;line-height: 40px;color:white}
 
-    /* nav.gnb>ul>li:nth-child(1) .submenu{display: block;} 서브메뉴 나옴 */
+    nav.gnb>ul>li:hover{background:skyblue}
 
-    nav.gnb>ul>li>a{display: block; text-align:center; line-height:40px;}
-    .submenu{padding-bottom: 10px; position: absolute;width: 100%; background: pink;}
-    .submenu li:hover{background: black;}
-    .submenu li a{display: block; line-height: 35px; color:#fff; text-align:center;}
+    /* nav.gnb>ul>li:nth-child(1) .submenu{display: block;} */
+    .submenu{padding-bottom:10px;position: absolute;width: 100%;background:skyblue;}
+    .submenu li:hover{background-color:green;}
+    .submenu a{display: block;line-height:35px;text-align: center;color:#fff}
 
     nav.gnb>ul>li:hover .submenu{display: block;}
 
-    .visual{background: #f54242; height: 400px;}
-    .visual img{width: 100%; z-index: 9999;}
+    .visual{background:rgb(15, 215, 174);}
+    .visual li img{width: 100%;}
 
 
   </style>
+
+  <script>
+    $(document).ready(function(){
+      $(".slide").bxSlider();
+    });
+
+  </script>
 </head>
 <body>
   <nav class="gnb">
     <ul class="clearfix">
       <li><a href="#">menu</a>
-        <ul class="submenu">
-          <li><a href="#">smenu1</a></li>
-          <li><a href="#">smenu2</a></li>
-          <li><a href="#">smenu3</a></li>
-          <li><a href="#">smenu4</a></li>
-        </ul>
+          <ul class="submenu">
+            <li><a href="#">smenu1</a></li>
+            <li><a href="#">smenu2</a></li>
+            <li><a href="#">smenu3</a></li>
+            <li><a href="#">smenu4</a></li>
+          </ul>
       </li>
       <li><a href="#">menu</a>
-        <ul class="submenu">
-          <li><a href="#">smenu1</a></li>
-          <li><a href="#">smenu2</a></li>
-          <li><a href="#">smenu3</a></li>
-          <li><a href="#">smenu4</a></li>
-        </ul>
+          <ul class="submenu">
+            <li><a href="#">smenu1</a></li>
+            <li><a href="#">smenu2</a></li>
+            <li><a href="#">smenu3</a></li>
+            <li><a href="#">smenu4</a></li>
+          </ul>
       </li>
       <li><a href="#">menu</a>
-        <ul class="submenu">
-          <li><a href="#">smenu1</a></li>
-          <li><a href="#">smenu2</a></li>
-          <li><a href="#">smenu3</a></li>
-          <li><a href="#">smenu4</a></li>
-        </ul>
+          <ul class="submenu">
+            <li><a href="#">smenu1</a></li>
+            <li><a href="#">smenu2</a></li>
+            <li><a href="#">smenu3</a></li>
+            <li><a href="#">smenu4</a></li>
+          </ul>
       </li>
       <li><a href="#">menu</a>
-        <ul class="submenu">
-          <li><a href="#">smenu1</a></li>
-          <li><a href="#">smenu2</a></li>
-          <li><a href="#">smenu3</a></li>
-          <li><a href="#">smenu4</a></li>
-        </ul>
+          <ul class="submenu">
+            <li><a href="#">smenu1</a></li>
+            <li><a href="#">smenu2</a></li>
+            <li><a href="#">smenu3</a></li>
+            <li><a href="#">smenu4</a></li>
+          </ul>
       </li>
       <li><a href="#">menu</a>
-        <ul class="submenu">
-          <li><a href="#">smenu1</a></li>
-          <li><a href="#">smenu2</a></li>
-          <li><a href="#">smenu3</a></li>
-          <li><a href="#">smenu4</a></li>
-        </ul>
+          <ul class="submenu">
+            <li><a href="#">smenu1</a></li>
+            <li><a href="#">smenu2</a></li>
+            <li><a href="#">smenu3</a></li>
+            <li><a href="#">smenu4</a></li>
+          </ul>
       </li>
     </ul>
   </nav>
-
+  <!-- bxslider -->
   <div class="visual">
-    <ul class="slider">
-      <li><img src="../images/pc01.jpg" alt=""></li>
-      <li><img src="../images/pc02.jpg" alt=""></li>
-      <li><img src="../images/pc03.jpg" alt=""></li>
+    <ul class="slide">
+      <li><img src="../images/pc01.jpg" alt="111"></li>
+      <li><img src="../images/pc01.jpg" alt="111"></li>
+      <li><img src="../images/pc01.jpg" alt="111"></li>
     </ul>
   </div>
 </body>

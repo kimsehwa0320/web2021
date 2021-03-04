@@ -55,8 +55,56 @@
 .banner .row>div:nth-child(3) .mask{
   background-color:rgba(169,81,237,0.6);
 }
+.banner .row>div:nth-child(4) .mask{
+  background-color:rgba(125,151,173,0.6);
+}
+.banner .row>div:nth-child(5) .mask{
+  background-color:rgba(255,162,52,0.6);
+}
+.banner .row>div:nth-child(6) .mask{
+  background-color:rgba(255,84,131,0.6);
+}
+
+.banner .card-img .view-new{
+  position: absolute;left: 10px;top: 10px;border-radius: 3px;
+  background: #fff;padding:3px 10px;
+}
 
 .banner .card{
   overflow: hidden;border:0 none;
   box-shadow: 10px 10px 25px rgb(46 61 73);
 }
+
+/* advantage */
+.advan .advan-title{
+  color:var(--primary-color);
+}
+.advan .img-view{position: relative;height: 400px;}
+.advan .img-view img{position: absolute;box-shadow: 10px 10px 25px rgba(46,61,73,0.2)}
+
+.advan .img-view .img-1st{right: 1.25rem;top:1.25rem;max-width:400px}
+.advan .img-view .img-2st{left:1.25rem;bottom:0;max-width:300px}
+.advan .img-view .img-3st{right: 1.25rem;top:1.25rem;max-width:400px}
+.advan .img-view .img-4st{left:1.25rem;bottom:0;max-width:300px}
+.advan .img-view .img-5st{right: 1.25rem;top:1.25rem;max-width:400px}
+.advan .img-view .img-6st{left:1.25rem;bottom:0;max-width:300px}
+
+.advan .title-1st{color:var(--primary-color)}
+.advan .title-2st{color:var(--secondary-color)}
+.advan .title-3st{color:var(--third-color)}
+
+.advan .icon{
+  width: 80px;height: 80px;
+  border-radius: 50%;box-shadow: 10px 10px 25px rgba(46,61,73,0.2)
+}
+
+/* CONTACT */
+
+.contact{
+  background:url(../images/contact-cover.jpg) no-repeat center;
+  background-size:cover;
+}
+
+
+
+/*  */
