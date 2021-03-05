@@ -109,6 +109,14 @@
     background: white;
   }
 
+  /* visual */
+  .visual_1{
+    background: url(../assets/pubg_bn1.png) no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+
   /* update */
   .update p.subtitle{color:var(--text-color)}
   .update{padding-top: 30px; padding-bottom: 50px;}
