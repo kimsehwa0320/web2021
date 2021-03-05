@@ -30,6 +30,7 @@
     width: 100%;height: 600px;
     overflow: hidden; /*hidden꼭 넣기 */
   }
+  .customer
 
   .wrapper li{position: absolute;left: 100%;}
   .wrapper .visualWrap{position: absolute;left: 0;}
@@ -65,7 +66,8 @@
 
 
   /* service */
-  .service h2,.portfolio h2,.customer h2,.video h2{font-size:21px; font-weight:bold}
+  .service h2,.portfolio h2,.customer h2,.video h2,.update h2{font-size:21px; font-weight:bold}
+  .update h2.title:after,
   .service h2.title:after,
   .video h2.title:after,
   .portfolio h2.title:after,
@@ -105,6 +107,54 @@
   .customer .sliderView{
     padding: 30px; border-radius: 5px;
     background: white;
+  }
+
+  /* update */
+  .update p.subtitle{color:var(--text-color)}
+  .update{padding-top: 30px; padding-bottom: 50px;}
+  .update h2{padding-bottom: 30px;}
+  .update h4{
+    font-size:17px;
+    font-weight:bold;padding: 5px;
+    letter-spacing: -2px;
+  }
+  .update p{font-size:15px;letter-spacing: -1px}
+  .update .sliderView{
+    padding: 30px; border-radius: 5px;
+    background: white;cursor: pointer;
+  }
+  .update .sliderView img{
+    max-width: 200px;
+    max-height:170px;
+    overflow: hidden;
+  }
+
+  /* event */
+  .event h2{font-size:21px; font-weight:bold;padding-bottom: 30px;}
+  .event h2.title:after{
+    content:"";display: block;margin: 10px auto;
+    width: 200px;height: 4px;
+    background: var(--primary-color1);
+  }
+  .event p.subtitle{color:var(--text-color)}
+  .event{padding-bottom: 50px;}
+  .event .card{border: 0 none;transition: 0.3s;cursor: pointer;}
+  .event .card:hover{box-shadow: var(--box-shadow);transform: scale(1.1)}
+  .event .card-body{height: 250px;}
+  .event h4{font-weight:bold; font-size:18px; letter-spacing: -2px;text-align:center;padding-bottom: 5px;}
+  .event p{font-size:16px;letter-spacing: -1px;text-align:center}
+  .event .button-group button{
+    background: none; border: 0 none; font-weight:bold; outline:none; font-size:1em;
+  }
+  .event .button-group button+button{margin-left: 30px;}
+  .event .button-group button.active{color:var(--primary-color1)}
+  .event .element-item img{border-radius: 5px;transition: 0.3s;}
+  .event .element-item img:hover{box-shadow: var(--box-shadow)}
+
+  .txt_line{
+    width:240px; padding:0 5px;
+    overflow:hidden; text-overflow:ellipsis;
+    white-space:nowrap;
   }
 
 
