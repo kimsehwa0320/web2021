@@ -71,7 +71,8 @@
 
 
   /* service */
-  .service h2,.portfolio h2,.customer h2,.video h2,.update h2{font-size:21px; font-weight:bold}
+  .service h2,.qa_etc h2,.portfolio h2,.customer h2,.video h2,.update h2{font-size:21px; font-weight:bold}
+  .qa_etc h2.title:after,
   .update h2.title:after,
   .service h2.title:after,
   .video h2.title:after,
@@ -134,6 +135,21 @@
   .visual_2 h1{font-weight:bold; letter-spacing: -3px;margin-top: -30px;}
   .visual_2 a{ font-size:20px;letter-spacing: -1px; color:#fff;}
 
+  .visual_3{
+    background: url(../assets/sub3_banner.jpg) no-repeat center;
+    width: 100%; height: 300px;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .visual_3 h1{font-weight:bold; letter-spacing: -3px;margin-top: -30px;}
+  .visual_3 a{ font-size:20px;letter-spacing: -1px; color:#fff;}
+
+  .visual_4{
+    background: url(../assets/sub4_banner.jpg) no-repeat center;
+    width: 100%; height: 300px;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
 
   /* update */
   .update p.subtitle{color:var(--text-color)}
@@ -182,6 +198,15 @@
     overflow:hidden; text-overflow:ellipsis;
     white-space:nowrap;
   }
+/* QA */
+.qa_etc h2{padding-bottom: 30px;}
+.qa_etc h4{font-size:20px;font-weight:bold;letter-spacing: -1.5px}
+.qa_etc p{letter-spacing: -1px}
+.qa_etc p.subtitle{color:var(--text-color)}
+.qa_etc .button.primary-button{box-shadow:none;}
+.qa_etc .card img{height: 200px;}
+.qa_etc .card{background: var(--bg-color2);border: 0 none;transition: 0.3s;cursor: pointer;}
+.qa_etc .card:hover{box-shadow: var(--box-shadow);transform: scale(1.1)}
 
 
   /* footer */
