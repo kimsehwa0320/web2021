@@ -22,10 +22,10 @@ File: Layout CSS
 
 /* Header
 --------------------------------------------------------------------------------------------------------------- */
-#header{}
-
-#header #logo{margin:30px 0 0 0;}
-#header #logo h1{margin:0; padding:0; font-size:22px; text-transform:uppercase;}
+#header{
+}
+.wrapper.fixed-top{box-shadow: 0 0 20px gray; transition: 0.3s;}
+#header #logo{padding-top: 25px;}
 
 
 /* Page Intro

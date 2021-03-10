@@ -1,0 +1,17 @@
+@font-face{
+	src : url("../fonts/BebasNeue-Book.ttf");
+	font-family: "BeueB";
+
+	src : url("../fonts/BebasNeue-Regular.ttf");
+	font-family: "Beue";
+
+	src : url("../fonts/NEXON Lv2 Gothic Medium.ttf");
+	font-family: "NEXONONE";
+
+	src : url("../fonts/NEXON Lv2 Gothic Bold.ttf");
+	font-family: "NEXONTWO";
+
+}
+
+body{font-family: "NEXONONE";}
+/*.slider h3{font-family: "NEXONTWO";}*/
