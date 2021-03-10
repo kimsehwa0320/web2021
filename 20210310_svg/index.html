@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG</title>
+</head>
+<style>
+  body{background: skyblue;}
+  .svg{width: 300px;height: 300px;background-image: url(star.svg);background-color: orange;}
+  .st0{
+    fill:#FF0000;transition:0.3s;
+  }
+  .star1 path{
+    fill:#fff;
+    stroke:#0ff;
+    stroke-width:10;
+  }
+  .star1{width: 400px; height: 400px; background: blue;}
+  .star1:hover .st0{fill:#00ff00}
+</style>
+<body>
+  <img src="star.svg" alt="">
+  <div class="svg"></div>
+
+  <div class="star1">
+    <svg x="0" y="0" width="100%" height="100%" viewbox="0 0 500 500">
+    <g>
+    	<polygon class="st0" points="258.1,278.3 190.8,333.8 222.7,252.6 149.1,205.7 236.2,211 258.1,126.5 280,211 367.1,205.7
+    		293.5,252.6 325.5,333.8 	"/>
+    	<path d="M258.1,128.5l21.3,82.2l0.2,0.8l0.8,0l84.8-5.2l-71.6,45.7l-0.7,0.4l0.3,0.8l31.1,79l-65.5-54l-0.6-0.5l-0.6,0.5l-65.5,54
+    		l31.1-79l0.3-0.8l-0.7-0.4L151,206.3l84.8,5.2l0.8,0l0.2-0.8L258.1,128.5 M258.1,124.5l-22.3,85.9l-88.6-5.4l74.9,47.7l-32.5,82.6
+    		l68.5-56.4l68.5,56.4l-32.5-82.6l74.9-47.7l-88.6,5.4L258.1,124.5L258.1,124.5z"/>
+    </g>
+    </svg>
+
+  </div>
+
+<!-- 원 생성 -->
+<style>
+  .circle{width: 100px;height: 100px;}
+  .circle circle{
+    stroke:#000;
+    fill:#f0f;
+    stroke-width:5;
+    stroke-dasharray:2280;
+    stroke-dashoffset:2280;
+    animation-fill-mode:forwards;
+    animation-duration:3s;
+    animation-direction:alternate;
+  }
+  @keyframes ani{
+    from{
+      stroke-dashoffset:2280
+    }
+    to{stroke-dashoffset:0}
+  }
+  .circle:hover circle{
+    stroke-dashoffset:0;
+  }
+
+  .circle:hover circle{animation-name:ani;}
+</style>
+<div class="circle">
+  <svg x="0" y="0" width="100%" height="100%" viewbox="0 0 200 200">
+    <circle cx="100" cy="100" r="45"></circle><!-- cx,cy : 중앙기준 -->
+  </svg>
+</div>
+
+</body>
+</html>
