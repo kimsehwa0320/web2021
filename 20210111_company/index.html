@@ -12,9 +12,11 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="../css/all.css">
 	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="css/colorbox.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
 	<script src="js/wow.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
 	<script>
 		new WOW().init();
 	</script>
@@ -73,9 +75,9 @@
 				$("#main_menu").removeAttr("style");
 			});
 
-			// $(".modal").colorbox({
-			// 	rel:"modal"
-			// });
+			$(".modal").colorbox({
+				rel:"modal"
+			});
 
 			$(".youtube").colorbox({
 				iframe:true,
@@ -84,6 +86,55 @@
 			});
 
 		});
+	</script>
+	<style>
+	.video-popup.reveal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index:9
+}
+
+.video-popup .video-wrapper {
+  position: relative;
+  width: 80%;
+  padding-bottom: 45%;
+  z-index: 10
+}
+
+.video-popup .video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.video-popup.reveal .video-popup-closer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .5);
+  z-index: 9
+}
+
+	</style>
+	<script>
+	$(".popupVideo a").click(function() {
+$(".video-popup").addClass("reveal"),
+$(".video-popup .video-wrapper").remove(),
+$(".video-popup").append("<div class='video-wrapper'><iframe width='560' height='315' src='https://youtube.com/embed/" + $(this).data("video") + "?rel=0&playsinline=1&autoplay=1' allow='autoplay; encrypted-media' allowfullscreen></iframe></div>")
+}),
+$(".video-popup-closer").click(function() {
+$(".video-popup .video-wrapper").remove(),
+$(".video-popup").removeClass("reveal")
+});
+
 	</script>
 </head>
 <body>
@@ -226,13 +277,12 @@
 					</a>
 				</li>
 				<li class="ct6st">
-						<a href="https://www.youtube.com/embed/SW7hBnXKTX4" class="youtube"><img src="images/img01_03.jpg" alt="" class="bgImg">
+						<img src="images/img01_03.jpg" alt="" class="bgImg">
 						<div class="txt6">
 							<h3>The Premiere</h3>
 							<p>더 혁신적인 디자인의 차이</p>
 						</div>
-						<img src="images/icon01_06.png" alt="실행" class="play">
-					</a>
+						<a href="https://www.youtube.com/watch?v=Ng_7yzY2SK8" class="modal"><img src="images/icon01_06.png" alt="실행" class="play"></a>
 				</li>
 					<li class="ct7st clearfix">
 						<div class="div_1">
