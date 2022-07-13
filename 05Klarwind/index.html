@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klarwind | Global premium Air purifier that makes your home healthier</title>
+  <meta name="description" content="Effect inspiration for opening an image grid item." />
+  <meta name="keywords" content="image grid, effect, inspiration, css, javascript, animation, masonry" />
+  <meta name="author" content="Codrops" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/colorbox.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+  <script type="text/javascript" src="js/wow.min.js"></script>
+  <script src="js/jquery.colorbox-min.js"></script>
+  <script src="js/modernizr-custom.js"></script>
+  <script src="js/wow.js"></script>
+  <script>
+    new WOW().init();
+      $(document).ready(function(){
+        $('.bxslider').bxSlider({
+        pager: true,
+        controls:false,
+        auto:true,
+        touchEnabled:false,
+        });
+        $( window ).scroll( function() {
+          if ( $( this ).scrollTop() > 200 ) {
+            $(".top_btn").fadeIn();
+          } else {
+            $(".top_btn").fadeOut();
+          }
+        });
+        $(window).scroll(function () {
+         if ($(this).scrollTop() > 500) {
+           $('#backToTop').fadeIn(500);
+         } else {
+           $('#backToTop').fadeOut('fast');
+         }
+       });
+       $('#backToTop').click(function (e) {
+         e.preventDefault();
+         $('html, body').animate({scrollTop: 0}, 400);
+       });
+      });
+    $(function(){
+      $(".subContent div").hide().eq(0).show();
+      $(".subMenuTab li").click(function(){
+        var i = $(this).index();
+        $(".subContent div").hide().eq(i).fadeIn();
+      });
+      $(".menu-trigger").click(function(){
+        var toggle = $(".menu-trigger").attr("class"); //get
+        console.log(toggle); // menu-trigger 찍힘
+        if(toggle == "menu-trigger"){
+          $(".menu-trigger").addClass("change");
+          $("#main_menu").stop().animate({left:0},300);
+        }else{
+          $(".menu-trigger").removeClass("change");
+          $("#main_menu").stop().animate({left:"-100%"},300);
+        }
+      });
+      $(window).resize(function(){
+        $(".menu-trigger").removeClass("change");
+        $("#main_menu").removeAttr("style");
+      });
+    });
+  </script>
+  <script async src=https://www.googletagmanager.com/gtag/js?id=G-9R21Q8KW9D></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9R21Q8KW9D');
+  </script>
+</head>
+<script>
+    window.onload = function() {
+
+    function onClick() {
+        document.querySelector('.modal_wrap').style.display ='block';
+        document.querySelector('.modal_bg').style.display ='block';
+    }
+    function offClick() {
+        document.querySelector('.modal_wrap').style.display ='none';
+        document.querySelector('.modal_bg').style.display ='none';
+    }
+
+    document.getElementById('modal_btn').addEventListener('click', onClick);
+    document.querySelector('.modal_close').addEventListener('click', offClick);
+};
+</script>
+<style>
+  h1{font-family: 'Noto Sans', sans-serif; font-weight: 700;}
+  body{font-family: 'Noto Sans', sans-serif;}
+</style>
+<body>
+<div class="header_top">
+  <nav id="navTop">
+    <a href="index.html" class="hd_logo_mobile blind_mo"><img src="images/assets/header_logo_m.svg" alt=""></a>
+    <div id="main_menu">
+      <ul class="clearfix" id="topMenu">
+        <li><a href="index.html"><img src="images/assets/header_logo.svg" alt="" class="hd_logo blind_pc">HOME</a></li>
+        <li class="blind_pc">&nbsp;</li>
+        <li><a href="about.html" class="pp">ABOUT</a></li>
+        <li><a href="product.html" class="pp">PRODUCT</a></li>
+        <li><a href="support.html" class="pp">SUPPORT</a></li>
+        <ul class="clearfix" id="topMenu_2">
+          <li></li>
+          <li></li>
+          <li class="blind_pc"><a href="https://www.facebook.com/Klarwind-US-104259765185755/?ref=pages_you_manage" target="_blank"><img src="images/assets/sns_fb.svg" alt=""></a></li>
+          <li class="blind_pc"><a href="https://www.instagram.com/klarwind_usa" target="_blank"><img src="images/assets/sns_is.svg" alt=""></a></li>
+          <li class="blind_mo"><a href="https://www.facebook.com/Klarwind-US-104259765185755/?ref=pages_you_manage" target="_blank"><img src="images/assets/fb_mo.png" alt=""></a></li>
+          <li class="blind_mo"><a href="https://www.instagram.com/klarwind_usa" target="_blank"><img src="images/assets/ig_mo.png" alt=""></a></li>
+        </ul>
+      </ul>
+    </div>
+    <div class="bar">
+      <div class="menu-trigger">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+  </nav>
+</div>
+<a id="backToTop" class="scrolltop" href="#">
+  <img src="images/top_btn.png" alt="">
+</a>
+  <div class="sectionWrap">
+    <div class="sectionContainer">
+      <!-- section 1st -->
+      <div class="section page1">
+        <video id="video_index" autoplay muted loop playsinline data-autoplay>
+          <source src="images/klarwind4.mp4" >
+        </video>
+        <div class="sectionLeft">
+          <div class="its">
+            <p class="h1">We are<br>
+              <div class="h12">
+                <div class="line">Klarwind</div>
+                <div class="line">Here to protect</div>
+                <div class="line">your life & health</div>
+                <div class="line">Klarwind</div>
+              </div>
+               <div class="slideTxt"><p>To make you comfort. To show how to clean. To see indoor air quality</p></div>
+            </p>
+          </div>
+        </div>
+        <div class="iconmouse">
+          <span class="ball"></span>
+        </div>
+      </div>
+      <!-- section 2st -->
+
+      <div class="section page2">
+        <h2>BEST SELLERS</h2>
+        <ul class="bxslider">
+          <li class="view2st">
+            <div class="viewbg2">
+              <img src="images/k_banner_two2_pc_2.jpg" alt="" class="blind_pc">
+            </div>
+            <div class="page2_slide2">
+              <h1>Feel fresh air</h1>
+              <p><span class="it">Klarwind</span> brand is aiming for the best value in terms of performance, design and reliability. <span class="blind_pc">Also, it won
+              several awards at prestigious European design competitions in Europe and recognized for its excellence in design.</span>
+              </p>
+              <a href="https://www.amazon.com/dp/B09P2WZZ95?ref=vse_pfo_vdp" target="_blank">BUY NOW</a>
+              <img src="images/aham_2.jpg" alt="">
+            </div>
+          </li>
+          <li class="view1st">
+          <div class="page2_slide1">
+            <h1>Make your home healthier</h1>
+            <p><span class="it">Klarwind</span> is a synthesis composing with "KLAR" which means "Clean" in Germany and "WIND" in English.</p>
+            <a href="https://www.amazon.com/Klarwind-Smart-Purifier-Blue-300/dp/B08BZHX5MB/ref=sr_1_2?dchild=1&keywords=klarwind&qid=1624267439&sr=8-2" target="_blank">BUY NOW</a>
+              <img src="images/aham_intertek.jpg" alt="">
+          </div>
+          <div class="viewbg1">
+            <img src="images/k_banner_two1_pc_2.jpg" alt="" class="blind_pc">
+          </div>
+          </li>
+        </ul>
+      </div>
+      <!-- section 3st -->
+
+      <!-- section 4st -->
+      <div class="section page4">
+        <h2>ROOM SIZE BY PRODUCT</h2>
+        <div class="container4">
+          <ul>
+            <li>
+              <a class='normal' href="https://www.amazon.com/dp/B09P2WZZ95/ref=emc_b_5_i" target="_blank">
+                  <img src="images/100_1.png" alt="">
+              </a>
+              <div class='info'>
+                <h3>Klarwind 100</h3>
+                <p>Designed for small size room or kids room.</p>
+                <div class="nextIcon_svg">
+                  <a href="#">See On Amazon
+                    <svg viewBox="0 0 50 20" class="nextIcon">
+                      <polygon points="37.97 0 37.24 0.9 47.56 9.39 0 9.39 0 10.55 47.43 10.55 37.23 19.11 37.98 20 50 9.91 37.97 0"></polygon>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="bggray">
+              <a class='normal' href="https://www.amazon.com/dp/B09P2WZZ95/ref=emc_b_5_i" target="_blank">
+                  <img src="images/200_1.png" alt="">
+              </a>
+              <div class='info'>
+                <h3>Klarwind 200</h3>
+                <p>It's Coming</p>
+                  <div class="nextIcon_svg">
+                    <a href="#">See On Amazon
+                      <svg viewBox="0 0 50 20" class="nextIcon">
+                        <polygon points="37.97 0 37.24 0.9 47.56 9.39 0 9.39 0 10.55 47.43 10.55 37.23 19.11 37.98 20 50 9.91 37.97 0"></polygon>
+                      </svg>
+                    </a>
+                  </div>
+              </div>
+            </li>
+            <li class="bggray">
+              <a class='normal' href="https://www.amazon.com/dp/B08BZHX5MB/ref=emc_b_5_i" target="_blank">
+                  <img src="images/300_1.png" alt="">
+              </a>
+              <div class='info'>
+                <h3>Klarwind 300</h3>
+                <p>Designed for medium size room.</p>
+                  <div class="nextIcon_svg">
+                    <a href="#">See On Amazon
+                    <svg viewBox="0 0 50 20" class="nextIcon">
+                      <polygon points="37.97 0 37.24 0.9 47.56 9.39 0 9.39 0 10.55 47.43 10.55 37.23 19.11 37.98 20 50 9.91 37.97 0"></polygon>
+                    </svg>
+                    </a>
+                  </div>
+              </div>
+            </li>
+            <li>
+              <a class='normal' href="https://www.amazon.com/dp/B08BZHG3FV/ref=emc_b_5_i" target="_blank">
+                  <img src="images/500_1.png" alt="">
+              </a>
+              <div class='info'>
+                <h3>Klarwind 500</h3>
+                <p>Designed for large size room.</p>
+                  <div class="nextIcon_svg">
+                    <a href="#">See On Amazon
+                      <svg viewBox="0 0 50 20" class="nextIcon">
+                        <polygon points="37.97 0 37.24 0.9 47.56 9.39 0 9.39 0 10.55 47.43 10.55 37.23 19.11 37.98 20 50 9.91 37.97 0"></polygon>
+                      </svg>
+                    </a>
+                  </div>
+              </div>
+            </li>
+            <li>
+              <a class='normal' href="https://www.amazon.com/dp/B08BZHNY25/ref=emc_b_5_i" target="_blank">
+                  <img src="images/500s_1.png" alt="">
+              </a>
+              <div class='info'>
+                <h3>Klarwind 500S</h3>
+                <p>Designed for large size room.</p>
+                <div class="nextIcon_svg">
+                  <a href="#">See On Amazon
+                    <svg viewBox="0 0 50 20" class="nextIcon">
+                      <polygon points="37.97 0 37.24 0.9 47.56 9.39 0 9.39 0 10.55 47.43 10.55 37.23 19.11 37.98 20 50 9.91 37.97 0"></polygon>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="bggray">
+              <a class='normal' href="https://www.amazon.com/dp/B08BZJL364/ref=emc_b_5_i" target="_blank">
+                  <img src="images/700_1.png" alt="">
+              </a>
+              <div class='info'>
+                <h3>Klarwind 700</h3>
+                <p>Designed for work space or office.</p>
+                <div class="nextIcon_svg">
+                  <a href="#">See On Amazon
+                    <svg viewBox="0 0 50 20" class="nextIcon">
+                      <polygon points="37.97 0 37.24 0.9 47.56 9.39 0 9.39 0 10.55 47.43 10.55 37.23 19.11 37.98 20 50 9.91 37.97 0"></polygon>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <script  src="./js/container4script.js"></script>
+      <!-- section 5st -->
+      <div class="section page5">
+        <div class="container5">
+          <div class="page5_left">
+            <h2>Klarwind Gallery</h2>
+            <p>Anytime, Any where, Any season</p>
+          </div>
+          <!-- Photo Grid -->
+          <div class="page5_right">
+            <div class="grid">
+              <div class="grid__item" data-size="1280x1280">
+                <a href="images/snsimg_1.jpg" class="img-wrap"><img src="images/snsimg_1.jpg" alt="img04" /></a>
+              </div>
+              <div class="grid__item" data-size="1280x12801">
+                <a href="images/snsimg_2.jpg" class="img-wrap"><img src="images/snsimg_2.jpg" alt="img05" /></a>
+              </div>
+              <div class="grid__item" data-size="1280x1280">
+                <a href="images/snsimg_3.jpg" class="img-wrap"><img src="images/snsimg_3.jpg" alt="img06" /></a>
+              </div>
+              <div class="grid__item" data-size="1280x12800">
+                <a href="images/snsimg_4.jpg" class="img-wrap"><img src="images/snsimg_4.jpg" alt="img07" /></a>
+              </div>
+              <div class="grid__item" data-size="1280x1280">
+                <a href="images/snsimg_5.jpg" class="img-wrap"><img src="images/snsimg_5.jpg" alt="img08" /> </a>
+              </div>
+              <div class="grid__item" data-size="1280x1280">
+                <a href="images/snsimg_6.jpg" class="img-wrap"><img src="images/snsimg_6.jpg" alt="img09" /></a>
+              </div>
+              <div class="grid__item" data-size="1280x12800">
+                <a href="images/snsimg_7.jpg" class="img-wrap"><img src="images/snsimg_7.jpg" alt="img10" /></a>
+              </div>
+              <div class="grid__item" data-size="1280x1280">
+                <a href="images/snsimg_8.jpg" class="img-wrap"><img src="images/snsimg_8.jpg" alt="img11" /></a>
+              </div>
+              <div class="grid__item" data-size="1280x1280">
+                <a href="images/snsimg_9.jpg" class="img-wrap"><img src="images/snsimg_9.jpg" alt="img01" /></a>
+              </div>
+            </div>
+            <!-- /grid -->
+            <div class="preview">
+              <button class="action action--close"><i class="fa fa-times"></i><span class="text-hidden">Close</span></button></div>
+            <!-- /preview -->
+          </div>
+        </div>
+      </div>
+      <!-- section 5st Footer-->
+      <div class="section page6">
+          <div class="container6">
+          <!-- Awards Section -->
+            <div class="awardWrap">
+              <h2>CERTIFICATIONS & AWARDS</h2>
+              <div class="awardContainer clearfix">
+                <span><img src="images/tek.png" alt=""></span>
+                <h3>INTERTEK</h3>
+                <p>Intertek is a Total Quality Assurance provider to industries worldwide.<br>
+                  It means that the minimum conditions of product safety standards are satisfied.</p>
+              </div>
+              <div class="awardContainer clearfix">
+                <span><img src="images/aham.jpg" alt=""></span>
+                <h3>AHAM</h3>
+                <p>AHAM’s standard for measuring an air cleaner’s efficacy is called the Clean Air Delivery Rate (CADR).<br>
+                  CADR indicates the volume of filtered air an air cleaner delivers, with separate scores for tobacco smoke, pollen and dust.</p>
+              </div>
+              <div class="awardContainer clearfix">
+                <span><img src="images/red_dot.png" alt=""></span>
+                <h3>RED DOT DESIGN AWARD</h3>
+                <p><span class="it">Klarwind</span> has won awards from numerous prestigious design competitions all over the world including Red dot and iF awards.<br>
+                  “Red Dot DESIGN AWARD” has become established internationally as one of the most sought-after seals of quality for good design.</p>
+              </div>
+              <div class="awardContainer clearfix">
+                <span><img src="images/if.png" alt=""></span>
+                <h3>IF DESIGN AWARD</h3>
+                <p>“iF DESIGN AWARD” is the oldest independent design seal in the world.<br>
+                  It is a symbol of outstanding design achievements that focuses on the innovative power of design.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section page8">      <!-- Five -->
+          <video id="video2_index" autoplay muted loop playsinline data-autoplay>
+            <source src="images/video2_index.mp4" >
+          </video>
+          <div class="subContainer8">
+            <h3>" Fresh air all around your family "</h3>
+            <p>We have a mission to provide enrich and exceptional experience at your home by providing cleaner air in your place.</p>
+            <a href="about.html" target="_blank">MORE</a>
+          </div>
+        </div>
+        <div class="section page7">      <!-- Five -->
+          <img src="images/main3_longver.jpg" alt="">
+          <div class="subContainer7">
+            <h3>
+              How much room does a Klarwind air purifier cover?<br>
+              Click to read more.
+          </h3>
+            <a href="product.html" target="_blank">MORE</a>
+          </div>
+        </div>
+        <!-- Footer -->
+          <footer id="footer_index">
+            <div class="copyright">
+              <ul class="snsIcons">
+                <li><a href="https://www.facebook.com/Klarwind-US-104259765185755/?ref=pages_you_manage" target="_blank"><img src="images/assets/sns_fb.svg" alt=""></a></li>
+                <li><a href="https://www.instagram.com/klarwind_usa" target="_blank"><img src="images/assets/sns_is.svg" alt=""></a></li>
+                <li><a href="support.html"><img src="images/assets/sns_m.svg" alt=""></a></li>
+              </ul>
+              <p>&copy; 2022 AT North America. All rights reserved.</p>
+              <a href="" class="fLogo"><img src="images/assets/footer_logo.svg" alt=""></a>
+            </div>
+          </footer>
+        </div>
+      </div>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		(function() {
+			var support = { transitions: Modernizr.csstransitions },
+				// transition end event name
+				transEndEventNames = { 'WebkitTransition': 'webkitTransitionEnd', 'MozTransition': 'transitionend', 'OTransition': 'oTransitionEnd', 'msTransition': 'MSTransitionEnd', 'transition': 'transitionend' },
+				transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+				onEndTransition = function( el, callback ) {
+					var onEndCallbackFn = function( ev ) {
+						if( support.transitions ) {
+							if( ev.target != this ) return;
+							this.removeEventListener( transEndEventName, onEndCallbackFn );
+						}
+						if( callback && typeof callback === 'function' ) { callback.call(this); }
+					};
+					if( support.transitions ) {
+						el.addEventListener( transEndEventName, onEndCallbackFn );
+					}
+					else {
+						onEndCallbackFn();
+					}
+				};
+
+			new GridFx(document.querySelector('.grid'), {
+				imgPosition : {
+					x : 1,
+					y : -0.75
+				},
+				pagemargin : 50,
+				onOpenItem : function(instance, item) {
+					var win = {width: window.innerWidth, height: window.innerHeight};
+					instance.items.forEach(function(el) {
+						if(item != el) {
+							var delay = Math.floor(Math.random() * 150);
+								el.style.WebkitTransition = 'opacity .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1), -webkit-transform .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1)';
+								el.style.transition = 'opacity .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1), transform .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1)';
+
+								el.style.WebkitTransform = 'translate3d(-' + win.width + 'px,0,0)';
+								el.style.transform = 'translate3d(-' + win.width + 'px,0,0)';
+								el.style.opacity = 0;
+						}
+					});
+				},
+				onCloseItem : function(instance, item) {
+					instance.items.forEach(function(el) {
+						if(item != el) {
+							var delay = Math.floor(Math.random() * 150);
+							el.style.WebkitTransition = 'opacity .3s ' + delay + 'ms cubic-bezier(.5,1,.2,1), -webkit-transform .3s ' + delay + 'ms cubic-bezier(.5,1,.2,1)';
+							el.style.transition = 'opacity .3s ' + delay + 'ms cubic-bezier(.5,1,.2,1), transform .3s ' + delay + 'ms cubic-bezier(.5,1,.2,1)';
+
+
+							el.style.WebkitTransform = 'translate3d(0,0,0)';
+							el.style.transform = 'translate3d(0,0,0)';
+							el.style.opacity = 1;
+
+							onEndTransition(el, function() {
+								el.style.transition = 'none';
+								el.style.WebkitTransform = 'none';
+							});
+						}
+					});
+				}
+			});
+		})();
+	</script>
+
+  <svg style="display: none;">
+    <symbol id="arrow-right" viewBox="0 0 20 10">
+      <path d="M14.84 0l-1.08 1.06 3.3 3.2H0v1.49h17.05l-3.3 3.2L14.84 10 20 5l-5.16-5z"></path>
+    </symbol>
+  </svg>
+</body>
+</html>
