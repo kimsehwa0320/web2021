@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Support - Klarwind</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+  <script src="js/wow.js"></script>
+	<script>
+		new WOW().init();
+
+    $(function(){
+      $(".menu-trigger").click(function(){
+        var toggle = $(".menu-trigger").attr("class"); //get
+        console.log(toggle); // menu-trigger 찍힘
+        if(toggle == "menu-trigger"){
+          $(".menu-trigger").addClass("change");
+          $("#main_menu").stop().animate({left:0},300);
+        }else{
+          $(".menu-trigger").removeClass("change");
+          $("#main_menu").stop().animate({left:"-100%"},300);
+        }
+      });
+
+      $(window).resize(function(){
+        $(".menu-trigger").removeClass("change");
+        $("#main_menu").removeAttr("style");
+      });
+  	});
+
+
+    function check() {
+    			var email = document.getElementById("email").value;
+    			if (email != "") {
+    				var exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+    				if (exptext.test(email) == false) {
+    					//이메일 형식이 알파벳+숫자@알파벳+숫자.알파벳+숫자 형식이 아닐경우
+    					alert("Please enter it correctly.");
+    					document.formtag.email.focus();
+    					return false;
+    				}
+    			}
+    			return true;
+    		}
+        </script>
+        <script async src=https://www.googletagmanager.com/gtag/js?id=G-9R21Q8KW9D></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-9R21Q8KW9D');
+        </script>
+
+</head>
+<style>
+  h1{font-family: 'Noto Sans', sans-serif; font-weight: 700;}
+  body{font-family: 'Noto Sans', sans-serif;}
+</style>
+
+<header>
+<div class="header_top">
+  <nav id="navTop">
+    <a href="index.html" class="hd_logo_mobile blind_mo"><img src="images/assets/header_logo_m.svg" alt=""></a>
+    <div id="main_menu">
+      <ul class="clearfix" id="topMenu">
+        <li><a href="index.html"><img src="images/assets/header_logo.svg" alt="" class="hd_logo blind_pc">HOME</a></li>
+        <li class="blind_pc">&nbsp;</li>
+        <li><a href="about.html" class="pp">ABOUT</a></li>
+        <li><a href="product.html" class="pp">PRODUCT</a></li>
+        <li><a href="support.html" class="pp" style="color:#666666;">SUPPORT</a></li>
+        <ul class="clearfix" id="topMenu_2">
+          <li></li>
+          <li></li>
+          <li class="blind_pc"><a href="https://www.facebook.com/Klarwind-US-104259765185755/?ref=pages_you_manage" target="_blank"><img src="images/assets/sns_fb.svg" alt=""></a></li>
+          <li class="blind_pc"><a href="https://www.instagram.com/klarwind_usa" target="_blank"><img src="images/assets/sns_is.svg" alt=""></a></li>
+          <li class="blind_mo"><a href="https://www.facebook.com/Klarwind-US-104259765185755/?ref=pages_you_manage" target="_blank"><img src="images/assets/sns_fb.svg" alt=""></a></li>
+          <li class="blind_mo"><a href="https://www.instagram.com/klarwind_usa" target="_blank"><img src="images/assets/sns_is.svg" alt=""></a></li>
+        </ul>
+      </ul>
+    </div>
+    <div class="bar">
+      <div class="menu-trigger">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+  </nav>
+</div>
+</header>
+
+<body>
+	<div class="Support_container">
+		<div class="Support_banner">
+          <img src="images/support_banner.jpg" alt="" class="blind_pc">
+					<h1>SUPPORT</h1>
+          <P>User Manuals & Contact Us</P>
+		</div>
+	<div class="SuppoerWrap">
+		<div class="SupportTab">
+			<div class="S_bar1"></div>
+			<h1>User Manuals</h1>
+		  <ul class="clearfix">
+		    <li>
+					<p>Klarwind 100</p>
+					<img src="images/s_100.jpg" alt="">
+					<a href="klarwind_100.pdf" class="A" target="_blank">DOWNLOAD</a>
+				</li>
+				<li>
+					<p>Klarwind 300</p>
+					<img src="images/s_300.jpg" alt="">
+					<a href="klarwind_300.pdf" class="A" target="_blank">DOWNLOAD</a>
+				</li>
+				<li>
+					<p>Klarwind 500</p>
+					<img src="images/s_500.jpg" alt="">
+					<a href="klarwind_500.pdf" class="A" target="_blank">DOWNLOAD</a>
+				</li>
+				<li>
+					<p>Klarwind 500S</p>
+					<img src="images/s_500S.jpg" alt="">
+					<a href="klarwind_500s.pdf" class="A" target="_blank">DOWNLOAD</a>
+				</li>
+				<li>
+					<p>Klarwind 700</p>
+					<img src="images/s_700.jpg" alt="">
+					<a href="klarwind_700.pdf" class="A" target="_blank">DOWNLOAD</a>
+				</li>
+		  </ul>
+		</div>
+		<div class="SupportHelp">
+				<ul class="clearfix">
+          <li class="left_contact">
+            <div class="Support_icon">
+              <div class="S_bar2"></div>
+              <h1 class="pt5">Contact Us</h1>
+              <p class="S_p2">Service Center Hours of Operation</p>
+              <div class="S_p1 blind_pc">
+                <p>U.S. Central Time: Mon to Fri 9:00 AM – 4:30 PM</p>
+                <p>U.S. Pacific Time: Mon to Fri 7:00 AM – 2:30 PM</p>
+                <p>U.S. Mountain Time: Mon to Fri 8:00 AM – 3:30 PM</p>
+                <p>U.S. Eastern Time: Mon to Fri 10:00 AM – 5:30 PM</p>
+              </div>
+              <div class="S_p1 blind_mo">
+                <p class="S_p1_h">Monday - Friday</p>
+                <p>U.S. Central Time<br> 9:00 AM – 4:30 PM</p>
+                <p>U.S. Pacific Time<br>  7:00 AM – 2:30 PM</p>
+                <p>U.S. Mountain Time<br>  8:00 AM – 3:30 PM</p>
+                <p>U.S. Eastern Time<br> 10:00 AM – 5:30 PM</p>
+              </div>
+              <ul class="clearfix">
+                <li>
+                  <img src="images/icon/icon5.png" alt="">
+                  <p class="S_p3">1-630-948-5004</p>
+                </li>
+                <li>
+                  <img src="images/icon/icon6.png" alt="">
+                  <p class="S_p3">CLK.CustomerService@gmail.com</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+            <li class="right_contact">
+              <div class="Support_Contact">
+                <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"> -->
+                <form class="gform" method="POST" data-email="CLK.CustomerService@gmail.com" action="https://script.google.com/macros/s/AKfycbwiBAFuoFY-TxG6Ws-ezbApdbicH0UfpFBplQb0/exec">
+                <ul class="clearfix">
+                  <li>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" required placeholder="Your name">
+                  </li>
+
+                  <li>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" required placeholder="Your last name">
+                  </li>
+                </ul>
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" value="" required placeholder="your.name@email.com">
+                  <label for="phone">Phone</label>
+                  <input type="number" id="phone" name="phone" required placeholder="Your phone number">
+                  <label for="question">Question</label>
+                  <textarea id="question" name="question" required placeholder="Your message" style="height:200px"></textarea>
+
+                  <input type="submit" value="Submit" onclick="return check();">
+
+                  <div style="display:none" class="thankyou_message">
+                   <h2>Thanks for contacting us! &nbsp;<i class="fa fa-paper-plane"></i>
+                   </h2>
+                  </div>
+                </form>
+                <form action="https://script.google.com/macros/s/..." method="post">
+                <label class="sr-only"></label>
+                <input id="honeypot" type="text" name="honeypot" value="" />
+              </form>
+                <script data-cfasync="false" type="text/javascript"
+                src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js">
+                </script>
+              </div>
+            </li>
+          </ul>
+
+		</div>
+	</div>
+</div>
+
+<!-- Footer -->
+  <footer id="footer_index" class="product_index sindex">
+    <div class="copyright">
+      <ul class="snsIcons">
+        <li><a href="https://www.facebook.com/Klarwind-US-104259765185755/?ref=pages_you_manage" target="_blank"><img src="images/assets/sns_fb.svg" alt=""></a></li>
+        <li><a href="https://www.instagram.com/klarwind_usa" target="_blank"><img src="images/assets/sns_is.svg" alt=""></a></li>
+        <li><a href="support.html"><img src="images/assets/sns_m.svg" alt=""></a></li>
+      </ul>
+      <p>&copy; 2022 AT North America. All rights reserved.</p>
+      <a href="" class="fLogo"><img src="images/assets/footer_logo.svg" alt=""></a>
+    </div>
+  </footer>
+
+<script>
+$(window).scroll(function () {
+ if ($(this).scrollTop() > 100) {
+   $('#backToTop').fadeIn('slow');
+ } else {
+   $('#backToTop').fadeOut('fast');
+ }
+});
+$('#backToTop').click(function (e) {
+ e.preventDefault();
+ $('html, body').animate({scrollTop: 0}, 400);
+});
+</script>
+<a id="backToTop" class="scrolltop" href="#">
+  <img src="images/top_btn.png" alt="">
+</a>
+
+
+</body>
+</html>
